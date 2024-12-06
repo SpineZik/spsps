@@ -756,6 +756,7 @@ local function IVUSPDV_fake_script() -- Trigger_4.OnActivate
 						local A_2 = tostring(v.ZoneID.Value)
 						local Event = game:GetService("ReplicatedStorage").Events.Drops.PickupDrop
 						Event:FireServer(A_1, A_2)
+						v:Destroy()
 					end
 				end
 	

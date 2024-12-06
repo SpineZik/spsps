@@ -10,46 +10,46 @@ local UICorner = Instance.new("UICorner")
 local ContainerList = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local UIPadding = Instance.new("UIPadding")
-local Button = Instance.new("Frame")
+local checkpoint = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
-local Toggle = Instance.new("Frame")
+local Button = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local Trigger_2 = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
-local In = Instance.new("Frame")
+local Toggle = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
-local Frame = Instance.new("Frame")
-local UICorner_5 = Instance.new("UICorner")
-local Toggle_2 = Instance.new("Frame")
-local UICorner_6 = Instance.new("UICorner")
 local Trigger_3 = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
-local In_2 = Instance.new("Frame")
+local In = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Toggle_2 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local Frame_2 = Instance.new("Frame")
-local UICorner_8 = Instance.new("UICorner")
-local Toggle_3 = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
 local Trigger_4 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
-local In_3 = Instance.new("Frame")
+local In_2 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Toggle_3 = Instance.new("Frame")
 local UICorner_10 = Instance.new("UICorner")
-local Frame_3 = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local Toggle_4 = Instance.new("Frame")
-local UICorner_12 = Instance.new("UICorner")
 local Trigger_5 = Instance.new("TextButton")
 local TextLabel_5 = Instance.new("TextLabel")
-local In_4 = Instance.new("Frame")
+local In_3 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Toggle_4 = Instance.new("Frame")
 local UICorner_13 = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
-local UICorner_14 = Instance.new("UICorner")
-local Button_2 = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
 local Trigger_6 = Instance.new("TextButton")
 local TextLabel_6 = Instance.new("TextLabel")
+local In_4 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
 local Vv = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
 local Trigger_7 = Instance.new("TextButton")
@@ -58,25 +58,29 @@ local In_5 = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
 local Frame_5 = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
-local X = Instance.new("Frame")
+local Button_2 = Instance.new("Frame")
 local UICorner_19 = Instance.new("UICorner")
 local Trigger_8 = Instance.new("TextButton")
 local TextLabel_8 = Instance.new("TextLabel")
-local Frame_6 = Instance.new("Frame")
+local X = Instance.new("Frame")
 local UICorner_20 = Instance.new("UICorner")
+local Trigger_9 = Instance.new("TextButton")
+local TextLabel_9 = Instance.new("TextLabel")
+local Frame_6 = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
 local DropDown = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local Button_3 = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local TextLabel_9 = Instance.new("TextLabel")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
 local UIPadding_2 = Instance.new("UIPadding")
 local ImageLabel_2 = Instance.new("ImageLabel")
-local UICorner_22 = Instance.new("UICorner")
 local UICorner_23 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
 local UICorner_24 = Instance.new("UICorner")
-local TextLabel_10 = Instance.new("TextLabel")
+local Top = Instance.new("Frame")
+local UICorner_25 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
 local Toggle_5 = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -114,7 +118,6 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456433, 0)
 ContainerList.Size = UDim2.new(0, 210, 0, 219)
-ContainerList.CanvasPosition = Vector2.new(0, 150)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -126,19 +129,19 @@ UIPadding.Parent = ContainerList
 UIPadding.PaddingLeft = UDim.new(0, 16)
 UIPadding.PaddingTop = UDim.new(0, 5)
 
-Button.Name = "Button"
-Button.Parent = ContainerList
-Button.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Button.BackgroundTransparency = 0.500
-Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button.BorderSizePixel = 0
-Button.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
-Button.Size = UDim2.new(0, 176, 0, 38)
+checkpoint.Name = "checkpoint"
+checkpoint.Parent = ContainerList
+checkpoint.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+checkpoint.BackgroundTransparency = 0.500
+checkpoint.BorderColor3 = Color3.fromRGB(0, 0, 0)
+checkpoint.BorderSizePixel = 0
+checkpoint.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+checkpoint.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_2.Parent = Button
+UICorner_2.Parent = checkpoint
 
 Trigger.Name = "Trigger"
-Trigger.Parent = Button
+Trigger.Parent = checkpoint
 Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger.BackgroundTransparency = 1.000
 Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -149,7 +152,7 @@ Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger.TextSize = 14.000
 Trigger.TextTransparency = 1.000
 
-TextLabel.Parent = Button
+TextLabel.Parent = checkpoint
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -157,24 +160,24 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.11931818, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 134, 0, 38)
 TextLabel.Font = Enum.Font.Jura
-TextLabel.Text = "Win Race"
+TextLabel.Text = "Click me 1 time."
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20.000
 TextLabel.TextWrapped = true
 
-Toggle.Name = "Toggle"
-Toggle.Parent = ContainerList
-Toggle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Toggle.BackgroundTransparency = 0.500
-Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BorderSizePixel = 0
-Toggle.Position = UDim2.new(0, 0, 0.165938869, 0)
-Toggle.Size = UDim2.new(0, 176, 0, 38)
+Button.Name = "Button"
+Button.Parent = ContainerList
+Button.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Button.BackgroundTransparency = 0.500
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+Button.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_3.Parent = Toggle
+UICorner_3.Parent = Button
 
 Trigger_2.Name = "Trigger"
-Trigger_2.Parent = Toggle
+Trigger_2.Parent = Button
 Trigger_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_2.BackgroundTransparency = 1.000
 Trigger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -185,7 +188,7 @@ Trigger_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_2.TextSize = 14.000
 Trigger_2.TextTransparency = 1.000
 
-TextLabel_2.Parent = Toggle
+TextLabel_2.Parent = Button
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -193,42 +196,24 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0.11931818, 0, 0, 0)
 TextLabel_2.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_2.Font = Enum.Font.Jura
-TextLabel_2.Text = "Auto Win"
+TextLabel_2.Text = "Win Race"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 20.000
 TextLabel_2.TextWrapped = true
 
-In.Name = "In"
-In.Parent = Toggle
-In.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-In.BorderColor3 = Color3.fromRGB(0, 0, 0)
-In.BorderSizePixel = 0
-In.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
-In.Size = UDim2.new(0, 35, 0, 20)
+Toggle.Name = "Toggle"
+Toggle.Parent = ContainerList
+Toggle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Toggle.BackgroundTransparency = 0.500
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0, 0, 0.165938869, 0)
+Toggle.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_4.Parent = In
-
-Frame.Parent = In
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Size = UDim2.new(0, 19, 0, 20)
-
-UICorner_5.Parent = Frame
-
-Toggle_2.Name = "Toggle"
-Toggle_2.Parent = ContainerList
-Toggle_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Toggle_2.BackgroundTransparency = 0.500
-Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_2.BorderSizePixel = 0
-Toggle_2.Position = UDim2.new(0, 0, 0.165938869, 0)
-Toggle_2.Size = UDim2.new(0, 176, 0, 38)
-
-UICorner_6.Parent = Toggle_2
+UICorner_4.Parent = Toggle
 
 Trigger_3.Name = "Trigger"
-Trigger_3.Parent = Toggle_2
+Trigger_3.Parent = Toggle
 Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_3.BackgroundTransparency = 1.000
 Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -239,50 +224,50 @@ Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_3.TextSize = 14.000
 Trigger_3.TextTransparency = 1.000
 
-TextLabel_3.Parent = Toggle_2
+TextLabel_3.Parent = Toggle
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.0568181835, 0, 0, 0)
+TextLabel_3.Position = UDim2.new(0.11931818, 0, 0, 0)
 TextLabel_3.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_3.Font = Enum.Font.Jura
-TextLabel_3.Text = "Disable GUI"
+TextLabel_3.Text = "Auto Win"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 20.000
 TextLabel_3.TextWrapped = true
 
-In_2.Name = "In"
-In_2.Parent = Toggle_2
-In_2.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-In_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-In_2.BorderSizePixel = 0
-In_2.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
-In_2.Size = UDim2.new(0, 35, 0, 20)
+In.Name = "In"
+In.Parent = Toggle
+In.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In.BorderSizePixel = 0
+In.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In.Size = UDim2.new(0, 35, 0, 20)
 
-UICorner_7.Parent = In_2
+UICorner_5.Parent = In
 
-Frame_2.Parent = In_2
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderSizePixel = 0
-Frame_2.Size = UDim2.new(0, 19, 0, 20)
+Frame.Parent = In
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 19, 0, 20)
 
-UICorner_8.Parent = Frame_2
+UICorner_6.Parent = Frame
 
-Toggle_3.Name = "Toggle"
-Toggle_3.Parent = ContainerList
-Toggle_3.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Toggle_3.BackgroundTransparency = 0.500
-Toggle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_3.BorderSizePixel = 0
-Toggle_3.Position = UDim2.new(0, 0, 0.165938869, 0)
-Toggle_3.Size = UDim2.new(0, 176, 0, 38)
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = ContainerList
+Toggle_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Toggle_2.BackgroundTransparency = 0.500
+Toggle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.BorderSizePixel = 0
+Toggle_2.Position = UDim2.new(0, 0, 0.165938869, 0)
+Toggle_2.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_9.Parent = Toggle_3
+UICorner_7.Parent = Toggle_2
 
 Trigger_4.Name = "Trigger"
-Trigger_4.Parent = Toggle_3
+Trigger_4.Parent = Toggle_2
 Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_4.BackgroundTransparency = 1.000
 Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -293,50 +278,50 @@ Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_4.TextSize = 14.000
 Trigger_4.TextTransparency = 1.000
 
-TextLabel_4.Parent = Toggle_3
+TextLabel_4.Parent = Toggle_2
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_4.Position = UDim2.new(0.0568181835, 0, 0, 0)
 TextLabel_4.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_4.Font = Enum.Font.Jura
-TextLabel_4.Text = "Auto Collect"
+TextLabel_4.Text = "Disable GUI"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 20.000
 TextLabel_4.TextWrapped = true
 
-In_3.Name = "In"
-In_3.Parent = Toggle_3
-In_3.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-In_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-In_3.BorderSizePixel = 0
-In_3.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
-In_3.Size = UDim2.new(0, 35, 0, 20)
+In_2.Name = "In"
+In_2.Parent = Toggle_2
+In_2.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_2.BorderSizePixel = 0
+In_2.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_2.Size = UDim2.new(0, 35, 0, 20)
 
-UICorner_10.Parent = In_3
+UICorner_8.Parent = In_2
 
-Frame_3.Parent = In_3
-Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderSizePixel = 0
-Frame_3.Size = UDim2.new(0, 19, 0, 20)
+Frame_2.Parent = In_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Size = UDim2.new(0, 19, 0, 20)
 
-UICorner_11.Parent = Frame_3
+UICorner_9.Parent = Frame_2
 
-Toggle_4.Name = "Toggle"
-Toggle_4.Parent = ContainerList
-Toggle_4.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Toggle_4.BackgroundTransparency = 0.500
-Toggle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle_4.BorderSizePixel = 0
-Toggle_4.Position = UDim2.new(0, 0, 0.165938869, 0)
-Toggle_4.Size = UDim2.new(0, 176, 0, 38)
+Toggle_3.Name = "Toggle"
+Toggle_3.Parent = ContainerList
+Toggle_3.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Toggle_3.BackgroundTransparency = 0.500
+Toggle_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_3.BorderSizePixel = 0
+Toggle_3.Position = UDim2.new(0, 0, 0.165938869, 0)
+Toggle_3.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_12.Parent = Toggle_4
+UICorner_10.Parent = Toggle_3
 
 Trigger_5.Name = "Trigger"
-Trigger_5.Parent = Toggle_4
+Trigger_5.Parent = Toggle_3
 Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_5.BackgroundTransparency = 1.000
 Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -347,50 +332,50 @@ Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_5.TextSize = 14.000
 Trigger_5.TextTransparency = 1.000
 
-TextLabel_5.Parent = Toggle_4
+TextLabel_5.Parent = Toggle_3
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.0568181835, 0, 0, 0)
+TextLabel_5.Position = UDim2.new(0.0511363633, 0, 0, 0)
 TextLabel_5.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_5.Font = Enum.Font.Jura
-TextLabel_5.Text = "Auto Rebirth"
+TextLabel_5.Text = "Auto Collect"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 20.000
 TextLabel_5.TextWrapped = true
 
-In_4.Name = "In"
-In_4.Parent = Toggle_4
-In_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-In_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-In_4.BorderSizePixel = 0
-In_4.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
-In_4.Size = UDim2.new(0, 35, 0, 20)
+In_3.Name = "In"
+In_3.Parent = Toggle_3
+In_3.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_3.BorderSizePixel = 0
+In_3.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_3.Size = UDim2.new(0, 35, 0, 20)
 
-UICorner_13.Parent = In_4
+UICorner_11.Parent = In_3
 
-Frame_4.Parent = In_4
-Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.BorderSizePixel = 0
-Frame_4.Size = UDim2.new(0, 19, 0, 20)
+Frame_3.Parent = In_3
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Size = UDim2.new(0, 19, 0, 20)
 
-UICorner_14.Parent = Frame_4
+UICorner_12.Parent = Frame_3
 
-Button_2.Name = "Button"
-Button_2.Parent = ContainerList
-Button_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-Button_2.BackgroundTransparency = 0.500
-Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Button_2.BorderSizePixel = 0
-Button_2.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
-Button_2.Size = UDim2.new(0, 176, 0, 38)
+Toggle_4.Name = "Toggle"
+Toggle_4.Parent = ContainerList
+Toggle_4.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Toggle_4.BackgroundTransparency = 0.500
+Toggle_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_4.BorderSizePixel = 0
+Toggle_4.Position = UDim2.new(0, 0, 0.165938869, 0)
+Toggle_4.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_15.Parent = Button_2
+UICorner_13.Parent = Toggle_4
 
 Trigger_6.Name = "Trigger"
-Trigger_6.Parent = Button_2
+Trigger_6.Parent = Toggle_4
 Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_6.BackgroundTransparency = 1.000
 Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -401,18 +386,36 @@ Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_6.TextSize = 14.000
 Trigger_6.TextTransparency = 1.000
 
-TextLabel_6.Parent = Button_2
+TextLabel_6.Parent = Toggle_4
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.11931818, 0, 0, 0)
+TextLabel_6.Position = UDim2.new(0.0568181835, 0, 0, 0)
 TextLabel_6.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_6.Font = Enum.Font.Jura
-TextLabel_6.Text = "Refresh Eggs"
+TextLabel_6.Text = "Auto Rebirth"
 TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 20.000
 TextLabel_6.TextWrapped = true
+
+In_4.Name = "In"
+In_4.Parent = Toggle_4
+In_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_4.BorderSizePixel = 0
+In_4.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_4.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_14.Parent = In_4
+
+Frame_4.Parent = In_4
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_15.Parent = Frame_4
 
 Vv.Name = "Vv"
 Vv.Parent = ContainerList
@@ -468,19 +471,19 @@ Frame_5.Size = UDim2.new(0, 19, 0, 20)
 
 UICorner_18.Parent = Frame_5
 
-X.Name = "X"
-X.Parent = ContainerList
-X.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-X.BackgroundTransparency = 0.500
-X.BorderColor3 = Color3.fromRGB(0, 0, 0)
-X.BorderSizePixel = 0
-X.Position = UDim2.new(0.0252525248, 0, 0.369158864, 0)
-X.Size = UDim2.new(0, 176, 0, 38)
+Button_2.Name = "Button"
+Button_2.Parent = ContainerList
+Button_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Button_2.BackgroundTransparency = 0.500
+Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.BorderSizePixel = 0
+Button_2.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+Button_2.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_19.Parent = X
+UICorner_19.Parent = Button_2
 
 Trigger_8.Name = "Trigger"
-Trigger_8.Parent = X
+Trigger_8.Parent = Button_2
 Trigger_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_8.BackgroundTransparency = 1.000
 Trigger_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -491,18 +494,54 @@ Trigger_8.TextColor3 = Color3.fromRGB(0, 0, 0)
 Trigger_8.TextSize = 14.000
 Trigger_8.TextTransparency = 1.000
 
-TextLabel_8.Parent = X
+TextLabel_8.Parent = Button_2
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_8.BorderSizePixel = 0
-TextLabel_8.Position = UDim2.new(0.107954547, 0, 0, 0)
+TextLabel_8.Position = UDim2.new(0.11931818, 0, 0, 0)
 TextLabel_8.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_8.Font = Enum.Font.Jura
-TextLabel_8.Text = "Select zone"
+TextLabel_8.Text = "Refresh Eggs"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextSize = 20.000
 TextLabel_8.TextWrapped = true
+
+X.Name = "X"
+X.Parent = ContainerList
+X.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+X.BackgroundTransparency = 0.500
+X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.0252525248, 0, 0.369158864, 0)
+X.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_20.Parent = X
+
+Trigger_9.Name = "Trigger"
+Trigger_9.Parent = X
+Trigger_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_9.BackgroundTransparency = 1.000
+Trigger_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.BorderSizePixel = 0
+Trigger_9.Size = UDim2.new(0, 176, 0, 38)
+Trigger_9.Font = Enum.Font.SourceSans
+Trigger_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.TextSize = 14.000
+Trigger_9.TextTransparency = 1.000
+
+TextLabel_9.Parent = X
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.107954547, 0, 0, 0)
+TextLabel_9.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_9.Font = Enum.Font.Jura
+TextLabel_9.Text = "Select Egg"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextSize = 20.000
+TextLabel_9.TextWrapped = true
 
 Frame_6.Parent = X
 Frame_6.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
@@ -512,7 +551,7 @@ Frame_6.BorderSizePixel = 0
 Frame_6.Position = UDim2.new(0, 0, 1, 0)
 Frame_6.Size = UDim2.new(0, 176, 0, 0)
 
-UICorner_20.Parent = Frame_6
+UICorner_21.Parent = Frame_6
 
 DropDown.Name = "DropDown"
 DropDown.Parent = Frame_6
@@ -540,20 +579,20 @@ Button_3.Position = UDim2.new(0.137640446, 0, 0, 0)
 Button_3.Size = UDim2.new(0, 128, 0, 29)
 Button_3.Visible = false
 
-UICorner_21.Parent = Button_3
+UICorner_22.Parent = Button_3
 
-TextLabel_9.Parent = Button_3
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.BorderSizePixel = 0
-TextLabel_9.Position = UDim2.new(0.0724168718, 0, 0, 0)
-TextLabel_9.Size = UDim2.new(0, 95, 0, 29)
-TextLabel_9.Font = Enum.Font.Unknown
-TextLabel_9.Text = "Farm"
-TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.TextSize = 14.000
-TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_10.Parent = Button_3
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_10.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_10.Font = Enum.Font.Unknown
+TextLabel_10.Text = "Farm"
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
 
 TextButton.Parent = Button_3
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -578,9 +617,9 @@ ImageLabel_2.Position = UDim2.new(0.837629139, 0, 0.182395533, 0)
 ImageLabel_2.Size = UDim2.new(0, 21, 0, 23)
 ImageLabel_2.Image = "rbxassetid://86241372527497"
 
-UICorner_22.Parent = ImageLabel_2
+UICorner_23.Parent = ImageLabel_2
 
-UICorner_23.Parent = ImageLabel
+UICorner_24.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -591,19 +630,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_24.Parent = Top
+UICorner_25.Parent = Top
 
-TextLabel_10.Parent = Top
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_10.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_10.Font = Enum.Font.Unknown
-TextLabel_10.Text = "SpineWare"
-TextLabel_10.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_10.TextSize = 18.000
+TextLabel_11.Parent = Top
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_11.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_11.Font = Enum.Font.Unknown
+TextLabel_11.Text = "SpineWare"
+TextLabel_11.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_11.TextSize = 18.000
 
 Toggle_5.Name = "Toggle"
 Toggle_5.Parent = Top
@@ -628,8 +667,67 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function HCLH_fake_script() -- Trigger.LocalScript 
+local function AUWWAIP_fake_script() -- Trigger.LocalScript 
 	local script = Instance.new('LocalScript', Trigger)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err =pcall(function()
+			local CFramelist = {
+				CFrame.new(-64.5494995, 145.899963, 939.322998, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 1939.323, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 2939.323, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 3939.323, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 4939.32275, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 5939.32275, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 6939.32275, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 7939.32275, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 8939.32324, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 9939.32324, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 14939.3232, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 19939.3223, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 24939.3223, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 29939.3223, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 34939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 39939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 44939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 49939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 54939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 59939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 64939.3242, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 69939.3203, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 74939.3203, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 79939.3203, 0, 0, 1, 0, 1, -0, -1, 0, 0),
+				CFrame.new(-64.5494995, 145.899963, 89939.3203, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+			}
+	
+			for I, v in CFramelist do
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v
+				wait(0.1)
+			end
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
+		end
+	end)
+	end)
+end
+coroutine.wrap(AUWWAIP_fake_script)()
+local function KROOUD_fake_script() -- Trigger_2.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_2)
 
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
@@ -663,9 +761,9 @@ local function HCLH_fake_script() -- Trigger.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HCLH_fake_script)()
-local function NSLO_fake_script() -- Trigger_2.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_2)
+coroutine.wrap(KROOUD_fake_script)()
+local function RBQWG_fake_script() -- Trigger_3.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -700,9 +798,9 @@ local function NSLO_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(NSLO_fake_script)()
-local function RAQD_fake_script() -- Trigger_3.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_3)
+coroutine.wrap(RBQWG_fake_script)()
+local function DMRGYYU_fake_script() -- Trigger_4.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -725,9 +823,9 @@ local function RAQD_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(RAQD_fake_script)()
-local function IVUSPDV_fake_script() -- Trigger_4.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_4)
+coroutine.wrap(DMRGYYU_fake_script)()
+local function UKYU_fake_script() -- Trigger_5.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -765,9 +863,9 @@ local function IVUSPDV_fake_script() -- Trigger_4.OnActivate
 		end
 	end)
 end
-coroutine.wrap(IVUSPDV_fake_script)()
-local function KPMJIDM_fake_script() -- Trigger_5.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_5)
+coroutine.wrap(UKYU_fake_script)()
+local function OUTMPA_fake_script() -- Trigger_6.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -795,9 +893,46 @@ local function KPMJIDM_fake_script() -- Trigger_5.OnActivate
 		end
 	end)
 end
-coroutine.wrap(KPMJIDM_fake_script)()
-local function ZKGAB_fake_script() -- Trigger_6.LocalScript 
-	local script = Instance.new('LocalScript', Trigger_6)
+coroutine.wrap(OUTMPA_fake_script)()
+local function YZFBN_fake_script() -- Trigger_7.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_7)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			local eggtohatc = _G.EggToHatch
+			pcall(function()
+				local A_1 = eggtohatc
+				local A_2 = false
+				local A_3 = 
+					{
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Inventory.HatchEgg
+				Event:FireServer(A_1, A_2, A_3)
+	
+			end)
+			wait(0.1)
+		end
+	end)
+end
+coroutine.wrap(YZFBN_fake_script)()
+local function OJQOMUF_fake_script() -- Trigger_8.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_8)
 
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
@@ -865,46 +1000,9 @@ local function ZKGAB_fake_script() -- Trigger_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZKGAB_fake_script)()
-local function LXJQM_fake_script() -- Trigger_7.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_7)
-
-	local ts = game:GetService("TweenService")
-	local info = TweenInfo.new(1.3)
-	local x=  TweenInfo.new(0.7)
-	local status = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if not status then
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
-			status = true
-			
-		else
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
-			status = false
-		end
-		
-		while status do
-			local eggtohatc = _G.EggToHatch
-			pcall(function()
-				local A_1 = eggtohatc
-				local A_2 = false
-				local A_3 = 
-					{
-					}
-				local Event = game:GetService("ReplicatedStorage").Events.Inventory.HatchEgg
-				Event:FireServer(A_1, A_2, A_3)
-	
-			end)
-			wait(0.1)
-		end
-	end)
-end
-coroutine.wrap(LXJQM_fake_script)()
-local function BTAQQYR_fake_script() -- Trigger_8.LocalScript 
-	local script = Instance.new('LocalScript', Trigger_8)
+coroutine.wrap(OJQOMUF_fake_script)()
+local function QFOHRWR_fake_script() -- Trigger_9.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_9)
 
 	local status = false
 	local isdoing = false
@@ -965,8 +1063,8 @@ local function BTAQQYR_fake_script() -- Trigger_8.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(BTAQQYR_fake_script)()
-local function QRNX_fake_script() -- DropDown.LocalScript 
+coroutine.wrap(QFOHRWR_fake_script)()
+local function NNXBBDT_fake_script() -- DropDown.LocalScript 
 	local script = Instance.new('LocalScript', DropDown)
 
 	_G.EggToHatch = "Zone1"
@@ -1002,9 +1100,9 @@ local function QRNX_fake_script() -- DropDown.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QRNX_fake_script)()
-local function WBZBNPR_fake_script() -- TextLabel_10.Script 
-	local script = Instance.new('LocalScript', TextLabel_10)
+coroutine.wrap(NNXBBDT_fake_script)()
+local function OCFC_fake_script() -- TextLabel_11.Script 
+	local script = Instance.new('LocalScript', TextLabel_11)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -1021,8 +1119,8 @@ local function WBZBNPR_fake_script() -- TextLabel_10.Script
 		end)
 	end)
 end
-coroutine.wrap(WBZBNPR_fake_script)()
-local function WOIYGVA_fake_script() -- Toggle_5.OnActivate 
+coroutine.wrap(OCFC_fake_script)()
+local function RZCCMW_fake_script() -- Toggle_5.OnActivate 
 	local script = Instance.new('LocalScript', Toggle_5)
 
 	local toggle = script.Parent
@@ -1065,8 +1163,8 @@ local function WOIYGVA_fake_script() -- Toggle_5.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(WOIYGVA_fake_script)()
-local function PJBY_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(RZCCMW_fake_script)()
+local function BWWARVP_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1075,8 +1173,8 @@ local function PJBY_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(PJBY_fake_script)()
-local function HIOAZ_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(BWWARVP_fake_script)()
+local function XBMXB_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -1092,8 +1190,8 @@ local function HIOAZ_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(HIOAZ_fake_script)()
-local function FXCEV_fake_script() -- youtuberacew.Tween 
+coroutine.wrap(XBMXB_fake_script)()
+local function BBIZJ_fake_script() -- youtuberacew.Tween 
 	local script = Instance.new('LocalScript', youtuberacew)
 
 	local list = {
@@ -1149,4 +1247,4 @@ local function FXCEV_fake_script() -- youtuberacew.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(FXCEV_fake_script)()
+coroutine.wrap(BBIZJ_fake_script)()

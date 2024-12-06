@@ -696,7 +696,7 @@ local function NSLO_fake_script() -- Trigger_2.OnActivate
 					firetouchinterest(x,char.HumanoidRootPart,0)
 				end
 			end)
-			wait(0.5)
+			wait(0)
 		end
 	end)
 end

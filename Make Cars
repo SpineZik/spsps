@@ -30,10 +30,14 @@ local In = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
 local Frame = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
+local CarsRobux = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
+local Trigger_5 = Instance.new("TextButton")
 local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
 local Toggle_2 = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -244,7 +248,43 @@ Frame.Size = UDim2.new(0, 19, 0, 20)
 
 UICorner_7.Parent = Frame
 
-UICorner_8.Parent = ImageLabel
+CarsRobux.Name = "Cars Robux"
+CarsRobux.Parent = ContainerList
+CarsRobux.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+CarsRobux.BackgroundTransparency = 0.500
+CarsRobux.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CarsRobux.BorderSizePixel = 0
+CarsRobux.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+CarsRobux.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_8.Parent = CarsRobux
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = CarsRobux
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 176, 0, 38)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+TextLabel_5.Parent = CarsRobux
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.11931818, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "Get Car Robux"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
+
+UICorner_9.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -255,19 +295,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_9.Parent = Top
+UICorner_10.Parent = Top
 
-TextLabel_5.Parent = Top
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_5.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "SpineWare"
-TextLabel_5.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_5.TextSize = 18.000
+TextLabel_6.Parent = Top
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_6.Font = Enum.Font.Unknown
+TextLabel_6.Text = "SpineWare"
+TextLabel_6.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_6.TextSize = 18.000
 
 Toggle_2.Name = "Toggle"
 Toggle_2.Parent = Top
@@ -292,7 +332,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function POWQBD_fake_script() -- Trigger.LocalScript 
+local function VBRFMKC_fake_script() -- Trigger.LocalScript 
 	local script = Instance.new('LocalScript', Trigger)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -304,7 +344,7 @@ local function POWQBD_fake_script() -- Trigger.LocalScript
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		local A_1 = 100000000000000
+		local A_1 = 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 		local Event = game:GetService("ReplicatedStorage").Event.Train
 	
 		if Event then
@@ -324,8 +364,8 @@ local function POWQBD_fake_script() -- Trigger.LocalScript
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 		end
 end
-coroutine.wrap(POWQBD_fake_script)()
-local function GNFKE_fake_script() -- Trigger_2.LocalScript 
+coroutine.wrap(VBRFMKC_fake_script)()
+local function HEKW_fake_script() -- Trigger_2.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -337,7 +377,7 @@ local function GNFKE_fake_script() -- Trigger_2.LocalScript
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		local A_1 = 100000000000000000000
+		local A_1 = 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 		local A_2 = 1
 		local Event = game:GetService("ReplicatedStorage").Event.SellWeapon
 	
@@ -358,8 +398,8 @@ local function GNFKE_fake_script() -- Trigger_2.LocalScript
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(GNFKE_fake_script)()
-local function MYWGJ_fake_script() -- Trigger_3.LocalScript 
+coroutine.wrap(HEKW_fake_script)()
+local function GKNWPVZ_fake_script() -- Trigger_3.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -372,7 +412,7 @@ local function MYWGJ_fake_script() -- Trigger_3.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local A_1 = "Lawnmower"
-		local A_2 = 2100000000000
+		local A_2 = 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 		local Event = game:GetService("ReplicatedStorage").Event.CraftWeapon
 	
 		if Event then
@@ -392,8 +432,8 @@ local function MYWGJ_fake_script() -- Trigger_3.LocalScript
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(MYWGJ_fake_script)()
-local function CADXX_fake_script() -- Trigger_4.OnActivate 
+coroutine.wrap(GKNWPVZ_fake_script)()
+local function IYOFS_fake_script() -- Trigger_4.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -423,9 +463,49 @@ local function CADXX_fake_script() -- Trigger_4.OnActivate
 		end
 	end)
 end
-coroutine.wrap(CADXX_fake_script)()
-local function HGOFZE_fake_script() -- TextLabel_5.Script 
-	local script = Instance.new('LocalScript', TextLabel_5)
+coroutine.wrap(IYOFS_fake_script)()
+local function ABWKR_fake_script() -- Trigger_5.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_5)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local Event = game:GetService("ReplicatedStorage").Event.BuyPower
+	
+		if Event then
+			-- Покупка "Bugti"
+			local A_1 = "Bugti"
+			local A_2 = 1
+			Event:FireServer(A_1, A_2)
+	
+			-- Покупка "Huracane"
+			A_1 = "Huracane"
+			A_2 = 1
+			Event:FireServer(A_1, A_2)
+		else
+			warn("Событие BuyPower не найдено в ReplicatedStorage.Event")
+		end
+	end)
+	
+	if not sucess then
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+		wait(2)
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()		
+	else
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+		wait(2)
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
+	end
+end
+coroutine.wrap(ABWKR_fake_script)()
+local function TWLU_fake_script() -- TextLabel_6.Script 
+	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -442,8 +522,8 @@ local function HGOFZE_fake_script() -- TextLabel_5.Script
 		end)
 	end)
 end
-coroutine.wrap(HGOFZE_fake_script)()
-local function MGEZS_fake_script() -- Toggle_2.OnActivate 
+coroutine.wrap(TWLU_fake_script)()
+local function EHOECKJ_fake_script() -- Toggle_2.OnActivate 
 	local script = Instance.new('LocalScript', Toggle_2)
 
 	local toggle = script.Parent
@@ -486,8 +566,8 @@ local function MGEZS_fake_script() -- Toggle_2.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(MGEZS_fake_script)()
-local function NMLUBZ_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(EHOECKJ_fake_script)()
+local function QKVUZF_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -496,8 +576,8 @@ local function NMLUBZ_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(NMLUBZ_fake_script)()
-local function HFVS_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(QKVUZF_fake_script)()
+local function VTPOXIO_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -513,8 +593,8 @@ local function HFVS_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(HFVS_fake_script)()
-local function JNUGE_fake_script() -- Makecars.Tween 
+coroutine.wrap(VTPOXIO_fake_script)()
+local function RENMUZ_fake_script() -- Makecars.Tween 
 	local script = Instance.new('LocalScript', Makecars)
 
 	local list = {
@@ -570,4 +650,4 @@ local function JNUGE_fake_script() -- Makecars.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(JNUGE_fake_script)()
+coroutine.wrap(RENMUZ_fake_script)()

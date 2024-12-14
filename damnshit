@@ -20,4 +20,6 @@ elseif game.PlaceId == 109819539837829 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Make%20Cars"))()
 elseif game.PlaceId == 110089100039334 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Punch%20Santa"))()
+elseif game.PlaceId == 17327880884 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/eatall"))()
 end

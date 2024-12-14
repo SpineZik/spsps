@@ -1,0 +1,23 @@
+if game.PlaceId == 75847425881082 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/gumleague"))()
+elseif game.PlaceId == 17142752129 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/crashit"))()
+elseif game.PlaceId == 18994232026 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/test1?token=GHSAT0AAAAAAC2TGSZRWTKSALRMCPAMTHEKZ2MUAUA"))()
+elseif game.PlaceId == 81627514272653 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/bswrng"))()
+elseif game.PlaceId == 17739194333 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killaura"))()
+elseif game.PlaceId == 134853721259762 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/game1"))()
+elseif game.PlaceId == 112786873255585 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/tarantul"))()
+elseif game.PlaceId == 105628647191901 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/warriorxzscript"))()
+elseif game.PlaceId == 116504589598336 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/chopchotatam"))()
+elseif game.PlaceId == 109819539837829 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Make%20Cars"))()
+elseif game.PlaceId == 110089100039334 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Punch%20Santa"))()
+end

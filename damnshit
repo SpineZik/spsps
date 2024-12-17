@@ -24,4 +24,6 @@ elseif game.PlaceId == 17327880884 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/eatall"))()
 elseif game.PlaceId == 13338128073 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineWare/spsps/refs/heads/main/Punch%20friend"))()
+elseif game.PlaceId == 18525150222 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slingshot%20Race%20Simulator"))()
 end

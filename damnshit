@@ -28,4 +28,6 @@ elseif game.PlaceId == 18525150222 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slingshot%20Race%20Simulator"))()
 elseif game.PlaceId == 96462622512177 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Market%20sim"))()
+elseif game.PlaceId == 77466875484829 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Destroy%20Stuff%20With%20Lightning"))()
 end

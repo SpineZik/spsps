@@ -22,10 +22,14 @@ local In = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local Frame = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
+local Win_2 = Instance.new("Frame")
 local UICorner_6 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
+local Trigger_3 = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -164,7 +168,43 @@ Frame.Size = UDim2.new(0, 19, 0, 20)
 
 UICorner_5.Parent = Frame
 
-UICorner_6.Parent = ImageLabel
+Win_2.Name = "Win"
+Win_2.Parent = ContainerList
+Win_2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Win_2.BackgroundTransparency = 0.500
+Win_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Win_2.BorderSizePixel = 0
+Win_2.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+Win_2.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_6.Parent = Win_2
+
+Trigger_3.Name = "Trigger"
+Trigger_3.Parent = Win_2
+Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_3.BackgroundTransparency = 1.000
+Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.BorderSizePixel = 0
+Trigger_3.Size = UDim2.new(0, 176, 0, 38)
+Trigger_3.Font = Enum.Font.SourceSans
+Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.TextSize = 14.000
+Trigger_3.TextTransparency = 1.000
+
+TextLabel_3.Parent = Win_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.11931818, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_3.Font = Enum.Font.Jura
+TextLabel_3.Text = "Inf Money"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+
+UICorner_7.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -175,19 +215,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_7.Parent = Top
+UICorner_8.Parent = Top
 
-TextLabel_3.Parent = Top
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_3.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_3.Font = Enum.Font.Unknown
-TextLabel_3.Text = "SpineWare"
-TextLabel_3.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_3.TextSize = 18.000
+TextLabel_4.Parent = Top
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "SpineWare"
+TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_4.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -212,7 +252,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function TRPGIV_fake_script() -- Trigger.LocalScript 
+local function DKFMW_fake_script() -- Trigger.LocalScript 
 	local script = Instance.new('LocalScript', Trigger)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -237,8 +277,8 @@ local function TRPGIV_fake_script() -- Trigger.LocalScript
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(TRPGIV_fake_script)()
-local function HMFP_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(DKFMW_fake_script)()
+local function ZJDIWY_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -267,9 +307,40 @@ local function HMFP_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(HMFP_fake_script)()
-local function AREJ_fake_script() -- TextLabel_3.Script 
-	local script = Instance.new('LocalScript', TextLabel_3)
+coroutine.wrap(ZJDIWY_fake_script)()
+local function STHVS_fake_script() -- Trigger_3.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_3)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local args = {
+			[1] = {
+				["Flour"] = -math.huge
+			}
+		}
+	
+		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Data"):WaitForChild("BuyShopGoodsRE"):FireServer(unpack(args))
+	end)
+	if not sucess then
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+		wait(2)
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()		
+	else
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+		wait(2)
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
+	end
+end
+coroutine.wrap(STHVS_fake_script)()
+local function SMLY_fake_script() -- TextLabel_4.Script 
+	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -286,8 +357,8 @@ local function AREJ_fake_script() -- TextLabel_3.Script
 		end)
 	end)
 end
-coroutine.wrap(AREJ_fake_script)()
-local function GJMBGLX_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(SMLY_fake_script)()
+local function SZVULD_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -330,8 +401,8 @@ local function GJMBGLX_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(GJMBGLX_fake_script)()
-local function XWTN_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(SZVULD_fake_script)()
+local function WUPXMZ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -340,8 +411,8 @@ local function XWTN_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(XWTN_fake_script)()
-local function RUFJ_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(WUPXMZ_fake_script)()
+local function GUBOASX_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -357,8 +428,8 @@ local function RUFJ_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(RUFJ_fake_script)()
-local function IMPP_fake_script() -- SupermarketSimulator.Tween 
+coroutine.wrap(GUBOASX_fake_script)()
+local function MQTNNWP_fake_script() -- SupermarketSimulator.Tween 
 	local script = Instance.new('LocalScript', SupermarketSimulator)
 
 	local list = {
@@ -414,4 +485,4 @@ local function IMPP_fake_script() -- SupermarketSimulator.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(IMPP_fake_script)()
+coroutine.wrap(MQTNNWP_fake_script)()

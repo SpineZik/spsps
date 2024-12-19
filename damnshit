@@ -36,4 +36,6 @@ elseif game.PlaceId == 117775934779043 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/deergame"))()
 elseif game.PlaceId == 18254034839 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/track%20race"))()
+elseif game.PlaceId == 139633471705544 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Star%20Simulator"))()
 end

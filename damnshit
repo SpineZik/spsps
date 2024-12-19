@@ -34,4 +34,6 @@ elseif game.PlaceId == 133301076624038 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/King%20of%20the%20Cannon"))()
 elseif game.PlaceId == 117775934779043 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/deergame"))()
+elseif game.PlaceId == 18254034839 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/track%20race"))()
 end

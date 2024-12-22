@@ -164,7 +164,7 @@ local function TWFMIW_fake_script() -- Trigger.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		local player = game.Players.LocalPlayer
 		local character = player.Character or player.CharacterAdded:Wait()
-		local targetCFrame = CFrame.new(1098.86963, 317.739014, 252.171661, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+		local targetCFrame = CFrame.new(813.125671, 516.04187, 259.271973, -0.999848366, -0.017436387, 0, -0.017436387, 0.999847949, 0, -0, 0, -1.00000048)
 	
 		character:WaitForChild("HumanoidRootPart").CFrame = targetCFrame
 	end)

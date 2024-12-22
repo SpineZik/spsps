@@ -44,4 +44,6 @@ elseif game.PlaceId == 78854354346740 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Build%20your%20Football%20team%20and%20prove%20them%20wrong!"))()
 elseif game.PlaceId == 18199234764 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Snake%20Simulator"))()
+elseif game.PlaceId == 18616404175 then
+       https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Car%20Rng
 end

@@ -50,4 +50,6 @@ elseif game.PlaceId == 15703316059 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Carry%20Simulator"))()
 elseif game.PlaceId == 13536964001 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/My%20Car%20Wash"))()
+elseif game.PlaceId == 122543305541623 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Become%20A%20Snowball"))()
 end

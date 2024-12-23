@@ -34,10 +34,18 @@ local UICorner_9 = Instance.new("UICorner")
 local Frame_3 = Instance.new("Frame")
 local UICorner_10 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
+local VipLeg = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
+local Trigger_4 = Instance.new("TextButton")
+local In_4 = Instance.new("Frame")
 local UICorner_12 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
+local UICorner_14 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -248,7 +256,61 @@ TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 20.000
 TextLabel_3.TextWrapped = true
 
-UICorner_11.Parent = ImageLabel
+VipLeg.Name = "Vip Leg"
+VipLeg.Parent = ContainerList
+VipLeg.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+VipLeg.BackgroundTransparency = 0.500
+VipLeg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VipLeg.BorderSizePixel = 0
+VipLeg.Position = UDim2.new(0, 0, 0.165938869, 0)
+VipLeg.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_11.Parent = VipLeg
+
+Trigger_4.Name = "Trigger"
+Trigger_4.Parent = VipLeg
+Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_4.BackgroundTransparency = 1.000
+Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.BorderSizePixel = 0
+Trigger_4.Size = UDim2.new(0, 176, 0, 38)
+Trigger_4.Font = Enum.Font.SourceSans
+Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.TextSize = 14.000
+Trigger_4.TextTransparency = 1.000
+
+In_4.Name = "In"
+In_4.Parent = VipLeg
+In_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_4.BorderSizePixel = 0
+In_4.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_4.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_12.Parent = In_4
+
+Frame_4.Parent = In_4
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_13.Parent = Frame_4
+
+TextLabel_4.Parent = VipLeg
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_4.Font = Enum.Font.Jura
+TextLabel_4.Text = "Vip Train Leg"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
+
+UICorner_14.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -259,19 +321,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_12.Parent = Top
+UICorner_15.Parent = Top
 
-TextLabel_4.Parent = Top
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_4.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "SpineWare"
-TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_4.TextSize = 18.000
+TextLabel_5.Parent = Top
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "SpineWare"
+TextLabel_5.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_5.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -296,7 +358,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function UCGPVCQ_fake_script() -- Trigger.OnActivate 
+local function YALTZWW_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -329,8 +391,8 @@ local function UCGPVCQ_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(UCGPVCQ_fake_script)()
-local function ZAIYZ_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(YALTZWW_fake_script)()
+local function QYDTCX_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -363,8 +425,8 @@ local function ZAIYZ_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(ZAIYZ_fake_script)()
-local function QDPUDTI_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(QYDTCX_fake_script)()
+local function YEXX_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -393,9 +455,43 @@ local function QDPUDTI_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(QDPUDTI_fake_script)()
-local function LFPWNFQ_fake_script() -- TextLabel_4.Script 
-	local script = Instance.new('LocalScript', TextLabel_4)
+coroutine.wrap(YEXX_fake_script)()
+local function NRRRMNC_fake_script() -- Trigger_4.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_4)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local A_1 = 176
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.TrainService.RF.PlayerExercise
+				Event:InvokeServer(A_1)
+				local A_1 = 176
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.TrainService.RF.PlayerExercise
+				Event:InvokeServer(A_1)
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(NRRRMNC_fake_script)()
+local function YNKHTTN_fake_script() -- TextLabel_5.Script 
+	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -412,8 +508,8 @@ local function LFPWNFQ_fake_script() -- TextLabel_4.Script
 		end)
 	end)
 end
-coroutine.wrap(LFPWNFQ_fake_script)()
-local function UNRWR_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(YNKHTTN_fake_script)()
+local function SXIK_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -456,8 +552,8 @@ local function UNRWR_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(UNRWR_fake_script)()
-local function PDIG_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(SXIK_fake_script)()
+local function ARBUL_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -466,8 +562,8 @@ local function PDIG_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(PDIG_fake_script)()
-local function GFUHY_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(ARBUL_fake_script)()
+local function VMXAP_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -483,8 +579,8 @@ local function GFUHY_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(GFUHY_fake_script)()
-local function COMDGBH_fake_script() -- BowlingSimulator.Tween 
+coroutine.wrap(VMXAP_fake_script)()
+local function YVHWLVW_fake_script() -- BowlingSimulator.Tween 
 	local script = Instance.new('LocalScript', BowlingSimulator)
 
 	local list = {
@@ -540,4 +636,4 @@ local function COMDGBH_fake_script() -- BowlingSimulator.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(COMDGBH_fake_script)()
+coroutine.wrap(YVHWLVW_fake_script)()

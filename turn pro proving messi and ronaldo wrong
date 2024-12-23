@@ -336,7 +336,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function BZFEW_fake_script() -- Trigger.OnActivate 
+local function HGFJQI_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -365,12 +365,12 @@ local function BZFEW_fake_script() -- Trigger.OnActivate
 				local Event = game:GetService("ReplicatedStorage").Events.Ball
 				Event:FireServer(A_1)
 			end)
-			wait()
+			wait(0.1)
 		end
 	end)
 end
-coroutine.wrap(BZFEW_fake_script)()
-local function VMRG_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(HGFJQI_fake_script)()
+local function XCQDLX_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -406,8 +406,8 @@ local function VMRG_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(VMRG_fake_script)()
-local function FCJN_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(XCQDLX_fake_script)()
+local function CEZY_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -450,8 +450,8 @@ local function FCJN_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(FCJN_fake_script)()
-local function HMGKFSN_fake_script() -- Trigger_4.LocalScript 
+coroutine.wrap(CEZY_fake_script)()
+local function LVPJIR_fake_script() -- Trigger_4.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -551,8 +551,8 @@ local function HMGKFSN_fake_script() -- Trigger_4.LocalScript
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(HMGKFSN_fake_script)()
-local function OGQSB_fake_script() -- TextLabel_5.Script 
+coroutine.wrap(LVPJIR_fake_script)()
+local function PMPVL_fake_script() -- TextLabel_5.Script 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local ts = game:GetService("TweenService")
@@ -570,8 +570,8 @@ local function OGQSB_fake_script() -- TextLabel_5.Script
 		end)
 	end)
 end
-coroutine.wrap(OGQSB_fake_script)()
-local function TUXN_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(PMPVL_fake_script)()
+local function ZTPSRI_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -614,8 +614,8 @@ local function TUXN_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(TUXN_fake_script)()
-local function POUO_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(ZTPSRI_fake_script)()
+local function BAQNRG_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -624,8 +624,8 @@ local function POUO_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(POUO_fake_script)()
-local function UYBW_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(BAQNRG_fake_script)()
+local function BWUN_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -641,8 +641,8 @@ local function UYBW_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(UYBW_fake_script)()
-local function URQJXJW_fake_script() -- turnproprovingmessiandronaldowrong.Tween 
+coroutine.wrap(BWUN_fake_script)()
+local function CRTPVVB_fake_script() -- turnproprovingmessiandronaldowrong.Tween 
 	local script = Instance.new('LocalScript', turnproprovingmessiandronaldowrong)
 
 	local list = {
@@ -698,4 +698,4 @@ local function URQJXJW_fake_script() -- turnproprovingmessiandronaldowrong.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(URQJXJW_fake_script)()
+coroutine.wrap(CRTPVVB_fake_script)()

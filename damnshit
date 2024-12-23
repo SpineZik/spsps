@@ -58,4 +58,6 @@ elseif game.PlaceId == 16810777113 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/turn%20pro%20proving%20messi%20and%20ronaldo%20wrong"))()
 elseif game.PlaceId == 97798357297059 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/99%25%20Fail%20Squid%20Game!%20Glass%20Bridge!"))()
+elseif game.PlaceId == 18174311913 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Race%20Simulator"))()
 end

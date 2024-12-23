@@ -54,4 +54,6 @@ elseif game.PlaceId == 122543305541623 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Become%20A%20Snowball"))()
 elseif game.PlaceId == 17165763698 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Bowling%20Simulator"))()
+elseif game.PlaceId == 16810777113 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/turn%20pro%20proving%20messi%20and%20ronaldo%20wrong"))()
 end

@@ -506,7 +506,7 @@ local function XRRGTRR_fake_script() -- Trigger.OnActivate
 		while status do
 			pcall(function()
 				local A_1 = 1
-				local A_2 = 1000000000000000000000000000000
+				local A_2 = 100000000000000000000000000000000000
 				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.GameService.RF.GetHalfWin
 				Event:InvokeServer(A_1, A_2)
 			end)

@@ -357,7 +357,7 @@ local function HXZMIA_fake_script() -- Trigger_3.LocalScript
 		local Event = game:GetService("ReplicatedStorage").Remotes["start_skydive"]
 		Event:InvokeServer(A_1)
 	
-		local A_1 = 7380000000000000000000000000
+		local A_1 = 738000000000000000000000000000000000000000000000000000000000
 		local A_2 = 3.345833506435156
 		local Event = game:GetService("ReplicatedStorage").Remotes["validate_skydive"]
 		Event:FireServer(A_1, A_2)

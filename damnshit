@@ -68,4 +68,6 @@ elseif game.PlaceId == 109543391562036 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Be%20a%20Paper%20Airplane"))()
 elseif game.PlaceId == 17067299143 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ronaldo%20Race%20Clicker"))()
+elseif game.PlaceId == 17775837290 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Rider%20Simulator"))()
 end

@@ -74,4 +74,6 @@ elseif game.PlaceId == 117272937710628 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawlidays%20v2!%20Brawl%20Stars%20RNG"))()
 elseif game.PlaceId == 78606358056604 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawl%20Stars%20RNG"))()
+elseif game.PlaceId == 84692728598973 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20Ghost"))()
 end

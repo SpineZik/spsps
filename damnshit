@@ -73,5 +73,5 @@ elseif game.PlaceId == 17775837290 then
 elseif game.PlaceId == 117272937710628 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawlidays%20v2!%20Brawl%20Stars%20RNG"))()
 elseif game.PlaceId == 78606358056604 then
-        loadstring(game:HttpGet("https://www.roblox.com/games/78606358056604/Brawl-Stars-RNG"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawl%20Stars%20RNG"))()
 end

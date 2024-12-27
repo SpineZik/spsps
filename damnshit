@@ -78,4 +78,6 @@ elseif game.PlaceId == 84692728598973 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20Ghost"))()
 elseif game.PlaceId == 16304978305 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Goal%20Battles"))()
+elseif game.PlaceId == 16780556005 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Throw%20Ball%20Simulator"))()
 end

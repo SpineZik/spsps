@@ -82,4 +82,6 @@ elseif game.PlaceId == 16780556005 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Throw%20Ball%20Simulator"))()
 elseif game.PlaceId == 108253910201584 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/make%20steam%20games%20to%20become%20rich%20and%20famous"))()
+elseif game.PlaceId == 13896956178 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Palm%20Slap%20Friends%20Simulator"))()
 end

@@ -80,4 +80,6 @@ elseif game.PlaceId == 16304978305 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Goal%20Battles"))()
 elseif game.PlaceId == 16780556005 then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Throw%20Ball%20Simulator"))()
+elseif game.PlaceId == 108253910201584 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/make%20steam%20games%20to%20become%20rich%20and%20famous"))()
 end

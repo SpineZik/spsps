@@ -588,6 +588,14 @@ local function ZGUWRJ_fake_script() -- Trigger_5.OnActivate
 			pcall(function()
 				local Event = game:GetService("ReplicatedStorage").Shared.RBXUtil.Net["RF/AttemptWheelspin"]
 				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Shared.RBXUtil.Net["RF/AttemptWheelspin"]
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Shared.RBXUtil.Net["RF/AttemptWheelspin"]
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Shared.RBXUtil.Net["RF/AttemptWheelspin"]
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Shared.RBXUtil.Net["RF/AttemptWheelspin"]
+				Event:InvokeServer()
 			end)
 			wait()
 		end

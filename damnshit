@@ -88,4 +88,6 @@ elseif game.PlaceId ==18624794967 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/petsevolution"))()
 elseif game.PlaceId ==17370712897 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Waterslide%20Simulator"))()
+elseif game.PlaceId ==17656988049 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Delivery%20Race"))()
 end

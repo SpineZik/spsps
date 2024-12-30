@@ -577,6 +577,18 @@ local function CROUJT_fake_script() -- Trigger_5.OnActivate
 				local A_1 = 47
 				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.PetLuckService.RF.LuckOnce
 				Event:InvokeServer(A_1)
+				local A_1 = 47
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.PetLuckService.RF.LuckOnce
+				Event:InvokeServer(A_1)
+				local A_1 = 47
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.PetLuckService.RF.LuckOnce
+				Event:InvokeServer(A_1)
+				local A_1 = 47
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.PetLuckService.RF.LuckOnce
+				Event:InvokeServer(A_1)
+				local A_1 = 47
+				local Event = game:GetService("ReplicatedStorage").Packages.Knit.Services.PetLuckService.RF.LuckOnce
+				Event:InvokeServer(A_1)
 			end)
 			wait()
 		end

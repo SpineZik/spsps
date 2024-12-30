@@ -386,6 +386,7 @@ local function YYLHSZ_fake_script() -- Trigger_3.OnActivate
 					}
 				local Event = game:GetService("ReplicatedStorage").Remotes.playercanclaimgifs
 				Event:FireServer(A_1)
+				local A_1 = 
 					{
 						[1] = 6
 					}

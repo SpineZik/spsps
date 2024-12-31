@@ -616,10 +616,10 @@ local function WXEK_fake_script() -- Trigger_5.OnActivate
 		
 		while status do
 			pcall(function()
-				local A_1 = "ForestEgg"
-				local A_2 = "FreeHatch"
-				local Event = game:GetService("ReplicatedStorage").Remotes.BuyEgg
-				Event:FireServer(A_1, A_2)
+                        local A_1 = "DominusEgg"
+                        local A_2 = "FreeHatch"
+                         local Event = game:GetService("ReplicatedStorage").Remotes.BuyEgg
+                          Event:FireServer(A_1, A_2)
 			end)
 			wait()
 		end

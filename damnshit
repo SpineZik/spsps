@@ -96,4 +96,6 @@ elseif game.PlaceId ==122262303515113 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Muscle%20Boxing%20Simulator"))()
 elseif game.PlaceId ==15610971848 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sword%20Training%20Simulator"))()
+elseif game.PlaceId ==18749079847 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/HeadBattle%20Simulator"))()
 end

@@ -98,4 +98,16 @@ elseif game.PlaceId ==15610971848 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sword%20Training%20Simulator"))()
 elseif game.PlaceId ==18749079847 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/HeadBattle%20Simulator"))()
+elseif game.PlaceId ==133033561458760 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
+elseif game.PlaceId ==132811399724545 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
+elseif game.PlaceId ==88685243659217 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
+elseif game.PlaceId ==106961878099428 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
+elseif game.PlaceId ==125900816440808 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
+elseif game.PlaceId ==71345480156033 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
 end

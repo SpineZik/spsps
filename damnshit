@@ -112,4 +112,6 @@ elseif game.PlaceId ==71345480156033 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
 elseif game.PlaceId ==115560789670995 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Turbo%20Racing%20Simulator!"))()
+elseif game.PlaceId ==80522439815035 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Kawaii%20Hatchers!"))()
 end

@@ -120,4 +120,6 @@ elseif game.PlaceId ==86230775293861 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch"))()
 elseif game.PlaceId ==125067579372958 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch"))()
+elseif game.PlaceId ==78810217013863 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Baseball%20Simulator"))()
 end

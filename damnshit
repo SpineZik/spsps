@@ -116,4 +116,6 @@ elseif game.PlaceId ==131104406203240 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Animal%20Racing"))()
 elseif game.PlaceId ==105483453326837 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Racing%20Simulator"))()
+elseif game.PlaceId ==118611268319028 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20for%20SPEED!"))()
 end

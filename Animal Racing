@@ -318,7 +318,7 @@ local function DEHO_fake_script() -- Trigger.OnActivate
 		
 		while status do
 			pcall(function()
-				for i = 1, 16 do
+				for i = 1, 3000 do
 					local A_1 = 
 						{
 							["data"] = 

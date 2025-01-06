@@ -405,7 +405,6 @@ local function IKUDZ_fake_script() -- Trigger_3.OnActivate
 							}, 
 							["throwmap"] = 
 							{
-								[8023] = true, 
 								[8021] = true
 							}, 
 							["index"] = 2

@@ -114,4 +114,6 @@ elseif game.PlaceId ==78810217013863 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Baseball%20Simulator"))()
 elseif game.PlaceId ==131104406203240 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Animal%20Racing"))()
+elseif game.PlaceId ==105483453326837 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Racing%20Simulator"))()
 end

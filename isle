@@ -998,7 +998,6 @@ TextLabel_17.Text = "Enable All Levers"
 TextLabel_17.TextColor3 = Color3.fromRGB(240, 240, 240)
 TextLabel_17.TextSize = 14.000
 TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
-
 TextButton_7.Parent = Button_7
 TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_7.BackgroundTransparency = 1.000
@@ -2222,16 +2221,16 @@ local function VBNUHQ_fake_script() -- TextButton_10.LocalScript
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 	
 			local list = {
-				{workspace.Map.Main.LeechContainer.Handle.ClickDetector,workspace.Map.Main.LeechContainer},
-				{workspace.Map.Main.HornetContainer.Handle.ClickDetector,workspace.Map.Main.HornetContainer},
-				{workspace.Map.Main.FrogContainer.Handle.ClickDetector,workspace.Map.Main.FrogContainer}
+				{workspace.Map.Main.LeechContainer.Handle.ClickDetector,workspace.Map.Main.LeechContainer,workspace.Map.Main.LeechContainer.Handle.ClickDetector.Parent.CFrame},
+				{workspace.Map.Main.HornetContainer.Handle.ClickDetector,workspace.Map.Main.HornetContainer,workspace.Map.Main.HornetContainer.Handle.ClickDetector.Parent.CFrame},
+				{workspace.Map.Main.FrogContainer.Handle.ClickDetector,workspace.Map.Main.FrogContainer,workspace.Map.Main.FrogContainer.Handle.ClickDetector.Parent.CFrame}
 			}
 	
 			for _, container in list do
-                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
 				for i = 1, 35 do 
 					pcall(function()
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].Handle.CFrame
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[3]
 					end)
 					
 					fireclickdetector(container[1])

@@ -2228,9 +2228,9 @@ local function VBNUHQ_fake_script() -- TextButton_10.LocalScript
 			}
 	
 			for _, container in list do
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
 				for i = 1, 35 do 
 					pcall(function()
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[3].CFrame
 					end)
 					

@@ -3185,6 +3185,7 @@ local forest_10 = Instance.new("TextButton")
 local forest_11 = Instance.new("TextButton")
 local forest_12 = Instance.new("TextButton")
 local forest_13 = Instance.new("TextButton")
+local forest_14 = Instance.new("TextButton")
 --Properties:
 
 ScreenGui.Parent = game.CoreGui
@@ -3279,6 +3280,19 @@ forest_4.Text = "Tallest Point"
 forest_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 forest_4.TextSize = 19.000
 forest_4.TextWrapped = true
+
+forest_14.Name = "forest"
+forest_14.Parent = ScrollingFrame
+forest_14.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+forest_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+forest_14.BorderSizePixel = 0
+forest_14.Position = UDim2.new(0.0760233924, 0, 0, 0)
+forest_14.Size = UDim2.new(0, 133, 0, 43)
+forest_14.Font = Enum.Font.Jura
+forest_14.Text = "Tallest Point"
+forest_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+forest_14.TextSize = 19.000
+forest_14.TextWrapped = true
 
 forest_5.Name = "forest"
 forest_5.Parent = ScrollingFrame
@@ -3544,6 +3558,18 @@ local function ECCLLRX_fake_script() -- forest_11.LocalScript
 	end)
 end
 coroutine.wrap(ECCLLRX_fake_script)()
+
+local function ECCLLRXx_fake_script() -- forest_11.LocalScript 
+	local script = Instance.new('LocalScript', forest_11)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+		char.CFrame = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)
+		
+	end)
+end
+coroutine.wrap(ECCLLRXx_fake_script)()
+
 local function WHYI_fake_script() -- Container.LocalScript 
 	local script = Instance.new('LocalScript', Container)
 

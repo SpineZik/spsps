@@ -2222,16 +2222,16 @@ local function VBNUHQ_fake_script() -- TextButton_10.LocalScript
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 	
 			local list = {
-				{workspace.Map.Main.LeechContainer.Handle.ClickDetector,workspace.Map.Main.LeechContainer,workspace.Map.Main.LeechContainer.Handle.ClickDetector.Parent.CFrame},
-				{workspace.Map.Main.HornetContainer.Handle.ClickDetector,workspace.Map.Main.HornetContainer,workspace.Map.Main.HornetContainer.Handle.ClickDetector.Parent.CFrame},
-				{workspace.Map.Main.FrogContainer.Handle.ClickDetector,workspace.Map.Main.FrogContainer,workspace.Map.Main.FrogContainer.Handle.ClickDetector.Parent.CFrame}
+				{workspace.Map.Main.LeechContainer.Handle.ClickDetector,workspace.Map.Main.LeechContainer},
+				{workspace.Map.Main.HornetContainer.Handle.ClickDetector,workspace.Map.Main.HornetContainer},
+				{workspace.Map.Main.FrogContainer.Handle.ClickDetector,workspace.Map.Main.FrogContainer}
 			}
 	
 			for _, container in list do
                                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
 				for i = 1, 35 do 
 					pcall(function()
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[3].CFrame
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].Handle.CFrame
 					end)
 					
 					fireclickdetector(container[1])

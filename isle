@@ -3289,7 +3289,7 @@ forest_14.BorderSizePixel = 0
 forest_14.Position = UDim2.new(0.0760233924, 0, 0, 0)
 forest_14.Size = UDim2.new(0, 133, 0, 43)
 forest_14.Font = Enum.Font.Jura
-forest_14.Text = "Tallest Point"
+forest_14.Text = "Crash"
 forest_14.TextColor3 = Color3.fromRGB(255, 255, 255)
 forest_14.TextSize = 19.000
 forest_14.TextWrapped = true
@@ -3560,7 +3560,7 @@ end
 coroutine.wrap(ECCLLRX_fake_script)()
 
 local function ECCLLRXx_fake_script() -- forest_11.LocalScript 
-	local script = Instance.new('LocalScript', forest_11)
+	local script = Instance.new('LocalScript', forest_14)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		local char = game.Players.LocalPlayer.Character.HumanoidRootPart

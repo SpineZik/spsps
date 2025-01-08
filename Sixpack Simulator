@@ -34,10 +34,50 @@ local UICorner_9 = Instance.new("UICorner")
 local Frame_3 = Instance.new("Frame")
 local UICorner_10 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
+local AutoBattle = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
+local Trigger_4 = Instance.new("TextButton")
+local In_4 = Instance.new("Frame")
 local UICorner_12 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
+local AutoBattle2 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local Trigger_5 = Instance.new("TextButton")
+local In_5 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Frame_5 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local AutoBattle3 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Trigger_6 = Instance.new("TextButton")
+local In_6 = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local Frame_6 = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local AutoBattle4 = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local Trigger_7 = Instance.new("TextButton")
+local In_7 = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local Frame_7 = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local AutoBattle5 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local Trigger_8 = Instance.new("TextButton")
+local In_8 = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local Frame_8 = Instance.new("Frame")
+local UICorner_25 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local UICorner_26 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -248,7 +288,277 @@ TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 20.000
 TextLabel_3.TextWrapped = true
 
-UICorner_11.Parent = ImageLabel
+AutoBattle.Name = "Auto Battle"
+AutoBattle.Parent = ContainerList
+AutoBattle.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoBattle.BackgroundTransparency = 0.500
+AutoBattle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBattle.BorderSizePixel = 0
+AutoBattle.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoBattle.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_11.Parent = AutoBattle
+
+Trigger_4.Name = "Trigger"
+Trigger_4.Parent = AutoBattle
+Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_4.BackgroundTransparency = 1.000
+Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.BorderSizePixel = 0
+Trigger_4.Size = UDim2.new(0, 176, 0, 38)
+Trigger_4.Font = Enum.Font.SourceSans
+Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.TextSize = 14.000
+Trigger_4.TextTransparency = 1.000
+
+In_4.Name = "In"
+In_4.Parent = AutoBattle
+In_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_4.BorderSizePixel = 0
+In_4.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_4.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_12.Parent = In_4
+
+Frame_4.Parent = In_4
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_13.Parent = Frame_4
+
+TextLabel_4.Parent = AutoBattle
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_4.Font = Enum.Font.Jura
+TextLabel_4.Text = "Auto Battle 1"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
+
+AutoBattle2.Name = "Auto Battle 2"
+AutoBattle2.Parent = ContainerList
+AutoBattle2.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoBattle2.BackgroundTransparency = 0.500
+AutoBattle2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBattle2.BorderSizePixel = 0
+AutoBattle2.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoBattle2.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_14.Parent = AutoBattle2
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = AutoBattle2
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 176, 0, 38)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+In_5.Name = "In"
+In_5.Parent = AutoBattle2
+In_5.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_5.BorderSizePixel = 0
+In_5.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_5.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_15.Parent = In_5
+
+Frame_5.Parent = In_5
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_16.Parent = Frame_5
+
+TextLabel_5.Parent = AutoBattle2
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "Auto Battle 2"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
+
+AutoBattle3.Name = "Auto Battle 3"
+AutoBattle3.Parent = ContainerList
+AutoBattle3.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoBattle3.BackgroundTransparency = 0.500
+AutoBattle3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBattle3.BorderSizePixel = 0
+AutoBattle3.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoBattle3.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_17.Parent = AutoBattle3
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = AutoBattle3
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 176, 0, 38)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+In_6.Name = "In"
+In_6.Parent = AutoBattle3
+In_6.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_6.BorderSizePixel = 0
+In_6.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_6.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_18.Parent = In_6
+
+Frame_6.Parent = In_6
+Frame_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_19.Parent = Frame_6
+
+TextLabel_6.Parent = AutoBattle3
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_6.Font = Enum.Font.Jura
+TextLabel_6.Text = "Auto Battle 3"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 20.000
+TextLabel_6.TextWrapped = true
+
+AutoBattle4.Name = "Auto Battle 4"
+AutoBattle4.Parent = ContainerList
+AutoBattle4.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoBattle4.BackgroundTransparency = 0.500
+AutoBattle4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBattle4.BorderSizePixel = 0
+AutoBattle4.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoBattle4.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_20.Parent = AutoBattle4
+
+Trigger_7.Name = "Trigger"
+Trigger_7.Parent = AutoBattle4
+Trigger_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_7.BackgroundTransparency = 1.000
+Trigger_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.BorderSizePixel = 0
+Trigger_7.Size = UDim2.new(0, 176, 0, 38)
+Trigger_7.Font = Enum.Font.SourceSans
+Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.TextSize = 14.000
+Trigger_7.TextTransparency = 1.000
+
+In_7.Name = "In"
+In_7.Parent = AutoBattle4
+In_7.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_7.BorderSizePixel = 0
+In_7.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_7.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_21.Parent = In_7
+
+Frame_7.Parent = In_7
+Frame_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.BorderSizePixel = 0
+Frame_7.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_22.Parent = Frame_7
+
+TextLabel_7.Parent = AutoBattle4
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_7.Font = Enum.Font.Jura
+TextLabel_7.Text = "Auto Battle 4"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 20.000
+TextLabel_7.TextWrapped = true
+
+AutoBattle5.Name = "Auto Battle 5"
+AutoBattle5.Parent = ContainerList
+AutoBattle5.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoBattle5.BackgroundTransparency = 0.500
+AutoBattle5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoBattle5.BorderSizePixel = 0
+AutoBattle5.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoBattle5.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_23.Parent = AutoBattle5
+
+Trigger_8.Name = "Trigger"
+Trigger_8.Parent = AutoBattle5
+Trigger_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_8.BackgroundTransparency = 1.000
+Trigger_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.BorderSizePixel = 0
+Trigger_8.Size = UDim2.new(0, 176, 0, 38)
+Trigger_8.Font = Enum.Font.SourceSans
+Trigger_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.TextSize = 14.000
+Trigger_8.TextTransparency = 1.000
+
+In_8.Name = "In"
+In_8.Parent = AutoBattle5
+In_8.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_8.BorderSizePixel = 0
+In_8.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_8.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_24.Parent = In_8
+
+Frame_8.Parent = In_8
+Frame_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_8.BorderSizePixel = 0
+Frame_8.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_25.Parent = Frame_8
+
+TextLabel_8.Parent = AutoBattle5
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_8.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_8.Font = Enum.Font.Jura
+TextLabel_8.Text = "Auto Battle 5"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 20.000
+TextLabel_8.TextWrapped = true
+
+UICorner_26.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -259,19 +569,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_12.Parent = Top
+UICorner_27.Parent = Top
 
-TextLabel_4.Parent = Top
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_4.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "SpineWare"
-TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_4.TextSize = 18.000
+TextLabel_9.Parent = Top
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_9.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "SpineWare"
+TextLabel_9.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_9.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -296,7 +606,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function VNZCN_fake_script() -- Trigger.OnActivate 
+local function WFJEADO_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -333,8 +643,8 @@ local function VNZCN_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(VNZCN_fake_script)()
-local function PZEJP_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(WFJEADO_fake_script)()
+local function VHJZW_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -367,8 +677,8 @@ local function PZEJP_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(PZEJP_fake_script)()
-local function UAWJVY_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(VHJZW_fake_script)()
+local function RWSZA_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -397,9 +707,176 @@ local function UAWJVY_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(UAWJVY_fake_script)()
-local function ZSHX_fake_script() -- TextLabel_4.Script 
-	local script = Instance.new('LocalScript', TextLabel_4)
+coroutine.wrap(RWSZA_fake_script)()
+local function ZFVWTKM_fake_script() -- Trigger_4.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_4)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local args = {
+					[1] = "Noob"
+				}
+	
+				game:GetService("ReplicatedStorage").packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.BattleService.RE.BattleRequest:FireServer(unpack(args))
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(ZFVWTKM_fake_script)()
+local function TIWJN_fake_script() -- Trigger_5.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_5)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local args = {
+					[1] = "Medium"
+				}
+	
+				game:GetService("ReplicatedStorage").packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.BattleService.RE.BattleRequest:FireServer(unpack(args))
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(TIWJN_fake_script)()
+local function CNTOS_fake_script() -- Trigger_6.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_6)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local args = {
+					[1] = "Hard"
+				}
+	
+				game:GetService("ReplicatedStorage").packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.BattleService.RE.BattleRequest:FireServer(unpack(args))
+	
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(CNTOS_fake_script)()
+local function XHCXCZM_fake_script() -- Trigger_7.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_7)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local args = {
+					[1] = "Extreme"
+				}
+	
+				game:GetService("ReplicatedStorage").packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.BattleService.RE.BattleRequest:FireServer(unpack(args))
+	
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(XHCXCZM_fake_script)()
+local function ICHJVRV_fake_script() -- Trigger_8.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_8)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local args = {
+					[1] = "Boss"
+				}
+	
+				game:GetService("ReplicatedStorage").packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.BattleService.RE.BattleRequest:FireServer(unpack(args))
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(ICHJVRV_fake_script)()
+local function JRZCJOP_fake_script() -- TextLabel_9.Script 
+	local script = Instance.new('LocalScript', TextLabel_9)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -416,8 +893,8 @@ local function ZSHX_fake_script() -- TextLabel_4.Script
 		end)
 	end)
 end
-coroutine.wrap(ZSHX_fake_script)()
-local function HNRSH_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(JRZCJOP_fake_script)()
+local function PKMQJL_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -460,8 +937,8 @@ local function HNRSH_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(HNRSH_fake_script)()
-local function ENDD_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(PKMQJL_fake_script)()
+local function QWZYD_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -470,8 +947,8 @@ local function ENDD_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(ENDD_fake_script)()
-local function XQCMIS_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(QWZYD_fake_script)()
+local function ULHLKWD_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -487,8 +964,8 @@ local function XQCMIS_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(XQCMIS_fake_script)()
-local function CBHD_fake_script() -- SixpackSimulator.Tween 
+coroutine.wrap(ULHLKWD_fake_script)()
+local function MMVLYNL_fake_script() -- SixpackSimulator.Tween 
 	local script = Instance.new('LocalScript', SixpackSimulator)
 
 	local list = {
@@ -544,4 +1021,4 @@ local function CBHD_fake_script() -- SixpackSimulator.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(CBHD_fake_script)()
+coroutine.wrap(MMVLYNL_fake_script)()

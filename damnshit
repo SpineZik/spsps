@@ -118,4 +118,6 @@ elseif game.PlaceId ==118611268319028 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20for%20SPEED!"))()
 elseif game.PlaceId ==18960157888 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Plane%20Race%20Clicker"))()
+elseif game.PlaceId ==16102065846 then 
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sixpack%20Simulator"))()
 end

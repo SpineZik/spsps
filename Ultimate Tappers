@@ -259,6 +259,36 @@ local function GBAB_fake_script() -- Trigger.OnActivate
 				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
 				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
 				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
+				local A_1 = game:GetService("Workspace").Eggs["Mystery Egg"]
+				local Event = game:GetService("ReplicatedStorage").EggHatchingRemote.HatchServer
+				Event:InvokeServer(A_1)
 			end)
 			wait()
 		end

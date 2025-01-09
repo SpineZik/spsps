@@ -124,4 +124,6 @@ elseif game.PlaceId ==18913300956 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sigma%20Simulator"))()
 elseif game.PlaceId == 3431407618 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"))()
+elseif game.PlaceId == 90607899071168 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Simulator"))()
 end

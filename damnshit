@@ -122,4 +122,6 @@ elseif game.PlaceId ==16102065846 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sixpack%20Simulator"))()
 elseif game.PlaceId ==18913300956 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sigma%20Simulator"))()
+elseif game.PlaceId == 3431407618 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"))()
 end

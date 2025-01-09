@@ -126,4 +126,6 @@ elseif game.PlaceId == 3431407618 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"))()
 elseif game.PlaceId == 90607899071168 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Simulator"))()
+elseif game.PlaceId == 107810605145141 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ultimate%20Tappers"))()
 end

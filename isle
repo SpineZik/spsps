@@ -998,7 +998,6 @@ Button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Button_7.BorderSizePixel = 0
 Button_7.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
 Button_7.Size = UDim2.new(0, 159, 0, 29)
-
 UICorner_30.Parent = Button_7
 
 TextLabel_17.Parent = Button_7
@@ -1184,7 +1183,7 @@ UIPadding_5.PaddingTop = UDim.new(0, 10)
 UIGridLayout_4.Parent = FeaturesContainer
 UIGridLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_4.CellSize = UDim2.new(0, 159, 0, 29)
-UIGridLayout_4..CellPadding = UDim2.new(0, 25,0, 5)
+UIGridLayout_4.CellPadding = UDim2.new(0, 25,0, 5)
 
 save.Name = "save"
 save.Parent = FeaturesContainer

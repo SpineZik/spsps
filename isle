@@ -744,6 +744,7 @@ UIPadding_3.PaddingTop = UDim.new(0, 10)
 UIGridLayout_2.Parent = SettingsContainer
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_2.CellSize = UDim2.new(0, 159, 0, 29)
+UIGridLayout_2.CellPadding = UDim2.new(0, 25,0, 5)
 
 Button.Name = "Button"
 Button.Parent = SettingsContainer
@@ -1183,6 +1184,7 @@ UIPadding_5.PaddingTop = UDim.new(0, 10)
 UIGridLayout_4.Parent = FeaturesContainer
 UIGridLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_4.CellSize = UDim2.new(0, 159, 0, 29)
+UIGridLayout_4..CellPadding = UDim2.new(0, 25,0, 5)
 
 save.Name = "save"
 save.Parent = FeaturesContainer
@@ -1493,6 +1495,7 @@ UIPadding_6.PaddingTop = UDim.new(0, 10)
 UIGridLayout_5.Parent = TeleportsContainer
 UIGridLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_5.CellSize = UDim2.new(0, 159, 0, 29)
+UIGridLayout_5.CellPadding = UDim2.new(0, 25,0, 5)
 
 _1.Name = "1"
 _1.Parent = TeleportsContainer

@@ -2133,12 +2133,10 @@ local function CDUZYN_fake_script() -- TextButton_6.LocalScript
 			for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
 				if v:IsA("Model") and string.find(v.Name,"Plate") then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,3,0)
-					pcall(function()
 					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
 					wait(0.1)
 					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
-					wait(1)
-					end)
+					wait(0.5)
 				end
 			end
 	

@@ -146,40 +146,54 @@
  UICorner_39 = Instance.new("UICorner")
  TextLabel_26 = Instance.new("TextLabel")
  TextButton_16 = Instance.new("TextButton")
+ _3 = Instance.new("Frame")
+ UICorner_40 = Instance.new("UICorner")
+ TextLabel_27 = Instance.new("TextLabel")
+ TextButton_17 = Instance.new("TextButton")
+ save_6 = Instance.new("Frame")
+ UICorner_41 = Instance.new("UICorner")
+ TextLabel_28 = Instance.new("TextLabel")
+ TextButton_18 = Instance.new("TextButton")
+ v2 = Instance.new("Frame")
+ UICorner_42 = Instance.new("UICorner")
+ TextLabel_29 = Instance.new("TextLabel")
+ Indicator_2 = Instance.new("Frame")
+ UICorner_43 = Instance.new("UICorner")
+ TextButton_19 = Instance.new("TextButton")
  TeleportsContainer = Instance.new("ScrollingFrame")
  UIPadding_6 = Instance.new("UIPadding")
  UIGridLayout_5 = Instance.new("UIGridLayout")
  _1 = Instance.new("Frame")
- UICorner_40 = Instance.new("UICorner")
- TextLabel_27 = Instance.new("TextLabel")
- TextButton_17 = Instance.new("TextButton")
- _2 = Instance.new("Frame")
- UICorner_41 = Instance.new("UICorner")
- TextLabel_28 = Instance.new("TextLabel")
- TextButton_18 = Instance.new("TextButton")
- _3 = Instance.new("Frame")
- UICorner_42 = Instance.new("UICorner")
- TextLabel_29 = Instance.new("TextLabel")
- TextButton_19 = Instance.new("TextButton")
- _3_2 = Instance.new("Frame")
- UICorner_43 = Instance.new("UICorner")
+ UICorner_44 = Instance.new("UICorner")
  TextLabel_30 = Instance.new("TextLabel")
  TextButton_20 = Instance.new("TextButton")
- UICorner_44 = Instance.new("UICorner")
- BlockFrame = Instance.new("Frame")
+ _3_2 = Instance.new("Frame")
  UICorner_45 = Instance.new("UICorner")
+ TextLabel_31 = Instance.new("TextLabel")
+ TextButton_21 = Instance.new("TextButton")
+ _3_3 = Instance.new("Frame")
+ UICorner_46 = Instance.new("UICorner")
+ TextLabel_32 = Instance.new("TextLabel")
+ TextButton_22 = Instance.new("TextButton")
+ _2 = Instance.new("Frame")
+ UICorner_47 = Instance.new("UICorner")
+ TextLabel_33 = Instance.new("TextLabel")
+ TextButton_23 = Instance.new("TextButton")
+ UICorner_48 = Instance.new("UICorner")
+ BlockFrame = Instance.new("Frame")
+ UICorner_49 = Instance.new("UICorner")
  ImageLabel = Instance.new("ImageLabel")
  Frame_3 = Instance.new("Frame")
- UICorner_46 = Instance.new("UICorner")
+ UICorner_50 = Instance.new("UICorner")
  TextBox = Instance.new("TextBox")
- UICorner_47 = Instance.new("UICorner")
+ UICorner_51 = Instance.new("UICorner")
  FunctionName = Instance.new("TextLabel")
  Value = Instance.new("TextLabel")
- UICorner_48 = Instance.new("UICorner")
+ UICorner_52 = Instance.new("UICorner")
  ImageButton = Instance.new("ImageButton")
  ImageButton_2 = Instance.new("ImageButton")
  hideshow = Instance.new("ImageButton")
- UICorner_49 = Instance.new("UICorner")
+ UICorner_53 = Instance.new("UICorner")
 
 --Properties:
 
@@ -998,6 +1012,7 @@ TextLabel_17.Text = "Enable All Levers"
 TextLabel_17.TextColor3 = Color3.fromRGB(240, 240, 240)
 TextLabel_17.TextSize = 14.000
 TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
+
 TextButton_7.Parent = Button_7
 TextButton_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_7.BackgroundTransparency = 1.000
@@ -1344,6 +1359,121 @@ TextButton_16.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_16.TextSize = 14.000
 TextButton_16.TextTransparency = 1.000
 
+_3.Name = "3"
+_3.Parent = FeaturesContainer
+_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_3.BackgroundTransparency = 0.700
+_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3.BorderSizePixel = 0
+_3.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+_3.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_40.Parent = _3
+
+TextLabel_27.Parent = _3
+TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_27.BackgroundTransparency = 1.000
+TextLabel_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_27.BorderSizePixel = 0
+TextLabel_27.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_27.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_27.Font = Enum.Font.ArialBold
+TextLabel_27.Text = "Auto Crate Hack"
+TextLabel_27.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_27.TextSize = 14.000
+TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_17.Parent = _3
+TextButton_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_17.BackgroundTransparency = 1.000
+TextButton_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_17.BorderSizePixel = 0
+TextButton_17.Size = UDim2.new(0, 159, 0, 29)
+TextButton_17.Font = Enum.Font.SourceSans
+TextButton_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_17.TextSize = 14.000
+TextButton_17.TextTransparency = 1.000
+
+save_6.Name = "save"
+save_6.Parent = FeaturesContainer
+save_6.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+save_6.BackgroundTransparency = 0.700
+save_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+save_6.BorderSizePixel = 0
+save_6.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+save_6.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_41.Parent = save_6
+
+TextLabel_28.Parent = save_6
+TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_28.BackgroundTransparency = 1.000
+TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_28.BorderSizePixel = 0
+TextLabel_28.Position = UDim2.new(0.0697359294, 0, 0, 0)
+TextLabel_28.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_28.Font = Enum.Font.ArialBold
+TextLabel_28.Text = "Inf Storage V1"
+TextLabel_28.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_28.TextSize = 14.000
+TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_18.Parent = save_6
+TextButton_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_18.BackgroundTransparency = 1.000
+TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_18.BorderSizePixel = 0
+TextButton_18.Size = UDim2.new(0, 159, 0, 29)
+TextButton_18.Font = Enum.Font.SourceSans
+TextButton_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_18.TextSize = 14.000
+TextButton_18.TextTransparency = 1.000
+
+v2.Name = "v2"
+v2.Parent = FeaturesContainer
+v2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+v2.BackgroundTransparency = 0.700
+v2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+v2.BorderSizePixel = 0
+v2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+v2.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_42.Parent = v2
+
+TextLabel_29.Parent = v2
+TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_29.BackgroundTransparency = 1.000
+TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_29.BorderSizePixel = 0
+TextLabel_29.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_29.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_29.Font = Enum.Font.ArialBold
+TextLabel_29.Text = "Inf Storage V2"
+TextLabel_29.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_29.TextSize = 14.000
+TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
+
+Indicator_2.Name = "Indicator"
+Indicator_2.Parent = v2
+Indicator_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Indicator_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_2.BorderSizePixel = 0
+Indicator_2.Position = UDim2.new(0.832554638, 0, 0.250255704, 0)
+Indicator_2.Size = UDim2.new(0, 15, 0, 15)
+
+UICorner_43.Parent = Indicator_2
+
+TextButton_19.Parent = v2
+TextButton_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_19.BackgroundTransparency = 1.000
+TextButton_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_19.BorderSizePixel = 0
+TextButton_19.Size = UDim2.new(0, 159, 0, 29)
+TextButton_19.Font = Enum.Font.SourceSans
+TextButton_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_19.TextSize = 14.000
+TextButton_19.TextTransparency = 1.000
+
 TeleportsContainer.Name = "TeleportsContainer"
 TeleportsContainer.Parent = ContainersList
 TeleportsContainer.Active = true
@@ -1373,127 +1503,22 @@ _1.BorderSizePixel = 0
 _1.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
 _1.Size = UDim2.new(0, 159, 0, 29)
 
-UICorner_40.Parent = _1
+UICorner_44.Parent = _1
 
-TextLabel_27.Parent = _1
-TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_27.BackgroundTransparency = 1.000
-TextLabel_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_27.BorderSizePixel = 0
-TextLabel_27.Position = UDim2.new(0.0189999994, 0, 0, 0)
-TextLabel_27.Size = UDim2.new(0, 95, 0, 29)
-TextLabel_27.Font = Enum.Font.ArialBold
-TextLabel_27.Text = " Teleport GUI [Items,...]"
-TextLabel_27.TextColor3 = Color3.fromRGB(240, 240, 240)
-TextLabel_27.TextSize = 14.000
-TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_17.Parent = _1
-TextButton_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_17.BackgroundTransparency = 1.000
-TextButton_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_17.BorderSizePixel = 0
-TextButton_17.Size = UDim2.new(0, 159, 0, 29)
-TextButton_17.Font = Enum.Font.SourceSans
-TextButton_17.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_17.TextSize = 14.000
-TextButton_17.TextTransparency = 1.000
-
-_2.Name = "2"
-_2.Parent = TeleportsContainer
-_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_2.BackgroundTransparency = 0.700
-_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_2.BorderSizePixel = 0
-_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-_2.Size = UDim2.new(0, 159, 0, 29)
-
-UICorner_41.Parent = _2
-
-TextLabel_28.Parent = _2
-TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_28.BackgroundTransparency = 1.000
-TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_28.BorderSizePixel = 0
-TextLabel_28.Position = UDim2.new(0.0724168718, 0, 0, 0)
-TextLabel_28.Size = UDim2.new(0, 95, 0, 29)
-TextLabel_28.Font = Enum.Font.ArialBold
-TextLabel_28.Text = "Locations TP GUI"
-TextLabel_28.TextColor3 = Color3.fromRGB(240, 240, 240)
-TextLabel_28.TextSize = 14.000
-TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_18.Parent = _2
-TextButton_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_18.BackgroundTransparency = 1.000
-TextButton_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_18.BorderSizePixel = 0
-TextButton_18.Size = UDim2.new(0, 159, 0, 29)
-TextButton_18.Font = Enum.Font.SourceSans
-TextButton_18.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_18.TextSize = 14.000
-TextButton_18.TextTransparency = 1.000
-
-_3.Name = "3"
-_3.Parent = TeleportsContainer
-_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_3.BackgroundTransparency = 0.700
-_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_3.BorderSizePixel = 0
-_3.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-_3.Size = UDim2.new(0, 159, 0, 29)
-
-UICorner_42.Parent = _3
-
-TextLabel_29.Parent = _3
-TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_29.BackgroundTransparency = 1.000
-TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_29.BorderSizePixel = 0
-TextLabel_29.Position = UDim2.new(0.0724168718, 0, 0, 0)
-TextLabel_29.Size = UDim2.new(0, 95, 0, 29)
-TextLabel_29.Font = Enum.Font.ArialBold
-TextLabel_29.Text = "Remove TP GUI"
-TextLabel_29.TextColor3 = Color3.fromRGB(240, 240, 240)
-TextLabel_29.TextSize = 14.000
-TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_19.Parent = _3
-TextButton_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_19.BackgroundTransparency = 1.000
-TextButton_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_19.BorderSizePixel = 0
-TextButton_19.Size = UDim2.new(0, 159, 0, 29)
-TextButton_19.Font = Enum.Font.SourceSans
-TextButton_19.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_19.TextSize = 14.000
-TextButton_19.TextTransparency = 1.000
-
-_3_2.Name = "3"
-_3_2.Parent = TeleportsContainer
-_3_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-_3_2.BackgroundTransparency = 0.700
-_3_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_3_2.BorderSizePixel = 0
-_3_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-_3_2.Size = UDim2.new(0, 159, 0, 29)
-
-UICorner_43.Parent = _3_2
-
-TextLabel_30.Parent = _3_2
+TextLabel_30.Parent = _1
 TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_30.BackgroundTransparency = 1.000
 TextLabel_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_30.BorderSizePixel = 0
-TextLabel_30.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_30.Position = UDim2.new(0.0189999994, 0, 0, 0)
 TextLabel_30.Size = UDim2.new(0, 95, 0, 29)
 TextLabel_30.Font = Enum.Font.ArialBold
-TextLabel_30.Text = "Random TP"
+TextLabel_30.Text = " Teleport GUI [Items,...]"
 TextLabel_30.TextColor3 = Color3.fromRGB(240, 240, 240)
 TextLabel_30.TextSize = 14.000
 TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
 
-TextButton_20.Parent = _3_2
+TextButton_20.Parent = _1
 TextButton_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_20.BackgroundTransparency = 1.000
 TextButton_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1504,7 +1529,112 @@ TextButton_20.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_20.TextSize = 14.000
 TextButton_20.TextTransparency = 1.000
 
-UICorner_44.Parent = Containers
+_3_2.Name = "3"
+_3_2.Parent = TeleportsContainer
+_3_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_3_2.BackgroundTransparency = 0.700
+_3_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3_2.BorderSizePixel = 0
+_3_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+_3_2.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_45.Parent = _3_2
+
+TextLabel_31.Parent = _3_2
+TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_31.BackgroundTransparency = 1.000
+TextLabel_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_31.BorderSizePixel = 0
+TextLabel_31.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_31.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_31.Font = Enum.Font.ArialBold
+TextLabel_31.Text = "Remove TP GUI"
+TextLabel_31.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_31.TextSize = 14.000
+TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_21.Parent = _3_2
+TextButton_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_21.BackgroundTransparency = 1.000
+TextButton_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_21.BorderSizePixel = 0
+TextButton_21.Size = UDim2.new(0, 159, 0, 29)
+TextButton_21.Font = Enum.Font.SourceSans
+TextButton_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_21.TextSize = 14.000
+TextButton_21.TextTransparency = 1.000
+
+_3_3.Name = "3"
+_3_3.Parent = TeleportsContainer
+_3_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_3_3.BackgroundTransparency = 0.700
+_3_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3_3.BorderSizePixel = 0
+_3_3.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+_3_3.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_46.Parent = _3_3
+
+TextLabel_32.Parent = _3_3
+TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_32.BackgroundTransparency = 1.000
+TextLabel_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_32.BorderSizePixel = 0
+TextLabel_32.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_32.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_32.Font = Enum.Font.ArialBold
+TextLabel_32.Text = "Random TP"
+TextLabel_32.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_32.TextSize = 14.000
+TextLabel_32.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_22.Parent = _3_3
+TextButton_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_22.BackgroundTransparency = 1.000
+TextButton_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_22.BorderSizePixel = 0
+TextButton_22.Size = UDim2.new(0, 159, 0, 29)
+TextButton_22.Font = Enum.Font.SourceSans
+TextButton_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_22.TextSize = 14.000
+TextButton_22.TextTransparency = 1.000
+
+_2.Name = "2"
+_2.Parent = TeleportsContainer
+_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_2.BackgroundTransparency = 0.700
+_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2.BorderSizePixel = 0
+_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+_2.Size = UDim2.new(0, 159, 0, 29)
+
+UICorner_47.Parent = _2
+
+TextLabel_33.Parent = _2
+TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_33.BackgroundTransparency = 1.000
+TextLabel_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_33.BorderSizePixel = 0
+TextLabel_33.Position = UDim2.new(0.0724168718, 0, 0, 0)
+TextLabel_33.Size = UDim2.new(0, 95, 0, 29)
+TextLabel_33.Font = Enum.Font.ArialBold
+TextLabel_33.Text = "Locations TP GUI"
+TextLabel_33.TextColor3 = Color3.fromRGB(240, 240, 240)
+TextLabel_33.TextSize = 14.000
+TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_23.Parent = _2
+TextButton_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_23.BackgroundTransparency = 1.000
+TextButton_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_23.BorderSizePixel = 0
+TextButton_23.Size = UDim2.new(0, 159, 0, 29)
+TextButton_23.Font = Enum.Font.SourceSans
+TextButton_23.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_23.TextSize = 14.000
+TextButton_23.TextTransparency = 1.000
+
+UICorner_48.Parent = Containers
 
 BlockFrame.Name = "BlockFrame"
 BlockFrame.Parent = Frame
@@ -1514,7 +1644,7 @@ BlockFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BlockFrame.BorderSizePixel = 0
 BlockFrame.Size = UDim2.new(0, 528, 0, 330)
 
-UICorner_45.Parent = BlockFrame
+UICorner_49.Parent = BlockFrame
 
 ImageLabel.Parent = BlockFrame
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1533,7 +1663,7 @@ Frame_3.BorderSizePixel = 0
 Frame_3.Position = UDim2.new(-0.00280187279, 0, -0.0049262587, 0)
 Frame_3.Size = UDim2.new(0, 170, 0, 205)
 
-UICorner_46.Parent = Frame_3
+UICorner_50.Parent = Frame_3
 
 TextBox.Parent = Frame_3
 TextBox.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
@@ -1546,7 +1676,7 @@ TextBox.Text = "16"
 TextBox.TextColor3 = Color3.fromRGB(209, 209, 209)
 TextBox.TextSize = 16.000
 
-UICorner_47.Parent = TextBox
+UICorner_51.Parent = TextBox
 
 FunctionName.Name = "Function Name"
 FunctionName.Parent = Frame_3
@@ -1574,7 +1704,7 @@ Value.Text = "Actual Value is 16"
 Value.TextColor3 = Color3.fromRGB(212, 212, 212)
 Value.TextSize = 10.000
 
-UICorner_48.Parent = ImageLabel
+UICorner_52.Parent = ImageLabel
 
 ImageButton.Parent = Frame
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1611,12 +1741,12 @@ hideshow.Visible = false
 hideshow.AutoButtonColor = false
 hideshow.Image = "rbxassetid://75662801744741"
 
-UICorner_49.CornerRadius = UDim.new(0, 50)
-UICorner_49.Parent = hideshow
+UICorner_53.CornerRadius = UDim.new(0, 50)
+UICorner_53.Parent = hideshow
 
 -- Scripts:
 
-local function VFTQR_fake_script() -- ScrollingFrame.LocalScript 
+local function JQBXLC_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local sucess, err = pcall(function()
@@ -1651,8 +1781,8 @@ local function VFTQR_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VFTQR_fake_script)()
-local function LHPTBKT_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(JQBXLC_fake_script)()
+local function CFGVIL_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local startedtext = script.Parent.Text
@@ -1675,8 +1805,8 @@ local function LHPTBKT_fake_script() -- TextLabel_4.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(LHPTBKT_fake_script)()
-local function FEYYO_fake_script() -- TextLabel_5.LocalScript 
+coroutine.wrap(CFGVIL_fake_script)()
+local function KNJKJTH_fake_script() -- TextLabel_5.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local startedtext = script.Parent.Text
@@ -1699,8 +1829,8 @@ local function FEYYO_fake_script() -- TextLabel_5.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(FEYYO_fake_script)()
-local function PHKG_fake_script() -- TextLabel_6.LocalScript 
+coroutine.wrap(KNJKJTH_fake_script)()
+local function QLPHTC_fake_script() -- TextLabel_6.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local startedtext = script.Parent.Text
@@ -1723,8 +1853,8 @@ local function PHKG_fake_script() -- TextLabel_6.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(PHKG_fake_script)()
-local function ONSK_fake_script() -- TextLabel_7.LocalScript 
+coroutine.wrap(QLPHTC_fake_script)()
+local function JPZZ_fake_script() -- TextLabel_7.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_7)
 
 	local startedtext = script.Parent.Text
@@ -1747,8 +1877,8 @@ local function ONSK_fake_script() -- TextLabel_7.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(ONSK_fake_script)()
-local function SMFII_fake_script() -- TextLabel_8.LocalScript 
+coroutine.wrap(JPZZ_fake_script)()
+local function MBGGFBH_fake_script() -- TextLabel_8.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_8)
 
 	local startedtext = script.Parent.Text
@@ -1771,8 +1901,8 @@ local function SMFII_fake_script() -- TextLabel_8.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(SMFII_fake_script)()
-local function EVPXDJF_fake_script() -- TextLabel_9.LocalScript 
+coroutine.wrap(MBGGFBH_fake_script)()
+local function ZPIO_fake_script() -- TextLabel_9.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_9)
 
 	local startedtext = script.Parent.Text
@@ -1795,8 +1925,8 @@ local function EVPXDJF_fake_script() -- TextLabel_9.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(EVPXDJF_fake_script)()
-local function WVFPCR_fake_script() -- TextLabel_10.LocalScript 
+coroutine.wrap(ZPIO_fake_script)()
+local function OMAV_fake_script() -- TextLabel_10.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_10)
 
 	local startedtext = script.Parent.Text
@@ -1819,8 +1949,8 @@ local function WVFPCR_fake_script() -- TextLabel_10.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(WVFPCR_fake_script)()
-local function JWFJS_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(OMAV_fake_script)()
+local function NGEL_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -1855,8 +1985,8 @@ local function JWFJS_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JWFJS_fake_script)()
-local function UFFDJV_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(NGEL_fake_script)()
+local function BIKA_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local status = true
@@ -1887,8 +2017,8 @@ local function UFFDJV_fake_script() -- TextButton_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UFFDJV_fake_script)()
-local function AEWSHGT_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(BIKA_fake_script)()
+local function ODVUMQ_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	_G[".Walk"] = 16
@@ -1898,8 +2028,8 @@ local function AEWSHGT_fake_script() -- TextButton_3.LocalScript
 		_G.ChangeValue(old,".Walk","WalkSpeed")
 	end)
 end
-coroutine.wrap(AEWSHGT_fake_script)()
-local function ZTTGT_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(ODVUMQ_fake_script)()
+local function DCBK_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -1939,8 +2069,8 @@ local function ZTTGT_fake_script() -- TextButton_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZTTGT_fake_script)()
-local function SUKWWBP_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(DCBK_fake_script)()
+local function RQTPWZ_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -1979,8 +2109,8 @@ local function SUKWWBP_fake_script() -- TextButton_5.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SUKWWBP_fake_script)()
-local function DTNQQZ_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(RQTPWZ_fake_script)()
+local function CDUZYN_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2001,10 +2131,12 @@ local function DTNQQZ_fake_script() -- TextButton_6.LocalScript
 			for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
 				if v:IsA("Model") and string.find(v.Name,"Plate") then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,3,0)
+					pcall(function()
 					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
 					wait(0.1)
 					firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
-					wait(0.5)
+					wait(1)
+					end)
 				end
 			end
 	
@@ -2027,8 +2159,8 @@ local function DTNQQZ_fake_script() -- TextButton_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DTNQQZ_fake_script)()
-local function NLXWFKW_fake_script() -- TextButton_7.LocalScript 
+coroutine.wrap(CDUZYN_fake_script)()
+local function NXVV_fake_script() -- TextButton_7.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_7)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2085,8 +2217,8 @@ local function NLXWFKW_fake_script() -- TextButton_7.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NLXWFKW_fake_script)()
-local function NUESFH_fake_script() -- TextButton_8.LocalScript 
+coroutine.wrap(NXVV_fake_script)()
+local function HSFUJQ_fake_script() -- TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_8)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2147,8 +2279,8 @@ local function NUESFH_fake_script() -- TextButton_8.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NUESFH_fake_script)()
-local function HRYQ_fake_script() -- TextButton_9.LocalScript 
+coroutine.wrap(HSFUJQ_fake_script)()
+local function KVCXKLC_fake_script() -- TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_9)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2200,8 +2332,8 @@ local function HRYQ_fake_script() -- TextButton_9.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HRYQ_fake_script)()
-local function VBNUHQ_fake_script() -- TextButton_10.LocalScript 
+coroutine.wrap(KVCXKLC_fake_script)()
+local function MJWVFCN_fake_script() -- TextButton_10.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_10)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2227,10 +2359,11 @@ local function VBNUHQ_fake_script() -- TextButton_10.LocalScript
 			}
 	
 			for _, container in list do
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
 				for i = 1, 35 do 
 					pcall(function()
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[3]
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[2].WorldPivot
+					wait(.01)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = container[3]
 					end)
 					
 					fireclickdetector(container[1])
@@ -2258,8 +2391,8 @@ local function VBNUHQ_fake_script() -- TextButton_10.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VBNUHQ_fake_script)()
-local function IDADY_fake_script() -- TextButton_11.LocalScript 
+coroutine.wrap(MJWVFCN_fake_script)()
+local function MGVS_fake_script() -- TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_11)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2294,8 +2427,8 @@ local function IDADY_fake_script() -- TextButton_11.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IDADY_fake_script)()
-local function KPHT_fake_script() -- TextButton_12.LocalScript 
+coroutine.wrap(MGVS_fake_script)()
+local function ZPUXMW_fake_script() -- TextButton_12.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_12)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2344,8 +2477,8 @@ local function KPHT_fake_script() -- TextButton_12.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KPHT_fake_script)()
-local function BSHFJ_fake_script() -- TextButton_13.LocalScript 
+coroutine.wrap(ZPUXMW_fake_script)()
+local function QCLNUW_fake_script() -- TextButton_13.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_13)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2394,8 +2527,8 @@ local function BSHFJ_fake_script() -- TextButton_13.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BSHFJ_fake_script)()
-local function RYWRA_fake_script() -- TextButton_14.LocalScript 
+coroutine.wrap(QCLNUW_fake_script)()
+local function KTRXRI_fake_script() -- TextButton_14.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_14)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2443,8 +2576,8 @@ local function RYWRA_fake_script() -- TextButton_14.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RYWRA_fake_script)()
-local function RDMEG_fake_script() -- TextButton_15.LocalScript 
+coroutine.wrap(KTRXRI_fake_script)()
+local function SIGCPCM_fake_script() -- TextButton_15.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_15)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2487,8 +2620,8 @@ local function RDMEG_fake_script() -- TextButton_15.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RDMEG_fake_script)()
-local function LUZL_fake_script() -- TextButton_16.LocalScript 
+coroutine.wrap(SIGCPCM_fake_script)()
+local function KNNBIZ_fake_script() -- TextButton_16.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_16)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2534,9 +2667,400 @@ local function LUZL_fake_script() -- TextButton_16.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LUZL_fake_script)()
-local function KJOFKE_fake_script() -- TextButton_17.LocalScript 
+coroutine.wrap(KNNBIZ_fake_script)()
+local function PGRA_fake_script() -- TextButton_17.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_17)
+
+	local oncomplete = "rbxassetid://76465964526940"
+	local notcomplete = "rbxassetid://90617427588639"
+	
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			local func=false
+			
+			pcall(function()
+			if getrawmetatable(game)~= nil then
+				func=true
+			end
+			end)
+			
+			if not func then
+				game.Workspace.TerminatorHuesosatoer.GetReturnValue:PizdanutVenikom(123)
+			else
+				local theId
+				local ThePart
+				local Hook; -- Store the old hook to return vital functions later
+				Hook = hookfunction(getrawmetatable(game).__namecall, newcclosure(function(self, ...) -- Hook Namecall
+					local args = {...} -- store argument
+					if getnamecallmethod() == "InvokeServer" and self.Name == "BypassRequest"   then
+						theId = args[1]
+						ThePart = args[2]
+					end
+					return Hook(self, ...) -- Return the old hook to prevent breaking your entire game
+				end))
+				local PlayersService = game:GetService("Players")
+				--
+				local LocalPlayer = PlayersService.LocalPlayer
+	
+				local Services = workspace:WaitForChild("Services")
+				--
+				local ALLOW_FREEZE = true -- If true makes generating extremely fast but might freeze on hard ones
+				--
+				local CharacterPresent, GetNumber, ParseExpression; do -- src: https://gist.githubusercontent.com/Noble-Mushtak/a2eb302003891c85b562/raw/652cbe49d72211309d6c688ced4027959afeffc1/Calculator.lua
+					function CharacterPresent(str, character)
+						for i=1, #str do
+							if string.sub(str, i, i) == character then
+								return true
+							end
+						end
+						return false
+					end
+					function GetNumber(expression)
+						local validCharacters = "0123456789.-"
+						local foundDigit = false
+						local i = 1
+						local currentCharacter = string.sub(expression, i, i)
+						while CharacterPresent(validCharacters, currentCharacter) do
+							if i == 1 then
+								validCharacters = "0123456789."
+							end
+							if currentCharacter == "." then
+								validCharacters = "0123456789"
+							end
+							if CharacterPresent("0123456789", currentCharacter) then
+								foundDigit = true
+							end
+							i = i + 1
+							if i > #expression then
+								break
+							end
+							currentCharacter = string.sub(expression, i, i)
+						end
+						if not foundDigit then
+							i = 1
+						end
+						return tonumber(string.sub(expression, 1, i-1)), string.sub(expression, i, #expression)
+					end
+					function ParseExpression(expression, expectEndParentheses)
+						if type(expression) ~= "string" then
+							return nil, "Expected string as argument #1"
+						end
+						expression = string.gsub(expression, "%s+", "")
+						local expectingExpression = true
+						local lastExpressionWasParenthetical = false
+						local operators = "+-/*^%"
+						local parts = {}
+						local foundEndParentheses = false
+						expectEndParentheses = expectEndParentheses or false
+						while expression ~= "" do
+							local nextNumber, expressionAfterNumber = GetNumber(expression)
+							local nextCharacter = string.sub(expression, 1, 1)
+							local nextPiece = string.sub(expression, 1, 5)
+							if #expression <= 5 then
+								nextPiece = nextPiece .." [end]"
+							end
+							if expectingExpression then
+								if nextCharacter == "(" then
+									local nestedExpressionValue, expressionAfterParentheses = ParseExpression(string.sub(expression, 2, #expression), true)
+									if nestedExpressionValue == nil then
+										return nestedExpressionValue, expressionAfterParentheses
+									end
+									table.insert(parts, nestedExpressionValue)
+									expression = expressionAfterParentheses
+									lastExpressionWasParenthetical = true
+								else
+									if nextNumber == nil then
+										return nil, "Expected number or '(', but found '"..nextPiece.."'"
+									end
+									table.insert(parts, nextNumber)
+									expression = expressionAfterNumber
+									lastExpressionWasParenthetical = false
+								end
+							elseif CharacterPresent(operators, nextCharacter) then
+								table.insert(parts, nextCharacter)
+								expression = string.sub(expression, 2, #expression)
+							elseif nextCharacter == "(" or (lastExpressionWasParenthetical and nextNumber ~= nil) then
+								table.insert(parts, "*")
+							elseif nextCharacter == ")" then
+								if expectEndParentheses then
+									expression = string.sub(expression, 2, #expression)
+									foundEndParentheses = true
+									break
+								else
+									return nil, "')' present without matching '(' at '"..nextPiece.."'"
+								end
+							else
+								return nil, "Expected expression, but found '"..nextPiece.."'"
+							end
+							expectingExpression = not expectingExpression
+						end
+						if expectEndParentheses and not foundEndParentheses then
+							return nil, "Expression unexpectedly ended ('(' present without matching ')')"
+						end
+						if expectingExpression then
+							return nil, "Expression unexpectedly ended"
+						end
+						local i = #parts
+						while i >= 1 do
+							if parts[i] == "^" then
+								parts[i-1] = parts[i-1] ^ parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							end
+							i = i - 1
+						end
+						i = 1
+						while i <= #parts do
+							if parts[i] == "*" then
+								parts[i-1] = parts[i-1]*parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							elseif parts[i] == "/" then
+								parts[i-1] = parts[i-1]/parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							elseif parts[i] == "%" then
+								parts[i-1] = parts[i-1]%parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							else
+								i = i+ 1
+							end
+						end
+						i = 1
+						while i <= #parts do
+							if parts[i] == "+" then
+								parts[i-1] = parts[i-1]+parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							elseif parts[i] == "-" then
+								parts[i-1] =parts[i-1]- parts[i+1]
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							else
+								i = i + 1
+							end
+						end
+	
+						return parts[1], expression
+					end
+				end
+	
+				local GetDictionaryLength; do
+					function GetDictionaryLength(dictionary)
+						local length = 0
+						for key, value in pairs(dictionary) do
+							length =length + 1
+						end
+						return length
+					end
+				end
+	
+				local OnHack; do
+					local SubmitSolution = Services:WaitForChild("SubmitSolution")
+					function OnHack(expressions, letters, answers, er,objectId,Place,sea)
+						local results = {}
+						local generatedNumbers = {}
+						local lastGeneratedNumbers
+						local allowSubmit = true
+						for index, expression in ipairs(expressions) do
+							local correctAnswer = tonumber(answers[index])
+							local result, errorMessage
+							repeat
+								local expression = expression
+								if lastGeneratedNumbers then
+									generatedNumbers = lastGeneratedNumbers
+								elseif GetDictionaryLength(generatedNumbers) == 0 then
+									for index, letter in ipairs(letters) do
+										generatedNumbers[letter] = math.random(0, 9)
+									end
+								end
+								for letter, value in pairs(generatedNumbers) do
+									expression = string.gsub(expression, letter, value)
+								end
+								result, errorMessage = ParseExpression(expression)
+								if tonumber(result) ~= correctAnswer then
+									if lastGeneratedNumbers == generatedNumbers then
+										allowSubmit = false
+										task.wait(0.0001)
+										task.spawn(OnHack, expressions, letters, answers, objectId)
+										break
+									end
+									table.clear(generatedNumbers)
+								end
+								if not ALLOW_FREEZE then
+									task.wait()
+								end
+							until tonumber(result) == correctAnswer
+							lastGeneratedNumbers = generatedNumbers
+						end
+						if allowSubmit   then
+	             		SubmitSolution:FireServer(theId, generatedNumbers,ThePart)
+							table.clear(generatedNumbers)
+							if parts then
+								table.remove(parts, i+1)
+								table.remove(parts, i)
+							end
+						end
+					end
+				end
+	
+	
+				local HackReceiver = LocalPlayer.Character:FindFirstChild("@H")
+				HackReceiver.OnClientEvent:Connect(OnHack)
+			end
+		end)
+		
+		if not sucess then
+			if _G.SendErrMessages then
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			print("Script returned error '"..err.."'...")
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			end
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		end
+	end)
+end
+coroutine.wrap(PGRA_fake_script)()
+local function RMZV_fake_script() -- TextButton_18.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_18)
+
+	local oncomplete = "rbxassetid://76465964526940"
+	local notcomplete = "rbxassetid://90617427588639"
+	local waycount = 0
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			local func = false
+			
+			pcall(function()
+				if getrawmetatable(game)~= nil then
+					func=true
+				end
+			end)
+			
+			if not func then
+				game.Workspace.SosyHuy30RubleyPlease:FireAnus("Go to hell")
+			else
+				 --[[
+	   когда сервер будет запрашивать сколько в игроке занято, все предметы перейдут в него(актив.), следовательно сервер не сможет увидеть в нем никаких предметов
+	   поддерживает только читы с метатаблицами
+	   работает по валюте
+	 ]]
+	
+				local onchange =  Instance.new("BoolValue")
+				onchange.Changed:Connect(function()
+	
+					if onchange.Value == true then
+						for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+							v.Parent = game.Players.LocalPlayer.Character
+						end
+						wait(0.5)
+						for i,v in game.Players.LocalPlayer.Character:GetChildren() do
+							if v:IsA("Tool") then
+								v.Parent = game.Players.LocalPlayer.Backpack
+							end
+						end
+	
+					end
+				end)
+	
+				local Hook; 
+	
+				Hook = hookfunction(getrawmetatable(game).__namecall, newcclosure(function(self, ...) 
+					if getnamecallmethod()=="InvokeServer" and self.Name == "PickupTool"then
+						onchange.Value = true
+						onchange.Value = false
+						wait(0.2)
+					end
+					return Hook(self, ...) 
+				end))
+			end
+		end)
+		
+		if not sucess then
+			if _G.SendErrMessages then
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			print("Script returned error '"..err.."'...")
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			end
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		end
+	end)
+end
+coroutine.wrap(RMZV_fake_script)()
+local function CPAYNA_fake_script() -- TextButton_19.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_19)
+
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			if not status then
+				status =true
+				game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3 = Color3.new(0,1,0)}):Play()
+			else
+				status = false
+				game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1,0,0)}):Play()
+			end
+			
+			while status do
+				for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
+					v.Parent = game.Players.LocalPlayer.Character
+				end
+				wait(0.5)
+				for i,v in game.Players.LocalPlayer.Character:GetChildren() do
+					if v:IsA("Tool") then
+						v.Parent = game.Players.LocalPlayer.Backpack
+					end
+				end
+				wait(0.5)
+			end
+		end)
+		
+		if not sucess then
+			
+			if _G.SendErrMessages then
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			end
+			
+			status = false
+			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
+		end
+	end)
+end
+coroutine.wrap(CPAYNA_fake_script)()
+local function VPNLOMZ_fake_script() -- TextButton_20.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_20)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3144,460 +3668,9 @@ local function KJOFKE_fake_script() -- TextButton_17.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KJOFKE_fake_script)()
-local function KLKTGFP_fake_script() -- TextButton_18.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_18)
-
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	
-	script.Parent.MouseEnter:Connect(function()
-		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
-	end)
-	
-	script.Parent.MouseLeave:Connect(function()
-		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
-	end)
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		local sucess, err = pcall(function()
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local Container = Instance.new("Frame")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
-local ship = Instance.new("TextButton")
-local forest = Instance.new("TextButton")
-local forest_2 = Instance.new("TextButton")
-local forest_3 = Instance.new("TextButton")
-local forest_4 = Instance.new("TextButton")
-local forest_5 = Instance.new("TextButton")
-local forest_6 = Instance.new("TextButton")
-local forest_7 = Instance.new("TextButton")
-local forest_8 = Instance.new("TextButton")
-local forest_9 = Instance.new("TextButton")
-local forest_10 = Instance.new("TextButton")
-local forest_11 = Instance.new("TextButton")
-local forest_12 = Instance.new("TextButton")
-local forest_13 = Instance.new("TextButton")
-local forest_14 = Instance.new("TextButton")
---Properties:
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Container.Name = "Container"
-Container.Parent = ScreenGui
-Container.Active =true
-Container.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
-Container.BackgroundTransparency = 0.200
-Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Container.BorderSizePixel = 0
-Container.Position = UDim2.new(0.0516225062, 0, 0.276635528, 0)
-Container.Size = UDim2.new(0, 171, 0, 241)
-
-ScrollingFrame.Parent = Container
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ScrollingFrame.BackgroundTransparency = 1.000
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0, 0, 0.107883818, 0)
-ScrollingFrame.Size = UDim2.new(0, 171, 0, 215)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
-
-UIListLayout.Parent = ScrollingFrame
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 2)
-
-ship.Name = "ship"
-ship.Parent = ScrollingFrame
-ship.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-ship.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ship.BorderSizePixel = 0
-ship.Position = UDim2.new(0.0760233924, 0, 0, 0)
-ship.Size = UDim2.new(0, 133, 0, 43)
-ship.Font = Enum.Font.Jura
-ship.Text = "Ship"
-ship.TextColor3 = Color3.fromRGB(255, 255, 255)
-ship.TextSize = 19.000
-ship.TextWrapped = true
-
-forest.Name = "forest"
-forest.Parent = ScrollingFrame
-forest.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest.BorderSizePixel = 0
-forest.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest.Size = UDim2.new(0, 133, 0, 43)
-forest.Font = Enum.Font.Jura
-forest.Text = "Forest"
-forest.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest.TextSize = 19.000
-forest.TextWrapped = true
-
-forest_2.Name = "forest"
-forest_2.Parent = ScrollingFrame
-forest_2.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_2.BorderSizePixel = 0
-forest_2.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_2.Size = UDim2.new(0, 133, 0, 43)
-forest_2.Font = Enum.Font.Jura
-forest_2.Text = "Generators"
-forest_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_2.TextSize = 19.000
-forest_2.TextWrapped = true
-
-forest_3.Name = "forest"
-forest_3.Parent = ScrollingFrame
-forest_3.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_3.BorderSizePixel = 0
-forest_3.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_3.Size = UDim2.new(0, 133, 0, 43)
-forest_3.Font = Enum.Font.Jura
-forest_3.Text = "Observatory"
-forest_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_3.TextSize = 19.000
-forest_3.TextWrapped = true
-
-forest_4.Name = "forest"
-forest_4.Parent = ScrollingFrame
-forest_4.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_4.BorderSizePixel = 0
-forest_4.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_4.Size = UDim2.new(0, 133, 0, 43)
-forest_4.Font = Enum.Font.Jura
-forest_4.Text = "Tallest Point"
-forest_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_4.TextSize = 19.000
-forest_4.TextWrapped = true
-
-forest_14.Name = "forest"
-forest_14.Parent = ScrollingFrame
-forest_14.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_14.BorderSizePixel = 0
-forest_14.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_14.Size = UDim2.new(0, 133, 0, 43)
-forest_14.Font = Enum.Font.Jura
-forest_14.Text = "Crash"
-forest_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_14.TextSize = 19.000
-forest_14.TextWrapped = true
-
-forest_5.Name = "forest"
-forest_5.Parent = ScrollingFrame
-forest_5.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_5.BorderSizePixel = 0
-forest_5.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_5.Size = UDim2.new(0, 133, 0, 43)
-forest_5.Font = Enum.Font.Jura
-forest_5.Text = "Fireplace"
-forest_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_5.TextSize = 19.000
-forest_5.TextWrapped = true
-
-forest_6.Name = "forest"
-forest_6.Parent = ScrollingFrame
-forest_6.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_6.BorderSizePixel = 0
-forest_6.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_6.Size = UDim2.new(0, 133, 0, 43)
-forest_6.Font = Enum.Font.Jura
-forest_6.Text = "Idk place"
-forest_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_6.TextSize = 19.000
-forest_6.TextWrapped = true
-
-forest_7.Name = "forest"
-forest_7.Parent = ScrollingFrame
-forest_7.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_7.BorderSizePixel = 0
-forest_7.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_7.Size = UDim2.new(0, 133, 0, 43)
-forest_7.Font = Enum.Font.Jura
-forest_7.Text = "Labaratory"
-forest_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_7.TextSize = 19.000
-forest_7.TextWrapped = true
-
-forest_8.Name = "forest"
-forest_8.Parent = ScrollingFrame
-forest_8.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_8.BorderSizePixel = 0
-forest_8.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_8.Size = UDim2.new(0, 133, 0, 43)
-forest_8.Font = Enum.Font.Jura
-forest_8.Text = "Glass Laboratory"
-forest_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_8.TextSize = 19.000
-forest_8.TextWrapped = true
-
-forest_9.Name = "forest"
-forest_9.Parent = ScrollingFrame
-forest_9.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_9.BorderSizePixel = 0
-forest_9.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_9.Size = UDim2.new(0, 133, 0, 43)
-forest_9.Font = Enum.Font.Jura
-forest_9.Text = "Docks"
-forest_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_9.TextSize = 19.000
-forest_9.TextWrapped = true
-
-forest_10.Name = "forest"
-forest_10.Parent = ScrollingFrame
-forest_10.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_10.BorderSizePixel = 0
-forest_10.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_10.Size = UDim2.new(0, 133, 0, 43)
-forest_10.Font = Enum.Font.Jura
-forest_10.Text = "Lair"
-forest_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_10.TextSize = 19.000
-forest_10.TextWrapped = true
-
-forest_11.Name = "forest"
-forest_11.Parent = ScrollingFrame
-forest_11.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_11.BorderSizePixel = 0
-forest_11.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_11.Size = UDim2.new(0, 133, 0, 43)
-forest_11.Font = Enum.Font.Jura
-forest_11.Text = "Hangar"
-forest_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_11.TextSize = 19.000
-forest_11.TextWrapped = true
-
-forest_12.Name = "forest"
-forest_12.Parent = ScrollingFrame
-forest_12.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_12.BorderSizePixel = 0
-forest_12.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_12.Size = UDim2.new(0, 133, 0, 43)
-forest_12.Font = Enum.Font.Jura
-forest_12.Text = "Peanut Box"
-forest_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_12.TextSize = 19.000
-forest_12.TextWrapped = true
-
-forest_13.Name = "forest"
-forest_13.Parent = ScrollingFrame
-forest_13.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-forest_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-forest_13.BorderSizePixel = 0
-forest_13.Position = UDim2.new(0.0760233924, 0, 0, 0)
-forest_13.Size = UDim2.new(0, 133, 0, 43)
-forest_13.Font = Enum.Font.Jura
-forest_13.Text = "Ape City"
-forest_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-forest_13.TextSize = 19.000
-forest_13.TextWrapped = true
-
--- Scripts:
-
-local function HDXSCO_fake_script() -- ship.LocalScript 
-	local script = Instance.new('LocalScript', ship)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)
-		
-	end)
-end
-coroutine.wrap(HDXSCO_fake_script)()
-local function YEPHH_fake_script() -- forest.LocalScript 
-	local script = Instance.new('LocalScript', forest)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)
-		
-	end)
-end
-coroutine.wrap(YEPHH_fake_script)()
-
-coroutine.wrap(HDXSCO_fake_script)()
-
-local function YEPHaH_fake_script() -- forest.LocalScript 
-	local script = Instance.new('LocalScript', forest_12)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = workspace.Map.Main.PeanutBox.WorldPivot
-	end)
-end
-coroutine.wrap(YEPHaH_fake_script)()
-
-local function OONFA_fake_script() -- forest_2.LocalScript 
-	local script = Instance.new('LocalScript', forest_2)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)
-		
-	end)
-end
-coroutine.wrap(OONFA_fake_script)()
-local function UJTFSP_fake_script() -- forest_3.LocalScript 
-	local script = Instance.new('LocalScript', forest_3)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)
-		
-	end)
-end
-coroutine.wrap(UJTFSP_fake_script)()
-local function FKMGC_fake_script() -- forest_4.LocalScript 
-	local script = Instance.new('LocalScript', forest_4)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)
-		
-	end)
-end
-coroutine.wrap(FKMGC_fake_script)()
-
-local function FKMGcC_fake_script() -- forest_4.LocalScript 
-	local script = Instance.new('LocalScript', forest_13)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)
-		
-	end)
-end
-coroutine.wrap(FKMGcC_fake_script)()
-
-local function MYAPL_fake_script() -- forest_5.LocalScript 
-	local script = Instance.new('LocalScript', forest_5)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)
-		
-	end)
-end
-coroutine.wrap(MYAPL_fake_script)()
-local function SARW_fake_script() -- forest_6.LocalScript 
-	local script = Instance.new('LocalScript', forest_6)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)
-		
-	end)
-end
-coroutine.wrap(SARW_fake_script)()
-local function ULDQ_fake_script() -- forest_7.LocalScript 
-	local script = Instance.new('LocalScript', forest_7)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)
-		
-	end)
-end
-coroutine.wrap(ULDQ_fake_script)()
-local function WCSEIZ_fake_script() -- forest_8.LocalScript 
-	local script = Instance.new('LocalScript', forest_8)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)
-		
-	end)
-end
-coroutine.wrap(WCSEIZ_fake_script)()
-local function DELS_fake_script() -- forest_9.LocalScript 
-	local script = Instance.new('LocalScript', forest_9)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)
-		
-	end)
-end
-coroutine.wrap(DELS_fake_script)()
-local function MBSEPO_fake_script() -- forest_10.LocalScript 
-	local script = Instance.new('LocalScript', forest_10)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)
-		
-	end)
-end
-coroutine.wrap(MBSEPO_fake_script)()
-local function ECCLLRX_fake_script() -- forest_11.LocalScript 
-	local script = Instance.new('LocalScript', forest_11)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)
-		
-	end)
-end
-coroutine.wrap(ECCLLRX_fake_script)()
-
-local function ECCLLRXx_fake_script() -- forest_11.LocalScript 
-	local script = Instance.new('LocalScript', forest_14)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-		char.CFrame = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)
-		
-	end)
-end
-coroutine.wrap(ECCLLRXx_fake_script)()
-
-local function WHYI_fake_script() -- Container.LocalScript 
-	local script = Instance.new('LocalScript', Container)
-
-	script.Parent.Draggable= true
-end
-coroutine.wrap(WHYI_fake_script)()
-
-		end)
-		
-		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
-			wait(2)
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
-		else
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
-			wait(2)
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
-		end
-	end)
-end
-coroutine.wrap(KLKTGFP_fake_script)()
-local function WNFY_fake_script() -- TextButton_19.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_19)
+coroutine.wrap(VPNLOMZ_fake_script)()
+local function ERZG_fake_script() -- TextButton_21.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_21)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3635,9 +3708,9 @@ local function WNFY_fake_script() -- TextButton_19.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WNFY_fake_script)()
-local function PKWZA_fake_script() -- TextButton_20.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_20)
+coroutine.wrap(ERZG_fake_script)()
+local function CAKVR_fake_script() -- TextButton_22.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_22)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3684,8 +3757,452 @@ local function PKWZA_fake_script() -- TextButton_20.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PKWZA_fake_script)()
-local function NWLGX_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(CAKVR_fake_script)()
+local function SKDOMD_fake_script() -- TextButton_23.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_23)
+
+	local oncomplete = "rbxassetid://76465964526940"
+	local notcomplete = "rbxassetid://90617427588639"
+	
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			local ScreenGui = Instance.new("ScreenGui")
+			local Container = Instance.new("Frame")
+			local ScrollingFrame = Instance.new("ScrollingFrame")
+			local UIListLayout = Instance.new("UIListLayout")
+			local ship = Instance.new("TextButton")
+			local forest = Instance.new("TextButton")
+			local forest_2 = Instance.new("TextButton")
+			local forest_3 = Instance.new("TextButton")
+			local forest_4 = Instance.new("TextButton")
+			local forest_5 = Instance.new("TextButton")
+			local forest_6 = Instance.new("TextButton")
+			local forest_7 = Instance.new("TextButton")
+			local forest_8 = Instance.new("TextButton")
+			local forest_9 = Instance.new("TextButton")
+			local forest_10 = Instance.new("TextButton")
+			local forest_11 = Instance.new("TextButton")
+			local forest_12 = Instance.new("TextButton")
+			local forest_13 = Instance.new("TextButton")
+			local forest_14 = Instance.new("TextButton")
+			--Properties:
+	
+			ScreenGui.Parent = game.CoreGui
+			ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+			Container.Name = "Container"
+			Container.Parent = ScreenGui
+			Container.Active =true
+			Container.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+			Container.BackgroundTransparency = 0.200
+			Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Container.BorderSizePixel = 0
+			Container.Position = UDim2.new(0.0516225062, 0, 0.276635528, 0)
+			Container.Size = UDim2.new(0, 171, 0, 241)
+	
+			ScrollingFrame.Parent = Container
+			ScrollingFrame.Active = true
+			ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ScrollingFrame.BackgroundTransparency = 1.000
+			ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ScrollingFrame.BorderSizePixel = 0
+			ScrollingFrame.Position = UDim2.new(0, 0, 0.107883818, 0)
+			ScrollingFrame.Size = UDim2.new(0, 171, 0, 215)
+			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
+	
+			UIListLayout.Parent = ScrollingFrame
+			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0, 2)
+	
+			ship.Name = "ship"
+			ship.Parent = ScrollingFrame
+			ship.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			ship.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ship.BorderSizePixel = 0
+			ship.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			ship.Size = UDim2.new(0, 133, 0, 43)
+			ship.Font = Enum.Font.Jura
+			ship.Text = "Ship"
+			ship.TextColor3 = Color3.fromRGB(255, 255, 255)
+			ship.TextSize = 19.000
+			ship.TextWrapped = true
+	
+			forest.Name = "forest"
+			forest.Parent = ScrollingFrame
+			forest.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest.BorderSizePixel = 0
+			forest.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest.Size = UDim2.new(0, 133, 0, 43)
+			forest.Font = Enum.Font.Jura
+			forest.Text = "Forest"
+			forest.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest.TextSize = 19.000
+			forest.TextWrapped = true
+	
+			forest_2.Name = "forest"
+			forest_2.Parent = ScrollingFrame
+			forest_2.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_2.BorderSizePixel = 0
+			forest_2.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_2.Size = UDim2.new(0, 133, 0, 43)
+			forest_2.Font = Enum.Font.Jura
+			forest_2.Text = "Generators"
+			forest_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_2.TextSize = 19.000
+			forest_2.TextWrapped = true
+	
+			forest_3.Name = "forest"
+			forest_3.Parent = ScrollingFrame
+			forest_3.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_3.BorderSizePixel = 0
+			forest_3.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_3.Size = UDim2.new(0, 133, 0, 43)
+			forest_3.Font = Enum.Font.Jura
+			forest_3.Text = "Observatory"
+			forest_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_3.TextSize = 19.000
+			forest_3.TextWrapped = true
+	
+			forest_4.Name = "forest"
+			forest_4.Parent = ScrollingFrame
+			forest_4.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_4.BorderSizePixel = 0
+			forest_4.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_4.Size = UDim2.new(0, 133, 0, 43)
+			forest_4.Font = Enum.Font.Jura
+			forest_4.Text = "Tallest Point"
+			forest_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_4.TextSize = 19.000
+			forest_4.TextWrapped = true
+	
+			forest_14.Name = "forest"
+			forest_14.Parent = ScrollingFrame
+			forest_14.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_14.BorderSizePixel = 0
+			forest_14.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_14.Size = UDim2.new(0, 133, 0, 43)
+			forest_14.Font = Enum.Font.Jura
+			forest_14.Text = "Crash"
+			forest_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_14.TextSize = 19.000
+			forest_14.TextWrapped = true
+	
+			forest_5.Name = "forest"
+			forest_5.Parent = ScrollingFrame
+			forest_5.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_5.BorderSizePixel = 0
+			forest_5.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_5.Size = UDim2.new(0, 133, 0, 43)
+			forest_5.Font = Enum.Font.Jura
+			forest_5.Text = "Fireplace"
+			forest_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_5.TextSize = 19.000
+			forest_5.TextWrapped = true
+	
+			forest_6.Name = "forest"
+			forest_6.Parent = ScrollingFrame
+			forest_6.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_6.BorderSizePixel = 0
+			forest_6.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_6.Size = UDim2.new(0, 133, 0, 43)
+			forest_6.Font = Enum.Font.Jura
+			forest_6.Text = "Idk place"
+			forest_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_6.TextSize = 19.000
+			forest_6.TextWrapped = true
+	
+			forest_7.Name = "forest"
+			forest_7.Parent = ScrollingFrame
+			forest_7.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_7.BorderSizePixel = 0
+			forest_7.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_7.Size = UDim2.new(0, 133, 0, 43)
+			forest_7.Font = Enum.Font.Jura
+			forest_7.Text = "Labaratory"
+			forest_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_7.TextSize = 19.000
+			forest_7.TextWrapped = true
+	
+			forest_8.Name = "forest"
+			forest_8.Parent = ScrollingFrame
+			forest_8.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_8.BorderSizePixel = 0
+			forest_8.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_8.Size = UDim2.new(0, 133, 0, 43)
+			forest_8.Font = Enum.Font.Jura
+			forest_8.Text = "Glass Laboratory"
+			forest_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_8.TextSize = 19.000
+			forest_8.TextWrapped = true
+	
+			forest_9.Name = "forest"
+			forest_9.Parent = ScrollingFrame
+			forest_9.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_9.BorderSizePixel = 0
+			forest_9.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_9.Size = UDim2.new(0, 133, 0, 43)
+			forest_9.Font = Enum.Font.Jura
+			forest_9.Text = "Docks"
+			forest_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_9.TextSize = 19.000
+			forest_9.TextWrapped = true
+	
+			forest_10.Name = "forest"
+			forest_10.Parent = ScrollingFrame
+			forest_10.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_10.BorderSizePixel = 0
+			forest_10.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_10.Size = UDim2.new(0, 133, 0, 43)
+			forest_10.Font = Enum.Font.Jura
+			forest_10.Text = "Lair"
+			forest_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_10.TextSize = 19.000
+			forest_10.TextWrapped = true
+	
+			forest_11.Name = "forest"
+			forest_11.Parent = ScrollingFrame
+			forest_11.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_11.BorderSizePixel = 0
+			forest_11.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_11.Size = UDim2.new(0, 133, 0, 43)
+			forest_11.Font = Enum.Font.Jura
+			forest_11.Text = "Hangar"
+			forest_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_11.TextSize = 19.000
+			forest_11.TextWrapped = true
+	
+			forest_12.Name = "forest"
+			forest_12.Parent = ScrollingFrame
+			forest_12.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_12.BorderSizePixel = 0
+			forest_12.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_12.Size = UDim2.new(0, 133, 0, 43)
+			forest_12.Font = Enum.Font.Jura
+			forest_12.Text = "Peanut Box"
+			forest_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_12.TextSize = 19.000
+			forest_12.TextWrapped = true
+	
+			forest_13.Name = "forest"
+			forest_13.Parent = ScrollingFrame
+			forest_13.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
+			forest_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			forest_13.BorderSizePixel = 0
+			forest_13.Position = UDim2.new(0.0760233924, 0, 0, 0)
+			forest_13.Size = UDim2.new(0, 133, 0, 43)
+			forest_13.Font = Enum.Font.Jura
+			forest_13.Text = "Ape City"
+			forest_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+			forest_13.TextSize = 19.000
+			forest_13.TextWrapped = true
+	
+			-- Scripts:
+	
+			local function HDXSCO_fake_script() -- ship.LocalScript 
+				local script = Instance.new('LocalScript', ship)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)
+	
+				end)
+			end
+			coroutine.wrap(HDXSCO_fake_script)()
+			local function YEPHH_fake_script() -- forest.LocalScript 
+				local script = Instance.new('LocalScript', forest)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)
+	
+				end)
+			end
+			coroutine.wrap(YEPHH_fake_script)()
+	
+			coroutine.wrap(HDXSCO_fake_script)()
+	
+			local function YEPHaH_fake_script() -- forest.LocalScript 
+				local script = Instance.new('LocalScript', forest_12)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = workspace.Map.Main.PeanutBox.WorldPivot
+				end)
+			end
+			coroutine.wrap(YEPHaH_fake_script)()
+	
+			local function OONFA_fake_script() -- forest_2.LocalScript 
+				local script = Instance.new('LocalScript', forest_2)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)
+	
+				end)
+			end
+			coroutine.wrap(OONFA_fake_script)()
+			local function UJTFSP_fake_script() -- forest_3.LocalScript 
+				local script = Instance.new('LocalScript', forest_3)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)
+	
+				end)
+			end
+			coroutine.wrap(UJTFSP_fake_script)()
+			local function FKMGC_fake_script() -- forest_4.LocalScript 
+				local script = Instance.new('LocalScript', forest_4)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)
+	
+				end)
+			end
+			coroutine.wrap(FKMGC_fake_script)()
+	
+			local function FKMGcC_fake_script() -- forest_4.LocalScript 
+				local script = Instance.new('LocalScript', forest_13)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)
+	
+				end)
+			end
+			coroutine.wrap(FKMGcC_fake_script)()
+	
+			local function MYAPL_fake_script() -- forest_5.LocalScript 
+				local script = Instance.new('LocalScript', forest_5)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)
+	
+				end)
+			end
+			coroutine.wrap(MYAPL_fake_script)()
+			local function SARW_fake_script() -- forest_6.LocalScript 
+				local script = Instance.new('LocalScript', forest_6)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)
+	
+				end)
+			end
+			coroutine.wrap(SARW_fake_script)()
+			local function ULDQ_fake_script() -- forest_7.LocalScript 
+				local script = Instance.new('LocalScript', forest_7)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)
+	
+				end)
+			end
+			coroutine.wrap(ULDQ_fake_script)()
+			local function WCSEIZ_fake_script() -- forest_8.LocalScript 
+				local script = Instance.new('LocalScript', forest_8)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)
+	
+				end)
+			end
+			coroutine.wrap(WCSEIZ_fake_script)()
+			local function DELS_fake_script() -- forest_9.LocalScript 
+				local script = Instance.new('LocalScript', forest_9)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)
+	
+				end)
+			end
+			coroutine.wrap(DELS_fake_script)()
+			local function MBSEPO_fake_script() -- forest_10.LocalScript 
+				local script = Instance.new('LocalScript', forest_10)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)
+	
+				end)
+			end
+			coroutine.wrap(MBSEPO_fake_script)()
+			local function ECCLLRX_fake_script() -- forest_11.LocalScript 
+				local script = Instance.new('LocalScript', forest_11)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)
+	
+				end)
+			end
+			coroutine.wrap(ECCLLRX_fake_script)()
+	
+			local function ECCLLRXx_fake_script() -- forest_11.LocalScript 
+				local script = Instance.new('LocalScript', forest_14)
+	
+				script.Parent.MouseButton1Click:Connect(function()
+					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
+					char.CFrame = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)
+	
+				end)
+			end
+			coroutine.wrap(ECCLLRXx_fake_script)()
+	
+			local function WHYI_fake_script() -- Container.LocalScript 
+				local script = Instance.new('LocalScript', Container)
+	
+				script.Parent.Draggable= true
+			end
+			coroutine.wrap(WHYI_fake_script)()
+		end)
+		
+		if not sucess then
+			if _G.SendErrMessages then
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			print("Script returned error '"..err.."'...")
+			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			end
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		end
+	end)
+end
+coroutine.wrap(SKDOMD_fake_script)()
+local function PMOQ_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active = true
@@ -3726,15 +4243,15 @@ local function NWLGX_fake_script() -- ImageLabel.LocalScript
 		if not a then print(b) end
 	end
 end
-coroutine.wrap(NWLGX_fake_script)()
-local function KLKHUG_fake_script() -- Frame.LocalScript 
+coroutine.wrap(PMOQ_fake_script)()
+local function CUUTGVU_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Draggable = true
 	script.Parent.Active =true
 end
-coroutine.wrap(KLKHUG_fake_script)()
-local function RYYWEF_fake_script() -- ImageButton_2.LocalScript 
+coroutine.wrap(CUUTGVU_fake_script)()
+local function ABGZ_fake_script() -- ImageButton_2.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -3743,8 +4260,8 @@ local function RYYWEF_fake_script() -- ImageButton_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(RYYWEF_fake_script)()
-local function ZDBQVYP_fake_script() -- isle.LocalScript 
+coroutine.wrap(ABGZ_fake_script)()
+local function ZQVS_fake_script() -- isle.LocalScript 
 	local script = Instance.new('LocalScript', isle)
 
 	local list = {
@@ -3800,8 +4317,8 @@ local function ZDBQVYP_fake_script() -- isle.LocalScript
 	
 	if not a then print(b) end
 end
-coroutine.wrap(ZDBQVYP_fake_script)()
-local function NFFBSG_fake_script() -- isle.CalibrateGTL 
+coroutine.wrap(ZQVS_fake_script)()
+local function LUDXRHG_fake_script() -- isle.CalibrateGTL 
 	local script = Instance.new('LocalScript', isle)
 
 	local status = false
@@ -3830,8 +4347,8 @@ local function NFFBSG_fake_script() -- isle.CalibrateGTL
 	end)
 	
 end
-coroutine.wrap(NFFBSG_fake_script)()
-local function PIIDRAG_fake_script() -- hideshow.LocalScript 
+coroutine.wrap(LUDXRHG_fake_script)()
+local function FDAZBAX_fake_script() -- hideshow.LocalScript 
 	local script = Instance.new('LocalScript', hideshow)
 
 	script.Parent.Active = true
@@ -3873,4 +4390,4 @@ local function PIIDRAG_fake_script() -- hideshow.LocalScript
 		end)
 	end
 end
-coroutine.wrap(PIIDRAG_fake_script)()
+coroutine.wrap(FDAZBAX_fake_script)()

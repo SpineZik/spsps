@@ -132,4 +132,6 @@ elseif game.PlaceId == 17417040202 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Push%20a%20FATPet"))()
 elseif game.PlaceId == 91819941310461 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slap%20Legends"))()
+elseif game.PlaceId == 112152012901197 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/RPG%20Fighting%20Simulator%20-%20BOSSES!"))()
 end

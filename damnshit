@@ -96,7 +96,7 @@ elseif game.PlaceId ==15610971848 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sword%20Training%20Simulator"))()
 elseif game.PlaceId ==18749079847 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/HeadBattle%20Simulator"))()
-elseif game.PlaceId ==133033561458760 or game.PlaceId == 132811399724545 or game.PlaceId ==88685243659217 or game.PlaceId == 106961878099428 or game.PlaceId ==125900816440808 or game.PlaceId == 71345480156033 or game.PlaceId == 73308469711171 then 
+elseif game.PlaceId ==133033561458760 or game.PlaceId == 132811399724545 or game.PlaceId ==88685243659217 or game.PlaceId == 106961878099428 or game.PlaceId ==125900816440808 or game.PlaceId == 71345480156033 or game.PlaceId == 73308469711171 or game.PlaceId == 74884846906654 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
 elseif game.PlaceId ==115560789670995 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Turbo%20Racing%20Simulator!"))()

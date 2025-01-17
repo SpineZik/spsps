@@ -104,7 +104,7 @@ elseif game.PlaceId ==80522439815035 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Kawaii%20Hatchers!"))()
 elseif game.PlaceId ==12183247809 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Pancake%20Battles"))()
-elseif game.PlaceId ==86230775293861 or game.PlaceId ==137535317402998 or game.PlaceId ==125067579372958 then 
+elseif game.PlaceId ==86230775293861 or game.PlaceId ==137535317402998 or game.PlaceId ==125067579372958 or game.PlaceId ==119696268487200 or game.PlaceId ==78606308971979 or game.PlaceId ==114268110379653 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch"))()
 elseif game.PlaceId ==78810217013863 then 
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Baseball%20Simulator"))()

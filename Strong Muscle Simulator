@@ -854,7 +854,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function EIWPKJN_fake_script() -- Trigger.OnActivate 
+local function NDIZ_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -883,8 +883,8 @@ local function EIWPKJN_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(EIWPKJN_fake_script)()
-local function XKMGSW_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(NDIZ_fake_script)()
+local function TIIJUBM_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -915,8 +915,8 @@ local function XKMGSW_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(XKMGSW_fake_script)()
-local function PGFL_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(TIIJUBM_fake_script)()
+local function KCELDG_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -948,8 +948,8 @@ local function PGFL_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(PGFL_fake_script)()
-local function VYKHSG_fake_script() -- Trigger_4.OnActivate 
+coroutine.wrap(KCELDG_fake_script)()
+local function UCRRVLG_fake_script() -- Trigger_4.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -980,8 +980,8 @@ local function VYKHSG_fake_script() -- Trigger_4.OnActivate
 		end
 	end)
 end
-coroutine.wrap(VYKHSG_fake_script)()
-local function MVZRIYB_fake_script() -- Trigger_5.OnActivate 
+coroutine.wrap(UCRRVLG_fake_script)()
+local function FERDL_fake_script() -- Trigger_5.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -1012,8 +1012,8 @@ local function MVZRIYB_fake_script() -- Trigger_5.OnActivate
 		end
 	end)
 end
-coroutine.wrap(MVZRIYB_fake_script)()
-local function RMKURY_fake_script() -- Trigger_6.OnActivate 
+coroutine.wrap(FERDL_fake_script)()
+local function LBGQR_fake_script() -- Trigger_6.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
@@ -1035,7 +1035,7 @@ local function RMKURY_fake_script() -- Trigger_6.OnActivate
 		
 		while status do
 			pcall(function()
-				local A_1 = "Hell"
+				local A_1 = "Demon"
 				local A_2 = 50
 				local Event = game:GetService("ReplicatedStorage").Packages.Network.RemoteFunctionStorage.HatchEgg
 				Event:InvokeServer(A_1, A_2)
@@ -1044,8 +1044,8 @@ local function RMKURY_fake_script() -- Trigger_6.OnActivate
 		end
 	end)
 end
-coroutine.wrap(RMKURY_fake_script)()
-local function NTZN_fake_script() -- Trigger_7.OnActivate 
+coroutine.wrap(LBGQR_fake_script)()
+local function MRNKMR_fake_script() -- Trigger_7.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_7)
 
 	local ts = game:GetService("TweenService")
@@ -1076,8 +1076,8 @@ local function NTZN_fake_script() -- Trigger_7.OnActivate
 		end
 	end)
 end
-coroutine.wrap(NTZN_fake_script)()
-local function OYZKFM_fake_script() -- Trigger_8.OnActivate 
+coroutine.wrap(MRNKMR_fake_script)()
+local function PUZGDC_fake_script() -- Trigger_8.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_8)
 
 	local ts = game:GetService("TweenService")
@@ -1108,8 +1108,8 @@ local function OYZKFM_fake_script() -- Trigger_8.OnActivate
 		end
 	end)
 end
-coroutine.wrap(OYZKFM_fake_script)()
-local function JXPJKS_fake_script() -- Trigger_9.OnActivate 
+coroutine.wrap(PUZGDC_fake_script)()
+local function NWYHZCN_fake_script() -- Trigger_9.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_9)
 
 	local ts = game:GetService("TweenService")
@@ -1140,8 +1140,8 @@ local function JXPJKS_fake_script() -- Trigger_9.OnActivate
 		end
 	end)
 end
-coroutine.wrap(JXPJKS_fake_script)()
-local function WGVXLSH_fake_script() -- Trigger_10.OnActivate 
+coroutine.wrap(NWYHZCN_fake_script)()
+local function CXPAP_fake_script() -- Trigger_10.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_10)
 
 	local ts = game:GetService("TweenService")
@@ -1172,8 +1172,8 @@ local function WGVXLSH_fake_script() -- Trigger_10.OnActivate
 		end
 	end)
 end
-coroutine.wrap(WGVXLSH_fake_script)()
-local function YCWO_fake_script() -- Trigger_11.OnActivate 
+coroutine.wrap(CXPAP_fake_script)()
+local function ZWVGJ_fake_script() -- Trigger_11.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_11)
 
 	local ts = game:GetService("TweenService")
@@ -1204,8 +1204,8 @@ local function YCWO_fake_script() -- Trigger_11.OnActivate
 		end
 	end)
 end
-coroutine.wrap(YCWO_fake_script)()
-local function UQSGA_fake_script() -- Trigger_12.OnActivate 
+coroutine.wrap(ZWVGJ_fake_script)()
+local function KMDDDSQ_fake_script() -- Trigger_12.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_12)
 
 	local ts = game:GetService("TweenService")
@@ -1236,8 +1236,8 @@ local function UQSGA_fake_script() -- Trigger_12.OnActivate
 		end
 	end)
 end
-coroutine.wrap(UQSGA_fake_script)()
-local function ZLIEXQ_fake_script() -- TextLabel_13.Script 
+coroutine.wrap(KMDDDSQ_fake_script)()
+local function PZCINQ_fake_script() -- TextLabel_13.Script 
 	local script = Instance.new('LocalScript', TextLabel_13)
 
 	local ts = game:GetService("TweenService")
@@ -1255,8 +1255,8 @@ local function ZLIEXQ_fake_script() -- TextLabel_13.Script
 		end)
 	end)
 end
-coroutine.wrap(ZLIEXQ_fake_script)()
-local function FQFT_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(PZCINQ_fake_script)()
+local function CRYSIO_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -1299,8 +1299,8 @@ local function FQFT_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(FQFT_fake_script)()
-local function DILB_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(CRYSIO_fake_script)()
+local function RHGNT_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1309,8 +1309,8 @@ local function DILB_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(DILB_fake_script)()
-local function UOSHWW_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(RHGNT_fake_script)()
+local function QBYD_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -1326,8 +1326,8 @@ local function UOSHWW_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(UOSHWW_fake_script)()
-local function VMNGGT_fake_script() -- StrongMuscleSimulator.Tween 
+coroutine.wrap(QBYD_fake_script)()
+local function MVLHYT_fake_script() -- StrongMuscleSimulator.Tween 
 	local script = Instance.new('LocalScript', StrongMuscleSimulator)
 
 	local list = {
@@ -1383,4 +1383,4 @@ local function VMNGGT_fake_script() -- StrongMuscleSimulator.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(VMNGGT_fake_script)()
+coroutine.wrap(MVLHYT_fake_script)()

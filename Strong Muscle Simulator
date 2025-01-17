@@ -82,10 +82,26 @@ local UICorner_27 = Instance.new("UICorner")
 local Frame_9 = Instance.new("Frame")
 local UICorner_28 = Instance.new("UICorner")
 local TextLabel_9 = Instance.new("TextLabel")
+local Egg8 = Instance.new("Frame")
 local UICorner_29 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
+local Trigger_10 = Instance.new("TextButton")
+local In_10 = Instance.new("Frame")
 local UICorner_30 = Instance.new("UICorner")
+local Frame_10 = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
 local TextLabel_10 = Instance.new("TextLabel")
+local Egg9 = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local Trigger_11 = Instance.new("TextButton")
+local In_11 = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local Frame_11 = Instance.new("Frame")
+local UICorner_34 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local UICorner_35 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_36 = Instance.new("UICorner")
+local TextLabel_12 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -620,7 +636,115 @@ TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextSize = 20.000
 TextLabel_9.TextWrapped = true
 
-UICorner_29.Parent = ImageLabel
+Egg8.Name = "Egg 8"
+Egg8.Parent = ContainerList
+Egg8.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Egg8.BackgroundTransparency = 0.500
+Egg8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Egg8.BorderSizePixel = 0
+Egg8.Position = UDim2.new(0, 0, 0.165938869, 0)
+Egg8.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_29.Parent = Egg8
+
+Trigger_10.Name = "Trigger"
+Trigger_10.Parent = Egg8
+Trigger_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_10.BackgroundTransparency = 1.000
+Trigger_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.BorderSizePixel = 0
+Trigger_10.Size = UDim2.new(0, 176, 0, 38)
+Trigger_10.Font = Enum.Font.SourceSans
+Trigger_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.TextSize = 14.000
+Trigger_10.TextTransparency = 1.000
+
+In_10.Name = "In"
+In_10.Parent = Egg8
+In_10.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_10.BorderSizePixel = 0
+In_10.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_10.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_30.Parent = In_10
+
+Frame_10.Parent = In_10
+Frame_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_10.BorderSizePixel = 0
+Frame_10.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_31.Parent = Frame_10
+
+TextLabel_10.Parent = Egg8
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_10.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_10.Font = Enum.Font.Jura
+TextLabel_10.Text = "Winter EGG"
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.TextSize = 20.000
+TextLabel_10.TextWrapped = true
+
+Egg9.Name = "Egg 9"
+Egg9.Parent = ContainerList
+Egg9.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Egg9.BackgroundTransparency = 0.500
+Egg9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Egg9.BorderSizePixel = 0
+Egg9.Position = UDim2.new(0, 0, 0.165938869, 0)
+Egg9.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_32.Parent = Egg9
+
+Trigger_11.Name = "Trigger"
+Trigger_11.Parent = Egg9
+Trigger_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_11.BackgroundTransparency = 1.000
+Trigger_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_11.BorderSizePixel = 0
+Trigger_11.Size = UDim2.new(0, 176, 0, 38)
+Trigger_11.Font = Enum.Font.SourceSans
+Trigger_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_11.TextSize = 14.000
+Trigger_11.TextTransparency = 1.000
+
+In_11.Name = "In"
+In_11.Parent = Egg9
+In_11.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+In_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_11.BorderSizePixel = 0
+In_11.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
+In_11.Size = UDim2.new(0, 35, 0, 20)
+
+UICorner_33.Parent = In_11
+
+Frame_11.Parent = In_11
+Frame_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_11.BorderSizePixel = 0
+Frame_11.Size = UDim2.new(0, 19, 0, 20)
+
+UICorner_34.Parent = Frame_11
+
+TextLabel_11.Parent = Egg9
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0.0511363633, 0, 0, 0)
+TextLabel_11.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_11.Font = Enum.Font.Jura
+TextLabel_11.Text = "Atlantis EGG"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextSize = 20.000
+TextLabel_11.TextWrapped = true
+
+UICorner_35.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -631,19 +755,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_30.Parent = Top
+UICorner_36.Parent = Top
 
-TextLabel_10.Parent = Top
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_10.BorderSizePixel = 0
-TextLabel_10.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_10.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_10.Font = Enum.Font.Unknown
-TextLabel_10.Text = "SpineWare"
-TextLabel_10.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_10.TextSize = 18.000
+TextLabel_12.Parent = Top
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_12.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_12.Font = Enum.Font.Unknown
+TextLabel_12.Text = "SpineWare"
+TextLabel_12.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_12.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -668,7 +792,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function YQKI_fake_script() -- Trigger.OnActivate 
+local function MEIXZME_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -697,8 +821,8 @@ local function YQKI_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(YQKI_fake_script)()
-local function CUJILDP_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(MEIXZME_fake_script)()
+local function JAWV_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -729,8 +853,8 @@ local function CUJILDP_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(CUJILDP_fake_script)()
-local function OONFCCX_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(JAWV_fake_script)()
+local function FQFDV_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -761,8 +885,8 @@ local function OONFCCX_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(OONFCCX_fake_script)()
-local function POGW_fake_script() -- Trigger_4.OnActivate 
+coroutine.wrap(FQFDV_fake_script)()
+local function EMJE_fake_script() -- Trigger_4.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -793,8 +917,8 @@ local function POGW_fake_script() -- Trigger_4.OnActivate
 		end
 	end)
 end
-coroutine.wrap(POGW_fake_script)()
-local function ONHQP_fake_script() -- Trigger_5.OnActivate 
+coroutine.wrap(EMJE_fake_script)()
+local function WMLHC_fake_script() -- Trigger_5.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -825,8 +949,8 @@ local function ONHQP_fake_script() -- Trigger_5.OnActivate
 		end
 	end)
 end
-coroutine.wrap(ONHQP_fake_script)()
-local function TORDNMU_fake_script() -- Trigger_6.OnActivate 
+coroutine.wrap(WMLHC_fake_script)()
+local function TNVIP_fake_script() -- Trigger_6.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
@@ -857,8 +981,8 @@ local function TORDNMU_fake_script() -- Trigger_6.OnActivate
 		end
 	end)
 end
-coroutine.wrap(TORDNMU_fake_script)()
-local function AMMSYX_fake_script() -- Trigger_7.OnActivate 
+coroutine.wrap(TNVIP_fake_script)()
+local function DTBQOIQ_fake_script() -- Trigger_7.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_7)
 
 	local ts = game:GetService("TweenService")
@@ -889,8 +1013,8 @@ local function AMMSYX_fake_script() -- Trigger_7.OnActivate
 		end
 	end)
 end
-coroutine.wrap(AMMSYX_fake_script)()
-local function HLOP_fake_script() -- Trigger_8.OnActivate 
+coroutine.wrap(DTBQOIQ_fake_script)()
+local function UWNYGL_fake_script() -- Trigger_8.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_8)
 
 	local ts = game:GetService("TweenService")
@@ -921,8 +1045,8 @@ local function HLOP_fake_script() -- Trigger_8.OnActivate
 		end
 	end)
 end
-coroutine.wrap(HLOP_fake_script)()
-local function RQYGI_fake_script() -- Trigger_9.OnActivate 
+coroutine.wrap(UWNYGL_fake_script)()
+local function LBGUOQ_fake_script() -- Trigger_9.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_9)
 
 	local ts = game:GetService("TweenService")
@@ -953,9 +1077,73 @@ local function RQYGI_fake_script() -- Trigger_9.OnActivate
 		end
 	end)
 end
-coroutine.wrap(RQYGI_fake_script)()
-local function PBDEI_fake_script() -- TextLabel_10.Script 
-	local script = Instance.new('LocalScript', TextLabel_10)
+coroutine.wrap(LBGUOQ_fake_script)()
+local function YPVNG_fake_script() -- Trigger_10.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_10)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local A_1 = "Winter"
+				local A_2 = 50
+				local Event = game:GetService("ReplicatedStorage").Packages.Network.RemoteFunctionStorage.HatchEgg
+				Event:InvokeServer(A_1, A_2)
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(YPVNG_fake_script)()
+local function EBUE_fake_script() -- Trigger_11.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_11)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local A_1 = "Atlantis"
+				local A_2 = 50
+				local Event = game:GetService("ReplicatedStorage").Packages.Network.RemoteFunctionStorage.HatchEgg
+				Event:InvokeServer(A_1, A_2)
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(EBUE_fake_script)()
+local function EPFQ_fake_script() -- TextLabel_12.Script 
+	local script = Instance.new('LocalScript', TextLabel_12)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -972,8 +1160,8 @@ local function PBDEI_fake_script() -- TextLabel_10.Script
 		end)
 	end)
 end
-coroutine.wrap(PBDEI_fake_script)()
-local function DWVX_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(EPFQ_fake_script)()
+local function QGRU_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -1016,8 +1204,8 @@ local function DWVX_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(DWVX_fake_script)()
-local function FRVIAMK_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(QGRU_fake_script)()
+local function VWTVP_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1026,8 +1214,8 @@ local function FRVIAMK_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(FRVIAMK_fake_script)()
-local function BVXFX_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(VWTVP_fake_script)()
+local function UCHUS_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -1043,8 +1231,8 @@ local function BVXFX_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(BVXFX_fake_script)()
-local function YFWGACJ_fake_script() -- StrongMuscleSimulator.Tween 
+coroutine.wrap(UCHUS_fake_script)()
+local function BNGJN_fake_script() -- StrongMuscleSimulator.Tween 
 	local script = Instance.new('LocalScript', StrongMuscleSimulator)
 
 	local list = {
@@ -1100,4 +1288,4 @@ local function YFWGACJ_fake_script() -- StrongMuscleSimulator.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(YFWGACJ_fake_script)()
+coroutine.wrap(BNGJN_fake_script)()

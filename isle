@@ -4663,8 +4663,75 @@ coroutine.wrap(NTMYVX_fake_script)()
 local function VCQEE_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
-	script.Parent.Active = true
-	script.Parent.Draggable = true
+local UIS = game:GetService('UserInputService')
+
+local frame = script.Parent
+
+
+
+local dragToggle = nil
+
+local dragSpeed = 0.25
+
+local dragStart = nil
+
+local startPos = nil
+
+
+
+local function updateInput(input)
+
+ local delta = input.Position - dragStart
+
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+ game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+
+end
+
+
+
+frame.InputBegan:Connect(function(input)
+
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+
+  dragToggle = true
+
+  dragStart = input.Position
+
+  startPos = frame.Position
+
+  input.Changed:Connect(function()
+
+   if input.UserInputState == Enum.UserInputState.End then
+
+    dragToggle = false
+
+   end
+
+  end)
+
+ end
+
+end)
+
+
+
+UIS.InputChanged:Connect(function(input)
+
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+
+  if dragToggle then
+
+   updateInput(input)
+
+  end
+
+ end
+
+end)
 	local is = false
 	_G.ChangeValue = function(arg2,toreturnname,arg3)
 		is = true
@@ -4705,8 +4772,75 @@ coroutine.wrap(VCQEE_fake_script)()
 local function OHRX_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
-	script.Parent.Draggable = true
-	script.Parent.Active =true
+local UIS = game:GetService('UserInputService')
+
+local frame = script.Parent
+
+
+
+local dragToggle = nil
+
+local dragSpeed = 0.25
+
+local dragStart = nil
+
+local startPos = nil
+
+
+
+local function updateInput(input)
+
+ local delta = input.Position - dragStart
+
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+ game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+
+end
+
+
+
+frame.InputBegan:Connect(function(input)
+
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+
+  dragToggle = true
+
+  dragStart = input.Position
+
+  startPos = frame.Position
+
+  input.Changed:Connect(function()
+
+   if input.UserInputState == Enum.UserInputState.End then
+
+    dragToggle = false
+
+   end
+
+  end)
+
+ end
+
+end)
+
+
+
+UIS.InputChanged:Connect(function(input)
+
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+
+  if dragToggle then
+
+   updateInput(input)
+
+  end
+
+ end
+
+end)
 end
 coroutine.wrap(OHRX_fake_script)()
 local function CPOXU_fake_script() -- ImageButton_2.LocalScript 
@@ -4843,8 +4977,75 @@ coroutine.wrap(VFFTYKC_fake_script)()
 local function LBXPMR_fake_script() -- hideshow.LocalScript 
 	local script = Instance.new('LocalScript', hideshow)
 
-	script.Parent.Active = true
-	script.Parent.Draggable = true
+local UIS = game:GetService('UserInputService')
+
+local frame = script.Parent
+
+
+
+local dragToggle = nil
+
+local dragSpeed = 0.25
+
+local dragStart = nil
+
+local startPos = nil
+
+
+
+local function updateInput(input)
+
+ local delta = input.Position - dragStart
+
+ local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+
+  startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+ game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+
+end
+
+
+
+frame.InputBegan:Connect(function(input)
+
+ if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+
+  dragToggle = true
+
+  dragStart = input.Position
+
+  startPos = frame.Position
+
+  input.Changed:Connect(function()
+
+   if input.UserInputState == Enum.UserInputState.End then
+
+    dragToggle = false
+
+   end
+
+  end)
+
+ end
+
+end)
+
+
+
+UIS.InputChanged:Connect(function(input)
+
+ if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+
+  if dragToggle then
+
+   updateInput(input)
+
+  end
+
+ end
+
+end)
 	
 	local GuiService = game:GetService("GuiService")
 	local UserInputService = game:GetService("UserInputService")

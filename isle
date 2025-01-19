@@ -3859,7 +3859,7 @@ local function SGRFBGO_fake_script() -- TextButton_22.LocalScript
 								local fold = game.Workspace.AIHunter
 								local enemyfold = {}
 	
-								for ___, en in fold do
+								for ___, en in fold:GetChildren() do
 									if en:IsA("Model") then
 										table.insert(enemyfold,en)
 									end

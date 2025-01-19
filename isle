@@ -3945,7 +3945,7 @@ local function SGRFBGO_fake_script() -- TextButton_22.LocalScript
 	
 local UIS = game:GetService('UserInputService')
 
-local frame = script.Parent
+local frame = script.Parent:FindFirstChildOfClass("Frame")
 
 
 

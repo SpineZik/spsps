@@ -138,4 +138,6 @@ elseif game.PlaceId == 127084696595933 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Find%20%26%20Sell"))()
 elseif game.PlaceId == 71248013249709 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Solo%20Leveling%E3%80%90%F0%9F%8F%A0School%20Dungeon%E3%80%91"))()
+elseif game.PlaceId == 114726928695371 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Feed%20The%20Giant%20Simulator!"))()
 end

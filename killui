@@ -1,0 +1,472 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local killUI = Instance.new("ScreenGui")
+local Container = Instance.new("Frame")
+local Search = Instance.new("TextBox")
+local Objects = Instance.new("ScrollingFrame")
+local Example = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+
+--Properties:
+
+killUI.Name = "killUI"
+killUI.Parent = game.CoreGui
+killUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Container.Name = "Container"
+Container.Parent = killUI
+Container.BackgroundColor3 = Color3.fromRGB(117, 117, 117)
+Container.BackgroundTransparency = 0.300
+Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0.147486031, 0, 0.198487714, 0)
+Container.Size = UDim2.new(0, 196, 0, 297)
+
+Search.Name = "Search"
+Search.Parent = Container
+Search.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+Search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Search.BorderSizePixel = 0
+Search.Position = UDim2.new(0.0306122452, 0, 0.0505050495, 0)
+Search.Size = UDim2.new(0, 183, 0, 27)
+Search.Font = Enum.Font.Jura
+Search.Text = "Search"
+Search.TextColor3 = Color3.fromRGB(238, 238, 238)
+Search.TextScaled = true
+Search.TextSize = 14.000
+Search.TextWrapped = true
+
+Objects.Name = "Objects"
+Objects.Parent = Container
+Objects.Active = true
+Objects.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Objects.BackgroundTransparency = 1.000
+Objects.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Objects.BorderSizePixel = 0
+Objects.Position = UDim2.new(0.0306122452, 0, 0.188552186, 0)
+Objects.Size = UDim2.new(0, 183, 0, 233)
+
+Example.Name = "Example"
+Example.Parent = Objects
+Example.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Example.BorderSizePixel = 0
+Example.Position = UDim2.new(0.101092897, 0, 0, 0)
+Example.Size = UDim2.new(0, 146, 0, 34)
+Example.Visible = false
+Example.Font = Enum.Font.Jura
+Example.Text = "ExampleButton"
+Example.TextColor3 = Color3.fromRGB(230, 230, 230)
+Example.TextSize = 14.000
+
+UIListLayout.Parent = Objects
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+-- Scripts:
+
+	Objects.ChildAdded:Connect(function()
+		Objects.CanvasSize = UDim2.new(0,0,0.35*#Objects:GetChildren(),0)
+	end)
+
+local function WXZP_fake_script() -- Search.LocalScript 
+	local script = Instance.new('LocalScript', Search)
+
+	script.Parent.Changed:Connect(function()
+	    pcall(function()
+		local text = script.Parent.Text:lower()
+		local otbor = Objects:GetChildren()
+	
+		for _,v in otbor do
+			if text ~= "" and text~="search" then
+				if v:IsA("TextButton") then
+					buttext= v.Text:lower()
+					if string.find(buttext,text) then
+						v.Visible= true
+					else
+						v.Visible = false
+					end
+				end
+			else 
+				if v:IsA("TextButton") and v.Text ~= "ExampleButton" then
+					v.Visible = true 
+				end
+			end
+		end end)
+	end)
+end
+coroutine.wrap(WXZP_fake_script)()
+local function YVCVMR_fake_script() -- Objects.Control 
+	local script = Instance.new('LocalScript', Objects)
+
+	local threats = game.Workspace.Threats
+	
+	for i,v in threats:GetChildren() do
+		if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") then
+			local newbutt = script.Parent.Example:Clone()
+			newbutt.Name="JustButton"
+			newbutt.Parent = script.Parent
+			newbutt.Text = v.Name.."("..math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude).."m)"
+			
+			newbutt.MouseButton1Click:Connect(function()
+				if not game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") then
+					local StarterGui = game:GetService("StarterGui")
+					
+					StarterGui:SetCore("SendNotification", {
+						Title = "Notification",
+						Text = "Get a steel sword",
+						Duration = 5,
+					})
+					
+				end
+				local safepos = CFrame.new(-640.083618, -762.512695, -1206.01123, -0.0762458369, -8.35072012e-09, 0.997089028, -2.74301315e-09, 1, 8.16534573e-09, -0.997089028, -2.11245488e-09, -0.0762458369)
+				local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local target = v
+				local lastc = root.CFrame
+				
+				repeat
+					local targetroot = target:FindFirstChild("HumanoidRootPart")
+					local plrkatana = game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") or game.Players.LocalPlayer.Character:FindFirstChild("Steel Sword")
+					
+					if plrkatana:FindFirstChild("VisualGunWeld") then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+					
+					if plrkatana.Parent.Name == "Backpack" then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+	
+					root = game.Players.LocalPlayer.Character.HumanoidRootPart
+					root.CFrame = targetroot.CFrame
+					wait(0.3)
+					local A_1 = target
+					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
+					Event:FireServer(A_1)
+					wait(0.5)
+					root.CFrame = safepos
+					wait(1.25)
+				until target.Humanoid.Health <= 0 
+	            root.CFrame = lastc
+			end)
+		end
+	end
+	
+	for i,v in game.Workspace.AIHunter:GetChildren() do
+		if v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") then
+			local newbutt = script.Parent.Example:Clone()
+			newbutt.Name="JustButton"
+			newbutt.Text = v.Name.."("..math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude).."m)"
+	        newbutt.Parent = script.Parent
+			newbutt.MouseButton1Click:Connect(function()
+				if not game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") then
+					local StarterGui = game:GetService("StarterGui")
+	
+					StarterGui:SetCore("SendNotification", {
+						Title = "Notification",
+						Text = "Get a steel sword",
+						Duration = 5,
+					})
+	
+				end
+				local safepos = CFrame.new(-640.083618, -762.512695, -1206.01123, -0.0762458369, -8.35072012e-09, 0.997089028, -2.74301315e-09, 1, 8.16534573e-09, -0.997089028, -2.11245488e-09, -0.0762458369)
+				local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local target = v
+	            local lastc = root.CFrame
+	            
+				repeat
+					local targetroot = target:FindFirstChild("HumanoidRootPart")
+					local plrkatana = game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") or game.Players.LocalPlayer.Character:FindFirstChild("Steel Sword")
+	
+					if plrkatana:FindFirstChild("VisualGunWeld") then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+	
+					if plrkatana.Parent.Name == "Backpack" then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+	
+					root = game.Players.LocalPlayer.Character.HumanoidRootPart
+					root.CFrame = targetroot.CFrame
+					wait(0.3)
+					local A_1 = target
+					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
+					Event:FireServer(A_1)
+					wait(0.5)
+					root.CFrame = safepos
+					wait(1.25)
+				until target.Humanoid.Health <= 0 
+	            root.CFrame = lastc
+			end)
+		end
+	end
+	
+	for i,v in game.Players:GetPlayers() do
+	    if v == game.Players.LocalPlayer then continue end
+		if v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Humanoid") then
+			local newbutt = script.Parent.Example:Clone()
+			newbutt.Name="JustButton"
+			newbutt.Text = v.Name.."("..math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude).."m)"
+	        newbutt.Parent = script.Parent
+			newbutt.MouseButton1Click:Connect(function()
+				if not game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") then
+					local StarterGui = game:GetService("StarterGui")
+	
+					StarterGui:SetCore("SendNotification", {
+						Title = "Notification",
+						Text = "Get a steel sword",
+						Duration = 5,
+					})
+	
+				end
+				local safepos = CFrame.new(-640.083618, -762.512695, -1206.01123, -0.0762458369, -8.35072012e-09, 0.997089028, -2.74301315e-09, 1, 8.16534573e-09, -0.997089028, -2.11245488e-09, -0.0762458369)
+				local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+				local target = v.Character
+	            local lastc = root.CFrame
+	            
+				repeat
+					local targetroot = target:FindFirstChild("HumanoidRootPart")
+					local plrkatana = game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") or game.Players.LocalPlayer.Character:FindFirstChild("Steel Sword")
+	
+					if plrkatana:FindFirstChild("VisualGunWeld") then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+	
+					if plrkatana.Parent.Name == "Backpack" then
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+					end
+	
+					root = game.Players.LocalPlayer.Character.HumanoidRootPart
+					root.CFrame = targetroot.CFrame
+					wait(0.3)
+					local A_1 = target
+					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
+					Event:FireServer(A_1)
+					wait(0.5)
+					root.CFrame = safepos
+					wait(1.25)
+				until target.Humanoid.Health <= 0 
+	            root.CFrame = lastc
+			end)
+		end
+	end
+	
+	threats.ChildAdded:Connect(function(child)
+		pcall(function()
+			if child:FindFirstChild("HumanoidRootPart") and child:FindFirstChild("Humanoid") then
+				local newbutt = script.Parent.Example:Clone()
+				newbutt.Name="JustButton"
+				newbutt.Parent = script.Parent
+				newbutt.Text = child.Name.."("..math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - child.HumanoidRootPart.Position).Magnitude).."m)"
+	
+				newbutt.MouseButton1Click:Connect(function()
+					if not game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") then
+						local StarterGui = game:GetService("StarterGui")
+	
+						StarterGui:SetCore("SendNotification", {
+							Title = "Notification",
+							Text = "Get a steel sword",
+							Duration = 5,
+						})
+	
+					end
+					local safepos = CFrame.new(-640.083618, -762.512695, -1206.01123, -0.0762458369, -8.35072012e-09, 0.997089028, -2.74301315e-09, 1, 8.16534573e-09, -0.997089028, -2.11245488e-09, -0.0762458369)
+					local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local target = child
+	                local lastc = root.CFrame
+					repeat
+						local targetroot = target:FindFirstChild("HumanoidRootPart")
+						local plrkatana = game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") or game.Players.LocalPlayer.Character:FindFirstChild("Steel Sword")
+	
+						if plrkatana:FindFirstChild("VisualGunWeld") then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+						end
+	
+						if plrkatana.Parent.Name == "Backpack" then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+						end
+	
+						root = game.Players.LocalPlayer.Character.HumanoidRootPart
+						root.CFrame = targetroot.CFrame
+						wait(0.3)
+						local A_1 = target
+						local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
+						Event:FireServer(A_1)
+						wait(0.5)
+						root.CFrame = safepos
+						wait(1.25)
+					until target.Humanoid.Health <= 0 
+	                root.CFrame = lastc
+				end)
+			end
+		end)
+	end)
+	
+	game.Workspace.AIHunter.ChildAdded:Connect(function(child)
+		pcall(function()
+			if child:FindFirstChild("HumanoidRootPart") and child:FindFirstChild("Humanoid") then
+				local newbutt = script.Parent.Example:Clone()
+				newbutt.Name="JustButton"
+				newbutt.Parent = script.Parent
+				newbutt.Text = child.Name.."("..math.floor((game.Players.LocalPlayer.Character.HumanoidRootPart.Position - child.HumanoidRootPart.Position).Magnitude).."m)"
+	
+				newbutt.MouseButton1Click:Connect(function()
+					if not game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") then
+						local StarterGui = game:GetService("StarterGui")
+	
+						StarterGui:SetCore("SendNotification", {
+							Title = "Notification",
+							Text = "Get a steel sword",
+							Duration = 5,
+						})
+	
+					end
+					local safepos = CFrame.new(-640.083618, -762.512695, -1206.01123, -0.0762458369, -8.35072012e-09, 0.997089028, -2.74301315e-09, 1, 8.16534573e-09, -0.997089028, -2.11245488e-09, -0.0762458369)
+					local root = game.Players.LocalPlayer.Character.HumanoidRootPart
+					local target = child
+	                local lastc = root.CFrame
+	                
+					repeat
+						local targetroot = target:FindFirstChild("HumanoidRootPart")
+						local plrkatana = game.Players.LocalPlayer.Backpack:FindFirstChild("Steel Sword") or game.Players.LocalPlayer.Character:FindFirstChild("Steel Sword")
+	
+						if plrkatana:FindFirstChild("VisualGunWeld") then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+						end
+	
+						if plrkatana.Parent.Name == "Backpack" then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(plrkatana)
+						end
+	
+						root = game.Players.LocalPlayer.Character.HumanoidRootPart
+						root.CFrame = targetroot.CFrame
+						wait(0.3)
+						local A_1 = target
+						local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
+						Event:FireServer(A_1)
+						wait(0.5)
+						root.CFrame = safepos
+						wait(1.25)
+					until target.Humanoid.Health <= 0 
+	                root.CFrame = lastc
+				end)
+			end
+		end)
+	end)
+	
+	
+	threats.ChildRemoved:Connect(function(child)
+		local butts = script.Parent.Parent.Objects:GetChildren()
+		
+		for i,v in butts do
+			if v:IsA("TextButton") then
+			if string.find(v.Text,child.Name) then
+				v:Destroy()
+				end
+				end
+		end
+		
+	end)
+	
+	game.Workspace.AIHunter.ChildRemoved:Connect(function(child)
+		local butts = script.Parent.Parent.Objects:GetChildren()
+	
+		for i,v in butts do
+			if v:IsA("TextButton") then
+			if string.find(v.Text,child.Name) then
+				v:Destroy()
+				end
+				end
+		end
+	end)
+	
+		game.Players.ChildRemoved:Connect(function(child)
+		local butts = script.Parent.Parent.Objects:GetChildren()
+	
+		for i,v in butts do
+			if v:IsA("TextButton") then
+			if string.find(v.Text,child.Name) then
+				v:Destroy()
+				end
+				end
+		end
+	end)
+end
+coroutine.wrap(YVCVMR_fake_script)()
+local function XYPHCZZ_fake_script() -- Container.LocalScript 
+	local script = Instance.new('LocalScript', Container)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+end
+coroutine.wrap(XYPHCZZ_fake_script)()
+

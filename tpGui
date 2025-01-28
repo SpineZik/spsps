@@ -1,0 +1,734 @@
+		-- Gui to Lua
+		-- Version: 3.2
+
+		-- Instances:
+
+		local ScreenGui = Instance.new("ScreenGui")
+		local Container = Instance.new("Frame")
+		local tabs = Instance.new("ScrollingFrame")
+		local items = Instance.new("TextButton")
+		local UIListLayout = Instance.new("UIListLayout")
+		local players = Instance.new("TextButton")
+		local objects = Instance.new("TextButton")
+		local crates = Instance.new("TextButton")
+		local tier = Instance.new("TextButton")
+		local protect = Instance.new("TextButton")
+		local enemy = Instance.new("TextButton")
+		local ScrollingFrame = Instance.new("ScrollingFrame")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+		local Example = Instance.new("TextButton")
+		local TextBox = Instance.new("TextBox")
+
+		--Properties:
+
+		ScreenGui.Parent = game.CoreGui
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Container.Name = "Container"
+		Container.Parent = ScreenGui
+		Container.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+		Container.BackgroundTransparency = 0.200
+		Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Container.BorderSizePixel = 0
+		Container.Position = UDim2.new(0.439165711, 0, 0.276635557, 0)
+		Container.Size = UDim2.new(0, 296, 0, 323)
+
+		tabs.Name = "tabs"
+		tabs.Parent = Container
+		tabs.Active = true
+		tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		tabs.BackgroundTransparency = 1.000
+		tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		tabs.BorderSizePixel = 0
+		tabs.Size = UDim2.new(0, 297, 0, 41)
+		tabs.CanvasSize = UDim2.new(2.4000001, 0, 0, 0)
+
+		items.Name = "items"
+		items.Parent = tabs
+		items.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		items.BackgroundTransparency = 0.300
+		items.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		items.BorderSizePixel = 0
+		items.Size = UDim2.new(0, 96, 0, 38)
+		items.Font = Enum.Font.Jura
+		items.Text = "Items"
+		items.TextColor3 = Color3.fromRGB(253, 253, 253)
+		items.TextSize = 14.000
+
+		UIListLayout.Parent = tabs
+		UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout.Padding = UDim.new(0, 3)
+
+		players.Name = "players"
+		players.Parent = tabs
+		players.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		players.BackgroundTransparency = 0.300
+		players.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		players.BorderSizePixel = 0
+		players.Size = UDim2.new(0, 96, 0, 38)
+		players.Font = Enum.Font.Jura
+		players.Text = "Players"
+		players.TextColor3 = Color3.fromRGB(253, 253, 253)
+		players.TextSize = 14.000
+
+		objects.Name = "objects"
+		objects.Parent = tabs
+		objects.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		objects.BackgroundTransparency = 0.300
+		objects.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		objects.BorderSizePixel = 0
+		objects.Size = UDim2.new(0, 96, 0, 38)
+		objects.Font = Enum.Font.Jura
+		objects.Text = "Objects"
+		objects.TextColor3 = Color3.fromRGB(253, 253, 253)
+		objects.TextSize = 14.000
+
+		crates.Name = "crates"
+		crates.Parent = tabs
+		crates.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		crates.BackgroundTransparency = 0.300
+		crates.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		crates.BorderSizePixel = 0
+		crates.Size = UDim2.new(0, 96, 0, 38)
+		crates.Font = Enum.Font.Jura
+		crates.Text = "Crates"
+		crates.TextColor3 = Color3.fromRGB(253, 253, 253)
+		crates.TextSize = 14.000
+
+		tier.Name = "tier"
+		tier.Parent = tabs
+		tier.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		tier.BackgroundTransparency = 0.300
+		tier.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		tier.BorderSizePixel = 0
+		tier.Size = UDim2.new(0, 96, 0, 38)
+		tier.Font = Enum.Font.Jura
+		tier.Text = "Tier 4"
+		tier.TextColor3 = Color3.fromRGB(253, 253, 253)
+		tier.TextSize = 14.000
+
+		protect.Name = "protect"
+		protect.Parent = tabs
+		protect.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		protect.BackgroundTransparency = 0.300
+		protect.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		protect.BorderSizePixel = 0
+		protect.Size = UDim2.new(0, 96, 0, 38)
+		protect.Font = Enum.Font.Jura
+		protect.Text = "Protect"
+		protect.TextColor3 = Color3.fromRGB(253, 253, 253)
+		protect.TextSize = 14.000
+
+		enemy.Name = "enemy"
+		enemy.Parent = tabs
+		enemy.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+		enemy.BackgroundTransparency = 0.300
+		enemy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		enemy.BorderSizePixel = 0
+		enemy.Size = UDim2.new(0, 96, 0, 38)
+		enemy.Font = Enum.Font.Jura
+		enemy.Text = "Enemy"
+		enemy.TextColor3 = Color3.fromRGB(253, 253, 253)
+		enemy.TextSize = 14.000
+
+		ScrollingFrame.Parent = Container
+		ScrollingFrame.Active = true
+		ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ScrollingFrame.BackgroundTransparency = 1.000
+		ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		ScrollingFrame.BorderSizePixel = 0
+		ScrollingFrame.Position = UDim2.new(0, 0, 0.250773996, 0)
+		ScrollingFrame.Size = UDim2.new(0, 297, 0, 242)
+
+		UIListLayout_2.Parent = ScrollingFrame
+		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+		Example.Name = "Example"
+		Example.Parent = ScrollingFrame
+		Example.BackgroundColor3 = Color3.fromRGB(91, 91, 91)
+		Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Example.BorderSizePixel = 0
+		Example.Size = UDim2.new(0, 200, 0, 34)
+		Example.Visible = false
+		Example.Font = Enum.Font.Jura
+		Example.Text = "AnyButton"
+		Example.TextColor3 = Color3.fromRGB(235, 235, 235)
+		Example.TextSize = 14.000
+
+		TextBox.Parent = Container
+		TextBox.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+		TextBox.BackgroundTransparency = 0.200
+		TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextBox.BorderSizePixel = 0
+		TextBox.Position = UDim2.new(0.117845118, 0, 0.139318883, 0)
+		TextBox.Size = UDim2.new(0, 232, 0, 30)
+		TextBox.Font = Enum.Font.Jura
+		TextBox.Text = "Search"
+		TextBox.TextColor3 = Color3.fromRGB(254, 254, 254)
+		TextBox.TextSize = 14.000
+
+		-- Scripts:
+
+		local function RIIM_fake_script() -- tabs.LocalScript 
+			local script = Instance.new('LocalScript', tabs)
+
+			local x =script.Parent:GetChildren()
+			local anyconnect;
+			local ondelete;
+			local getitemid = "#*@72503913191116949753";
+			local useoldmethod = false
+
+			xpcall(function()
+				local oldhook;
+				local ar = false
+
+				local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
+				local bindable = Instance.new("BindableFunction")
+
+				function bindable.OnInvoke(response)
+					print(response .. " chosen")
+				end
+
+				StarterGui:SetCore("SendNotification", {
+					Title = "Notification",
+					Text = "Ur executor support this script fully (pickup any tool, pls!)",
+					Duration = 5,
+					Callback = bindable,
+				})
+
+
+				oldhook = hookfunction(getrawmetatable(game).__namecall,newcclosure(function(self,...)
+					local meth = getnamecallmethod()
+					if meth =="InvokeServer" and self.Name =="PickupTool" then
+						local args = {...}
+						getitemid = args[1]
+						if not ar then
+							StarterGui:SetCore("SendNotification", {
+								Title = "Notification",
+								Text = "Sucess! Ignore next notification",
+								Duration = 5,
+								Callback = bindable,
+							})
+							ar=true	
+						end
+					end
+					return oldhook(self,...)
+				end)) 
+
+			end,function()
+				getitemid = "#*@72503913191116949753"
+				local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
+				local bindable = Instance.new("BindableFunction")
+
+				function bindable.OnInvoke(response)
+					if response == "Yes" then
+						useoldmethod = true
+					else
+						useoldmethod=false
+					end
+				end
+
+				StarterGui:SetCore("SendNotification", {
+					Title = "Notification",
+					Text = "Ur executor doesnt support some functions; use old method?",
+					Duration = 5,
+					Callback = bindable,
+					Button1 = "Yes",
+					Button2 = "No"
+				})
+
+			end)
+
+			for _,butt in x do
+				if butt:IsA("TextButton") then
+					butt.MouseButton1Click:Connect(function()
+						if butt.Name == "items" then
+							pcall(function()
+								pcall(function()
+									anyconnect:Disconnect()
+									ondelete:Disconnect()
+								end)
+								local tablewithitems = {}
+
+								for __, tool in workspace.Map.Ignore.Tools:GetChildren() do
+									table.insert(tablewithitems,tool)
+								end
+
+								for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+									if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+										alreadyex:Destroy()
+									end
+								end
+
+								anyconnect = workspace.Map.Ignore.Tools.ChildAdded:Connect(function(child)
+									table.insert(tablewithitems,child)
+									local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+									clonedbutt.Visible = true
+									clonedbutt.Name = "Any"
+									clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+									clonedbutt.Text = child.Name
+									clonedbutt.MouseButton1Click:Connect(function()
+										local plr = game.Players.LocalPlayer.Character
+										local lastpos = plr.HumanoidRootPart.CFrame
+
+										pcall(function()
+											plr.HumanoidRootPart.CFrame = child.WorldPivot
+											wait(0.5)
+										end)
+
+										if useoldmethod then
+											for i =1, 30 do
+												plr.HumanoidRootPart.CFrame = child.Handle.CFrame
+												keypress(0x45)
+												keypress("E")
+												wait(0.1)
+											end
+											plr.HumanoidRootPart.CFrame = lastpos
+										else
+											for i =1, 3 do
+												local A_1 = getitemid
+												local A_2 = child.Name
+												local Event = game:GetService("Workspace").Services.PickupTool
+												Event:InvokeServer(A_1, A_2)
+												wait(0.1)
+											end
+											plr.HumanoidRootPart.CFrame = lastpos
+										end
+										plr.HumanoidRootPart.CFrame = lastpos
+									end)
+
+								end)
+
+								ondelete = workspace.Map.Ignore.Tools.ChildRemoved:Connect(function(child)
+									for ___, m in script.Parent.Parent.ScrollingFrame:GetChildren() do
+										if m:IsA("TextButton") then
+											if m.Text == child.Name then
+												m.Text = "Already Taken ("..m.Text..")"
+											end
+										end
+									end
+								end)
+
+								script.Parent.Parent.ScrollingFrame.CanvasSize = UDim2.new(0,0,0.5*#tablewithitems,0)
+								for ___, readytool in tablewithitems do
+									local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+									clonedbutt.Visible = true
+									clonedbutt.Name = "Any"
+									clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+									clonedbutt.Text = readytool.Name
+									clonedbutt.MouseButton1Click:Connect(function()
+										plr = game.Players.LocalPlayer.Character
+										local lastpos = plr.HumanoidRootPart.CFrame
+										pcall(function()
+											plr.HumanoidRootPart.CFrame = readytool.WorldPivot
+											wait(0.5)
+										end)
+										if useoldmethod then
+											for i =1, 30 do
+												plr.HumanoidRootPart.CFrame = readytool.Handle.CFrame
+												keypress(0x45)
+												keypress("E")
+												wait(0.1)
+											end
+											plr.HumanoidRootPart.CFrame = lastpos
+										else
+											for i =1, 3 do
+												local A_1 = getitemid
+												local A_2 = readytool.Name
+												local Event = game:GetService("Workspace").Services.PickupTool
+												Event:InvokeServer(A_1, A_2)
+												wait(0.1)
+											end
+											plr.HumanoidRootPart.CFrame = lastpos
+										end
+										plr.HumanoidRootPart.CFrame = lastpos
+									end)
+								end
+
+
+							end)
+						elseif butt.Name == "players" then
+							local plrs = game:GetService("Players"):GetPlayers()
+
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							script.Parent.Parent.ScrollingFrame.CanvasSize = UDim2.new(0,0,0.5*#plrs,0)
+							for ___, aplr in plrs do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = aplr.Name
+								clonedbutt.Name = "Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									local localplr = game.Players.LocalPlayer
+									localplr.Character.HumanoidRootPart.CFrame = aplr.Character:FindFirstChild("HumanoidRootPart").CFrame
+								end)
+							end
+						elseif butt.Name == "objects" then
+							local objs = game:GetService("Workspace"):GetDescendants()
+							local tablewithitems = {}
+
+							for _, obj in objs do
+								if obj:IsA("Part") or obj:IsA("Model") or obj:IsA("MeshPart") or obj:IsA("BasePart") or obj:IsA("UnionOperation") then
+									if not game.Players:GetPlayerFromCharacter(obj.Parent) and not game.Players:GetPlayerFromCharacter(obj) then
+										table.insert(tablewithitems, obj)
+										game:GetService("RunService").Stepped:Wait()
+									end
+								end
+							end
+
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							for __, object in tablewithitems do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = object.Name
+								clonedbutt.Name ="Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									plr = game.Players.LocalPlayer.Character
+
+									xpcall(function()
+										plr.HumanoidRootPart.CFrame = object.CFrame
+									end, function()
+										plr.HumanoidRootPart.CFrame = object.WorldPivot
+									end)
+								end)
+								game:GetService("RunService").Stepped:Wait()
+							end
+						elseif  butt.Name == "crates" then
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							local crates = game.Workspace:GetChildren()
+
+							local cratestable = {}
+
+							for _,v in crates do
+								if v.Name=="Crate" then
+									local readytable = {v}
+
+									table.insert(readytable,v:FindFirstChildOfClass("Folder").Item.Value)
+									table.insert(cratestable,readytable)
+								end
+							end
+
+							local tier4 = {
+								"Gatling Gun",
+								"Grenade Launcher",
+								"Flamethrower",
+								"Heavy Rifle",
+								"Quad Launcher",
+								"Dart Gun"
+							}
+							script.Parent.Parent.ScrollingFrame.CanvasSize = UDim2.new(0,0,0.5*#cratestable,0)
+							for iiiiii, crate in cratestable do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								for __14214, atier in tier4 do
+									if string.find(crate[2],atier) then
+										clonedbutt.TextColor3 =Color3.new(0,1,0)
+									end
+								end
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = crate[1].Name.." : "..crate[2]
+								clonedbutt.Name ="Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									plr = game.Players.LocalPlayer.Character
+
+									xpcall(function()
+										plr.HumanoidRootPart.CFrame = crate[1].CFrame
+									end, function()
+										plr.HumanoidRootPart.CFrame = crate[1].WorldPivot
+									end)
+								end)
+							end
+						elseif butt.Name =="tier" then
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							local tier4 = {
+								"Gatling Gun",
+								"Grenade Launcher",
+								"Flamethrower",
+								"Heavy Rifle",
+								"Quad Launcher",
+								"Dart Gun"
+							}
+
+							local found = {}
+
+							for ____,tool in game.Workspace.Map.Ignore.Tools:GetChildren() do
+								for iiii, aname in tier4 do
+									if string.find(tool.Name,aname) then
+										table.insert(found,tool)
+									end
+								end
+							end
+
+							for gfkalsgkas, find in found do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = find.Name
+								clonedbutt.Name ="Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									plr = game.Players.LocalPlayer.Character
+
+									xpcall(function()
+										plr.HumanoidRootPart.CFrame = find.CFrame
+									end, function()
+										plr.HumanoidRootPart.CFrame = find.WorldPivot
+									end)
+								end)
+							end
+						elseif butt.Name == "protect"then
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							local tier4 = {
+								"Vest",
+								"Shield",
+								"Medical",
+								"Spray",
+							}
+
+							local found = {}
+
+							for ____,tool in game.Workspace.Map.Ignore.Tools:GetChildren() do
+								for iiii, aname in tier4 do
+									if string.find(tool.Name,aname) then
+										table.insert(found,tool)
+									end
+								end
+							end
+							script.Parent.Parent.ScrollingFrame.CanvasSize = UDim2.new(0,0,0.5*#found,0)
+							for iiiiii, find in found do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = find.Name
+								clonedbutt.Name ="Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									plr = game.Players.LocalPlayer.Character
+
+									xpcall(function()
+										plr.HumanoidRootPart.CFrame = find.CFrame
+									end, function()
+										plr.HumanoidRootPart.CFrame = find.WorldPivot
+									end)
+								end)
+							end
+						elseif butt.Name =="enemy" then
+							pcall(function()
+								anyconnect:Disconnect()
+								ondelete:Disconnect()
+							end)
+
+							for _1422141 , alreadyex in script.Parent.Parent.ScrollingFrame:GetChildren() do
+								if alreadyex:IsA("TextButton") and alreadyex.Name ~= "Example" then
+									alreadyex:Destroy()
+								end
+							end
+
+							local fold = game.Workspace.AIHunter:GetChildren()
+							local enemyfold = {}
+
+							for ___, en in fold do
+								if en:IsA("Model") then
+									table.insert(enemyfold,en)
+								end
+							end
+
+							anyconnect = workspace.AIHunter.ChildAdded:Connect(function(child)
+								if child:IsA("Model") then
+									table.insert(enemyfold,child)
+									local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+									clonedbutt.Visible = true
+									clonedbutt.Name = "Any"
+									clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+									clonedbutt.Text = child.Name
+									clonedbutt.MouseButton1Click:Connect(function()
+										plr = game.Players.LocalPlayer.Character
+										pcall(function()
+											plr.HumanoidRootPart.CFrame = child.WorldPivot
+										end)
+									end)
+								end
+							end)
+
+							ondelete = workspace.AIHunter.ChildRemoved:Connect(function(child)
+								for ___, m in script.Parent.Parent.ScrollingFrame:GetChildren() do
+									if m:IsA("TextButton") then
+										if m.Text == child.Name then
+											m.Text = "Killed ("..m.Text..")"
+										end
+									end
+								end
+							end)
+
+							for _____, enemy in enemyfold do
+								local clonedbutt = script.Parent.Parent.ScrollingFrame.Example:Clone()
+								clonedbutt.Visible = true
+								clonedbutt.Parent =script.Parent.Parent.ScrollingFrame
+								clonedbutt.Text = enemy.Name
+								clonedbutt.Name ="Any"
+								clonedbutt.MouseButton1Click:Connect(function()
+									plr = game.Players.LocalPlayer.Character
+
+									xpcall(function()
+										plr.HumanoidRootPart.CFrame = enemy.CFrame
+									end, function()
+										plr.HumanoidRootPart.CFrame = enemy.WorldPivot
+									end)
+								end)
+							end
+						end
+					end)
+				end
+			end
+		end
+		coroutine.wrap(RIIM_fake_script)()
+		local function YOBXIO_fake_script() -- TextBox.LocalScript 
+			local script = Instance.new('LocalScript', TextBox)
+
+			script.Parent.Changed:Connect(function()
+				local text = script.Parent.Text:lower()
+				local otbor = script.Parent.Parent.ScrollingFrame:GetChildren()
+
+				for _,v in otbor do
+					if text ~= "" and text~="search" then
+						if v:IsA("TextButton") then
+							buttext= v.Text:lower()
+							if string.find(buttext,text) then
+								v.Visible= true
+							else
+								v.Visible = false
+							end
+						end
+					else 
+						if v:IsA("TextButton") and v.Text ~= "AnyButton" then
+							v.Visible = true 
+						end
+					end
+				end
+			end)
+		end
+		coroutine.wrap(YOBXIO_fake_script)()
+		local function RXHOJG_fake_script() -- ScreenGui.LocalScript 
+			local script = Instance.new('LocalScript', Container)
+
+			local UIS = game:GetService('UserInputService')
+
+			local frame = script.Parent
+
+
+
+			local dragToggle = nil
+
+			local dragSpeed = 0.25
+
+			local dragStart = nil
+
+			local startPos = nil
+
+
+
+			local function updateInput(input)
+
+				local delta = input.Position - dragStart
+
+				local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+
+					startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+
+				game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+
+			end
+
+
+
+			frame.InputBegan:Connect(function(input)
+
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+
+					dragToggle = true
+
+					dragStart = input.Position
+
+					startPos = frame.Position
+
+					input.Changed:Connect(function()
+
+						if input.UserInputState == Enum.UserInputState.End then
+
+							dragToggle = false
+
+						end
+
+					end)
+
+				end
+
+			end)
+
+
+
+			UIS.InputChanged:Connect(function(input)
+
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+
+					if dragToggle then
+
+						updateInput(input)
+
+					end
+
+				end
+
+			end)
+		end
+		coroutine.wrap(RXHOJG_fake_script)()

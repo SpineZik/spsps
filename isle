@@ -1,12 +1,4 @@
-pcall(function()
-local StarterGui = game:GetSerivce("StarterGui");
-StarterGui:SetCore("SendNotification", {
-					Title = "SpineWare",
-					Text = "Hello from VernoxTestAccount! Thank u for using our script.",
-					Duration = 8,
-					Button1 = "Ignore"
-})
-end)
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -4688,3 +4680,13 @@ local function JEDTM_fake_script() -- hideshow.LocalScript
 	end
 end
 coroutine.wrap(JEDTM_fake_script)()
+
+pcall(function()
+local StarterGui = game:GetSerivce("StarterGui");
+StarterGui:SetCore("SendNotification", {
+					Title = "SpineWare",
+					Text = "Hello from VernoxTestAccount! Thank u for using our script.",
+					Duration = 8,
+					Button1 = "Ignore"
+})
+end)

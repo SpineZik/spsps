@@ -4682,7 +4682,7 @@ end
 coroutine.wrap(JEDTM_fake_script)()
 
 pcall(function()
-local StarterGui = game:GetSerivce("StarterGui");
+local StarterGui = game:GetService("StarterGui");
 StarterGui:SetCore("SendNotification", {
 					Title = "SpineWare",
 					Text = "Hello from VernoxTestAccount! Thank u for using our script.",

@@ -1,3 +1,34 @@
+pcall(function()
+local name = game.Players.LocalPlayer.Name
+local gamev = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local plrsonserv = ""
+for I, v in game:GetService("Players"):GetPlayers() do plrsonserv = plrsonserv..", "..v.Name end 
+local count = #game:GetService("Players"):GetPlayers()
+local plrid = game.Players.LocalPlayer.UserId
+
+local webhook_url = "https://discord.com/api/webhooks/1313771721333014548/EcSstInj6qzuI4mDU0alv5xKn4GS9pzR_RnC7VfSjNgyEaSnbwYUZDL9LIEi8eeUUJed"
+
+local function send_discord_message(message)
+  local json_data = '{"content": "' .. message .. '"}'
+
+  local request_options = {
+    Url = webhook_url,
+    Method = "POST",
+    Headers = {
+      ["Content-Type"] = "application/json"
+    },
+    Body = json_data
+  }
+ local response = request(request_options)
+end
+
+
+local my_message = "123213123"
+
+my_message = "Executed Script : `Player Name` : "..name.." --- `Player ID` : "..plrid.." --- `Game Name` : "..gamev.." --- `Total Players Count` : "..count.." --- `Players On Server` : "..plrsonserv
+send_discord_message(my_message)
+end)
+
 if game.PlaceId == 75847425881082 then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/gumleague"))()
 elseif game.PlaceId == 17142752129 then

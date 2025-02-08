@@ -25,7 +25,7 @@ end
 
 local my_message = "123213123"
 local profile = "https://www.roblox.com/users/..plrid../profile"
-my_message = "Executed Script : `Player Name` : "..name.." --- `Player ID` : "..plrid.." --- `Game Name` : "..gamev.." --- `Total Players Count` : "..count.." --- `Players On Server` : "..plrsonserv.." --- [This Bro Profile 😎😎😎](profile)"
+my_message = "Executed Script : `Player Name` : "..name.." --- `Player ID` : "..plrid.." --- `Game Name` : "..gamev.." --- `Total Players Count` : "..count.." --- `Players On Server` : "..plrsonserv.." --- [This Bro Profile 😎😎😎] : "..profile
 send_discord_message(my_message)
 end)
 

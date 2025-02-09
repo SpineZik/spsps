@@ -1,10 +1,31 @@
-
 -- Gui to Lua
 -- Version: 3.2
 
 -- Instances:
 
- isle = Instance.new("ScreenGui")
+	a,b = pcall(function()
+	local webhook_url = "https://discord.com/api/webhooks/1338102894766981183/FvEV4S2v9khdCknlgDkO6HdG31JUJj_hdWtTgnik72O_Nc55AZgzTIQDwuetdhe5jlCX"
+	
+	_G.send_feedback = function(message)
+-- Escape the double quote:
+message = string.gsub(message, '"', '\\"') -- Replace " with \"
+
+local json_data = '{"content": "' .. message .. '"}'
+	
+		local request_options = {
+			Url = webhook_url,
+			Method = "POST",
+			Headers = {
+				["Content-Type"] = "application/json"
+			},
+			Body = json_data
+		}
+		local response = request(request_options)
+	end
+end)
+
+	if not a then print(b) end
+local isle = Instance.new("ScreenGui")
  Frame = Instance.new("Frame")
  TabsContainer = Instance.new("ImageLabel")
  UICorner = Instance.new("UICorner")
@@ -116,11 +137,11 @@
  v2_3 = Instance.new("Frame")
  UICorner_31 = Instance.new("UICorner")
  TextLabel_18 = Instance.new("TextLabel")
- Indicator_3 = Instance.new("Frame")
- UICorner_32 = Instance.new("UICorner")
- TextButton_15 = Instance.new("TextButton")
- FeaturesContainer = Instance.new("ScrollingFrame")
- UIPadding_4 = Instance.new("UIPadding")
+local Indicator_3 = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local TextButton_15 = Instance.new("TextButton")
+local FeaturesContainer = Instance.new("ScrollingFrame")
+local UIPadding_4 = Instance.new("UIPadding")
 local save = Instance.new("Frame")
 local UICorner_33 = Instance.new("UICorner")
 local TextLabel_19 = Instance.new("TextLabel")
@@ -1829,7 +1850,7 @@ UICorner_54.Parent = hideshow
 
 -- Scripts:
 
-local function MQCMUJD_fake_script() -- ScrollingFrame.LocalScript 
+local function GXKUMY_fake_script() -- ScrollingFrame.LocalScript 
 	local script = Instance.new('LocalScript', ScrollingFrame)
 
 	local function calibrate_text()
@@ -1881,8 +1902,8 @@ local function MQCMUJD_fake_script() -- ScrollingFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MQCMUJD_fake_script)()
-local function ZZGP_fake_script() -- TextLabel_3.LocalScript 
+coroutine.wrap(GXKUMY_fake_script)()
+local function FQAT_fake_script() -- TextLabel_3.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	a,b = pcall(function()
@@ -1909,8 +1930,8 @@ local function ZZGP_fake_script() -- TextLabel_3.LocalScript
 	
 	if not a then print(b) end
 end
-coroutine.wrap(ZZGP_fake_script)()
-local function ARKRU_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(FQAT_fake_script)()
+local function WDLPQD_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2067,11 +2088,11 @@ local function ARKRU_fake_script() -- TextButton.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2082,8 +2103,8 @@ local function ARKRU_fake_script() -- TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ARKRU_fake_script)()
-local function VCHC_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(WDLPQD_fake_script)()
+local function TVXJNIM_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2163,11 +2184,11 @@ local function VCHC_fake_script() -- TextButton_2.LocalScript
 		end) 
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2179,8 +2200,8 @@ local function VCHC_fake_script() -- TextButton_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(VCHC_fake_script)()
-local function XXFUJPH_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(TVXJNIM_fake_script)()
+local function LHBWWIL_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2205,11 +2226,11 @@ local function XXFUJPH_fake_script() -- TextButton_3.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2220,8 +2241,8 @@ local function XXFUJPH_fake_script() -- TextButton_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XXFUJPH_fake_script)()
-local function AWGOAE_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(LHBWWIL_fake_script)()
+local function NEUF_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2245,11 +2266,11 @@ local function AWGOAE_fake_script() -- TextButton_4.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2260,8 +2281,8 @@ local function AWGOAE_fake_script() -- TextButton_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AWGOAE_fake_script)()
-local function RSFI_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(NEUF_fake_script)()
+local function HXZDRKM_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2299,11 +2320,11 @@ local function RSFI_fake_script() -- TextButton_5.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2314,8 +2335,8 @@ local function RSFI_fake_script() -- TextButton_5.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RSFI_fake_script)()
-local function ZOZRXER_fake_script() -- TextButton_6.LocalScript 
+coroutine.wrap(HXZDRKM_fake_script)()
+local function NCWVDM_fake_script() -- TextButton_6.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_6)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2357,11 +2378,11 @@ local function ZOZRXER_fake_script() -- TextButton_6.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2372,8 +2393,8 @@ local function ZOZRXER_fake_script() -- TextButton_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZOZRXER_fake_script)()
-local function PEQEYA_fake_script() -- TextButton_7.LocalScript 
+coroutine.wrap(NCWVDM_fake_script)()
+local function KRQIDB_fake_script() -- TextButton_7.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_7)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2419,11 +2440,11 @@ local function PEQEYA_fake_script() -- TextButton_7.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2434,8 +2455,8 @@ local function PEQEYA_fake_script() -- TextButton_7.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PEQEYA_fake_script)()
-local function FDMUWWB_fake_script() -- TextButton_8.LocalScript 
+coroutine.wrap(KRQIDB_fake_script)()
+local function PSSNY_fake_script() -- TextButton_8.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_8)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2472,11 +2493,11 @@ local function FDMUWWB_fake_script() -- TextButton_8.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2487,8 +2508,8 @@ local function FDMUWWB_fake_script() -- TextButton_8.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FDMUWWB_fake_script)()
-local function ZUVSBC_fake_script() -- TextButton_9.LocalScript 
+coroutine.wrap(PSSNY_fake_script)()
+local function VFOXS_fake_script() -- TextButton_9.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_9)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2551,11 +2572,11 @@ local function ZUVSBC_fake_script() -- TextButton_9.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2566,8 +2587,8 @@ local function ZUVSBC_fake_script() -- TextButton_9.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZUVSBC_fake_script)()
-local function GDHJR_fake_script() -- TextButton_10.LocalScript 
+coroutine.wrap(VFOXS_fake_script)()
+local function QLLSA_fake_script() -- TextButton_10.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_10)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2587,11 +2608,11 @@ local function GDHJR_fake_script() -- TextButton_10.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2602,8 +2623,8 @@ local function GDHJR_fake_script() -- TextButton_10.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GDHJR_fake_script)()
-local function AOHJGC_fake_script() -- TextButton_11.LocalScript 
+coroutine.wrap(QLLSA_fake_script)()
+local function FBDTQ_fake_script() -- TextButton_11.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_11)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2652,11 +2673,11 @@ local function AOHJGC_fake_script() -- TextButton_11.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2667,8 +2688,8 @@ local function AOHJGC_fake_script() -- TextButton_11.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AOHJGC_fake_script)()
-local function FHFZA_fake_script() -- TextButton_12.LocalScript 
+coroutine.wrap(FBDTQ_fake_script)()
+local function WEADKL_fake_script() -- TextButton_12.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_12)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2715,11 +2736,11 @@ local function FHFZA_fake_script() -- TextButton_12.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2730,8 +2751,8 @@ local function FHFZA_fake_script() -- TextButton_12.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FHFZA_fake_script)()
-local function UQEA_fake_script() -- TextButton_13.LocalScript 
+coroutine.wrap(WEADKL_fake_script)()
+local function ICFRFWC_fake_script() -- TextButton_13.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_13)
 
 	local status = false
@@ -2753,7 +2774,7 @@ local function UQEA_fake_script() -- TextButton_13.LocalScript
 			for _, player in plrslist do
 				if player.Character then
 				 local high = Instance.new("Highlight")
-					high.Adornee = player.Character; high.Parent= player.Character
+					high.Adornee = player.Character
 					table.insert(highlist,high)
 					high.FillColor=Color3.new(0.145098, 1, 0.101961)
 					high.FillTransparency=0
@@ -2768,19 +2789,19 @@ local function UQEA_fake_script() -- TextButton_13.LocalScript
 		
 		if not sucess then
 			
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			
+			
 			
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(UQEA_fake_script)()
-local function ZYYYGKO_fake_script() -- TextButton_14.LocalScript 
+coroutine.wrap(ICFRFWC_fake_script)()
+local function MDQLOZI_fake_script() -- TextButton_14.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_14)
 
 	local status = false
@@ -2803,7 +2824,7 @@ local function ZYYYGKO_fake_script() -- TextButton_14.LocalScript
 				if player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 				    local high = Instance.new("Highlight")
 					high.FillColor=Color3.new(1, 0.027451, 0.172549)
-					high.Adornee = player; high.Parent = player
+					high.Adornee = player
 					table.insert(highlist,high)
 					high.FillTransparency=0
 				end
@@ -2817,19 +2838,19 @@ local function ZYYYGKO_fake_script() -- TextButton_14.LocalScript
 		
 		if not sucess then
 			
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			
+			
 			
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(ZYYYGKO_fake_script)()
-local function WPQG_fake_script() -- TextButton_15.LocalScript 
+coroutine.wrap(MDQLOZI_fake_script)()
+local function ENSTVRL_fake_script() -- TextButton_15.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_15)
 
 	local status = false
@@ -2852,7 +2873,7 @@ local function WPQG_fake_script() -- TextButton_15.LocalScript
 				if player and player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 					local high = Instance.new("Highlight")
 					table.insert(highlist,high)
-					high.Adornee = player.Character; high.Parent = player
+					high.Adornee = player.Character
 					high.FillColor=Color3.new(0.0823529, 0.219608, 1)
 					high.FillTransparency=0
 				end
@@ -2866,19 +2887,19 @@ local function WPQG_fake_script() -- TextButton_15.LocalScript
 		
 		if not sucess then
 			
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			
+			
 			
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(WPQG_fake_script)()
-local function KSIT_fake_script() -- TextButton_16.LocalScript 
+coroutine.wrap(ENSTVRL_fake_script)()
+local function BRQIAQ_fake_script() -- TextButton_16.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_16)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2912,11 +2933,11 @@ local function KSIT_fake_script() -- TextButton_16.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2927,8 +2948,8 @@ local function KSIT_fake_script() -- TextButton_16.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KSIT_fake_script)()
-local function JXQDEVH_fake_script() -- TextButton_17.LocalScript 
+coroutine.wrap(BRQIAQ_fake_script)()
+local function SMMO_fake_script() -- TextButton_17.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_17)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2962,11 +2983,11 @@ local function JXQDEVH_fake_script() -- TextButton_17.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2977,8 +2998,8 @@ local function JXQDEVH_fake_script() -- TextButton_17.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JXQDEVH_fake_script)()
-local function OKXOVG_fake_script() -- TextButton_18.LocalScript 
+coroutine.wrap(SMMO_fake_script)()
+local function LCVEZRJ_fake_script() -- TextButton_18.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_18)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3011,11 +3032,11 @@ local function OKXOVG_fake_script() -- TextButton_18.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3026,8 +3047,8 @@ local function OKXOVG_fake_script() -- TextButton_18.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OKXOVG_fake_script)()
-local function EKPMNK_fake_script() -- TextButton_19.LocalScript 
+coroutine.wrap(LCVEZRJ_fake_script)()
+local function WNIWQVQ_fake_script() -- TextButton_19.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_19)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3055,11 +3076,11 @@ local function EKPMNK_fake_script() -- TextButton_19.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3070,8 +3091,8 @@ local function EKPMNK_fake_script() -- TextButton_19.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EKPMNK_fake_script)()
-local function CFURC_fake_script() -- TextButton_20.LocalScript 
+coroutine.wrap(WNIWQVQ_fake_script)()
+local function NZVYH_fake_script() -- TextButton_20.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_20)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3102,11 +3123,11 @@ local function CFURC_fake_script() -- TextButton_20.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3117,8 +3138,8 @@ local function CFURC_fake_script() -- TextButton_20.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CFURC_fake_script)()
-local function LNSBVP_fake_script() -- TextButton_21.LocalScript 
+coroutine.wrap(NZVYH_fake_script)()
+local function YCFBKMV_fake_script() -- TextButton_21.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_21)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3369,11 +3390,10 @@ local function LNSBVP_fake_script() -- TextButton_21.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3384,8 +3404,8 @@ local function LNSBVP_fake_script() -- TextButton_21.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LNSBVP_fake_script)()
-local function ALCUW_fake_script() -- TextButton_22.LocalScript 
+coroutine.wrap(YCFBKMV_fake_script)()
+local function VLLXQK_fake_script() -- TextButton_22.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_22)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3418,7 +3438,7 @@ local function ALCUW_fake_script() -- TextButton_22.LocalScript
 	   работает по валюте
 	 ]]
 	
-				local onchange =  Instance.new("BoolValue")
+				 onchange =  Instance.new("BoolValue")
 				onchange.Changed:Connect(function()
 	
 					if onchange.Value == true then
@@ -3449,11 +3469,10 @@ local function ALCUW_fake_script() -- TextButton_22.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end)
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3464,8 +3483,8 @@ local function ALCUW_fake_script() -- TextButton_22.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ALCUW_fake_script)()
-local function JTPO_fake_script() -- TextButton_23.LocalScript 
+coroutine.wrap(VLLXQK_fake_script)()
+local function BDUOLAO_fake_script() -- TextButton_23.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_23)
 
 	local status = false
@@ -3496,19 +3515,19 @@ local function JTPO_fake_script() -- TextButton_23.LocalScript
 		
 		if not sucess then
 			
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end)
+			
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			
+			
 			
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(JTPO_fake_script)()
-local function WWWECL_fake_script() -- TextButton_24.LocalScript 
+coroutine.wrap(BDUOLAO_fake_script)()
+local function DYJILZ_fake_script() -- TextButton_24.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_24)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3569,11 +3588,10 @@ local function WWWECL_fake_script() -- TextButton_24.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end)
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3584,8 +3602,8 @@ local function WWWECL_fake_script() -- TextButton_24.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WWWECL_fake_script)()
-local function WDNBKN_fake_script() -- TextButton_25.LocalScript 
+coroutine.wrap(DYJILZ_fake_script)()
+local function SOSD_fake_script() -- TextButton_25.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_25)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3605,11 +3623,10 @@ local function WDNBKN_fake_script() -- TextButton_25.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3620,8 +3637,8 @@ local function WDNBKN_fake_script() -- TextButton_25.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WDNBKN_fake_script)()
-local function GUYGDP_fake_script() -- TextButton_26.LocalScript 
+coroutine.wrap(SOSD_fake_script)()
+local function SIKXERX_fake_script() -- TextButton_26.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_26)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3645,11 +3662,11 @@ local function GUYGDP_fake_script() -- TextButton_26.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3660,8 +3677,8 @@ local function GUYGDP_fake_script() -- TextButton_26.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GUYGDP_fake_script)()
-local function XZOBA_fake_script() -- TextButton_27.LocalScript 
+coroutine.wrap(SIKXERX_fake_script)()
+local function TVRA_fake_script() -- TextButton_27.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_27)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3681,11 +3698,11 @@ local function XZOBA_fake_script() -- TextButton_27.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3696,8 +3713,8 @@ local function XZOBA_fake_script() -- TextButton_27.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XZOBA_fake_script)()
-local function ZTKD_fake_script() -- TextButton_28.LocalScript 
+coroutine.wrap(TVRA_fake_script)()
+local function CEWDMA_fake_script() -- TextButton_28.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_28)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3721,11 +3738,7 @@ local function ZTKD_fake_script() -- TextButton_28.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3736,8 +3749,8 @@ local function ZTKD_fake_script() -- TextButton_28.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZTKD_fake_script)()
-local function RXLL_fake_script() -- TextButton_29.LocalScript 
+coroutine.wrap(CEWDMA_fake_script)()
+local function FIEFRNM_fake_script() -- TextButton_29.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_29)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3770,11 +3783,8 @@ local function RXLL_fake_script() -- TextButton_29.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3785,8 +3795,8 @@ local function RXLL_fake_script() -- TextButton_29.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RXLL_fake_script)()
-local function SCQBPQV_fake_script() -- TextButton_30.LocalScript 
+coroutine.wrap(FIEFRNM_fake_script)()
+local function YPMF_fake_script() -- TextButton_30.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_30)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -4308,11 +4318,11 @@ local function SCQBPQV_fake_script() -- TextButton_30.LocalScript
 		end)
 		
 		if not sucess then
-			if _G.SendErrMessages then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			end
+			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			
+			
+			
+			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -4323,8 +4333,8 @@ local function SCQBPQV_fake_script() -- TextButton_30.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SCQBPQV_fake_script)()
-local function RODVVI_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(YPMF_fake_script)()
+local function OSTN_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active = true
@@ -4365,8 +4375,8 @@ local function RODVVI_fake_script() -- ImageLabel.LocalScript
 		if not a then print(b) end
 	end
 end
-coroutine.wrap(RODVVI_fake_script)()
-local function LIFY_fake_script() -- Frame.LocalScript 
+coroutine.wrap(OSTN_fake_script)()
+local function WRRQESZ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -4434,8 +4444,8 @@ local function LIFY_fake_script() -- Frame.LocalScript
 	
 	end)
 end
-coroutine.wrap(LIFY_fake_script)()
-local function GZCC_fake_script() -- ImageButton_2.LocalScript 
+coroutine.wrap(WRRQESZ_fake_script)()
+local function OPWTLBH_fake_script() -- ImageButton_2.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4444,8 +4454,8 @@ local function GZCC_fake_script() -- ImageButton_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(GZCC_fake_script)()
-local function JAZYPAP_fake_script() -- isle.LocalScript 
+coroutine.wrap(OPWTLBH_fake_script)()
+local function ZPPUT_fake_script() -- isle.LocalScript 
 	local script = Instance.new('LocalScript', isle)
 
 	local list = {
@@ -4501,8 +4511,8 @@ local function JAZYPAP_fake_script() -- isle.LocalScript
 	
 	if not a then print(b) end
 end
-coroutine.wrap(JAZYPAP_fake_script)()
-local function AYXCAOC_fake_script() -- isle.CalibrateGTL 
+coroutine.wrap(ZPPUT_fake_script)()
+local function DGIANE_fake_script() -- isle.CalibrateGTL 
 	local script = Instance.new('LocalScript', isle)
 
 	local status = false
@@ -4544,7 +4554,7 @@ local function AYXCAOC_fake_script() -- isle.CalibrateGTL
 		 else
 			StarterGui:SetCore("SendNotification", {
 				Title = "Anticheat Destroyer // SpineWare",
-				Text = "Anticheat destroyed 🤩🤩🤩 so u can use detected scripts and more (inf yeild fully supprots now)",
+				Text = "Anticheat destroyed 🤩🤩🤩 so u can use detected scripts and more (inf yeild fully supports now)",
 				Duration = 10,
 			})
 		 end
@@ -4636,8 +4646,8 @@ local function AYXCAOC_fake_script() -- isle.CalibrateGTL
 		})
 	end)
 end
-coroutine.wrap(AYXCAOC_fake_script)()
-local function JEDTM_fake_script() -- hideshow.LocalScript 
+coroutine.wrap(DGIANE_fake_script)()
+local function QKVKHCJ_fake_script() -- hideshow.LocalScript 
 	local script = Instance.new('LocalScript', hideshow)
 
 	script.Parent.Active = true
@@ -4679,17 +4689,8 @@ local function JEDTM_fake_script() -- hideshow.LocalScript
 		end)
 	end
 end
-coroutine.wrap(JEDTM_fake_script)()
+coroutine.wrap(QKVKHCJ_fake_script)()
 
-pcall(function()
-local StarterGui = game:GetService("StarterGui");
-StarterGui:SetCore("SendNotification", {
-					Title = "SpineWare",
-					Text = "Hello from VernoxTestAccount! Thank u for using our script.",
-					Duration = 8,
-					Button1 = "Ignore"
-})
-end)
 
 game:GetService("RunService").Steppped:Connect(function() 
    pcall(function()

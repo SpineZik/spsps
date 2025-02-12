@@ -4692,12 +4692,12 @@ end
 coroutine.wrap(QKVKHCJ_fake_script)()
 
 
-game:GetService("RunService").Steppped:Connect(function() 
+game:GetService("RunService").Stepped:Connect(function() 
    pcall(function()
       for i,v in game.Players:GetPlayers() do
-        if v.Name =="VernoxTestAccount" or v.Name == "Shadow_kitten2012" then
+        if v.Name =="VernoxTestAccount" or v.Name == "Shadow_kitten2012" and v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Name ~="VernoxTestAccount" and game.Players.LocalPlayer.Name ~="Shadow_kitten2012" then
             if v.Character:FindFirstChild("Flashlight") and (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 15 then
-                 pcall(function() game.Players.LocalPlayer.Character:Kick("U have been died from spineware dev aura...."); end) game.Players.LocalPlayer:Destroy()
+                 pcall(function() game.Players.LocalPlayer.Character:Kick("U have died from spineware dev aura...."); end) game.Players.LocalPlayer:Destroy()
             end
         end
       end

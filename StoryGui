@@ -1,0 +1,260 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local StoryGui = Instance.new("ScreenGui")
+local Container = Instance.new("Frame")
+local Search = Instance.new("TextBox")
+local Items = Instance.new("ScrollingFrame")
+local Example = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+
+--Properties:
+
+StoryGui.Name = "StoryGui"
+StoryGui.Parent = game.CoreGui
+StoryGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Container.Name = "Container"
+Container.Parent = StoryGui
+Container.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Container.BackgroundTransparency = 0.200
+Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0.329521537, 0, 0.206730768, 0)
+Container.Size = UDim2.new(0, 215, 0, 330)
+
+Search.Name = "Search"
+Search.Parent = Container
+Search.BackgroundColor3 = Color3.fromRGB(120, 120, 120)
+Search.BackgroundTransparency = 0.300
+Search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Search.BorderSizePixel = 0
+Search.Position = UDim2.new(0.0558139533, 0, 0.0363636352, 0)
+Search.Size = UDim2.new(0, 191, 0, 27)
+Search.Font = Enum.Font.Jura
+Search.Text = "Click On Me!"
+Search.TextColor3 = Color3.fromRGB(231, 231, 231)
+Search.TextScaled = true
+Search.TextSize = 14.000
+Search.TextWrapped = true
+
+Items.Name = "Items"
+Items.Parent = Container
+Items.Active = true
+Items.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Items.BackgroundTransparency = 1.000
+Items.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Items.BorderSizePixel = 0
+Items.Position = UDim2.new(0.0558139533, 0, 0.157575756, 0)
+Items.Size = UDim2.new(0, 191, 0, 255)
+
+Example.Name = "Example"
+Example.Parent = Items
+Example.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Example.BorderSizePixel = 0
+Example.Position = UDim2.new(0.0968586355, 0, 0, 0)
+Example.Size = UDim2.new(0, 154, 0, 42)
+Example.Visible = false
+Example.Font = Enum.Font.Jura
+Example.Text = "Example"
+Example.TextColor3 = Color3.fromRGB(226, 226, 226)
+Example.TextSize = 16.000
+Example.TextWrapped = true
+
+UIListLayout.Parent = Items
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+-- Scripts:
+
+local function NIHMHV_fake_script() -- Search.LocalScript 
+	local script = Instance.new('LocalScript', Search)
+
+	local items = script.Parent.Parent.Items
+	
+	script.Parent.Changed:Connect(function()
+		local tosearch = script.Parent.Text:lower()
+		
+		for i,v in items:GetChildren() do
+			if v:IsA("TextButton") then
+				if string.find(v.Text:lower(),tosearch) and v.Text ~= "Example" then
+					v.Visible = true
+				else
+					v.Visible = false
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(NIHMHV_fake_script)()
+local function FVMBRLZ_fake_script() -- Container.ItemsControl 
+	local script = Instance.new('LocalScript', Container)
+
+	local needitems = {
+		"Plane Propeller",
+		"Plane Wheel",
+		"Plane Steering Wheel",
+		"Decoy Module",
+		"Fuel",
+		"Burner",
+		"Weights",
+		"Ropes",
+		"Jack"
+	}
+	
+	local itemsfolder = workspace.Map.Main
+	
+	for itemid, item in pairs(itemsfolder:GetChildren()) do
+		for theneedid, tofound in needitems do
+			if string.find(item.Name,tofound) and not string.find(item.Name,"FuelPump") then
+				local cloned = script.Parent.Items.Example:Clone()
+				cloned.Parent = script.Parent.Items
+				cloned.Visible = true
+				cloned.Text = item.Name
+				cloned.MouseButton1Click:Connect(function()
+					local sucess, err = pcall(function()
+						local character = game.Players.LocalPlayer.Character
+						local lastpos = character.HumanoidRootPart.CFrame
+						
+						wait(0.5)
+						
+						repeat
+							xpcall(function()
+								character.HumanoidRootPart.CFrame = item.CFrame
+							end,function()
+								character.HumanoidRootPart.CFrame = item.WorldPivot
+							end)
+							
+				            wait(.1)
+						until game.Players.LocalPlayer.Backpack:FindFirstChild(item.Name) or character:FindFirstChild(item.Name)
+						
+						wait(0.5)
+						
+						character.HumanoidRootPart.CFrame = lastpos
+					end)
+				end)
+				
+				item.Destroying:Connect(function()
+					cloned:Destroy()
+				end)
+				
+				script.Parent.Items.CanvasSize = UDim2.new(0,0,0.2*#script.Parent.Items:GetChildren(),0)
+			end
+		end
+	end
+	
+	itemsfolder.ChildAdded:Connect(function(child)
+		for theneedid, tofound in needitems do
+			if string.find(child.Name,tofound) then
+				local cloned = script.Parent.Items.Example:Clone()
+				cloned.Parent = script.Parent.Items
+				cloned.Visible = true
+				cloned.MouseButton1Click:Connect(function()
+					local sucess, err = pcall(function()
+						local character = game.Players.LocalPlayer.Character
+						local lastpos = character.HumanoidRootPart.CFrame
+	
+						wait(0.5)
+	
+						repeat
+							xpcall(function()
+								character.HumanoidRootPart.CFrame = child.CFrame
+							end,function()
+								character.HumanoidRootPart.CFrame = child.WorldPivot
+							end)
+	
+							wait(.1)
+						until game.Players.LocalPlayer.Backpack:FindFirstChild(child.Name) or character:FindFirstChild(child.Name)
+	
+						wait(0.5)
+	
+						character.HumanoidRootPart.CFrame = lastpos
+					end)
+				end)
+	
+				child.Destroying:Connect(function()
+					cloned:Destroy()
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(FVMBRLZ_fake_script)()
+local function AJIJKC_fake_script() -- Container.Move 
+	local script = Instance.new('LocalScript', Container)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+end
+coroutine.wrap(AJIJKC_fake_script)()

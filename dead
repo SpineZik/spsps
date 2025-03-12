@@ -54,10 +54,14 @@ local UICorner_16 = Instance.new("UICorner")
 local Frame_5 = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
 local TextLabel_6 = Instance.new("TextLabel")
+local scan = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
+local Trigger_7 = Instance.new("TextButton")
 local TextLabel_7 = Instance.new("TextLabel")
+local UICorner_19 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -95,6 +99,7 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456433, 0)
 ContainerList.Size = UDim2.new(0, 210, 0, 219)
+ContainerList.CanvasPosition = Vector2.new(0, 140)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -412,7 +417,43 @@ TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 20.000
 TextLabel_6.TextWrapped = true
 
-UICorner_18.Parent = ImageLabel
+scan.Name = "scan"
+scan.Parent = ContainerList
+scan.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+scan.BackgroundTransparency = 0.500
+scan.BorderColor3 = Color3.fromRGB(0, 0, 0)
+scan.BorderSizePixel = 0
+scan.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
+scan.Size = UDim2.new(0, 176, 0, 38)
+
+UICorner_18.Parent = scan
+
+Trigger_7.Name = "Trigger"
+Trigger_7.Parent = scan
+Trigger_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_7.BackgroundTransparency = 1.000
+Trigger_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.BorderSizePixel = 0
+Trigger_7.Size = UDim2.new(0, 176, 0, 38)
+Trigger_7.Font = Enum.Font.SourceSans
+Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.TextSize = 14.000
+Trigger_7.TextTransparency = 1.000
+
+TextLabel_7.Parent = scan
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.11931818, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_7.Font = Enum.Font.Jura
+TextLabel_7.Text = "Scan Items {$}"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 20.000
+TextLabel_7.TextWrapped = true
+
+UICorner_19.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -423,19 +464,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_19.Parent = Top
+UICorner_20.Parent = Top
 
-TextLabel_7.Parent = Top
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_7.BorderSizePixel = 0
-TextLabel_7.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_7.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_7.Font = Enum.Font.Unknown
-TextLabel_7.Text = "SpineWare"
-TextLabel_7.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_7.TextSize = 18.000
+TextLabel_8.Parent = Top
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_8.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "SpineWare"
+TextLabel_8.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_8.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -460,7 +501,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function VVQDO_fake_script() -- Trigger.OnActivate 
+local function TTUX_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -511,8 +552,8 @@ local function VVQDO_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(VVQDO_fake_script)()
-local function BPCRYX_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(TTUX_fake_script)()
+local function QYURDJ_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -595,8 +636,8 @@ local function BPCRYX_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(BPCRYX_fake_script)()
-local function SFKTTDB_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(QYURDJ_fake_script)()
+local function CXBGJD_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -661,8 +702,8 @@ local function SFKTTDB_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(SFKTTDB_fake_script)()
-local function STRT_fake_script() -- Trigger_4.LocalScript 
+coroutine.wrap(CXBGJD_fake_script)()
+local function NBOUV_fake_script() -- Trigger_4.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -701,8 +742,8 @@ local function STRT_fake_script() -- Trigger_4.LocalScript
 	
 	end)
 end
-coroutine.wrap(STRT_fake_script)()
-local function ECGW_fake_script() -- Trigger_5.OnActivate 
+coroutine.wrap(NBOUV_fake_script)()
+local function XMVMZW_fake_script() -- Trigger_5.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -734,8 +775,8 @@ local function ECGW_fake_script() -- Trigger_5.OnActivate
 		end
 	end)
 end
-coroutine.wrap(ECGW_fake_script)()
-local function FCARPCJ_fake_script() -- Trigger_6.OnActivate 
+coroutine.wrap(XMVMZW_fake_script)()
+local function KXWQ_fake_script() -- Trigger_6.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
@@ -823,9 +864,86 @@ local function FCARPCJ_fake_script() -- Trigger_6.OnActivate
 		end
 	end)
 end
-coroutine.wrap(FCARPCJ_fake_script)()
-local function EPMRUCB_fake_script() -- TextLabel_7.Script 
-	local script = Instance.new('LocalScript', TextLabel_7)
+coroutine.wrap(KXWQ_fake_script)()
+local function IPRIRHO_fake_script() -- Trigger_7.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_7)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		local sucess, err = pcall(function()
+			local itemslist = {
+				{"GoldBar",50},
+				{"SilverBar",25},
+				{"GoldPainting",35},
+				{"GoldCup",25},
+				{"SilverPocketWatch",7},
+				{"SilverPainting",12},
+				{"GoldPlate",20},
+				{"GoldPocketWatch",15},
+				{"Holy Water",20},
+				{"Painting",5},
+				{"Banjo",15},
+				{"Statue",5},
+				{"SilverStatue",20},
+				{"GoldStatue",45},
+				{"VaseTwo",5},
+				{"Bandage",7},
+				{"Book",5},
+				{"Wheel",5},
+				{"Chair",5},
+				{"Barrel",5},
+				{"Rope",5},
+				{"Helmet",60},
+				{"ChestPlate",70},
+				{"Rightshoulderarmor",45},
+				{"Leftshoulderarmor",45},
+				{"Nikola Tesla`s Head",250}
+			}
+	
+			local StarterGui = game:GetService("StarterGui")
+			local folder = workspace.RuntimeItems
+			local money = 0
+			local tries = 0
+	
+			for i,v in folder:GetChildren() do
+				for ii,vv in itemslist do
+					if v.Name == vv[1] then
+						money = money + vv[2]
+						tries += 1
+					end
+				end
+			end
+	
+			StarterGui:SetCore("SendNotification", {
+				Title = "Scanned (~"..money.."$) // SpineWare",
+				Text = "Scanned "..tries.."/"..#folder:GetChildren().." items",
+				Duration = 15,
+			})
+		end)
+	
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
+		end
+	
+	end)
+end
+coroutine.wrap(IPRIRHO_fake_script)()
+local function DOWML_fake_script() -- TextLabel_8.Script 
+	local script = Instance.new('LocalScript', TextLabel_8)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -842,8 +960,8 @@ local function EPMRUCB_fake_script() -- TextLabel_7.Script
 		end)
 	end)
 end
-coroutine.wrap(EPMRUCB_fake_script)()
-local function TPUOTV_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(DOWML_fake_script)()
+local function FIOTZT_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -886,8 +1004,8 @@ local function TPUOTV_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(TPUOTV_fake_script)()
-local function TVVIVNU_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(FIOTZT_fake_script)()
+local function VHRKWA_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -896,8 +1014,8 @@ local function TVVIVNU_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(TVVIVNU_fake_script)()
-local function FRNZE_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(VHRKWA_fake_script)()
+local function OMUBEHT_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -980,8 +1098,8 @@ local function FRNZE_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(FRNZE_fake_script)()
-local function GFLT_fake_script() -- DeadRails.Tween 
+coroutine.wrap(OMUBEHT_fake_script)()
+local function WSEPC_fake_script() -- DeadRails.Tween 
 	local script = Instance.new('LocalScript', DeadRails)
 
 	local list = {
@@ -1037,4 +1155,4 @@ local function GFLT_fake_script() -- DeadRails.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(GFLT_fake_script)()
+coroutine.wrap(WSEPC_fake_script)()

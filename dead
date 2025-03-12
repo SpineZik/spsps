@@ -501,7 +501,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function TTUX_fake_script() -- Trigger.OnActivate 
+local function COOPW_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -552,8 +552,8 @@ local function TTUX_fake_script() -- Trigger.OnActivate
 		end
 	end)
 end
-coroutine.wrap(TTUX_fake_script)()
-local function QYURDJ_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(COOPW_fake_script)()
+local function MFHXNG_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -561,7 +561,48 @@ local function QYURDJ_fake_script() -- Trigger_2.OnActivate
 	local x=  TweenInfo.new(0.7)
 	local status = false
 	
+	local findcost = function(name)
+		local itemslist = {
+			{"GoldBar",50},
+			{"SilverBar",25},
+			{"GoldPainting",35},
+			{"GoldCup",25},
+			{"SilverPocketWatch",7},
+			{"SilverPainting",12},
+			{"GoldPlate",20},
+			{"GoldPocketWatch",15},
+			{"Holy Water",20},
+			{"Painting",5},
+			{"Banjo",15},
+			{"Statue",5},
+			{"SilverStatue",20},
+			{"GoldStatue",45},
+			{"VaseTwo",5},
+			{"Bandage",7},
+			{"Book",5},
+			{"Wheel",5},
+			{"Chair",5},
+			{"Barrel",5},
+			{"Rope",5},
+			{"Helmet",60},
+			{"ChestPlate",70},
+			{"Rightshoulderarmor",45},
+			{"Leftshoulderarmor",45},
+			{"Nikola Tesla`s Head",250}
+		}
+		
+		local status = "IDK$"
+		for i,v in itemslist do
+			if v[1] == name then
+				status = v[2].."$"
+			end
+		end
+		
+		return status
+	end
+	
 	script.Parent.MouseButton1Click:Connect(function()
+		
 		if not status then
 			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
 			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
@@ -599,10 +640,11 @@ local function QYURDJ_fake_script() -- Trigger_2.OnActivate
 	
 						local high = Instance.new("Highlight",parent)
 						async(high)
-	
+						
+						local cost = findcost(parent.Name)
 						local label = Instance.new("TextLabel",billboard)
 						label.BackgroundTransparency = 1
-						label.Text = parent.Name
+						label.Text = parent.Name.." [~"..cost.."]"
 						label.Size = UDim2.new(0.5,0,3,0)
 						label.Font = Enum.Font.Jura
 						label.TextScaled = true
@@ -618,8 +660,18 @@ local function QYURDJ_fake_script() -- Trigger_2.OnActivate
 					create(v)
 				end
 	
+				local newfolder = workspace.Baseplates
+			
+				newfolder:WaitForChild("CenterBaseplate").Animals.ChildAdded:Connect(function(an)
+					create(an)
+				end)
+				
+				for iiiiiiiii, v123 in newfolder do
+					create(v123)
+				end
 			end)
 			wait()
+			
 		else
 			pcall(function()
 				local folder = workspace.RuntimeItems
@@ -636,8 +688,8 @@ local function QYURDJ_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(QYURDJ_fake_script)()
-local function CXBGJD_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(MFHXNG_fake_script)()
+local function QZUA_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -702,8 +754,8 @@ local function CXBGJD_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(CXBGJD_fake_script)()
-local function NBOUV_fake_script() -- Trigger_4.LocalScript 
+coroutine.wrap(QZUA_fake_script)()
+local function XTIZAZE_fake_script() -- Trigger_4.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -742,8 +794,8 @@ local function NBOUV_fake_script() -- Trigger_4.LocalScript
 	
 	end)
 end
-coroutine.wrap(NBOUV_fake_script)()
-local function XMVMZW_fake_script() -- Trigger_5.OnActivate 
+coroutine.wrap(XTIZAZE_fake_script)()
+local function FDPNAO_fake_script() -- Trigger_5.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -775,14 +827,46 @@ local function XMVMZW_fake_script() -- Trigger_5.OnActivate
 		end
 	end)
 end
-coroutine.wrap(XMVMZW_fake_script)()
-local function KXWQ_fake_script() -- Trigger_6.OnActivate 
+coroutine.wrap(FDPNAO_fake_script)()
+local function HXWIVUB_fake_script() -- Trigger_6.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
 	local x=  TweenInfo.new(0.7)
 	local status = false
+	
+	local function send()
+		local bank = workspace.Towns.MediumTownTemplate.Buildings:FindFirstChild("Bank")
+		local is = "+"
+		
+		if not bank then 
+			is = "-"
+		end
+		
+		local StarterGui = game:GetService("StarterGui")
+		local x = Instance.new("BindableFunction")
+	
+		StarterGui:SetCore("SendNotification", {
+			Title = "Bank : "..is,
+			Text = "Checked for bank...",
+			Duration = 15,
+			Button1 = "Get Combination",
+			Button2 = "Ignore",
+			Callback = x
+		})
+		
+		function x.OnInvoke(ch)
+			if ch == "Get Combination" then
+				local valute = workspace.Towns.MediumTownTemplate.Buildings.Bank.Vault.Combination.Value
+	
+				StarterGui:SetCore("SendNotification", {
+					Title = "Combination is "..bank,
+					Duration = 15,
+				})
+			end
+		end
+	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if not status then
@@ -820,7 +904,7 @@ local function KXWQ_fake_script() -- Trigger_6.OnActivate
 				fold2.ChildAdded:Connect(function(child)
 					if status then
 						local StarterGui = game:GetService("StarterGui")
-						local x = Instance.new("BindableEvent")
+						local x = Instance.new("BindableFunction")
 						
 						StarterGui:SetCore("SendNotification", {
 							Title = "Structure {"..child.Name.."} // SpineWare",
@@ -831,41 +915,49 @@ local function KXWQ_fake_script() -- Trigger_6.OnActivate
 							Callback = x
 						})
 						
-						x.Event:Connect(function(choose)
-							if choose == "Check For Bank" then
-								local bank = workspace.Towns.MediumTownTemplate.Buildings:FindFirstChild("Bank")
-								
-								local StarterGui = game:GetService("StarterGui")
-								local xx = Instance.new("BindableEvent")
-	
-								StarterGui:SetCore("SendNotification", {
-									Title = "Bank : "..bank,
-									Duration = 15,
-									Button1 = "Get Combination",
-									Button2 = "Ignore",
-									Callback = xx
-								})
-								
-								xx.Event:Connect(function(ch)
-									if ch == "Get Combination" then
-										local valute = workspace.Towns.MediumTownTemplate.Buildings.Bank.Vault.Combination.Value
-										
-										StarterGui:SetCore("SendNotification", {
-											Title = "Combination is "..bank,
-											Duration = 15,
-										})
-									end
-								end)
-							end
-						end)
+						function x.OnInvoke(choose)
+							send()
+						end
 					end
 				end)
+				
+				local newfold = workspace.Baseplates
+				
+				newfold.ChildAdded:Connect(function(child)
+					child:WaitForChild("CenterBaseplate").Animals.ChildAdded:Connect(function(children)
+						if children.Name == "Unicorn" then
+							local StarterGui = game:GetService("StarterGui")
+							StarterGui:SetCore("SendNotification", {
+								Title = "Unicorn Spawned! // SpineWare",
+								Text = "New animal has spawned!",
+								Duration = 15,
+								Button1 = "Ignore",
+								Button2 = "Ignore"
+							})
+						end
+					end)
+				end)
+				
+				for iiiiii,vvvv in newfold:GetChildren() do
+					vvvv:WaitForChild("CenterBaseplate").Animals.ChildAdded:Connect(function(children)
+						if children.Name == "Unicorn" then
+							local StarterGui = game:GetService("StarterGui")
+							StarterGui:SetCore("SendNotification", {
+								Title = "Unicorn Spawned! // SpineWare",
+								Text = "New animal has spawned!",
+								Duration = 15,
+								Button1 = "Ignore",
+								Button2 = "Ignore"
+							})
+						end
+					end)
+				end
 			end)
 		end
 	end)
 end
-coroutine.wrap(KXWQ_fake_script)()
-local function IPRIRHO_fake_script() -- Trigger_7.LocalScript 
+coroutine.wrap(HXWIVUB_fake_script)()
+local function UNEMLS_fake_script() -- Trigger_7.LocalScript 
 	local script = Instance.new('LocalScript', Trigger_7)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -941,8 +1033,8 @@ local function IPRIRHO_fake_script() -- Trigger_7.LocalScript
 	
 	end)
 end
-coroutine.wrap(IPRIRHO_fake_script)()
-local function DOWML_fake_script() -- TextLabel_8.Script 
+coroutine.wrap(UNEMLS_fake_script)()
+local function TSYN_fake_script() -- TextLabel_8.Script 
 	local script = Instance.new('LocalScript', TextLabel_8)
 
 	local ts = game:GetService("TweenService")
@@ -960,8 +1052,8 @@ local function DOWML_fake_script() -- TextLabel_8.Script
 		end)
 	end)
 end
-coroutine.wrap(DOWML_fake_script)()
-local function FIOTZT_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(TSYN_fake_script)()
+local function VMDJ_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -1004,8 +1096,8 @@ local function FIOTZT_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(FIOTZT_fake_script)()
-local function VHRKWA_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(VMDJ_fake_script)()
+local function BRRQEQ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1014,8 +1106,8 @@ local function VHRKWA_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(VHRKWA_fake_script)()
-local function OMUBEHT_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(BRRQEQ_fake_script)()
+local function QCOUUCB_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -1098,8 +1190,8 @@ local function OMUBEHT_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(OMUBEHT_fake_script)()
-local function WSEPC_fake_script() -- DeadRails.Tween 
+coroutine.wrap(QCOUUCB_fake_script)()
+local function NNROMN_fake_script() -- DeadRails.Tween 
 	local script = Instance.new('LocalScript', DeadRails)
 
 	local list = {
@@ -1155,4 +1247,4 @@ local function WSEPC_fake_script() -- DeadRails.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(WSEPC_fake_script)()
+coroutine.wrap(NNROMN_fake_script)()

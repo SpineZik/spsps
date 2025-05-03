@@ -10,7 +10,7 @@ local UICorner = Instance.new("UICorner")
 local ContainerList = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
 local UIPadding = Instance.new("UIPadding")
-local AutoTrain = Instance.new("Frame")
+local bugach = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
 local In = Instance.new("Frame")
@@ -18,7 +18,7 @@ local UICorner_3 = Instance.new("UICorner")
 local Frame = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
-local bugach = Instance.new("Frame")
+local AutoRebirth = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local Trigger_2 = Instance.new("TextButton")
 local In_2 = Instance.new("Frame")
@@ -26,22 +26,14 @@ local UICorner_6 = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
-local AutoRebirth = Instance.new("Frame")
+local Obby = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
 local Trigger_3 = Instance.new("TextButton")
-local In_3 = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
-local Frame_3 = Instance.new("Frame")
-local UICorner_10 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
-local Obby = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local Trigger_4 = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local Top = Instance.new("Frame")
-local UICorner_13 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 
@@ -90,19 +82,19 @@ UIPadding.Parent = ContainerList
 UIPadding.PaddingLeft = UDim.new(0, 16)
 UIPadding.PaddingTop = UDim.new(0, 5)
 
-AutoTrain.Name = "Auto Train"
-AutoTrain.Parent = ContainerList
-AutoTrain.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-AutoTrain.BackgroundTransparency = 0.500
-AutoTrain.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AutoTrain.BorderSizePixel = 0
-AutoTrain.Position = UDim2.new(0, 0, 0.165938869, 0)
-AutoTrain.Size = UDim2.new(0, 176, 0, 38)
+bugach.Name = "bug ach"
+bugach.Parent = ContainerList
+bugach.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+bugach.BackgroundTransparency = 0.500
+bugach.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bugach.BorderSizePixel = 0
+bugach.Position = UDim2.new(0, 0, 0.165938869, 0)
+bugach.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_2.Parent = AutoTrain
+UICorner_2.Parent = bugach
 
 Trigger.Name = "Trigger"
-Trigger.Parent = AutoTrain
+Trigger.Parent = bugach
 Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger.BackgroundTransparency = 1.000
 Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -114,7 +106,7 @@ Trigger.TextSize = 14.000
 Trigger.TextTransparency = 1.000
 
 In.Name = "In"
-In.Parent = AutoTrain
+In.Parent = bugach
 In.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 In.BorderColor3 = Color3.fromRGB(0, 0, 0)
 In.BorderSizePixel = 0
@@ -131,7 +123,7 @@ Frame.Size = UDim2.new(0, 19, 0, 20)
 
 UICorner_4.Parent = Frame
 
-TextLabel.Parent = AutoTrain
+TextLabel.Parent = bugach
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -139,24 +131,24 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0511363633, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 134, 0, 38)
 TextLabel.Font = Enum.Font.Jura
-TextLabel.Text = "Auto Train"
+TextLabel.Text = "Bug ACH"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20.000
 TextLabel.TextWrapped = true
 
-bugach.Name = "bug ach"
-bugach.Parent = ContainerList
-bugach.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-bugach.BackgroundTransparency = 0.500
-bugach.BorderColor3 = Color3.fromRGB(0, 0, 0)
-bugach.BorderSizePixel = 0
-bugach.Position = UDim2.new(0, 0, 0.165938869, 0)
-bugach.Size = UDim2.new(0, 176, 0, 38)
+AutoRebirth.Name = "Auto Rebirth"
+AutoRebirth.Parent = ContainerList
+AutoRebirth.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+AutoRebirth.BackgroundTransparency = 0.500
+AutoRebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoRebirth.BorderSizePixel = 0
+AutoRebirth.Position = UDim2.new(0, 0, 0.165938869, 0)
+AutoRebirth.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_5.Parent = bugach
+UICorner_5.Parent = AutoRebirth
 
 Trigger_2.Name = "Trigger"
-Trigger_2.Parent = bugach
+Trigger_2.Parent = AutoRebirth
 Trigger_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger_2.BackgroundTransparency = 1.000
 Trigger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -168,7 +160,7 @@ Trigger_2.TextSize = 14.000
 Trigger_2.TextTransparency = 1.000
 
 In_2.Name = "In"
-In_2.Parent = bugach
+In_2.Parent = AutoRebirth
 In_2.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 In_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 In_2.BorderSizePixel = 0
@@ -185,7 +177,7 @@ Frame_2.Size = UDim2.new(0, 19, 0, 20)
 
 UICorner_7.Parent = Frame_2
 
-TextLabel_2.Parent = bugach
+TextLabel_2.Parent = AutoRebirth
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -193,64 +185,10 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0.0511363633, 0, 0, 0)
 TextLabel_2.Size = UDim2.new(0, 134, 0, 38)
 TextLabel_2.Font = Enum.Font.Jura
-TextLabel_2.Text = "Bug ACH"
+TextLabel_2.Text = "Auto Rebirth"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 20.000
 TextLabel_2.TextWrapped = true
-
-AutoRebirth.Name = "Auto Rebirth"
-AutoRebirth.Parent = ContainerList
-AutoRebirth.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-AutoRebirth.BackgroundTransparency = 0.500
-AutoRebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AutoRebirth.BorderSizePixel = 0
-AutoRebirth.Position = UDim2.new(0, 0, 0.165938869, 0)
-AutoRebirth.Size = UDim2.new(0, 176, 0, 38)
-
-UICorner_8.Parent = AutoRebirth
-
-Trigger_3.Name = "Trigger"
-Trigger_3.Parent = AutoRebirth
-Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Trigger_3.BackgroundTransparency = 1.000
-Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Trigger_3.BorderSizePixel = 0
-Trigger_3.Size = UDim2.new(0, 176, 0, 38)
-Trigger_3.Font = Enum.Font.SourceSans
-Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Trigger_3.TextSize = 14.000
-Trigger_3.TextTransparency = 1.000
-
-In_3.Name = "In"
-In_3.Parent = AutoRebirth
-In_3.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-In_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-In_3.BorderSizePixel = 0
-In_3.Position = UDim2.new(0.761363626, 0, 0.236842111, 0)
-In_3.Size = UDim2.new(0, 35, 0, 20)
-
-UICorner_9.Parent = In_3
-
-Frame_3.Parent = In_3
-Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderSizePixel = 0
-Frame_3.Size = UDim2.new(0, 19, 0, 20)
-
-UICorner_10.Parent = Frame_3
-
-TextLabel_3.Parent = AutoRebirth
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.0511363633, 0, 0, 0)
-TextLabel_3.Size = UDim2.new(0, 134, 0, 38)
-TextLabel_3.Font = Enum.Font.Jura
-TextLabel_3.Text = "Auto Rebirth"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextSize = 20.000
-TextLabel_3.TextWrapped = true
 
 Obby.Name = "Obby"
 Obby.Parent = ContainerList
@@ -261,34 +199,34 @@ Obby.BorderSizePixel = 0
 Obby.Position = UDim2.new(0.0252525248, 0, 0.0140186911, 0)
 Obby.Size = UDim2.new(0, 176, 0, 38)
 
-UICorner_11.Parent = Obby
+UICorner_8.Parent = Obby
 
-Trigger_4.Name = "Trigger"
-Trigger_4.Parent = Obby
-Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Trigger_4.BackgroundTransparency = 1.000
-Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Trigger_4.BorderSizePixel = 0
-Trigger_4.Size = UDim2.new(0, 176, 0, 38)
-Trigger_4.Font = Enum.Font.SourceSans
-Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Trigger_4.TextSize = 14.000
-Trigger_4.TextTransparency = 1.000
+Trigger_3.Name = "Trigger"
+Trigger_3.Parent = Obby
+Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_3.BackgroundTransparency = 1.000
+Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.BorderSizePixel = 0
+Trigger_3.Size = UDim2.new(0, 176, 0, 38)
+Trigger_3.Font = Enum.Font.SourceSans
+Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.TextSize = 14.000
+Trigger_3.TextTransparency = 1.000
 
-TextLabel_4.Parent = Obby
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.11931818, 0, 0, 0)
-TextLabel_4.Size = UDim2.new(0, 134, 0, 38)
-TextLabel_4.Font = Enum.Font.Jura
-TextLabel_4.Text = "Last Train"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextSize = 20.000
-TextLabel_4.TextWrapped = true
+TextLabel_3.Parent = Obby
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.11931818, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 134, 0, 38)
+TextLabel_3.Font = Enum.Font.Jura
+TextLabel_3.Text = "Last Train"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
 
-UICorner_12.Parent = ImageLabel
+UICorner_9.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -299,19 +237,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(0, 0, -0.00362318847, 0)
 Top.Size = UDim2.new(0, 210, 0, 36)
 
-UICorner_13.Parent = Top
+UICorner_10.Parent = Top
 
-TextLabel_5.Parent = Top
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.238095239, 0, 0, 0)
-TextLabel_5.Size = UDim2.new(0, 109, 0, 35)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "SpineWare"
-TextLabel_5.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_5.TextSize = 18.000
+TextLabel_4.Parent = Top
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.238095239, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 109, 0, 35)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "SpineWare"
+TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_4.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -336,43 +274,8 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function GYTX_fake_script() -- Trigger.OnActivate 
+local function ITWJ_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
-
-	local ts = game:GetService("TweenService")
-	local info = TweenInfo.new(1.3)
-	local x=  TweenInfo.new(0.7)
-	local status = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if not status then
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,18,0,0)}):Play()
-			status = true
-			
-		else
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
-			status = false
-		end
-		
-		while status do
-			pcall(function()
-				local A_1 = "train_start"
-				local A_2 = 
-					{
-						["1"] = 48
-					}
-				local Event = game:GetService("ReplicatedStorage").RemoteEvent
-				Event:FireServer(A_1, A_2)
-			end)
-			wait()
-		end
-	end)
-end
-coroutine.wrap(GYTX_fake_script)()
-local function ZMDSMTK_fake_script() -- Trigger_2.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -451,9 +354,9 @@ local function ZMDSMTK_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(ZMDSMTK_fake_script)()
-local function ZCZYNL_fake_script() -- Trigger_3.OnActivate 
-	local script = Instance.new('LocalScript', Trigger_3)
+coroutine.wrap(ITWJ_fake_script)()
+local function EXBLH_fake_script() -- Trigger_2.OnActivate 
+	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1.3)
@@ -486,9 +389,9 @@ local function ZCZYNL_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(ZCZYNL_fake_script)()
-local function XADPZ_fake_script() -- Trigger_4.LocalScript 
-	local script = Instance.new('LocalScript', Trigger_4)
+coroutine.wrap(EXBLH_fake_script)()
+local function XSZYRZ_fake_script() -- Trigger_3.LocalScript 
+	local script = Instance.new('LocalScript', Trigger_3)
 
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.3}):Play()
@@ -517,9 +420,9 @@ local function XADPZ_fake_script() -- Trigger_4.LocalScript
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(XADPZ_fake_script)()
-local function VDSCZBD_fake_script() -- TextLabel_5.Script 
-	local script = Instance.new('LocalScript', TextLabel_5)
+coroutine.wrap(XSZYRZ_fake_script)()
+local function EJJTWUS_fake_script() -- TextLabel_4.Script 
+	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -536,8 +439,8 @@ local function VDSCZBD_fake_script() -- TextLabel_5.Script
 		end)
 	end)
 end
-coroutine.wrap(VDSCZBD_fake_script)()
-local function VFTZPOQ_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(EJJTWUS_fake_script)()
+local function DVKW_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -580,8 +483,8 @@ local function VFTZPOQ_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(VFTZPOQ_fake_script)()
-local function OWLIB_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(DVKW_fake_script)()
+local function LAMYPK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -590,8 +493,8 @@ local function OWLIB_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(OWLIB_fake_script)()
-local function DLJAJQ_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(LAMYPK_fake_script)()
+local function RLDB_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -607,8 +510,8 @@ local function DLJAJQ_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(DLJAJQ_fake_script)()
-local function FJJE_fake_script() -- PETSSIMNEW.Tween 
+coroutine.wrap(RLDB_fake_script)()
+local function OLWLBPQ_fake_script() -- PETSSIMNEW.Tween 
 	local script = Instance.new('LocalScript', PETSSIMNEW)
 
 	local list = {
@@ -664,4 +567,4 @@ local function FJJE_fake_script() -- PETSSIMNEW.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(FJJE_fake_script)()
+coroutine.wrap(OLWLBPQ_fake_script)()

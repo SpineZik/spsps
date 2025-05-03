@@ -186,6 +186,4 @@ elseif game.PlaceId == 70876832253163 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/dead"))()
 elseif game.PlaceId == 124902841078209 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/petssim"))()
-elseif game.PlaceId == 120570155878200 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Broom%20Training"))()
 end

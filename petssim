@@ -46,6 +46,7 @@ local ImageButton = Instance.new("ImageButton")
 PETSSIMNEW.Name = "PETS SIM NEW"
 PETSSIMNEW.Parent = game.CoreGui
 
+
 ImageLabel.Parent = PETSSIMNEW
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -296,7 +297,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function TLKZB_fake_script() -- Trigger.OnActivate 
+local function WRZUPX_fake_script() -- Trigger.OnActivate 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -318,20 +319,20 @@ local function TLKZB_fake_script() -- Trigger.OnActivate
 		
 		while status do
 			pcall(function()
-				local A_1 = "get_limit_pets_data"
+				local A_1 = "train_start"
 				local A_2 = 
 					{
-						["1"] = 51
+						["1"] = 48
 					}
-				local Event = game:GetService("ReplicatedStorage").RemoteFunction
-				Event:InvokeServer(A_1, A_2)
+				local Event = game:GetService("ReplicatedStorage").RemoteEvent
+				Event:FireServer(A_1, A_2)
 			end)
 			wait()
 		end
 	end)
 end
-coroutine.wrap(TLKZB_fake_script)()
-local function YAJH_fake_script() -- Trigger_2.OnActivate 
+coroutine.wrap(WRZUPX_fake_script)()
+local function VLFEGSA_fake_script() -- Trigger_2.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -411,8 +412,8 @@ local function YAJH_fake_script() -- Trigger_2.OnActivate
 		end
 	end)
 end
-coroutine.wrap(YAJH_fake_script)()
-local function NNUM_fake_script() -- Trigger_3.OnActivate 
+coroutine.wrap(VLFEGSA_fake_script)()
+local function XKYOXPJ_fake_script() -- Trigger_3.OnActivate 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -446,8 +447,8 @@ local function NNUM_fake_script() -- Trigger_3.OnActivate
 		end
 	end)
 end
-coroutine.wrap(NNUM_fake_script)()
-local function YGWJLQL_fake_script() -- TextLabel_4.Script 
+coroutine.wrap(XKYOXPJ_fake_script)()
+local function QYVTFMI_fake_script() -- TextLabel_4.Script 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
@@ -465,8 +466,8 @@ local function YGWJLQL_fake_script() -- TextLabel_4.Script
 		end)
 	end)
 end
-coroutine.wrap(YGWJLQL_fake_script)()
-local function MNCFR_fake_script() -- Toggle.OnActivate 
+coroutine.wrap(QYVTFMI_fake_script)()
+local function PARI_fake_script() -- Toggle.OnActivate 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -509,8 +510,8 @@ local function MNCFR_fake_script() -- Toggle.OnActivate
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(MNCFR_fake_script)()
-local function ZOXSVLM_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(PARI_fake_script)()
+local function ITKUVR_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -519,8 +520,8 @@ local function ZOXSVLM_fake_script() -- ImageButton.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(ZOXSVLM_fake_script)()
-local function NQCZFWC_fake_script() -- ImageLabel.LocalScript 
+coroutine.wrap(ITKUVR_fake_script)()
+local function VGFQXCV_fake_script() -- ImageLabel.LocalScript 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	script.Parent.Active= true
@@ -536,8 +537,8 @@ local function NQCZFWC_fake_script() -- ImageLabel.LocalScript
 	
 	
 end
-coroutine.wrap(NQCZFWC_fake_script)()
-local function AQEW_fake_script() -- PETSSIMNEW.Tween 
+coroutine.wrap(VGFQXCV_fake_script)()
+local function WVONUMH_fake_script() -- PETSSIMNEW.Tween 
 	local script = Instance.new('LocalScript', PETSSIMNEW)
 
 	local list = {
@@ -593,4 +594,4 @@ local function AQEW_fake_script() -- PETSSIMNEW.Tween
 	
 	if not a then print(b) end
 end
-coroutine.wrap(AQEW_fake_script)()
+coroutine.wrap(WVONUMH_fake_script)()

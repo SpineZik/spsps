@@ -45,7 +45,6 @@ local ImageButton = Instance.new("ImageButton")
 
 CARGOSIMNEW.Name = "CAR GO SIM NEW"
 CARGOSIMNEW.Parent = game.CoreGui
-CARGOSIMNEW.Enabled = false
 
 ImageLabel.Parent = CARGOSIMNEW
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)

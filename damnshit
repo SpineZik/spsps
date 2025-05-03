@@ -184,4 +184,6 @@ elseif game.PlaceId == 98884828936836 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/%5BUPD%5D%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Pirate%20RNG"))()
 elseif game.PlaceId == 70876832253163 then
        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/dead"))()
+elseif game.PlaceId == 107326628277908 then
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Car%20Go"))()
 end

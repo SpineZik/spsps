@@ -135,7 +135,7 @@ for i,v in gameids do
             loadstring(game:HttpGet(v[2]))()
         else
             xpcall(function()
-                local pow = math.random(1,10) + (information + v[2]) 
+              pcall(function() local pow = math.random(1,10) + (information + v[2]) end)
             end,
             function()
                 local broke = math.random(1,10)

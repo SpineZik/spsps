@@ -83,7 +83,7 @@ local gameids = {
     {'71248013249709', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Solo%20Leveling%E3%80%90%F0%9F%8F%A0School%20Dungeon%E3%80%91'},
     {'114726928695371', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/Feed%20The%20Giant%20Simulator!'},
     {'98884828936836', 'https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/%5BUPD%5D%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Pirate%20RNG'},
-    {'70876832253163', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NwaW5lV2FyZS9Vbml2ZXJzYWxMb2FkZXIvcmVmcy9oZWFkcy9tYWluL0xvYWQ='},
+    {'70876832253163', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL2RlYWQ='},
     {'116495829188952', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NwaW5lWmlrL3Nwc3BzL3JlZnMvaGVhZHMvbWFpbi9kZWFk'},
     {'120570155878200', 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0Jyb29tJTIwVHJhaW5pbmc='},
     {"107326628277908","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0JlJTIwYSUyMENhcg=="},

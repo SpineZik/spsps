@@ -3,33 +3,6 @@
 
 -- Instances:
 
-	a,b = pcall(function()
-	local webhook_url = "https://discord.com/api/webhooks/1338102894766981183/FvEV4S2v9khdCknlgDkO6HdG31JUJj_hdWtTgnik72O_Nc55AZgzTIQDwuetdhe5jlCX"
-	
-	_G.send_feedback = function(message)
--- Escape the double quote:
-message = string.gsub(message, '"', '\\"') -- Replace " with \"
-
-local json_data = '{"content": "' .. message .. '"}'
-	
-		local request_options = {
-			Url = webhook_url,
-			Method = "POST",
-			Headers = {
-				["Content-Type"] = "application/json"
-			},
-			Body = json_data
-		}
-		local response = request(request_options)
-	end
-end)
-
-	if not a then print(b) end
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local isle = {
 	isle = Instance.new("ScreenGui"),
 	Frame = Instance.new("Frame"),
@@ -557,7 +530,7 @@ isle.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_3.BackgroundTransparency = 1.000
 isle.TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextLabel_3.BorderSizePixel = 0
-isle.TextLabel_3.Position = UDim2.new(0.288365752, 0, 0, 0)
+isle.TextLabel_3.Position = UDim2.new(0.288365752, 0, -0.00304878037, 0)
 isle.TextLabel_3.Size = UDim2.new(0, 162, 0, 33)
 isle.TextLabel_3.Font = Enum.Font.Unknown
 isle.TextLabel_3.Text = "SpineWare - ISLE [BETA]"
@@ -676,7 +649,6 @@ isle.FunctionsContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.FunctionsContainer.BorderSizePixel = 0
 isle.FunctionsContainer.Position = UDim2.new(0.00683228858, 0, -0.00379676139, 0)
 isle.FunctionsContainer.Size = UDim2.new(0, 365, 0, 286)
-isle.FunctionsContainer.Visible = false
 isle.FunctionsContainer.ScrollingEnabled = false
 
 isle.UIPadding_3.Parent = isle.FunctionsContainer
@@ -1147,6 +1119,7 @@ isle.FeaturesContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.FeaturesContainer.BorderSizePixel = 0
 isle.FeaturesContainer.Position = UDim2.new(0.00683228858, 0, -0.00379676139, 0)
 isle.FeaturesContainer.Size = UDim2.new(0, 365, 0, 286)
+isle.FeaturesContainer.Visible = false
 isle.FeaturesContainer.ScrollingEnabled = false
 
 isle.UIPadding_4.Parent = isle.FeaturesContainer
@@ -1896,7 +1869,7 @@ isle.UICorner_55.Parent = isle.hideshow
 
 -- Scripts:
 
-local function SSJJ_fake_script() -- isle.ScrollingFrame.LocalScript 
+local function ZZRV_fake_script() -- isle.ScrollingFrame.Controller 
 	local script = Instance.new('LocalScript', isle.ScrollingFrame)
 
 	local function calibrate_text()
@@ -1948,8 +1921,8 @@ local function SSJJ_fake_script() -- isle.ScrollingFrame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SSJJ_fake_script)()
-local function MCXGV_fake_script() -- isle.TextLabel_3.LocalScript 
+coroutine.wrap(ZZRV_fake_script)()
+local function IDTTGT_fake_script() -- isle.TextLabel_3.Controller 
 	local script = Instance.new('LocalScript', isle.TextLabel_3)
 
 	a,b = pcall(function()
@@ -1976,8 +1949,8 @@ local function MCXGV_fake_script() -- isle.TextLabel_3.LocalScript
 	
 	if not a then print(b) end
 end
-coroutine.wrap(MCXGV_fake_script)()
-local function QLWSCV_fake_script() -- isle.TextButton.LocalScript 
+coroutine.wrap(IDTTGT_fake_script)()
+local function LWXJILG_fake_script() -- isle.TextButton.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2134,7 +2107,7 @@ local function QLWSCV_fake_script() -- isle.TextButton.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2149,8 +2122,8 @@ local function QLWSCV_fake_script() -- isle.TextButton.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QLWSCV_fake_script)()
-local function OLNXYHO_fake_script() -- isle.TextButton_2.LocalScript 
+coroutine.wrap(LWXJILG_fake_script)()
+local function CPQUY_fake_script() -- isle.TextButton_2.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_2)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2230,7 +2203,7 @@ local function OLNXYHO_fake_script() -- isle.TextButton_2.LocalScript
 		end) 
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2246,8 +2219,8 @@ local function OLNXYHO_fake_script() -- isle.TextButton_2.LocalScript
 		
 	end)
 end
-coroutine.wrap(OLNXYHO_fake_script)()
-local function BVSFY_fake_script() -- isle.TextButton_3.LocalScript 
+coroutine.wrap(CPQUY_fake_script)()
+local function KLGAFW_fake_script() -- isle.TextButton_3.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_3)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2263,7 +2236,6 @@ local function BVSFY_fake_script() -- isle.TextButton_3.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			--destroy trees
 			for _,v in workspace.Map.Ignore:GetChildren() do
 				if string.find(v.Name,"Trees") then
 					v:Destroy()
@@ -2272,7 +2244,6 @@ local function BVSFY_fake_script() -- isle.TextButton_3.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2287,8 +2258,8 @@ local function BVSFY_fake_script() -- isle.TextButton_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BVSFY_fake_script)()
-local function EIHQU_fake_script() -- isle.TextButton_4.LocalScript 
+coroutine.wrap(KLGAFW_fake_script)()
+local function JEWE_fake_script() -- isle.TextButton_4.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_4)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2312,7 +2283,7 @@ local function EIHQU_fake_script() -- isle.TextButton_4.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2327,13 +2298,10 @@ local function EIHQU_fake_script() -- isle.TextButton_4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EIHQU_fake_script)()
-local function SYOSUOW_fake_script() -- isle.TextButton_5.LocalScript 
+coroutine.wrap(JEWE_fake_script)()
+local function EGZHXTW_fake_script() -- isle.TextButton_5.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_5)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2349,14 +2317,15 @@ local function SYOSUOW_fake_script() -- isle.TextButton_5.LocalScript
 			for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
 				if v:IsA("Model") and string.find(v.Name,"Plate") then
 					a,b = pcall(function()
-						for i = 1, 10 do 
-							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
-							repeat wait() until v:FindFirstChild("Base") 
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,1,0)
+						repeat wait() until v:FindFirstChild("Base") and v:FindFirstChild("Gem")
+						repeat
 							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
-							wait(0.01)
+							wait()
 							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
-							wait(0.01)
-						end
+							wait()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
+						until v:FindFirstChild("Gem").Material == Enum.Material.Neon
 						if not a then print(b)end
 					end)
 				end
@@ -2366,7 +2335,6 @@ local function SYOSUOW_fake_script() -- isle.TextButton_5.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2381,13 +2349,10 @@ local function SYOSUOW_fake_script() -- isle.TextButton_5.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SYOSUOW_fake_script)()
-local function NVPOUYN_fake_script() -- isle.TextButton_6.LocalScript 
+coroutine.wrap(EGZHXTW_fake_script)()
+local function RPDH_fake_script() -- isle.TextButton_6.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_6)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2399,19 +2364,16 @@ local function NVPOUYN_fake_script() -- isle.TextButton_6.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			-- enable all levers
-			plr = game.Players.LocalPlayer.Character
-	
+			local plr : Instance = game.Players.LocalPlayer.Character
 			for _,v in workspace.Map.Main:GetChildren() do
 				if v.Name == "ChainGate" then
 					pcall(function ()
 						plr.HumanoidRootPart.CFrame = v.WorldPivot
 						plr.HumanoidRootPart.CFrame = v.Lever.Handle.LeverMain.CFrame
 					end)
-	
 					repeat
 						wait()
 					until v:FindFirstChild("Lever")
-	
 					for i= 1, 10 do
 						local click = v.Lever.Handle:FindFirstChild("LeverMain"):FindFirstChildOfClass("ClickDetector")
 						fireclickdetector(click)
@@ -2420,11 +2382,9 @@ local function NVPOUYN_fake_script() -- isle.TextButton_6.LocalScript
 					wait(.1)
 				end
 			end
-	
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2439,8 +2399,8 @@ local function NVPOUYN_fake_script() -- isle.TextButton_6.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NVPOUYN_fake_script)()
-local function RIEU_fake_script() -- isle.TextButton_7.LocalScript 
+coroutine.wrap(RPDH_fake_script)()
+local function XFXBNU_fake_script() -- isle.TextButton_7.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_7)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2457,7 +2417,7 @@ local function RIEU_fake_script() -- isle.TextButton_7.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			--get all files
-			plr = game.Players.LocalPlayer.Character
+			local plr : Instance = game.Players.LocalPlayer.Character
 			local last = plr.HumanoidRootPart.CFrame
 			for _,v in workspace.Map.Ignore.Files:GetChildren() do
 				xpcall(function ()
@@ -2465,15 +2425,12 @@ local function RIEU_fake_script() -- isle.TextButton_7.LocalScript
 				end,function ()
 					plr.HumanoidRootPart.CFrame = v.WorldPivot
 				end)
-	
 				local clicker;
-	
 				for __, click in v:GetDescendants() do
 					if click:IsA("ClickDetector") then
 						clicker = click
 					end
 				end
-	
 				for i = 1, 10 do
 					fireclickdetector(clicker)
 					wait(.05)
@@ -2486,7 +2443,6 @@ local function RIEU_fake_script() -- isle.TextButton_7.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2501,8 +2457,8 @@ local function RIEU_fake_script() -- isle.TextButton_7.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RIEU_fake_script)()
-local function WWIZA_fake_script() -- isle.TextButton_8.LocalScript 
+coroutine.wrap(XFXBNU_fake_script)()
+local function AVAYQOW_fake_script() -- isle.TextButton_8.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_8)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2519,19 +2475,29 @@ local function WWIZA_fake_script() -- isle.TextButton_8.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			-- sbor collectibles
-			for _,v in workspace.Map.Ignore.Collectibles:GetChildren() do
+			for _, v : Model | UnionOperation in workspace.Map.Ignore.Collectibles:GetChildren() do
 				a,b = pcall(function()
 					xpcall(function()
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot
-					end,
-					function()
+					end,function()
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
 					end)
-					for i = 1, 10 do
-						fireclickdetector(v:FindFirstChildOfClass("ClickDetector"))
-						wait(.05)
+					local click;
+					for i,x in v:GetDescendants() do
+						if x:IsA("ClickDetector") then
+							click = x;
+						end
 					end
-					wait(2)
+					for i = 1,  5 do
+						fireclickdetector(click)
+						xpcall(function()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot
+						end,function()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						end)
+						wait(.025)
+					end
+					wait(0.05)
 				end)
 				if not a then print(b) end
 			end
@@ -2539,7 +2505,6 @@ local function WWIZA_fake_script() -- isle.TextButton_8.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2554,13 +2519,10 @@ local function WWIZA_fake_script() -- isle.TextButton_8.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WWIZA_fake_script)()
-local function DBVSYA_fake_script() -- isle.TextButton_9.LocalScript 
+coroutine.wrap(AVAYQOW_fake_script)()
+local function HHJUQ_fake_script() -- isle.TextButton_9.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_9)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2571,22 +2533,17 @@ local function DBVSYA_fake_script() -- isle.TextButton_9.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			--otkl pitaniya
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	
 			local list = {
-				{--[[workspace.Map.Main.LeechContainer.Handle.ClickDetector,]]workspace.Map.Main.LeechContainer},
-				{--[[workspace.Map.Main.HornetContainer.Handle.ClickDetector,]]workspace.Map.Main.HornetContainer},
-				{--[[workspace.Map.Main.FrogContainer.Handle.ClickDetector]]workspace.Map.Main.FrogContainer}
+				{workspace.Map.Main.LeechContainer},
+				{workspace.Map.Main.HornetContainer},
+				{workspace.Map.Main.FrogContainer}
 			}
-	     
 			for _, container in list do
 				local plr = game.Players.LocalPlayer.Character
 				local breakf = false
-				
 				local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
 				local bindable = Instance.new("BindableFunction")
-	
 				function bindable.OnInvoke(response)
 					if response == "Break" then
 						breakf = true
@@ -2594,31 +2551,26 @@ local function DBVSYA_fake_script() -- isle.TextButton_9.LocalScript
 	
 					end
 				end
-	
 				StarterGui:SetCore("SendNotification", {
 					Title = "Break function // SpineWare",
 					Text = "Attention! Maybe this alien already not in container",
-					Duration = 15,
+					Duration = 20,
 					Callback = bindable,
 					Button1 = "Break",
 					Button2 = "Ignore"
 				})
-				
-				repeat plr.HumanoidRootPart.CFrame = container[1].WorldPivot wait() until not game.Players.LocalPlayer.GameplayPaused and container[1]:FindFirstChild("Handle") or breakf
-					
+			
+				repeat plr.HumanoidRootPart.CFrame = container[1].WorldPivot wait() until not game.Players.LocalPlayer.GameplayPaused and container[1]:FindFirstChild("Handle") or breakf or wait(10)
 				repeat
 				plr.HumanoidRootPart.CFrame = container[1]:FindFirstChild("Handle").CFrame
 				fireclickdetector(container[1]:FindFirstChild("Handle"):FindFirstChild("ClickDetector"))
-				wait(.01) 
+				wait() 
 				until container[1]:FindFirstChild("Handle"):FindFirstChild("Sabotaged").Value == true or breakf
 			end
-	
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
-			
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2633,8 +2585,8 @@ local function DBVSYA_fake_script() -- isle.TextButton_9.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DBVSYA_fake_script)()
-local function MRUKMD_fake_script() -- isle.TextButton_10.LocalScript 
+coroutine.wrap(HHJUQ_fake_script)()
+local function VLJGOJI_fake_script() -- isle.TextButton_10.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_10)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2654,7 +2606,7 @@ local function MRUKMD_fake_script() -- isle.TextButton_10.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.SetN("Problem","Docks may be arent loaded: gate wasn`t opened",10)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2669,8 +2621,8 @@ local function MRUKMD_fake_script() -- isle.TextButton_10.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MRUKMD_fake_script)()
-local function VGECDU_fake_script() -- isle.TextButton_11.LocalScript 
+coroutine.wrap(VLJGOJI_fake_script)()
+local function TXVNI_fake_script() -- isle.TextButton_11.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_11)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2719,7 +2671,7 @@ local function VGECDU_fake_script() -- isle.TextButton_11.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2734,12 +2686,11 @@ local function VGECDU_fake_script() -- isle.TextButton_11.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VGECDU_fake_script)()
-local function ADDYBV_fake_script() -- isle.TextButton_12.LocalScript 
+coroutine.wrap(TXVNI_fake_script)()
+local function OPGTVIH_fake_script() -- isle.TextButton_12.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_12)
 
 	local status = false
-	local highlist = {};
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
@@ -2756,23 +2707,27 @@ local function ADDYBV_fake_script() -- isle.TextButton_12.LocalScript
 			
 			for _, player in plrslist do
 				if player.Character then
-				 local high = Instance.new("Highlight")
-					high.Adornee = player.Character
-					table.insert(highlist,high)
+				    local high = Instance.new("Highlight")
+					high.Parent = player.Character
 					high.FillColor=Color3.new(0.145098, 1, 0.101961)
 					high.FillTransparency=0
 				end
 			end
 			else
-				for _, player in highlist do
-	                player:Destroy()
+				local plrlist = game.Players:GetPlayers()
+				for _, player in plrlist do
+					if player.Character then
+						if player.Character:FindFirstChild("Highlight") then
+							player.Character:FindFirstChild("Highlight"):Destroy()
+						end
+					end
 				end
 			end
 		end)
 		
 		if not sucess then
 			
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2783,12 +2738,11 @@ local function ADDYBV_fake_script() -- isle.TextButton_12.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ADDYBV_fake_script)()
-local function RSQXA_fake_script() -- isle.TextButton_13.LocalScript 
+coroutine.wrap(OPGTVIH_fake_script)()
+local function MLZVPB_fake_script() -- isle.TextButton_13.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_13)
 
 	local status = false
-	local highlist = {};
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
@@ -2807,21 +2761,24 @@ local function RSQXA_fake_script() -- isle.TextButton_13.LocalScript
 				if player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 				    local high = Instance.new("Highlight")
 					high.FillColor=Color3.new(1, 0.027451, 0.172549)
-					high.Adornee = player
-					table.insert(highlist,high)
+					high.Parent = player
 					high.FillTransparency=0
 				end
 			end
 			else
-				for _, player in highlist do
-					player:Destroy()
+				local plrslist = game.Workspace.Threats:GetChildren()
+				
+				for _, player in plrslist do
+					if player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
+						player:FindFirstChild("Highlight"):Destroy()
+					end
 				end
 			end
 		end)
 		
 		if not sucess then
 			
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2832,12 +2789,11 @@ local function RSQXA_fake_script() -- isle.TextButton_13.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RSQXA_fake_script)()
-local function POOB_fake_script() -- isle.TextButton_14.LocalScript 
+coroutine.wrap(MLZVPB_fake_script)()
+local function AYEAW_fake_script() -- isle.TextButton_14.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_14)
 
 	local status = false
-	local highlist = {};
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
@@ -2855,22 +2811,25 @@ local function POOB_fake_script() -- isle.TextButton_14.LocalScript
 			for _, player in plrslist do
 				if player and player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 					local high = Instance.new("Highlight")
-					table.insert(highlist,high)
-					high.Adornee = player.Character
+					high.Parent = player.Character
 					high.FillColor=Color3.new(0.0823529, 0.219608, 1)
 					high.FillTransparency=0
 				end
 			end
 			else
-				for _, player in highlist do
-					player:Destroy() 		
+				local plrslist = game.Workspace.AIHunter:GetChildren()
+				
+				for _, player in plrslist do
+					if player and player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") and player:FindFirstChild("Highlight") then
+					   player.Highlight:Destroy() 		
+					end
 				end
 			end
 		end)
 		
 		if not sucess then
 			
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2881,13 +2840,10 @@ local function POOB_fake_script() -- isle.TextButton_14.LocalScript
 		end
 	end)
 end
-coroutine.wrap(POOB_fake_script)()
-local function KCGGKN_fake_script() -- isle.TextButton_15.LocalScript 
+coroutine.wrap(AYEAW_fake_script)()
+local function TZQFWFZ_fake_script() -- isle.TextButton_15.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_15)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2898,10 +2854,8 @@ local function KCGGKN_fake_script() -- isle.TextButton_15.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			-- take teleporter entrance
 			local teleport = workspace.Map.Ignore.Debris["Teleport Entrance"]
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	
 			repeat
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleport.WorldPivot
 				for i = 1, 10 do
@@ -2910,17 +2864,14 @@ local function KCGGKN_fake_script() -- isle.TextButton_15.LocalScript
 				end
 				wait()
 			until game.Players.LocalPlayer.Backpack:FindFirstChild("Teleporter Entrance")
-	
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
-	
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.SendN("Problem","Teleport Entrance may be arent loaded...",12)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2931,13 +2882,10 @@ local function KCGGKN_fake_script() -- isle.TextButton_15.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KCGGKN_fake_script)()
-local function UWUCG_fake_script() -- isle.TextButton_16.LocalScript 
+coroutine.wrap(TZQFWFZ_fake_script)()
+local function AYDB_fake_script() -- isle.TextButton_16.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_16)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2948,10 +2896,8 @@ local function UWUCG_fake_script() -- isle.TextButton_16.LocalScript
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			-- take teleporter exit
 			local teleport = workspace.Map.Ignore.Debris["Teleport Exit"]
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	
 			repeat
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleport.WorldPivot
 				for i = 1, 10 do
@@ -2960,13 +2906,11 @@ local function UWUCG_fake_script() -- isle.TextButton_16.LocalScript
 				end
 				wait()
 			until game.Players.LocalPlayer.Backpack:FindFirstChild("Teleporter Exit")
-	
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
-	
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.SendN("Problem","Teleport Exit may be arent loaded...",10)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -2981,13 +2925,13 @@ local function UWUCG_fake_script() -- isle.TextButton_16.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UWUCG_fake_script)()
-local function ZOWC_fake_script() -- isle.TextButton_17.LocalScript 
+coroutine.wrap(AYDB_fake_script)()
+local function IMCVY_fake_script() -- isle.TextButton_17.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_17)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
+	
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -3001,21 +2945,20 @@ local function ZOWC_fake_script() -- isle.TextButton_17.LocalScript
 			-- 1 pilon
 			pcall(function ()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreenEarth.Button.WorldPivot
-				wait(0.3)
+				repeat wait() until workspace.Map.Main.PylonScreenEarth.Button:FindFirstChild("Main")
 			end)
 	
 			local click = workspace.Map.Main.PylonScreenEarth.Button.Main.ClickDetector
 	
-			for i=1,50 do
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = click.Parent.CFrame
+			repeat
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = click.Parent.CFrame + Vector3.new(0,2,0)
 				fireclickdetector(click)
-				wait(.01)
-			end
+				wait(.03)
+			until click.Parent.Material ~= Enum.Material.Neon
 	
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3030,8 +2973,8 @@ local function ZOWC_fake_script() -- isle.TextButton_17.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZOWC_fake_script)()
-local function WCOZZW_fake_script() -- isle.TextButton_18.LocalScript 
+coroutine.wrap(IMCVY_fake_script)()
+local function XBQYGIY_fake_script() -- isle.TextButton_18.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_18)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3059,7 +3002,7 @@ local function WCOZZW_fake_script() -- isle.TextButton_18.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3074,13 +3017,10 @@ local function WCOZZW_fake_script() -- isle.TextButton_18.LocalScript
 		end
 	end)
 end
-coroutine.wrap(WCOZZW_fake_script)()
-local function HBHHPWS_fake_script() -- isle.TextButton_19.LocalScript 
+coroutine.wrap(XBQYGIY_fake_script)()
+local function WOIEF_fake_script() -- isle.TextButton_19.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_19)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -3096,17 +3036,16 @@ local function HBHHPWS_fake_script() -- isle.TextButton_19.LocalScript
 			local last = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 			pcall(function ()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = fuse.WorldPivot
+				firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,0)
+				wait(0.1)
+				firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,1)
+				wait(0.3)
 			end)
-			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,0)
-			wait(0.1)
-			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,1)
-			wait(0.3)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = last
 	
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3121,8 +3060,8 @@ local function HBHHPWS_fake_script() -- isle.TextButton_19.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HBHHPWS_fake_script)()
-local function ISWJHGY_fake_script() -- isle.TextButton_20.LocalScript 
+coroutine.wrap(WOIEF_fake_script)()
+local function SEQRTD_fake_script() -- isle.TextButton_20.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_20)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3373,7 +3312,7 @@ local function ISWJHGY_fake_script() -- isle.TextButton_20.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3387,13 +3326,10 @@ local function ISWJHGY_fake_script() -- isle.TextButton_20.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ISWJHGY_fake_script)()
-local function GXYNC_fake_script() -- isle.TextButton_21.LocalScript 
+coroutine.wrap(SEQRTD_fake_script)()
+local function GOPGTUU_fake_script() -- isle.TextButton_21.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_21)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -3405,22 +3341,14 @@ local function GXYNC_fake_script() -- isle.TextButton_21.LocalScript
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			local func = false
-			
 			pcall(function()
 				if getrawmetatable(game)~= nil then
 					func=true
 				end
 			end)
-			
 			if not func then
 				game.Workspace.SosyHuy30RubleyPlease:FireAnus("Go to hell")
 			else
-				 --[[
-	   когда сервер будет запрашивать сколько в игроке занято, все предметы перейдут в него(актив.), следовательно сервер не сможет увидеть в нем никаких предметов
-	   поддерживает только читы с метатаблицами
-	   работает по валюте
-	 ]]
-	
 				local onchange =  Instance.new("BoolValue")
 				onchange.Changed:Connect(function()
 	
@@ -3428,18 +3356,15 @@ local function GXYNC_fake_script() -- isle.TextButton_21.LocalScript
 						for i,v in game.Players.LocalPlayer.Backpack:GetChildren() do
 							v.Parent = game.Players.LocalPlayer.Character
 						end
-						wait(0.5)
+						wait(0.25)
 						for i,v in game.Players.LocalPlayer.Character:GetChildren() do
 							if v:IsA("Tool") then
 								v.Parent = game.Players.LocalPlayer.Backpack
 							end
 						end
-	
 					end
 				end)
-	
 				local Hook; 
-	
 				Hook = hookfunction(getrawmetatable(game).__namecall, newcclosure(function(self, ...) 
 					if getnamecallmethod()=="InvokeServer" and self.Name == "PickupTool"then
 						onchange.Value = true
@@ -3452,7 +3377,7 @@ local function GXYNC_fake_script() -- isle.TextButton_21.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.SendN("Problem","there is error: maybe ur executor doesnt support it")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3466,8 +3391,8 @@ local function GXYNC_fake_script() -- isle.TextButton_21.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GXYNC_fake_script)()
-local function MGTOOMD_fake_script() -- isle.TextButton_22.LocalScript 
+coroutine.wrap(GOPGTUU_fake_script)()
+local function YPHFXP_fake_script() -- isle.TextButton_22.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_22)
 
 	local status = false
@@ -3498,7 +3423,7 @@ local function MGTOOMD_fake_script() -- isle.TextButton_22.LocalScript
 		
 		if not sucess then
 			
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3509,8 +3434,8 @@ local function MGTOOMD_fake_script() -- isle.TextButton_22.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MGTOOMD_fake_script)()
-local function TGBRXSQ_fake_script() -- isle.TextButton_23.LocalScript 
+coroutine.wrap(YPHFXP_fake_script)()
+local function WTKQIA_fake_script() -- isle.TextButton_23.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_23)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3556,22 +3481,21 @@ local function TGBRXSQ_fake_script() -- isle.TextButton_23.LocalScript
 			for i=1,5 do
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreen.Button.WorldPivot
 				for ii = 1, 10 do 
-				pcall(function()
-				fireclickdetector(workspace.Map.Main.PylonScreen.Button.Main.ClickDetector)
-				wait(0.01)	
-				end)
+					pcall(function()
+						fireclickdetector(workspace.Map.Main.PylonScreen.Button.Main.ClickDetector)
+						wait(0.01)	
+					end)
 				end
 				wait(0.15)
 			end
 			
 			for iii=1 , 3 do
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
-			wait(0.1)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+				wait(0.1)
 			end
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3585,8 +3509,8 @@ local function TGBRXSQ_fake_script() -- isle.TextButton_23.LocalScript
 		end
 	end)
 end
-coroutine.wrap(TGBRXSQ_fake_script)()
-local function MHXYTVK_fake_script() -- isle.TextButton_24.LocalScript 
+coroutine.wrap(WTKQIA_fake_script)()
+local function IPQRB_fake_script() -- isle.TextButton_24.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_24)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3606,7 +3530,7 @@ local function MHXYTVK_fake_script() -- isle.TextButton_24.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3620,8 +3544,8 @@ local function MHXYTVK_fake_script() -- isle.TextButton_24.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MHXYTVK_fake_script)()
-local function HRFYBEG_fake_script() -- isle.TextButton_25.LocalScript 
+coroutine.wrap(IPQRB_fake_script)()
+local function BQUV_fake_script() -- isle.TextButton_25.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_25)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3645,7 +3569,7 @@ local function HRFYBEG_fake_script() -- isle.TextButton_25.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3660,8 +3584,8 @@ local function HRFYBEG_fake_script() -- isle.TextButton_25.LocalScript
 		end
 	end)
 end
-coroutine.wrap(HRFYBEG_fake_script)()
-local function SZLUCE_fake_script() -- isle.TextButton_26.LocalScript 
+coroutine.wrap(BQUV_fake_script)()
+local function SXWJV_fake_script() -- isle.TextButton_26.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_26)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3681,7 +3605,7 @@ local function SZLUCE_fake_script() -- isle.TextButton_26.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3696,8 +3620,8 @@ local function SZLUCE_fake_script() -- isle.TextButton_26.LocalScript
 		end
 	end)
 end
-coroutine.wrap(SZLUCE_fake_script)()
-local function FRMURT_fake_script() -- isle.TextButton_27.LocalScript 
+coroutine.wrap(SXWJV_fake_script)()
+local function WYCP_fake_script() -- isle.TextButton_27.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_27)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3721,7 +3645,7 @@ local function FRMURT_fake_script() -- isle.TextButton_27.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3736,8 +3660,8 @@ local function FRMURT_fake_script() -- isle.TextButton_27.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FRMURT_fake_script)()
-local function IQALD_fake_script() -- isle.TextButton_28.LocalScript 
+coroutine.wrap(WYCP_fake_script)()
+local function POUYT_fake_script() -- isle.TextButton_28.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_28)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3757,7 +3681,7 @@ local function IQALD_fake_script() -- isle.TextButton_28.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3772,8 +3696,8 @@ local function IQALD_fake_script() -- isle.TextButton_28.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IQALD_fake_script)()
-local function BQNCM_fake_script() -- isle.TextButton_29.LocalScript 
+coroutine.wrap(POUYT_fake_script)()
+local function HRUDUS_fake_script() -- isle.TextButton_29.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_29)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3797,7 +3721,7 @@ local function BQNCM_fake_script() -- isle.TextButton_29.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3812,8 +3736,8 @@ local function BQNCM_fake_script() -- isle.TextButton_29.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BQNCM_fake_script)()
-local function ZVPJG_fake_script() -- isle.TextButton_30.LocalScript 
+coroutine.wrap(HRUDUS_fake_script)()
+local function QIYGHOE_fake_script() -- isle.TextButton_30.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_30)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3846,7 +3770,7 @@ local function ZVPJG_fake_script() -- isle.TextButton_30.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -3861,8 +3785,8 @@ local function ZVPJG_fake_script() -- isle.TextButton_30.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZVPJG_fake_script)()
-local function FGBLVJY_fake_script() -- isle.TextButton_31.LocalScript 
+coroutine.wrap(QIYGHOE_fake_script)()
+local function PGFCXI_fake_script() -- isle.TextButton_31.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_31)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -4384,7 +4308,7 @@ local function FGBLVJY_fake_script() -- isle.TextButton_31.LocalScript
 		end)
 		
 		if not sucess then
-			task.spawn(function() task.spawn(function() task.spawn(function() _G.send_feedback("The Script Returned Error... :  Player Name - `"..game.Players.LocalPlayer.Name.."`, The Place ID - `"..game.PlaceId.."`, The Player ID - `"..game.Players.LocalPlayer.UserId.."`, so the game name - `"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.."` (there was name) , the error : "..err) end) end) end)
+			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			print("Script returned error '"..err.."'...")
 			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
@@ -4399,8 +4323,8 @@ local function FGBLVJY_fake_script() -- isle.TextButton_31.LocalScript
 		end
 	end)
 end
-coroutine.wrap(FGBLVJY_fake_script)()
-local function DKMHYTD_fake_script() -- isle.ImageLabel.LocalScript 
+coroutine.wrap(PGFCXI_fake_script)()
+local function PBBNQY_fake_script() -- isle.ImageLabel.Controller 
 	local script = Instance.new('LocalScript', isle.ImageLabel)
 
 	script.Parent.Active = true
@@ -4441,25 +4365,17 @@ local function DKMHYTD_fake_script() -- isle.ImageLabel.LocalScript
 		if not a then print(b) end
 	end
 end
-coroutine.wrap(DKMHYTD_fake_script)()
-local function NVEWG_fake_script() -- isle.Frame.LocalScript 
+coroutine.wrap(PBBNQY_fake_script)()
+local function HSJMCR_fake_script() -- isle.Frame.Controller^Functions 
 	local script = Instance.new('LocalScript', isle.Frame)
 
 	local UIS = game:GetService('UserInputService')
-	
 	local frame = script.Parent
 	
-	
-	
 	local dragToggle = nil
-	
 	local dragSpeed = 0.3
-	
 	local dragStart = nil
-	
 	local startPos = nil
-	
-	
 	
 	local function updateInput(input)
 		local delta = input.Position - dragStart
@@ -4468,50 +4384,37 @@ local function NVEWG_fake_script() -- isle.Frame.LocalScript
 		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
 	
-	
-	
 	frame.InputBegan:Connect(function(input)
-	
 		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
 			dragToggle = true
-	
 			dragStart = input.Position
-	
 			startPos = frame.Position
-	
 			input.Changed:Connect(function()
-	
 				if input.UserInputState == Enum.UserInputState.End then
-	
 					dragToggle = false
-	
 				end
-	
 			end)
-	
 		end
-	
 	end)
-	
-	
 	
 	UIS.InputChanged:Connect(function(input)
-	
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	
 			if dragToggle then
-	
 				updateInput(input)
-	
 			end
-	
 		end
-	
 	end)
+	
+	_G.SetN = function(Name : string, Text_To : string, Time : int)
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = Name,
+			Text = Text_To,
+			Duration = Time,
+		})
+	end
 end
-coroutine.wrap(NVEWG_fake_script)()
-local function HYUA_fake_script() -- isle.ImageButton_2.LocalScript 
+coroutine.wrap(HSJMCR_fake_script)()
+local function IKFK_fake_script() -- isle.ImageButton_2.Controller 
 	local script = Instance.new('LocalScript', isle.ImageButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -4520,8 +4423,8 @@ local function HYUA_fake_script() -- isle.ImageButton_2.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(HYUA_fake_script)()
-local function LVZPVQS_fake_script() -- isle.isle.LocalScript 
+coroutine.wrap(IKFK_fake_script)()
+local function IARUN_fake_script() -- isle.isle.Controller 
 	local script = Instance.new('LocalScript', isle.isle)
 
 	local list = {
@@ -4577,26 +4480,9 @@ local function LVZPVQS_fake_script() -- isle.isle.LocalScript
 	
 	if not a then print(b) end
 	
-	pcall(function()
-	local webhook_url = "https://discord.com/api/webhooks/1338102894766981183/FvEV4S2v9khdCknlgDkO6HdG31JUJj_hdWtTgnik72O_Nc55AZgzTIQDwuetdhe5jlCX"
-	
-	_G.send_feedback = function(message)
-		local json_data = '{"content": "' .. message .. '"}'
-	
-		local request_options = {
-			Url = webhook_url,
-			Method = "POST",
-			Headers = {
-				["Content-Type"] = "application/json"
-			},
-			Body = json_data
-		}
-		local response = request(request_options)
-	end
-	end)
 end
-coroutine.wrap(LVZPVQS_fake_script)()
-local function OXGWQO_fake_script() -- isle.isle.CalibrateGTL 
+coroutine.wrap(IARUN_fake_script)()
+local function UHULZX_fake_script() -- isle.isle.Controller 
 	local script = Instance.new('LocalScript', isle.isle)
 
 	local status = false
@@ -4632,14 +4518,14 @@ local function OXGWQO_fake_script() -- isle.isle.CalibrateGTL
 		 if not a then 
 			StarterGui:SetCore("SendNotification", {
 				Title = "Anticheat Destroyer // SpineWare",
-				Text = "Anticheat not destroyed bc ur executor dont support it",
+				Text = "Anticheat not destroyed bc ur executor doesnt support it",
 				Duration = 10,
 			})
 		 else
 			StarterGui:SetCore("SendNotification", {
 				Title = "Anticheat Destroyer // SpineWare",
-				Text = "Anticheat destroyed 🤩🤩🤩 so u can use detected scripts and more (inf yeild fully supprots now)",
-				Duration = 10,
+				Text = "Anticheat destroyed 🤩🤩🤩 (inf yeild fully supports now)",
+				Duration = 5,
 			})
 		 end
 		 
@@ -4657,8 +4543,7 @@ local function OXGWQO_fake_script() -- isle.isle.CalibrateGTL
 		end
 		
 		game:GetService("UserInputService").InputBegan:Connect(function(input,ev)
-			if ev then return end
-			if input.KeyCode == Enum.KeyCode.LeftControl then
+			if input.KeyCode == Enum.KeyCode.Insert then
 				if not status then
 				script.Parent.Frame.Visible = false
 				status =true
@@ -4730,8 +4615,8 @@ local function OXGWQO_fake_script() -- isle.isle.CalibrateGTL
 		})
 	end)
 end
-coroutine.wrap(OXGWQO_fake_script)()
-local function JDMI_fake_script() -- isle.hideshow.LocalScript 
+coroutine.wrap(UHULZX_fake_script)()
+local function WNEZ_fake_script() -- isle.hideshow.Controller 
 	local script = Instance.new('LocalScript', isle.hideshow)
 
 	script.Parent.Active = true
@@ -4773,18 +4658,4 @@ local function JDMI_fake_script() -- isle.hideshow.LocalScript
 		end)
 	end
 end
-coroutine.wrap(JDMI_fake_script)()
-
-
---[[game:GetService("RunService").Stepped:Connect(function() 
-   pcall(function()
-      for i,v in game.Players:GetPlayers() do
-        if v.Name =="VernoxTestAccount" or v.Name == "Shadow_kitten2012" and v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Name ~="VernoxTestAccount" and game.Players.LocalPlayer.Name ~="Shadow_kitten20122" then
-            if v.Character:FindFirstChild("Flashlight") and (v.Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 15 then
-                 pcall(function() game.Players.LocalPlayer.Character:Kick("U have died from spineware dev aura...."); end) game.Players.LocalPlayer:Destroy()
-            end
-        end
-      end
-   end)
-end)
-]]
+coroutine.wrap(WNEZ_fake_script)()

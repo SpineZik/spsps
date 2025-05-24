@@ -146,8 +146,10 @@ local function YVCVMR_fake_script() -- Objects.Control
 					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
 					Event:FireServer(A_1)
 					wait(0.5)
-					root.CFrame = safepos
-					wait(1.25)
+                                                for i = 1, 10 do 
+							root.CFrame = safepos
+							wait(0.125)
+                                                end
 				until target.Humanoid.Health <= 0 
 	            root.CFrame = lastc
 			end)
@@ -195,8 +197,10 @@ local function YVCVMR_fake_script() -- Objects.Control
 					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
 					Event:FireServer(A_1)
 					wait(0.5)
-					root.CFrame = safepos
-					wait(1.25)
+                                                for i = 1, 10 do 
+							root.CFrame = safepos
+							wait(0.125)
+                                                end
 				until target.Humanoid.Health <= 0 
 	            root.CFrame = lastc
 			end)
@@ -245,8 +249,10 @@ local function YVCVMR_fake_script() -- Objects.Control
 					local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
 					Event:FireServer(A_1)
 					wait(0.5)
-					root.CFrame = safepos
-					wait(1.25)
+                                                for i = 1, 10 do 
+							root.CFrame = safepos
+							wait(0.125)
+                                                end
 				until target.Humanoid.Health <= 0 
 	            root.CFrame = lastc
 			end)
@@ -295,8 +301,10 @@ local function YVCVMR_fake_script() -- Objects.Control
 						local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
 						Event:FireServer(A_1)
 						wait(0.5)
-						root.CFrame = safepos
-						wait(1.25)
+                                                for i = 1, 10 do 
+							root.CFrame = safepos
+							wait(0.125)
+                                                end
 					until target.Humanoid.Health <= 0 
 	                root.CFrame = lastc
 				end)
@@ -347,8 +355,10 @@ local function YVCVMR_fake_script() -- Objects.Control
 						local Event = game.Players.LocalPlayer.Character["Steel Sword"]["@Kill"]
 						Event:FireServer(A_1)
 						wait(0.5)
-						root.CFrame = safepos
-						wait(1.25)
+                                                for i = 1, 10 do 
+							root.CFrame = safepos
+							wait(0.125)
+                                                end
 					until target.Humanoid.Health <= 0 
 	                root.CFrame = lastc
 				end)
@@ -443,7 +453,6 @@ local function XYPHCZZ_fake_script() -- Container.LocalScript
 				if input.UserInputState == Enum.UserInputState.End then
 	
 					dragToggle = false
-	
 				end
 	
 			end)

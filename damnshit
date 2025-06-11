@@ -142,6 +142,9 @@ local gameids = {
 }
 local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()
 local information = {001101,10101,01010101010,Apple = tonumber,Orange = tostring,Cat = loadstring,Mad = pcall,protect = xpcall or pcall,P = 3.14,MAP = game,D = protection,PS = game.HttpGet, player = game.Players.LocalPlayer,6516,5124}
+local s_1, optimized_success = pcall(function() 
+ return loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_lag"))()
+end)
 local mt = {
     __namecall = function(self)
         return string.match(string.format("%s-%s>%s",self[1],self[2],self[3]))

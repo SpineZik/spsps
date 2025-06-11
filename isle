@@ -160,11 +160,11 @@ local isle = {
 	UICorner_42 = Instance.new("UICorner"),
 	TextLabel_27 = Instance.new("TextLabel"),
 	TextButton_24 = Instance.new("TextButton"),
-	save_9 = Instance.new("Frame"),
+	Button_12 = Instance.new("Frame"),
 	UICorner_43 = Instance.new("UICorner"),
 	TextLabel_28 = Instance.new("TextLabel"),
 	TextButton_25 = Instance.new("TextButton"),
-	Button_12 = Instance.new("Frame"),
+	save_9 = Instance.new("Frame"),
 	UICorner_44 = Instance.new("UICorner"),
 	TextLabel_29 = Instance.new("TextLabel"),
 	TextButton_26 = Instance.new("TextButton"),
@@ -172,40 +172,43 @@ local isle = {
 	UICorner_45 = Instance.new("UICorner"),
 	TextLabel_30 = Instance.new("TextLabel"),
 	TextButton_27 = Instance.new("TextButton"),
-	TeleportsContainer = Instance.new("ScrollingFrame"),
-	UIPadding_5 = Instance.new("UIPadding"),
-	_1 = Instance.new("Frame"),
+	save_11 = Instance.new("Frame"),
 	UICorner_46 = Instance.new("UICorner"),
 	TextLabel_31 = Instance.new("TextLabel"),
 	TextButton_28 = Instance.new("TextButton"),
-	_3_2 = Instance.new("Frame"),
+	TeleportsContainer = Instance.new("ScrollingFrame"),
+	UIPadding_5 = Instance.new("UIPadding"),
+	_1 = Instance.new("Frame"),
 	UICorner_47 = Instance.new("UICorner"),
 	TextLabel_32 = Instance.new("TextLabel"),
 	TextButton_29 = Instance.new("TextButton"),
-	_3_3 = Instance.new("Frame"),
+	_3_2 = Instance.new("Frame"),
 	UICorner_48 = Instance.new("UICorner"),
 	TextLabel_33 = Instance.new("TextLabel"),
 	TextButton_30 = Instance.new("TextButton"),
-	_2 = Instance.new("Frame"),
+	_3_3 = Instance.new("Frame"),
 	UICorner_49 = Instance.new("UICorner"),
 	TextLabel_34 = Instance.new("TextLabel"),
 	TextButton_31 = Instance.new("TextButton"),
-	UIGridLayout_4 = Instance.new("UIGridLayout"),
+	_2 = Instance.new("Frame"),
 	UICorner_50 = Instance.new("UICorner"),
-	BlockFrame = Instance.new("Frame"),
+	TextLabel_35 = Instance.new("TextLabel"),
+	TextButton_32 = Instance.new("TextButton"),
+	UIGridLayout_4 = Instance.new("UIGridLayout"),
 	UICorner_51 = Instance.new("UICorner"),
+	BlockFrame = Instance.new("Frame"),
+	UICorner_52 = Instance.new("UICorner"),
 	ImageLabel = Instance.new("ImageLabel"),
 	Frame_3 = Instance.new("Frame"),
-	UICorner_52 = Instance.new("UICorner"),
-	TextBox = Instance.new("TextBox"),
 	UICorner_53 = Instance.new("UICorner"),
+	TextBox = Instance.new("TextBox"),
+	UICorner_54 = Instance.new("UICorner"),
 	FunctionName = Instance.new("TextLabel"),
 	Value = Instance.new("TextLabel"),
-	UICorner_54 = Instance.new("UICorner"),
-	ImageButton = Instance.new("ImageButton"),
-	ImageButton_2 = Instance.new("ImageButton"),
-	hideshow = Instance.new("ImageButton"),
 	UICorner_55 = Instance.new("UICorner"),
+	ImageButton = Instance.new("ImageButton"),
+	hideshow = Instance.new("ImageButton"),
+	UICorner_56 = Instance.new("UICorner"),
 }
 
 --Properties:
@@ -1472,10 +1475,10 @@ isle.TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_27.BackgroundTransparency = 1.000
 isle.TextLabel_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextLabel_27.BorderSizePixel = 0
-isle.TextLabel_27.Position = UDim2.new(0.0697358325, 0, 0, 0)
+isle.TextLabel_27.Position = UDim2.new(0.0719999969, 0, 0, 0)
 isle.TextLabel_27.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_27.Font = Enum.Font.ArialBold
-isle.TextLabel_27.Text = "Kill GUI [Plrs]"
+isle.TextLabel_27.Text = "Get Artifacts"
 isle.TextLabel_27.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_27.TextSize = 14.000
 isle.TextLabel_27.TextXAlignment = Enum.TextXAlignment.Left
@@ -1491,31 +1494,31 @@ isle.TextButton_24.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_24.TextSize = 14.000
 isle.TextButton_24.TextTransparency = 1.000
 
-isle.save_9.Name = "save"
-isle.save_9.Parent = isle.FeaturesContainer
-isle.save_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-isle.save_9.BackgroundTransparency = 0.700
-isle.save_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle.save_9.BorderSizePixel = 0
-isle.save_9.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-isle.save_9.Size = UDim2.new(0, 159, 0, 29)
+isle.Button_12.Name = "Button"
+isle.Button_12.Parent = isle.FeaturesContainer
+isle.Button_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle.Button_12.BackgroundTransparency = 0.700
+isle.Button_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.Button_12.BorderSizePixel = 0
+isle.Button_12.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle.Button_12.Size = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_43.Parent = isle.save_9
+isle.UICorner_43.Parent = isle.Button_12
 
-isle.TextLabel_28.Parent = isle.save_9
+isle.TextLabel_28.Parent = isle.Button_12
 isle.TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_28.BackgroundTransparency = 1.000
 isle.TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextLabel_28.BorderSizePixel = 0
-isle.TextLabel_28.Position = UDim2.new(0.0697358325, 0, 0, 0)
+isle.TextLabel_28.Position = UDim2.new(0.0724168718, 0, 0, 0)
 isle.TextLabel_28.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_28.Font = Enum.Font.ArialBold
-isle.TextLabel_28.Text = "Remove Kill GUI"
+isle.TextLabel_28.Text = "Story Items GUI"
 isle.TextLabel_28.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_28.TextSize = 14.000
 isle.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
 
-isle.TextButton_25.Parent = isle.save_9
+isle.TextButton_25.Parent = isle.Button_12
 isle.TextButton_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextButton_25.BackgroundTransparency = 1.000
 isle.TextButton_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1526,31 +1529,31 @@ isle.TextButton_25.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_25.TextSize = 14.000
 isle.TextButton_25.TextTransparency = 1.000
 
-isle.Button_12.Name = "Button"
-isle.Button_12.Parent = isle.FeaturesContainer
-isle.Button_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-isle.Button_12.BackgroundTransparency = 0.700
-isle.Button_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle.Button_12.BorderSizePixel = 0
-isle.Button_12.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-isle.Button_12.Size = UDim2.new(0, 159, 0, 29)
+isle.save_9.Name = "save"
+isle.save_9.Parent = isle.FeaturesContainer
+isle.save_9.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle.save_9.BackgroundTransparency = 0.700
+isle.save_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.save_9.BorderSizePixel = 0
+isle.save_9.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle.save_9.Size = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_44.Parent = isle.Button_12
+isle.UICorner_44.Parent = isle.save_9
 
-isle.TextLabel_29.Parent = isle.Button_12
+isle.TextLabel_29.Parent = isle.save_9
 isle.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_29.BackgroundTransparency = 1.000
 isle.TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextLabel_29.BorderSizePixel = 0
-isle.TextLabel_29.Position = UDim2.new(0.0724168718, 0, 0, 0)
+isle.TextLabel_29.Position = UDim2.new(0.0697358325, 0, 0, 0)
 isle.TextLabel_29.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_29.Font = Enum.Font.ArialBold
-isle.TextLabel_29.Text = "Story Items GUI"
+isle.TextLabel_29.Text = "Remove Story GUI"
 isle.TextLabel_29.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_29.TextSize = 14.000
 isle.TextLabel_29.TextXAlignment = Enum.TextXAlignment.Left
 
-isle.TextButton_26.Parent = isle.Button_12
+isle.TextButton_26.Parent = isle.save_9
 isle.TextButton_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextButton_26.BackgroundTransparency = 1.000
 isle.TextButton_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1580,7 +1583,7 @@ isle.TextLabel_30.BorderSizePixel = 0
 isle.TextLabel_30.Position = UDim2.new(0.0697358325, 0, 0, 0)
 isle.TextLabel_30.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_30.Font = Enum.Font.ArialBold
-isle.TextLabel_30.Text = "Remove Story GUI"
+isle.TextLabel_30.Text = "Remove Kill GUI"
 isle.TextLabel_30.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_30.TextSize = 14.000
 isle.TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
@@ -1595,6 +1598,41 @@ isle.TextButton_27.Font = Enum.Font.SourceSans
 isle.TextButton_27.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_27.TextSize = 14.000
 isle.TextButton_27.TextTransparency = 1.000
+
+isle.save_11.Name = "save"
+isle.save_11.Parent = isle.FeaturesContainer
+isle.save_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle.save_11.BackgroundTransparency = 0.700
+isle.save_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.save_11.BorderSizePixel = 0
+isle.save_11.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle.save_11.Size = UDim2.new(0, 159, 0, 29)
+
+isle.UICorner_46.Parent = isle.save_11
+
+isle.TextLabel_31.Parent = isle.save_11
+isle.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+isle.TextLabel_31.BackgroundTransparency = 1.000
+isle.TextLabel_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextLabel_31.BorderSizePixel = 0
+isle.TextLabel_31.Position = UDim2.new(0.0697358325, 0, 0, 0)
+isle.TextLabel_31.Size = UDim2.new(0, 95, 0, 29)
+isle.TextLabel_31.Font = Enum.Font.ArialBold
+isle.TextLabel_31.Text = "Kill GUI [Plrs]"
+isle.TextLabel_31.TextColor3 = Color3.fromRGB(240, 240, 240)
+isle.TextLabel_31.TextSize = 14.000
+isle.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
+
+isle.TextButton_28.Parent = isle.save_11
+isle.TextButton_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+isle.TextButton_28.BackgroundTransparency = 1.000
+isle.TextButton_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextButton_28.BorderSizePixel = 0
+isle.TextButton_28.Size = UDim2.new(0, 159, 0, 29)
+isle.TextButton_28.Font = Enum.Font.SourceSans
+isle.TextButton_28.TextColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextButton_28.TextSize = 14.000
+isle.TextButton_28.TextTransparency = 1.000
 
 isle.TeleportsContainer.Name = "TeleportsContainer"
 isle.TeleportsContainer.Parent = isle.ContainersList
@@ -1621,57 +1659,22 @@ isle._1.BorderSizePixel = 0
 isle._1.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
 isle._1.Size = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_46.Parent = isle._1
+isle.UICorner_47.Parent = isle._1
 
-isle.TextLabel_31.Parent = isle._1
-isle.TextLabel_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-isle.TextLabel_31.BackgroundTransparency = 1.000
-isle.TextLabel_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle.TextLabel_31.BorderSizePixel = 0
-isle.TextLabel_31.Position = UDim2.new(0.0189999994, 0, 0, 0)
-isle.TextLabel_31.Size = UDim2.new(0, 95, 0, 29)
-isle.TextLabel_31.Font = Enum.Font.ArialBold
-isle.TextLabel_31.Text = " Teleport GUI [Items,...]"
-isle.TextLabel_31.TextColor3 = Color3.fromRGB(240, 240, 240)
-isle.TextLabel_31.TextSize = 14.000
-isle.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
-
-isle.TextButton_28.Parent = isle._1
-isle.TextButton_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-isle.TextButton_28.BackgroundTransparency = 1.000
-isle.TextButton_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle.TextButton_28.BorderSizePixel = 0
-isle.TextButton_28.Size = UDim2.new(0, 159, 0, 29)
-isle.TextButton_28.Font = Enum.Font.SourceSans
-isle.TextButton_28.TextColor3 = Color3.fromRGB(0, 0, 0)
-isle.TextButton_28.TextSize = 14.000
-isle.TextButton_28.TextTransparency = 1.000
-
-isle._3_2.Name = "3"
-isle._3_2.Parent = isle.TeleportsContainer
-isle._3_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-isle._3_2.BackgroundTransparency = 0.700
-isle._3_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle._3_2.BorderSizePixel = 0
-isle._3_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-isle._3_2.Size = UDim2.new(0, 159, 0, 29)
-
-isle.UICorner_47.Parent = isle._3_2
-
-isle.TextLabel_32.Parent = isle._3_2
+isle.TextLabel_32.Parent = isle._1
 isle.TextLabel_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_32.BackgroundTransparency = 1.000
 isle.TextLabel_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextLabel_32.BorderSizePixel = 0
-isle.TextLabel_32.Position = UDim2.new(0.0724168718, 0, 0, 0)
+isle.TextLabel_32.Position = UDim2.new(0.0189999994, 0, 0, 0)
 isle.TextLabel_32.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_32.Font = Enum.Font.ArialBold
-isle.TextLabel_32.Text = "Remove TP GUI"
+isle.TextLabel_32.Text = " Teleport GUI [Items,...]"
 isle.TextLabel_32.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_32.TextSize = 14.000
 isle.TextLabel_32.TextXAlignment = Enum.TextXAlignment.Left
 
-isle.TextButton_29.Parent = isle._3_2
+isle.TextButton_29.Parent = isle._1
 isle.TextButton_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextButton_29.BackgroundTransparency = 1.000
 isle.TextButton_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1682,18 +1685,18 @@ isle.TextButton_29.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_29.TextSize = 14.000
 isle.TextButton_29.TextTransparency = 1.000
 
-isle._3_3.Name = "3"
-isle._3_3.Parent = isle.TeleportsContainer
-isle._3_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-isle._3_3.BackgroundTransparency = 0.700
-isle._3_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle._3_3.BorderSizePixel = 0
-isle._3_3.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-isle._3_3.Size = UDim2.new(0, 159, 0, 29)
+isle._3_2.Name = "3"
+isle._3_2.Parent = isle.TeleportsContainer
+isle._3_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle._3_2.BackgroundTransparency = 0.700
+isle._3_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle._3_2.BorderSizePixel = 0
+isle._3_2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle._3_2.Size = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_48.Parent = isle._3_3
+isle.UICorner_48.Parent = isle._3_2
 
-isle.TextLabel_33.Parent = isle._3_3
+isle.TextLabel_33.Parent = isle._3_2
 isle.TextLabel_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_33.BackgroundTransparency = 1.000
 isle.TextLabel_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1701,12 +1704,12 @@ isle.TextLabel_33.BorderSizePixel = 0
 isle.TextLabel_33.Position = UDim2.new(0.0724168718, 0, 0, 0)
 isle.TextLabel_33.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_33.Font = Enum.Font.ArialBold
-isle.TextLabel_33.Text = "Random TP"
+isle.TextLabel_33.Text = "Remove TP GUI"
 isle.TextLabel_33.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_33.TextSize = 14.000
 isle.TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
 
-isle.TextButton_30.Parent = isle._3_3
+isle.TextButton_30.Parent = isle._3_2
 isle.TextButton_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextButton_30.BackgroundTransparency = 1.000
 isle.TextButton_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1717,18 +1720,18 @@ isle.TextButton_30.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_30.TextSize = 14.000
 isle.TextButton_30.TextTransparency = 1.000
 
-isle._2.Name = "2"
-isle._2.Parent = isle.TeleportsContainer
-isle._2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-isle._2.BackgroundTransparency = 0.700
-isle._2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle._2.BorderSizePixel = 0
-isle._2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
-isle._2.Size = UDim2.new(0, 159, 0, 29)
+isle._3_3.Name = "3"
+isle._3_3.Parent = isle.TeleportsContainer
+isle._3_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle._3_3.BackgroundTransparency = 0.700
+isle._3_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle._3_3.BorderSizePixel = 0
+isle._3_3.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle._3_3.Size = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_49.Parent = isle._2
+isle.UICorner_49.Parent = isle._3_3
 
-isle.TextLabel_34.Parent = isle._2
+isle.TextLabel_34.Parent = isle._3_3
 isle.TextLabel_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextLabel_34.BackgroundTransparency = 1.000
 isle.TextLabel_34.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1736,12 +1739,12 @@ isle.TextLabel_34.BorderSizePixel = 0
 isle.TextLabel_34.Position = UDim2.new(0.0724168718, 0, 0, 0)
 isle.TextLabel_34.Size = UDim2.new(0, 95, 0, 29)
 isle.TextLabel_34.Font = Enum.Font.ArialBold
-isle.TextLabel_34.Text = "Locations TP GUI"
+isle.TextLabel_34.Text = "Random TP"
 isle.TextLabel_34.TextColor3 = Color3.fromRGB(240, 240, 240)
 isle.TextLabel_34.TextSize = 14.000
 isle.TextLabel_34.TextXAlignment = Enum.TextXAlignment.Left
 
-isle.TextButton_31.Parent = isle._2
+isle.TextButton_31.Parent = isle._3_3
 isle.TextButton_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.TextButton_31.BackgroundTransparency = 1.000
 isle.TextButton_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1752,12 +1755,47 @@ isle.TextButton_31.TextColor3 = Color3.fromRGB(0, 0, 0)
 isle.TextButton_31.TextSize = 14.000
 isle.TextButton_31.TextTransparency = 1.000
 
+isle._2.Name = "2"
+isle._2.Parent = isle.TeleportsContainer
+isle._2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+isle._2.BackgroundTransparency = 0.700
+isle._2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle._2.BorderSizePixel = 0
+isle._2.Position = UDim2.new(-0.0108695654, 0, 0.407017529, 0)
+isle._2.Size = UDim2.new(0, 159, 0, 29)
+
+isle.UICorner_50.Parent = isle._2
+
+isle.TextLabel_35.Parent = isle._2
+isle.TextLabel_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+isle.TextLabel_35.BackgroundTransparency = 1.000
+isle.TextLabel_35.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextLabel_35.BorderSizePixel = 0
+isle.TextLabel_35.Position = UDim2.new(0.0724168718, 0, 0, 0)
+isle.TextLabel_35.Size = UDim2.new(0, 95, 0, 29)
+isle.TextLabel_35.Font = Enum.Font.ArialBold
+isle.TextLabel_35.Text = "Locations TP GUI"
+isle.TextLabel_35.TextColor3 = Color3.fromRGB(240, 240, 240)
+isle.TextLabel_35.TextSize = 14.000
+isle.TextLabel_35.TextXAlignment = Enum.TextXAlignment.Left
+
+isle.TextButton_32.Parent = isle._2
+isle.TextButton_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+isle.TextButton_32.BackgroundTransparency = 1.000
+isle.TextButton_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextButton_32.BorderSizePixel = 0
+isle.TextButton_32.Size = UDim2.new(0, 159, 0, 29)
+isle.TextButton_32.Font = Enum.Font.SourceSans
+isle.TextButton_32.TextColor3 = Color3.fromRGB(0, 0, 0)
+isle.TextButton_32.TextSize = 14.000
+isle.TextButton_32.TextTransparency = 1.000
+
 isle.UIGridLayout_4.Parent = isle.TeleportsContainer
 isle.UIGridLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
 isle.UIGridLayout_4.CellPadding = UDim2.new(0, 25, 0, 5)
 isle.UIGridLayout_4.CellSize = UDim2.new(0, 159, 0, 29)
 
-isle.UICorner_50.Parent = isle.Containers
+isle.UICorner_51.Parent = isle.Containers
 
 isle.BlockFrame.Name = "BlockFrame"
 isle.BlockFrame.Parent = isle.Frame
@@ -1767,7 +1805,7 @@ isle.BlockFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.BlockFrame.BorderSizePixel = 0
 isle.BlockFrame.Size = UDim2.new(0, 528, 0, 330)
 
-isle.UICorner_51.Parent = isle.BlockFrame
+isle.UICorner_52.Parent = isle.BlockFrame
 
 isle.ImageLabel.Parent = isle.BlockFrame
 isle.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1786,7 +1824,7 @@ isle.Frame_3.BorderSizePixel = 0
 isle.Frame_3.Position = UDim2.new(-0.00280187279, 0, -0.0049262587, 0)
 isle.Frame_3.Size = UDim2.new(0, 170, 0, 205)
 
-isle.UICorner_52.Parent = isle.Frame_3
+isle.UICorner_53.Parent = isle.Frame_3
 
 isle.TextBox.Parent = isle.Frame_3
 isle.TextBox.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
@@ -1799,7 +1837,7 @@ isle.TextBox.Text = "16"
 isle.TextBox.TextColor3 = Color3.fromRGB(209, 209, 209)
 isle.TextBox.TextSize = 16.000
 
-isle.UICorner_53.Parent = isle.TextBox
+isle.UICorner_54.Parent = isle.TextBox
 
 isle.FunctionName.Name = "Function Name"
 isle.FunctionName.Parent = isle.Frame_3
@@ -1827,31 +1865,19 @@ isle.Value.Text = "Actual Value is 16"
 isle.Value.TextColor3 = Color3.fromRGB(212, 212, 212)
 isle.Value.TextSize = 10.000
 
-isle.UICorner_54.Parent = isle.ImageLabel
+isle.UICorner_55.Parent = isle.ImageLabel
 
 isle.ImageButton.Parent = isle.Frame
 isle.ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 isle.ImageButton.BackgroundTransparency = 1.000
 isle.ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 isle.ImageButton.BorderSizePixel = 0
-isle.ImageButton.Position = UDim2.new(0.890304923, 0, 0.895705521, 0)
-isle.ImageButton.Size = UDim2.new(0, 44, 0, 35)
-isle.ImageButton.Visible = false
+isle.ImageButton.Position = UDim2.new(0.0890000015, 0, 0.730000019, 0)
+isle.ImageButton.Size = UDim2.new(0, 42, 0, 34)
+isle.ImageButton.AutoButtonColor = false
 isle.ImageButton.Image = "rbxassetid://3926305904"
-isle.ImageButton.ImageRectOffset = Vector2.new(880, 807)
+isle.ImageButton.ImageRectOffset = Vector2.new(402, 967)
 isle.ImageButton.ImageRectSize = Vector2.new(40, 30)
-
-isle.ImageButton_2.Parent = isle.Frame
-isle.ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-isle.ImageButton_2.BackgroundTransparency = 1.000
-isle.ImageButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-isle.ImageButton_2.BorderSizePixel = 0
-isle.ImageButton_2.Position = UDim2.new(0.0890000015, 0, 0.730000019, 0)
-isle.ImageButton_2.Size = UDim2.new(0, 42, 0, 34)
-isle.ImageButton_2.AutoButtonColor = false
-isle.ImageButton_2.Image = "rbxassetid://3926305904"
-isle.ImageButton_2.ImageRectOffset = Vector2.new(402, 967)
-isle.ImageButton_2.ImageRectSize = Vector2.new(40, 30)
 
 isle.hideshow.Name = "hide/show"
 isle.hideshow.Parent = isle.isle
@@ -1864,12 +1890,12 @@ isle.hideshow.Visible = false
 isle.hideshow.AutoButtonColor = false
 isle.hideshow.Image = "rbxassetid://75662801744741"
 
-isle.UICorner_55.CornerRadius = UDim.new(0, 50)
-isle.UICorner_55.Parent = isle.hideshow
+isle.UICorner_56.CornerRadius = UDim.new(0, 50)
+isle.UICorner_56.Parent = isle.hideshow
 
 -- Scripts:
 
-local function ZZRV_fake_script() -- isle.ScrollingFrame.Controller 
+local function LABCT_fake_script() -- isle.ScrollingFrame.Controller 
 	local script = Instance.new('LocalScript', isle.ScrollingFrame)
 
 	local function calibrate_text()
@@ -1921,8 +1947,8 @@ local function ZZRV_fake_script() -- isle.ScrollingFrame.Controller
 		end
 	end)
 end
-coroutine.wrap(ZZRV_fake_script)()
-local function IDTTGT_fake_script() -- isle.TextLabel_3.Controller 
+coroutine.wrap(LABCT_fake_script)()
+local function VIHBQ_fake_script() -- isle.TextLabel_3.Controller 
 	local script = Instance.new('LocalScript', isle.TextLabel_3)
 
 	a,b = pcall(function()
@@ -1949,8 +1975,8 @@ local function IDTTGT_fake_script() -- isle.TextLabel_3.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(IDTTGT_fake_script)()
-local function LWXJILG_fake_script() -- isle.TextButton.Controller 
+coroutine.wrap(VIHBQ_fake_script)()
+local function ULFGK_fake_script() -- isle.TextButton.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -1963,30 +1989,6 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 	script.Parent.MouseLeave:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
 	end)
-	
-	local function activate()
-		local sucess, err = pcall(function()
-			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	
-			for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
-				if v:IsA("Model") and string.find(v.Name,"Plate") then
-					a,b = pcall(function()
-						for i = 1, 10 do 
-							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
-							repeat wait() until v:FindFirstChild("Base") 
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
-							wait(0.01)
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
-							wait(0.01)
-						end
-						if not a then print(b)end
-					end)
-				end
-			end
-	
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
-		end)
-	end
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
@@ -2015,39 +2017,12 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 	            if not ismantis then
 				if not isground then
 					-- 1 pilon
-					pcall(function ()
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreenEarth.Button.WorldPivot
-						wait(0.3)
-					end)
-	
-					local click = workspace.Map.Main.PylonScreenEarth.Button.Main.ClickDetector
-	
-					for i=1,50 do
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = click.Parent.CFrame
-						fireclickdetector(click)
-						wait(.01)
-					end
+					getgenv().Activate_Mineshaft_Pylon()
 				elseif not iswater then
 					-- 2 pilon
-					local click = workspace.Map.Main.LeviathanFragments.State.Solved
-	
-					for i=1,15 do
-						pcall(function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.Map.Main.PerspectiveTriggerModel.WorldPivot   end)
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PerspectiveTriggerModel.PerspectiveTrigger.CFrame + Vector3.new(0,5,0)
-						click:FireServer()
-						wait(.01)
-					end
+					getgenv().Activate_Water_Pylon()
 				elseif not isair then
-					for i=1,5 do
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreen.Button.WorldPivot
-						for ii = 1, 10 do 
-							pcall(function()
-								fireclickdetector(workspace.Map.Main.PylonScreen.Button.Main.ClickDetector)
-								wait(0.01)	
-							end)
-						end
-						wait(0.15)
-					end
+					getgenv().Activate_Air_Pylon()
 				end
 				end
 				
@@ -2057,7 +2032,7 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 					Duration = 10,
 				})
 				
-				activate()
+				getgenv().Activate_Ape_City()
 				
 				StarterGui:SetCore("SendNotification", {
 					Title = "Attention // SpineWare",
@@ -2066,9 +2041,7 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 				})
 				
 				plr.HumanoidRootPart.CFrame = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)
-				
 				repeat wait() 
-					
 				until workspace.Map.Main.AlienEvent:FindFirstChild("FinalPod")
 				
 				StarterGui:SetCore("SendNotification", {
@@ -2093,13 +2066,12 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 				end
 				wait(1)
 				plr.HumanoidRootPart.CFrame = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)
-				
 				local char = game.Players.LocalPlayer.Character.HumanoidRootPart
 				char.CFrame = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)
 				
 				StarterGui:SetCore("SendNotification", {
 					Title = "Attention // SpineWare",
-					Text = "Go forward to start talk with dragon and summon mantis",
+					Text = "Go forward to start talking with dragon and summon mantis",
 					Duration = 7,
 				})
 				
@@ -2107,10 +2079,9 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2122,13 +2093,10 @@ local function LWXJILG_fake_script() -- isle.TextButton.Controller
 		end
 	end)
 end
-coroutine.wrap(LWXJILG_fake_script)()
-local function CPQUY_fake_script() -- isle.TextButton_2.Controller 
+coroutine.wrap(ULFGK_fake_script)()
+local function DOWV_fake_script() -- isle.TextButton_2.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_2)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -2162,10 +2130,10 @@ local function CPQUY_fake_script() -- isle.TextButton_2.Controller
 	
 			local tools = game.Workspace.Map.Ignore.Tools
 			local toolbags = {}
-	
+		
 			for i,v in tools:GetChildren() do
-				if string.find(v.Name,"Tool Bag") then
-					if i >= 7 then
+				if string.find(v.Name:lower(),"tool bag") then
+					if #toolbags >= 7 then
 						break
 					end
 					table.insert(toolbags,v)
@@ -2173,13 +2141,7 @@ local function CPQUY_fake_script() -- isle.TextButton_2.Controller
 			end
 	
 			if #toolbags < 6 then
-				local StarterGui = game:GetService("StarterGui") -- not sure why you used CoreGui
-	
-				StarterGui:SetCore("SendNotification", {
-					Title = "AutoBadges // SpineWare",
-					Text = "Not enough tool bags! Load map / tp to all locations.",
-					Duration = 15,
-				})
+				_G.SetN("AutoBadges // SpineWare","Not enough tool bags! Load map / tp to all locations.",15)
 			else
 				local getitemid = "#*@72503913191116949753";
 				for ii,vv in toolbags do
@@ -2193,20 +2155,13 @@ local function CPQUY_fake_script() -- isle.TextButton_2.Controller
 				end
 				badge()
 			end 
-		
-		StarterGui:SetCore("SendNotification", {
-			Title = "AutoBadges // SpineWare",
-			Text = "This badge in beta! Place tool bags manually if u didnt get badge",
-			Duration = 15,
-		})
-		
+			_G.SetN("AutoBadges // SpineWare","This badge in beta! Place tool bags manually if u hadnt gotten a badge",15)
 		end) 
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2219,8 +2174,8 @@ local function CPQUY_fake_script() -- isle.TextButton_2.Controller
 		
 	end)
 end
-coroutine.wrap(CPQUY_fake_script)()
-local function KLGAFW_fake_script() -- isle.TextButton_3.Controller 
+coroutine.wrap(DOWV_fake_script)()
+local function KUYYUX_fake_script() -- isle.TextButton_3.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_3)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2244,9 +2199,9 @@ local function KLGAFW_fake_script() -- isle.TextButton_3.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2258,8 +2213,8 @@ local function KLGAFW_fake_script() -- isle.TextButton_3.Controller
 		end
 	end)
 end
-coroutine.wrap(KLGAFW_fake_script)()
-local function JEWE_fake_script() -- isle.TextButton_4.Controller 
+coroutine.wrap(KUYYUX_fake_script)()
+local function AYQU_fake_script() -- isle.TextButton_4.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_4)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2283,10 +2238,10 @@ local function JEWE_fake_script() -- isle.TextButton_4.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2298,8 +2253,8 @@ local function JEWE_fake_script() -- isle.TextButton_4.Controller
 		end
 	end)
 end
-coroutine.wrap(JEWE_fake_script)()
-local function EGZHXTW_fake_script() -- isle.TextButton_5.Controller 
+coroutine.wrap(AYQU_fake_script)()
+local function KTKBEO_fake_script() -- isle.TextButton_5.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_5)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -2310,34 +2265,38 @@ local function EGZHXTW_fake_script() -- isle.TextButton_5.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
 	end)
 	
+	getgenv().Activate_Ape_City = function()
+		local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	
+		for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
+			if v:IsA("Model") and string.find(v.Name,"Plate") then
+				a,b = pcall(function()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,1,0)
+					repeat wait() until v:FindFirstChild("Base") and v:FindFirstChild("Gem")
+					repeat
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
+						wait()
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
+						wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
+					until v:FindFirstChild("Gem").Material == Enum.Material.Neon
+					if not a then print(b)end
+				end)
+			end
+		end
+	
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+	end
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-	
-			for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
-				if v:IsA("Model") and string.find(v.Name,"Plate") then
-					a,b = pcall(function()
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,1,0)
-						repeat wait() until v:FindFirstChild("Base") and v:FindFirstChild("Gem")
-						repeat
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
-							wait()
-							firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
-							wait()
-							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
-						until v:FindFirstChild("Gem").Material == Enum.Material.Neon
-						if not a then print(b)end
-					end)
-				end
-			end
-	
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+			getgenv().Activate_Ape_City()
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2349,8 +2308,8 @@ local function EGZHXTW_fake_script() -- isle.TextButton_5.Controller
 		end
 	end)
 end
-coroutine.wrap(EGZHXTW_fake_script)()
-local function RPDH_fake_script() -- isle.TextButton_6.Controller 
+coroutine.wrap(KTKBEO_fake_script)()
+local function ZAHBY_fake_script() -- isle.TextButton_6.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_6)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -2385,9 +2344,9 @@ local function RPDH_fake_script() -- isle.TextButton_6.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2399,8 +2358,8 @@ local function RPDH_fake_script() -- isle.TextButton_6.Controller
 		end
 	end)
 end
-coroutine.wrap(RPDH_fake_script)()
-local function XFXBNU_fake_script() -- isle.TextButton_7.Controller 
+coroutine.wrap(ZAHBY_fake_script)()
+local function TKWX_fake_script() -- isle.TextButton_7.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_7)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2443,9 +2402,9 @@ local function XFXBNU_fake_script() -- isle.TextButton_7.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2457,8 +2416,8 @@ local function XFXBNU_fake_script() -- isle.TextButton_7.Controller
 		end
 	end)
 end
-coroutine.wrap(XFXBNU_fake_script)()
-local function AVAYQOW_fake_script() -- isle.TextButton_8.Controller 
+coroutine.wrap(TKWX_fake_script)()
+local function BSUJ_fake_script() -- isle.TextButton_8.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_8)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2505,9 +2464,9 @@ local function AVAYQOW_fake_script() -- isle.TextButton_8.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2519,8 +2478,8 @@ local function AVAYQOW_fake_script() -- isle.TextButton_8.Controller
 		end
 	end)
 end
-coroutine.wrap(AVAYQOW_fake_script)()
-local function HHJUQ_fake_script() -- isle.TextButton_9.Controller 
+coroutine.wrap(BSUJ_fake_script)()
+local function UKCMS_fake_script() -- isle.TextButton_9.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_9)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -2571,9 +2530,9 @@ local function HHJUQ_fake_script() -- isle.TextButton_9.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2585,8 +2544,8 @@ local function HHJUQ_fake_script() -- isle.TextButton_9.Controller
 		end
 	end)
 end
-coroutine.wrap(HHJUQ_fake_script)()
-local function VLJGOJI_fake_script() -- isle.TextButton_10.Controller 
+coroutine.wrap(UKCMS_fake_script)()
+local function HJHC_fake_script() -- isle.TextButton_10.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_10)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2607,9 +2566,9 @@ local function VLJGOJI_fake_script() -- isle.TextButton_10.Controller
 		
 		if not sucess then
 			_G.SetN("Problem","Docks may be arent loaded: gate wasn`t opened",10)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2621,8 +2580,8 @@ local function VLJGOJI_fake_script() -- isle.TextButton_10.Controller
 		end
 	end)
 end
-coroutine.wrap(VLJGOJI_fake_script)()
-local function TXVNI_fake_script() -- isle.TextButton_11.Controller 
+coroutine.wrap(HJHC_fake_script)()
+local function HEPCQO_fake_script() -- isle.TextButton_11.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_11)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2671,10 +2630,10 @@ local function TXVNI_fake_script() -- isle.TextButton_11.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2686,12 +2645,73 @@ local function TXVNI_fake_script() -- isle.TextButton_11.Controller
 		end
 	end)
 end
-coroutine.wrap(TXVNI_fake_script)()
-local function OPGTVIH_fake_script() -- isle.TextButton_12.Controller 
+coroutine.wrap(HEPCQO_fake_script)()
+local function PVRB_fake_script() -- isle.TextButton_12.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_12)
 
+	getgenv().esp_properties = {}
+	getgenv().esp_enabled = {false, false, false, false}
+	getgenv().write_object = function(objectClass, objectProperties)
+		local obj = Drawing.new(objectClass)
+		table.insert(getgenv().esp_properties, obj)
+		for i, v in pairs(objectProperties) do
+			obj[i] = v
+		end
+		objectProperties = nil
+		return obj
+	end
+	getgenv().create_esp = function(object : Instance, IsHumanoid : boolean, Color : Color3, Index : number)
+		task.spawn(function()
+			if object:IsDescendantOf(game) then
+				if IsHumanoid then
+					if (object:FindFirstChild("Head") and object:FindFirstChild("Head").ClassName == "MeshPart") and object:FindFirstChild("Humanoid") and object:FindFirstChild("HumanoidRootPart") then
+						local objectNameText = getgenv().write_object("Text", {
+							Position = Vector2.new(0, 0),
+							Text = object.Name,
+							Size = 15,
+							Font = Drawing.Fonts.UI,
+							Color = Color,
+							Transparency = 0,
+							Outline = true,
+							OutlineColor = Color3.fromRGB(0, 0, 0),
+						})
+						local screenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(object:FindFirstChild("Head").Position)
+						game:GetService("RunService").RenderStepped:Connect(function()
+							if onScreen and getgenv().esp_enabled[Index] == true then
+								objectNameText.Visible = true
+								objectNameText.Position = Vector2.new(screenPosition.X, screenPosition.Y)
+								objectNameText.Text = string.format("%s [%.1fHP]",object.Name,object:FindFirstChildOfClass("Humanoid").Health)
+							else
+								objectNameText.Visible = false
+							end
+						end)
+					end
+				elseif object:IsDescendantOf(game) and not IsHumanoid then
+					local objectNameText = getgenv().write_object("Text", {
+						Position = Vector2.new(0, 0),
+						Text = object.Name,
+						Size = 15,
+						Font = Drawing.Fonts.UI,
+						Color = Color,
+						Transparency = 0,
+						Outline = true,
+						OutlineColor = Color3.fromRGB(0, 0, 0),
+					})
+					local screenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(object:FindFirstChildOfClass("Part").Position)
+					game:GetService("RunService").RenderStepped:Connect(function()
+						if onScreen and getgenv().esp_enabled[Index] == true then
+							objectNameText.Visible = true
+							objectNameText.Position = Vector2.new(screenPosition.X, screenPosition.Y)
+							objectNameText.Text = string.format("%s",object.Name)
+						else
+							objectNameText.Visible = false
+						end
+					end) 
+				end
+			end
+		end)
+	end
 	local status = false
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			if not status then
@@ -2706,15 +2726,18 @@ local function OPGTVIH_fake_script() -- isle.TextButton_12.Controller
 			local plrslist = game.Players:GetPlayers()
 			
 			for _, player in plrslist do
-				if player.Character then
+				if player.Character and player ~= game.Players.LocalPlayer then
 				    local high = Instance.new("Highlight")
 					high.Parent = player.Character
 					high.FillColor=Color3.new(0.145098, 1, 0.101961)
 					high.FillTransparency=0
+					getgenv().esp_enabled[1] = true
+					getgenv().create_esp(player.Character, true, Color3.new(0.113725, 0.203922, 1), 1)
 				end
 			end
 			else
 				local plrlist = game.Players:GetPlayers()
+				getgenv().esp_enabled[1] = false
 				for _, player in plrlist do
 					if player.Character then
 						if player.Character:FindFirstChild("Highlight") then
@@ -2726,24 +2749,18 @@ local function OPGTVIH_fake_script() -- isle.TextButton_12.Controller
 		end)
 		
 		if not sucess then
-			
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			print(err)
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			
-			
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(OPGTVIH_fake_script)()
-local function MLZVPB_fake_script() -- isle.TextButton_13.Controller 
+coroutine.wrap(PVRB_fake_script)()
+local function JIDEJK_fake_script() -- isle.TextButton_13.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_13)
 
 	local status = false
-	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			if not status then
@@ -2763,11 +2780,13 @@ local function MLZVPB_fake_script() -- isle.TextButton_13.Controller
 					high.FillColor=Color3.new(1, 0.027451, 0.172549)
 					high.Parent = player
 					high.FillTransparency=0
+					getgenv().esp_enabled[2] = true
+					getgenv().create_esp(player, true, Color3.new(0.227451, 0.831373, 0.792157), 2)
 				end
 			end
 			else
 				local plrslist = game.Workspace.Threats:GetChildren()
-				
+				getgenv().esp_enabled[2] = false
 				for _, player in plrslist do
 					if player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 						player:FindFirstChild("Highlight"):Destroy()
@@ -2777,20 +2796,14 @@ local function MLZVPB_fake_script() -- isle.TextButton_13.Controller
 		end)
 		
 		if not sucess then
-			
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			
-			
+			print(err)
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(MLZVPB_fake_script)()
-local function AYEAW_fake_script() -- isle.TextButton_14.Controller 
+coroutine.wrap(JIDEJK_fake_script)()
+local function ZTJFJ_fake_script() -- isle.TextButton_14.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_14)
 
 	local status = false
@@ -2811,14 +2824,16 @@ local function AYEAW_fake_script() -- isle.TextButton_14.Controller
 			for _, player in plrslist do
 				if player and player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") then
 					local high = Instance.new("Highlight")
-					high.Parent = player.Character
+					high.Parent = player
 					high.FillColor=Color3.new(0.0823529, 0.219608, 1)
 					high.FillTransparency=0
+					getgenv().esp_enabled[3] = true
+					getgenv().create_esp(player, true, Color3.new(0.227451, 0.831373, 0.792157), 3)
 				end
 			end
 			else
 				local plrslist = game.Workspace.AIHunter:GetChildren()
-				
+				getgenv().esp_enabled[3] = false
 				for _, player in plrslist do
 					if player and player:FindFirstChild("Humanoid") and player:FindFirstChild("HumanoidRootPart") and player:FindFirstChild("Highlight") then
 					   player.Highlight:Destroy() 		
@@ -2828,20 +2843,14 @@ local function AYEAW_fake_script() -- isle.TextButton_14.Controller
 		end)
 		
 		if not sucess then
-			
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			
-			
+			print(err)
 			status = false
 			game:GetService("TweenService"):Create(script.Parent.Parent.Indicator,TweenInfo.new(1),{BackgroundColor3= Color3.new(1, 0.635294, 0.270588)}):Play()
 		end
 	end)
 end
-coroutine.wrap(AYEAW_fake_script)()
-local function TZQFWFZ_fake_script() -- isle.TextButton_15.Controller 
+coroutine.wrap(ZTJFJ_fake_script)()
+local function EGBLT_fake_script() -- isle.TextButton_15.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_15)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -2868,10 +2877,10 @@ local function TZQFWFZ_fake_script() -- isle.TextButton_15.Controller
 		end)
 		
 		if not sucess then
-			_G.SendN("Problem","Teleport Entrance may be arent loaded...",12)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			_G.SetN("Problem","Teleport Entrance may be arent loaded...",12)
+	
+			
+	
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -2882,8 +2891,8 @@ local function TZQFWFZ_fake_script() -- isle.TextButton_15.Controller
 		end
 	end)
 end
-coroutine.wrap(TZQFWFZ_fake_script)()
-local function AYDB_fake_script() -- isle.TextButton_16.Controller 
+coroutine.wrap(EGBLT_fake_script)()
+local function TJSCXGT_fake_script() -- isle.TextButton_16.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_16)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -2910,10 +2919,10 @@ local function AYDB_fake_script() -- isle.TextButton_16.Controller
 		end)
 		
 		if not sucess then
-			_G.SendN("Problem","Teleport Exit may be arent loaded...",10)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			_G.SetN("Problem","Teleport Exit may be arent loaded...",10)
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2925,8 +2934,8 @@ local function AYDB_fake_script() -- isle.TextButton_16.Controller
 		end
 	end)
 end
-coroutine.wrap(AYDB_fake_script)()
-local function IMCVY_fake_script() -- isle.TextButton_17.Controller 
+coroutine.wrap(TJSCXGT_fake_script)()
+local function BMGACBP_fake_script() -- isle.TextButton_17.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_17)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2940,9 +2949,8 @@ local function IMCVY_fake_script() -- isle.TextButton_17.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
 	end)
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	getgenv().Activate_Mineshaft_Pylon = function()
 		local sucess, err = pcall(function()
-			-- 1 pilon
 			pcall(function ()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreenEarth.Button.WorldPivot
 				repeat wait() until workspace.Map.Main.PylonScreenEarth.Button:FindFirstChild("Main")
@@ -2957,11 +2965,17 @@ local function IMCVY_fake_script() -- isle.TextButton_17.Controller
 			until click.Parent.Material ~= Enum.Material.Neon
 	
 		end)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			getgenv().Activate_Mineshaft_Pylon()
+		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -2973,8 +2987,8 @@ local function IMCVY_fake_script() -- isle.TextButton_17.Controller
 		end
 	end)
 end
-coroutine.wrap(IMCVY_fake_script)()
-local function XBQYGIY_fake_script() -- isle.TextButton_18.Controller 
+coroutine.wrap(BMGACBP_fake_script)()
+local function LHMKTGI_fake_script() -- isle.TextButton_18.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_18)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -2988,24 +3002,26 @@ local function XBQYGIY_fake_script() -- isle.TextButton_18.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
 	end)
 	
+	getgenv().Activate_Water_Pylon = function()
+		local click = workspace.Map.Main.LeviathanFragments.State.Solved
+	
+		for i=1,50 do
+			pcall(function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.Map.Main.PerspectiveTriggerModel.WorldPivot   end)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PerspectiveTriggerModel.PerspectiveTrigger.CFrame + Vector3.new(0,5,0)
+			click:FireServer()
+			wait(.01)
+		end
+	end
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			-- 2 pilon
-			local click = workspace.Map.Main.LeviathanFragments.State.Solved
-	
-			for i=1,50 do
-				pcall(function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.Map.Main.PerspectiveTriggerModel.WorldPivot   end)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PerspectiveTriggerModel.PerspectiveTrigger.CFrame + Vector3.new(0,5,0)
-				click:FireServer()
-				wait(.01)
-			end
+			getgenv().Activate_Water_Pylon()
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3017,8 +3033,8 @@ local function XBQYGIY_fake_script() -- isle.TextButton_18.Controller
 		end
 	end)
 end
-coroutine.wrap(XBQYGIY_fake_script)()
-local function WOIEF_fake_script() -- isle.TextButton_19.Controller 
+coroutine.wrap(LHMKTGI_fake_script)()
+local function CCGI_fake_script() -- isle.TextButton_19.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_19)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -3046,9 +3062,9 @@ local function WOIEF_fake_script() -- isle.TextButton_19.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3060,8 +3076,8 @@ local function WOIEF_fake_script() -- isle.TextButton_19.Controller
 		end
 	end)
 end
-coroutine.wrap(WOIEF_fake_script)()
-local function SEQRTD_fake_script() -- isle.TextButton_20.Controller 
+coroutine.wrap(CCGI_fake_script)()
+local function OFTTXS_fake_script() -- isle.TextButton_20.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_20)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3312,10 +3328,6 @@ local function SEQRTD_fake_script() -- isle.TextButton_20.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3326,8 +3338,8 @@ local function SEQRTD_fake_script() -- isle.TextButton_20.Controller
 		end
 	end)
 end
-coroutine.wrap(SEQRTD_fake_script)()
-local function GOPGTUU_fake_script() -- isle.TextButton_21.Controller 
+coroutine.wrap(OFTTXS_fake_script)()
+local function THOXHY_fake_script() -- isle.TextButton_21.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_21)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -3378,9 +3390,9 @@ local function GOPGTUU_fake_script() -- isle.TextButton_21.Controller
 		
 		if not sucess then
 			_G.SendN("Problem","there is error: maybe ur executor doesnt support it")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
+			
+	
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3391,8 +3403,8 @@ local function GOPGTUU_fake_script() -- isle.TextButton_21.Controller
 		end
 	end)
 end
-coroutine.wrap(GOPGTUU_fake_script)()
-local function YPHFXP_fake_script() -- isle.TextButton_22.Controller 
+coroutine.wrap(THOXHY_fake_script)()
+local function PJHVRFB_fake_script() -- isle.TextButton_22.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_22)
 
 	local status = false
@@ -3423,10 +3435,10 @@ local function YPHFXP_fake_script() -- isle.TextButton_22.Controller
 		
 		if not sucess then
 			
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
 			print("Script returned error '"..err.."', setting status orange, because script can`t complete...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+	
 			
 			
 			status = false
@@ -3434,8 +3446,8 @@ local function YPHFXP_fake_script() -- isle.TextButton_22.Controller
 		end
 	end)
 end
-coroutine.wrap(YPHFXP_fake_script)()
-local function WTKQIA_fake_script() -- isle.TextButton_23.Controller 
+coroutine.wrap(PJHVRFB_fake_script)()
+local function RYSA_fake_script() -- isle.TextButton_23.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_23)
 
 	local oncomplete = "rbxassetid://76465964526940"
@@ -3449,45 +3461,33 @@ local function WTKQIA_fake_script() -- isle.TextButton_23.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
 	end)
 	
+	getgenv().Activate_Air_Pylon = function()
+		repeat 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreen.Button.WorldPivot + Vector3.new(0,90,0)
+			task.wait(.05)
+		until workspace.Map.Main.PylonScreen:FindFirstChild("Button"):FindFirstChild("Main")
+		for i=1,5 do
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreen.Button.WorldPivot
+			for ii = 1, 10 do 
+				pcall(function()
+					fireclickdetector(workspace.Map.Main.PylonScreen.Button.Main.ClickDetector)
+					wait(0.01)	
+				end)
+			end
+			wait(0.15)
+		end
+	end
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
 			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 			wait(0.1)
 			-- 1 pilon
-			pcall(function ()
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreenEarth.Button.WorldPivot
-				wait(0.3)
-			end)
-	
-			local click = workspace.Map.Main.PylonScreenEarth.Button.Main.ClickDetector
-	
-			for i=1,50 do
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = click.Parent.CFrame
-				fireclickdetector(click)
-				wait(.01)
-			end
-			
+			getgenv().Activate_Mineshaft_Pylon()
 			-- 2 pilon
-			local click = workspace.Map.Main.LeviathanFragments.State.Solved
-	
-			for i=1,15 do
-				pcall(function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.Map.Main.PerspectiveTriggerModel.WorldPivot   end)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PerspectiveTriggerModel.PerspectiveTrigger.CFrame + Vector3.new(0,5,0)
-				click:FireServer()
-				wait(.01)
-			end
-			
-			
-			for i=1,5 do
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreen.Button.WorldPivot
-				for ii = 1, 10 do 
-					pcall(function()
-						fireclickdetector(workspace.Map.Main.PylonScreen.Button.Main.ClickDetector)
-						wait(0.01)	
-					end)
-				end
-				wait(0.15)
-			end
+			getgenv().Activate_Water_Pylon()
+			-- 3 pilon
+			getgenv().Activate_Air_Pylon()
 			
 			for iii=1 , 3 do
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
@@ -3496,9 +3496,6 @@ local function WTKQIA_fake_script() -- isle.TextButton_23.Controller
 		end)
 		
 		if not sucess then
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3509,13 +3506,10 @@ local function WTKQIA_fake_script() -- isle.TextButton_23.Controller
 		end
 	end)
 end
-coroutine.wrap(WTKQIA_fake_script)()
-local function IPQRB_fake_script() -- isle.TextButton_24.Controller 
+coroutine.wrap(RYSA_fake_script)()
+local function CYZB_fake_script() -- isle.TextButton_24.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_24)
 
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
 	script.Parent.MouseEnter:Connect(function()
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
 	end)
@@ -3526,54 +3520,87 @@ local function IPQRB_fake_script() -- isle.TextButton_24.Controller
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		local sucess, err = pcall(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killui"))()
-		end)
-		
-		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
-			wait(2)
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
-		else
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
-			wait(2)
-			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
-		end
-	end)
-end
-coroutine.wrap(IPQRB_fake_script)()
-local function BQUV_fake_script() -- isle.TextButton_25.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_25)
-
-	local oncomplete = "rbxassetid://76465964526940"
-	local notcomplete = "rbxassetid://90617427588639"
-	local waycount = 0
-	script.Parent.MouseEnter:Connect(function()
-		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
-	end)
+			local arts = {
+				CFrame.new(-1350.38, -458.775238, -1580.62024, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(1405.88269, -250.722977, -1855.16284, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(-752.184326, 126.690788, -3171.6106, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(-1761.74756, -194.51709, -1306.67212, -0.885949731, 0.00651492085, 0.463735491, -0.00259297574, 0.99981612, -0.0189999882, -0.463773996, -0.0180354901, -0.885769963)
+			}
+			local arts_n = {"A","B","C","D"}
+			local char : Character = game.Players.LocalPlayer.Character
+			local root = char:FindFirstChild("HumanoidRootPart")
+			local c = root.CFrame
+			local revolver_cf = CFrame.new(472.481567, 164.817795, -1216.77148, -0.101358771, 2.70025069e-09, -0.99484992, 5.56263746e-09, 1, 2.14748819e-09, 0.99484992, -5.31632294e-09, -0.101358771)
 	
-	script.Parent.MouseLeave:Connect(function()
-		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
-	end)
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		local sucess, err = pcall(function()
-			for i,v in game.CoreGui:GetChildren() do
-				if v.Name == "killUI" or v.Name =="killUi" then
-					v:Destroy()
-				end 
+			for position, artifact_c in pairs(arts) do
+				local artifact_name = string.format("Artifact %s",arts_n[position])
+				local tp_c = artifact_c
+				if position ~= 4 then
+					pcall(function()
+						local art; for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then art = v break end end
+						if art then
+							tp_c = art.WorldPivot
+						end
+					end)
+					for i = 1, 5 do root.CFrame = tp_c wait(0.01) end
+					local is_f = false; local artifact = nil
+					repeat wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then is_f = true; artifact = v break end end until is_f 
+					local args = {"#*@85799661851116949753", artifact.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(args)) wait(.5) end
+					repeat wait() until char:FindFirstChild(artifact_name) or game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+					local art = nil
+					if char:FindFirstChild(artifact_name) then
+						art = char:FindFirstChild(artifact_name)
+					else
+						art = game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+						char.Humanoid:EquipTool(art)
+						wait()
+					end
+					for i = 1, 5 do
+						art:Activate() wait(.05)
+					end
+					wait()
+				else 
+					local artifact_name = string.format("Artifact %s",arts_n[position])
+					for i =1, 5 do root.CFrame = revolver_cf wait(.03) end; local revo
+					pcall(function() _G.SetN("Artifact D // SpineWare","Take the revolver, usually it spawns near you",7.5) end)
+					repeat wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),"revolver") then pcall(function() if (v.Collision.Position - root.Position).Magnitude <= 12 then revo = v end  end) end end until revo
+					local argssse = {"#*@85799661851116949753", revo.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(argssse)) wait(.5) end
+					repeat wait() until char:FindFirstChild("Revolver") and char:FindFirstChild("Revolver"):FindFirstChildOfClass("RemoteEvent")
+					local rev = char:FindFirstChild("Revolver")
+					local kill_event = rev:FindFirstChild("@Kill")
+					for i = 1, 5 do root.CFrame = artifact_c wait(.03) end
+					repeat wait() until workspace.Threats:WaitForChild("Glass Container") and char:FindFirstChild("Revolver"):FindFirstChildOfClass("RemoteEvent")
+					local glass = workspace.Threats:WaitForChild("Glass Container"); local skip = false
+					if glass.Humanoid.Health >= 0 then skip = true end
+					if not skip then wait(.25)
+						pcall(function() _G.SetN("Artifact D // SpineWare","Take the revolver, usually it spawns near you",7.5) end)
+						wait(1.25)
+						kill_event:FireServer(glass) end
+					local is_f = false; local artifact = nil;
+					repeat wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then is_f = true; artifact = v break end end until is_f 
+					for i = 1, 5 do root.CFrame = artifact.WorldPivot end
+					local argsss = {"#*@85799661851116949753", artifact.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(argsss)) wait(.5) end
+					repeat wait() until char:FindFirstChild(artifact_name) or game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+					local art = nil
+					if char:FindFirstChild(artifact_name) then
+						art = char:FindFirstChild(artifact_name)
+					else
+						art = game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+						char.Humanoid:EquipTool(art)
+						wait()
+					end
+					for i = 1, 5 do
+						art:Activate() wait(.05)
+					end
+					wait()
+				end
 			end
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
@@ -3584,9 +3611,9 @@ local function BQUV_fake_script() -- isle.TextButton_25.Controller
 		end
 	end)
 end
-coroutine.wrap(BQUV_fake_script)()
-local function SXWJV_fake_script() -- isle.TextButton_26.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_26)
+coroutine.wrap(CYZB_fake_script)()
+local function UIYAVC_fake_script() -- isle.TextButton_25.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_25)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3605,10 +3632,10 @@ local function SXWJV_fake_script() -- isle.TextButton_26.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3620,9 +3647,9 @@ local function SXWJV_fake_script() -- isle.TextButton_26.Controller
 		end
 	end)
 end
-coroutine.wrap(SXWJV_fake_script)()
-local function WYCP_fake_script() -- isle.TextButton_27.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_27)
+coroutine.wrap(UIYAVC_fake_script)()
+local function ZFZXMO_fake_script() -- isle.TextButton_26.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_26)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3645,10 +3672,10 @@ local function WYCP_fake_script() -- isle.TextButton_27.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3660,9 +3687,84 @@ local function WYCP_fake_script() -- isle.TextButton_27.Controller
 		end
 	end)
 end
-coroutine.wrap(WYCP_fake_script)()
-local function POUYT_fake_script() -- isle.TextButton_28.Controller 
+coroutine.wrap(ZFZXMO_fake_script)()
+local function VTUWF_fake_script() -- isle.TextButton_27.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_27)
+
+	local oncomplete = "rbxassetid://76465964526940"
+	local notcomplete = "rbxassetid://90617427588639"
+	local waycount = 0
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			for i,v in game.CoreGui:GetChildren() do
+				if v.Name == "killUI" or v.Name =="killUi" then
+					v:Destroy()
+				end 
+			end
+		end)
+		
+		if not sucess then
+			
+	
+			
+	
+			
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		end
+	end)
+end
+coroutine.wrap(VTUWF_fake_script)()
+local function ADWJ_fake_script() -- isle.TextButton_28.Controller 
 	local script = Instance.new('LocalScript', isle.TextButton_28)
+
+	local oncomplete = "rbxassetid://76465964526940"
+	local notcomplete = "rbxassetid://90617427588639"
+	local waycount = 0
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency = 0.85}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(0.9),{BackgroundTransparency= 0.7}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killui"))()
+		end)
+		
+		if not sucess then
+			
+	
+			
+	
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0.705882, 0)}):Play()
+			wait(2)
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0, 0, 0)}):Play()
+		end
+	end)
+end
+coroutine.wrap(ADWJ_fake_script)()
+local function GCUZNOS_fake_script() -- isle.TextButton_29.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_29)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3681,10 +3783,10 @@ local function POUYT_fake_script() -- isle.TextButton_28.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3696,9 +3798,9 @@ local function POUYT_fake_script() -- isle.TextButton_28.Controller
 		end
 	end)
 end
-coroutine.wrap(POUYT_fake_script)()
-local function HRUDUS_fake_script() -- isle.TextButton_29.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_29)
+coroutine.wrap(GCUZNOS_fake_script)()
+local function XJGGGRK_fake_script() -- isle.TextButton_30.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_30)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3721,10 +3823,10 @@ local function HRUDUS_fake_script() -- isle.TextButton_29.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3736,9 +3838,9 @@ local function HRUDUS_fake_script() -- isle.TextButton_29.Controller
 		end
 	end)
 end
-coroutine.wrap(HRUDUS_fake_script)()
-local function QIYGHOE_fake_script() -- isle.TextButton_30.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_30)
+coroutine.wrap(XJGGGRK_fake_script)()
+local function ODYQBRT_fake_script() -- isle.TextButton_31.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_31)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -3770,10 +3872,10 @@ local function QIYGHOE_fake_script() -- isle.TextButton_30.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -3785,9 +3887,9 @@ local function QIYGHOE_fake_script() -- isle.TextButton_30.Controller
 		end
 	end)
 end
-coroutine.wrap(QIYGHOE_fake_script)()
-local function PGFCXI_fake_script() -- isle.TextButton_31.Controller 
-	local script = Instance.new('LocalScript', isle.TextButton_31)
+coroutine.wrap(ODYQBRT_fake_script)()
+local function AOWWK_fake_script() -- isle.TextButton_32.Controller 
+	local script = Instance.new('LocalScript', isle.TextButton_32)
 
 	local oncomplete = "rbxassetid://76465964526940"
 	local notcomplete = "rbxassetid://90617427588639"
@@ -4308,10 +4410,10 @@ local function PGFCXI_fake_script() -- isle.TextButton_31.Controller
 		end)
 		
 		if not sucess then
-			_G.send_feedback("The Script Returned Error... :  **Player Name** - "..game.Players.LocalPlayer.Name..", The Place ID - "..game.PlaceID..", The Player ID - "..game.Players.LocalPlayer.UserId..", so the game name - "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name.." (there was name) , the error : "..err)
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
-			print("Script returned error '"..err.."'...")
-			warn("-------------------------SPINEWARE ERROR UTILITY--------------------------")
+			
+	
+			
+	
 			
 			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundColor3  = Color3.new(0.705882, 0.027451, 0.0941176)}):Play()
 			wait(2)
@@ -4323,8 +4425,8 @@ local function PGFCXI_fake_script() -- isle.TextButton_31.Controller
 		end
 	end)
 end
-coroutine.wrap(PGFCXI_fake_script)()
-local function PBBNQY_fake_script() -- isle.ImageLabel.Controller 
+coroutine.wrap(AOWWK_fake_script)()
+local function KJHOYW_fake_script() -- isle.ImageLabel.Controller 
 	local script = Instance.new('LocalScript', isle.ImageLabel)
 
 	script.Parent.Active = true
@@ -4365,8 +4467,8 @@ local function PBBNQY_fake_script() -- isle.ImageLabel.Controller
 		if not a then print(b) end
 	end
 end
-coroutine.wrap(PBBNQY_fake_script)()
-local function HSJMCR_fake_script() -- isle.Frame.Controller^Functions 
+coroutine.wrap(KJHOYW_fake_script)()
+local function VOJTEHI_fake_script() -- isle.Frame.Controller^Functions 
 	local script = Instance.new('LocalScript', isle.Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -4413,9 +4515,9 @@ local function HSJMCR_fake_script() -- isle.Frame.Controller^Functions
 		})
 	end
 end
-coroutine.wrap(HSJMCR_fake_script)()
-local function IKFK_fake_script() -- isle.ImageButton_2.Controller 
-	local script = Instance.new('LocalScript', isle.ImageButton_2)
+coroutine.wrap(VOJTEHI_fake_script)()
+local function QFTFXCL_fake_script() -- isle.ImageButton.Controller 
+	local script = Instance.new('LocalScript', isle.ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		pcall(function()
@@ -4423,8 +4525,8 @@ local function IKFK_fake_script() -- isle.ImageButton_2.Controller
 		end)
 	end)
 end
-coroutine.wrap(IKFK_fake_script)()
-local function IARUN_fake_script() -- isle.isle.Controller 
+coroutine.wrap(QFTFXCL_fake_script)()
+local function RGZOY_fake_script() -- isle.isle.Controller 
 	local script = Instance.new('LocalScript', isle.isle)
 
 	local list = {
@@ -4481,8 +4583,8 @@ local function IARUN_fake_script() -- isle.isle.Controller
 	if not a then print(b) end
 	
 end
-coroutine.wrap(IARUN_fake_script)()
-local function UHULZX_fake_script() -- isle.isle.Controller 
+coroutine.wrap(RGZOY_fake_script)()
+local function PVGTR_fake_script() -- isle.isle.Controller 
 	local script = Instance.new('LocalScript', isle.isle)
 
 	local status = false
@@ -4615,8 +4717,8 @@ local function UHULZX_fake_script() -- isle.isle.Controller
 		})
 	end)
 end
-coroutine.wrap(UHULZX_fake_script)()
-local function WNEZ_fake_script() -- isle.hideshow.Controller 
+coroutine.wrap(PVGTR_fake_script)()
+local function TLXN_fake_script() -- isle.hideshow.Controller 
 	local script = Instance.new('LocalScript', isle.hideshow)
 
 	script.Parent.Active = true
@@ -4658,4 +4760,4 @@ local function WNEZ_fake_script() -- isle.hideshow.Controller
 		end)
 	end
 end
-coroutine.wrap(WNEZ_fake_script)()
+coroutine.wrap(TLXN_fake_script)()

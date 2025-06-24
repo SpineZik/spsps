@@ -150,7 +150,7 @@ local gameids = {
     {"81756970203351","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0ltcGVyaWFsJTIwSGF0Y2hlcnM="},
     {"115413186988658","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0xhd24lMjBNb3dpbmclMjBTaW11bGF0b3Ih"},
     {"114725843991996","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0NyeXN0YWxzJTIwUk5H"},
-    {"",""},
+    {"115469775440792","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL1BsYW5lJTIwVHJhaW5pbmc="},
     {"",""},
 }
 local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()

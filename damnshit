@@ -160,6 +160,13 @@ local gameids = {
     {"114291906728616","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL1BPTFktWiUyMFJORyUyMFpvbWJpZSUyMFN1cnZpdmFsJTIwTE9CQlk="},
     {"86078645393000","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0V2b2x2ZSUyNlJpc2U="},
     {"73934517857372","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluLyUyQjElMjBTcGVlZCUyMFByaXNvbiUyMEVzY2FwZQ=="},
+    {"99874949504042","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0xhYnVidSUyMEV2b2x1dGlvbg=="},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
     {"",""},
 
 }

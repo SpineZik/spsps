@@ -174,6 +174,13 @@ local gameids = {
     {"87256706755171","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL0NPTExFQ1QlMjBMRUFWRVM="},
     {"70868846842122","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluLyUyQjElMjBTcGVlZCUyMFNxdWlkJTIwRXNjYXBl"},
     {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
 
 }
 local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()

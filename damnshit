@@ -179,9 +179,9 @@ local gameids = {
     {"88695943347797","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL01hZCUyME1vbSUyMENsaWNrZXIlMjAoQ2xpY2tzJTIwT0ZGTElORSEp"},
     {"136003210253823","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL1N0b3AlMjB0aGUlMjBUcmFpbiUyMFNpbXVsYXRvcg=="},
     {"104829086860397","aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1Jvb3RpZi1wcm9nL2ZhbnRhc3RpYy1kb29kbGUvcmVmcy9oZWFkcy9tYWluL1N1cmZpbmclMjBUcmFpbmluZyUyMFJhY2U="},
+    {"10435020306","https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"},
+    {"91368995063922","https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"},
     {"",""},
-    {"",""},
-
 }
 local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()
 local information = {001101,10101,01010101010,Apple = tonumber,Orange = tostring,Cat = loadstring,Mad = pcall,protect = xpcall or pcall,P = 3.14,MAP = game,D = protection,PS = game.HttpGet, player = game.Players.LocalPlayer,6516,5124}

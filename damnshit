@@ -182,6 +182,11 @@ local gameids = {
     {"10435020306","https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"},
     {"91368995063922","https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/isle"},
     {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
+    {"",""},
 }
 local protection = loadstring(game:HttpGet("https://raw.githubusercontent.com/zinarhack/optimize_code/refs/heads/main/anti_kick"))()
 local information = {001101,10101,01010101010,Apple = tonumber,Orange = tostring,Cat = loadstring,Mad = pcall,protect = xpcall or pcall,P = 3.14,MAP = game,D = protection,PS = game.HttpGet, player = game.Players.LocalPlayer,6516,5124}

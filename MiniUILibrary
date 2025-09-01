@@ -275,6 +275,8 @@ local module = {
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.Padding = UDim.new(0, 3)
+			
+			return main_tab_module
 		else
 			warn('[SpineLibrary]: Hey! Gui won`t be loaded! The Parent is NIL, there is no CoreGui/PlayerGui!')
 		end

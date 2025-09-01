@@ -291,7 +291,7 @@ local module = {
 		local prevproport = {Size = background.Size, BackgroundTransparency = background.BackgroundTransparency}
 
 		pcall(function() -- так нада
-			for _, v in pairs(script.Parent:GetDescendants()) do
+			for _, v in pairs(gui:GetDescendants()) do
 				if v:IsA("ScrollingFrame") then
 					v.ScrollBarImageTransparency = 1 
 				elseif v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
@@ -335,7 +335,7 @@ local module = {
 			end)	
 		end)
 		
-		for _, desc in script.Parent:GetDescendants() do
+		for _, desc in gui:GetDescendants() do
 			if desc:IsA("Frame") or desc:IsA("ScrollingFrame") then
 				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency}})
 				desc.BackgroundTransparency = 1

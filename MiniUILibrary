@@ -1,0 +1,404 @@
+local ts: TweenService = game:GetService("TweenService")
+local UIS: UserInputService = game:GetService('UserInputService')
+local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['LocalPlayer']['PlayerGui']
+-- Gui without tabs!
+
+local main_tab: ScrollingFrame
+
+local main_tab_module = {
+	CreateButton = function(self, properties)
+		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
+		--[[ Properties:
+			Name: имя
+			Signal: function
+		]]
+		
+		local Button = Instance.new("Frame")
+		local UICorner_3 = Instance.new("UICorner")
+		local TextLabel_2 = Instance.new("TextLabel")
+		local Turner = Instance.new("Frame")
+		local UICorner_4 = Instance.new("UICorner")
+		local Frame = Instance.new("Frame")
+		local UICorner_5 = Instance.new("UICorner")
+		local Trigger = Instance.new("TextButton")
+		local UIPadding = Instance.new("UIPadding")
+		local ScrollingFrame: ScrollingFrame = main_tab
+		
+		Button.Name = properties['Name']
+		Button.Parent = ScrollingFrame
+		Button.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		Button.BackgroundTransparency = 0.200
+		Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Button.BorderSizePixel = 0
+		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		Button.Size = UDim2.new(0, 383, 0, 38)
+
+		UICorner_3.CornerRadius = UDim.new(0, 4)
+		UICorner_3.Parent = Button
+
+		TextLabel_2.Parent = Button
+		TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.BackgroundTransparency = 1.000
+		TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_2.BorderSizePixel = 0
+		TextLabel_2.Position = UDim2.new(0.039164491, 0, 0.049866125, 0)
+		TextLabel_2.Size = UDim2.new(0, 147, 0, 33)
+		TextLabel_2.Font = Enum.Font.Unknown
+		TextLabel_2.Text = properties['Name']
+		TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_2.TextSize = 18.000
+		TextLabel_2.TextWrapped = true
+		TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+		Turner.Name = "Turner"
+		Turner.Parent = Button
+		Turner.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+		Turner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Turner.BorderSizePixel = 0
+		Turner.Position = UDim2.new(0.853785872, 0, 0.218210325, 0)
+		Turner.Size = UDim2.new(0, 47, 0, 21)
+
+		UICorner_4.Parent = Turner
+
+		Frame.Parent = Turner
+		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0, 26, -0.0552382693, 0)
+		Frame.Size = UDim2.new(0, 23, 0, 22)
+
+		UICorner_5.CornerRadius = UDim.new(0, 6)
+		UICorner_5.Parent = Frame
+
+		Trigger.Name = "Trigger"
+		Trigger.Parent = Button
+		Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Trigger.BackgroundTransparency = 1.000
+		Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Trigger.BorderSizePixel = 0
+		Trigger.Position = UDim2.new(0.8328982, 0, 0.0263157897, 0)
+		Trigger.Size = UDim2.new(0, 64, 0, 33)
+		Trigger.Font = Enum.Font.SourceSans
+		Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
+		Trigger.TextSize = 14.000
+		Trigger.TextTransparency = 1.000
+
+		UIPadding.Parent = ScrollingFrame
+		UIPadding.PaddingRight = UDim.new(0, 1)
+		UIPadding.PaddingTop = UDim.new(0, 4)
+		
+		Trigger.MouseButton1Click:Connect(function()
+			task.spawn(function()
+				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected!') return end
+				properties['Signal']()
+			end)
+		end)
+	end,
+	CreateTextBox = function(self, properties)
+		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
+		
+		local TextBoxMain = Instance.new("Frame")
+		local UICorner_9 = Instance.new("UICorner")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local Turner_3 = Instance.new("Frame")
+		local UICorner_10 = Instance.new("UICorner")
+		local TextBox = Instance.new("TextBox")
+		
+		TextBoxMain.Name = properties['Text']
+		TextBoxMain.Parent = main_tab
+		TextBoxMain.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		TextBoxMain.BackgroundTransparency = 0.200
+		TextBoxMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextBoxMain.BorderSizePixel = 0
+		TextBoxMain.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		TextBoxMain.Size = UDim2.new(0, 383, 0, 38)
+
+		UICorner_9.CornerRadius = UDim.new(0, 4)
+		UICorner_9.Parent = TextBoxMain
+
+		TextLabel_4.Parent = TextBoxMain
+		TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.BackgroundTransparency = 1.000
+		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_4.BorderSizePixel = 0
+		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_4.Size = UDim2.new(0, 181, 0, 33)
+		TextLabel_4.Font = Enum.Font.Unknown
+		TextLabel_4.Text = properties['Text']
+		TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.TextSize = 18.000
+		TextLabel_4.TextWrapped = true
+		TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+		Turner_3.Name = "Turner"
+		Turner_3.Parent = TextBoxMain
+		Turner_3.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+		Turner_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Turner_3.BorderSizePixel = 0
+		Turner_3.Position = UDim2.new(0.819843352, 0, 0.128813088, 0)
+		Turner_3.Size = UDim2.new(0, 62, 0, 27)
+
+		UICorner_10.CornerRadius = UDim.new(0, 4)
+		UICorner_10.Parent = Turner_3
+
+		TextBox.Parent = Turner_3
+		TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextBox.BackgroundTransparency = 1.000
+		TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextBox.BorderSizePixel = 0
+		TextBox.Size = UDim2.new(0, 62, 0, 27)
+		TextBox.Font = Enum.Font.Unknown
+		TextBox.Text = "Input"
+		TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextBox.TextScaled = true
+		TextBox.TextSize = 14.000
+		TextBox.TextWrapped = true
+		
+		local turner: Frame = Turner_3
+		local box: TextBox = turner:FindFirstChildOfClass("TextBox") or turner:FindFirstChild("TextBox")
+		local textlabel: TextLabel = TextBoxMain:FindFirstChildOfClass("TextLabel")
+
+		local ts: TweenService = game:GetService("TweenService")
+		local properties: TweenInfo = TweenInfo.new(0.55)
+
+		if getgenv == nil then
+			getgenv = function()
+				return _G
+			end
+		end
+
+		box.FocusLost:Connect(function()
+			getgenv()[properties['Variable']] = TextBox['Text']
+		end)
+	end,
+}
+setmetatable(main_tab_module, {
+	__index = function(table, index)
+		warn('[SpineLibrary]: ERROR! No Index named '..index.."!")
+	end,
+	__namecall = function(...)
+		warn('[SpineLibrary]: Missed the method! NO FUNCTION! Arguments: '..table.unpack({...}))
+	end,
+})
+
+local module = {
+	Init = function(self, gui_parent: Object, Name: string)
+		if not gui_parent then
+			gui_parent = core_gui
+		end
+		if not Name then
+			Name = "SpineGui"
+		end
+		local new_gui: ScreenGui = Instance.new("ScreenGui", gui_parent)
+		self['Gui'] = new_gui
+
+		if new_gui['Parent'] ~= nil then
+			local Backround: Frame = Instance.new("Frame", new_gui) -- init the gui
+			local Top: TextLabel = Instance.new("TextLabel")
+			local UICorner: UICorner = Instance.new("UICorner")
+			local UICorner_2: UICorner = Instance.new("UICorner")
+			local TextLabel = Instance.new("TextLabel")
+			local ImageLabel = Instance.new("ImageLabel")
+			local ControlSize = Instance.new("ImageButton")
+			local ScrollingFrame = Instance.new("ScrollingFrame")
+			local UIListLayout = Instance.new("UIListLayout")
+			
+			self['ControlSize'] = ControlSize
+				
+			Backround.Name = "Backround"
+			Backround.AnchorPoint = Vector2.new(0.5, 0.5)
+			Backround.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+			Backround.BackgroundTransparency = 0.650
+			Backround.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Backround.BorderSizePixel = 0
+			Backround.Position = UDim2.new(0.586109161, 0, 0.297805637, 0)
+			Backround.Size = UDim2.new(0, 392, 0, 229)
+
+			UICorner.CornerRadius = UDim.new(0, 4)
+			UICorner.Parent = Backround
+
+			Top.Name = "Top"
+			Top.Parent = Backround
+			Top.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+			Top.BackgroundTransparency = 0.350
+			Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Top.BorderSizePixel = 0
+			Top.Size = UDim2.new(0, 392, 0, 34)
+
+			UICorner_2.CornerRadius = UDim.new(0, 4)
+			UICorner_2.Parent = Top
+
+			TextLabel.Parent = Top
+			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Position = UDim2.new(0.0127551025, 25, 0.0266463328, 0)
+			TextLabel.Size = UDim2.new(0, 136, 0, 33)
+			TextLabel.Font = Enum.Font.Unknown
+			TextLabel.Text = Name
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextSize = 24.000
+
+			ImageLabel.Parent = Top
+			ImageLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+			ImageLabel.BackgroundTransparency = 1.000
+			ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ImageLabel.BorderSizePixel = 0
+			ImageLabel.Position = UDim2.new(0.0102040814, 0, 0.0294117648, 0)
+			ImageLabel.Size = UDim2.new(0, 34, 0, 32)
+			ImageLabel.Image = "rbxassetid://103605169978265"
+
+			ControlSize.Name = "ControlSize"
+			ControlSize.Parent = Top
+			ControlSize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ControlSize.BackgroundTransparency = 1.000
+			ControlSize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ControlSize.BorderSizePixel = 0
+			ControlSize.Position = UDim2.new(0.893573999, 0, 0.302705646, 0)
+			ControlSize.Size = UDim2.new(0, 35, 0, 21)
+			ControlSize.Image = "rbxassetid://81808702659668"
+
+			ScrollingFrame.Parent = Backround
+			ScrollingFrame.Active = true
+			ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			ScrollingFrame.BackgroundTransparency = 1.000
+			ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			ScrollingFrame.BorderSizePixel = 0
+			ScrollingFrame.Position = UDim2.new(0, 0, 0.148471609, 0)
+			ScrollingFrame.Size = UDim2.new(0, 392, 0, 195)
+			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+			ScrollingFrame.ScrollingEnabled = false
+			main_tab = ScrollingFrame
+			
+			UIListLayout.Parent = ScrollingFrame
+			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0, 3)
+		else
+			warn('[SpineLibrary]: Hey! Gui won`t be loaded! The Parent is NIL, there is no CoreGui/PlayerGui!')
+		end
+	end,
+	Start = function(self)
+		local gui: StarterGui = self['Gui']
+		local turner: ImageButton = self['ControlSize']
+		
+		if not gui then warn('[SpineLibrary]: Hey! First make the init! "Start" starts animations and makes gui moveable.') return end
+		local background = gui:FindFirstChild("Backround") or gui:FindFirstChildOfClass("Frame")
+		local data = {} -- здесь будут храниться пропорции
+		local prevproport = {Size = background.Size, BackgroundTransparency = background.BackgroundTransparency}
+
+		pcall(function() -- так нада
+			for _, v in pairs(script.Parent:GetDescendants()) do
+				if v:IsA("ScrollingFrame") then
+					v.ScrollBarImageTransparency = 1 
+				elseif v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
+					local filterforfont: TextLabel = v
+					filterforfont.RichText = true
+					filterforfont.Font = Enum.Font.Jura
+					filterforfont.Text = string.format("<b>%s</b>", filterforfont.Text)
+				end
+			end
+		end)
+		
+		task.spawn(function()
+			local controlbutton: ImageButton = turner
+			local background: Frame = turner['Parent']['Parent']
+			
+			local buttons: ScrollingFrame = background:FindFirstChild("ScrollingFrame") or background:FindFirstChildOfClass("ScrollingFrame")
+			local status: boolean = true
+			local proccessing: boolean = false
+
+			local closingtween = {Size = UDim2.new(0, 392, 0, 34)}
+			local openingtween = {Size = background.Size}
+			controlbutton.MouseButton1Click:Connect(function()
+				if proccessing then return end
+				proccessing = true
+
+				status = not status
+				if not status then
+					buttons.Visible = false
+					local closing = ts:Create(background,TweenInfo.new(1),closingtween)
+					ts:Create(controlbutton,TweenInfo.new(1),{Rotation = 180}):Play()
+					closing:Play()
+					closing.Completed:Wait()
+				else 
+					local opening = ts:Create(background,TweenInfo.new(1),openingtween)
+					ts:Create(controlbutton,TweenInfo.new(1),{Rotation = 0}):Play()
+					opening:Play()
+					opening.Completed:Wait()
+					buttons.Visible = true
+				end
+				proccessing = false	
+			end)	
+		end)
+		
+		for _, desc in script.Parent:GetDescendants() do
+			if desc:IsA("Frame") or desc:IsA("ScrollingFrame") then
+				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency}})
+				desc.BackgroundTransparency = 1
+			elseif desc:IsA("TextLabel") or desc:IsA("TextButton") or desc:IsA("TextBox") then
+				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency, TextTransparency = desc.TextTransparency}})
+				desc.BackgroundTransparency = 1
+				desc.TextTransparency = 1
+			elseif desc:IsA("ImageLabel") or desc:IsA("ImageButton") then
+				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency, ImageTransparency = desc.ImageTransparency}})
+				desc.BackgroundTransparency = 1
+				desc.ImageTransparency = 1
+			end
+		end -- все обьекты заносим в дату и так же делаем их прозрачным, чтобы потом сделать их снова непрозрачными
+
+		background.Size = UDim2.new(0, 100, 0, 100) -- делаем квадрат, а после расширяем его
+		task.wait(1.5)
+		background.BackgroundTransparency = prevproport.BackgroundTransparency
+		
+		local maintween = ts:Create(background,TweenInfo.new(1),prevproport)
+		maintween:Play()
+		maintween.Completed:Wait()
+		
+		for _, data_object in data do -- а вот сейчас делаем их обратно в родные пропорции
+			task.spawn(function()
+				ts:Create(data_object[1], TweenInfo.new(1), data_object[2]):Play()
+			end)
+		end
+		
+		table.clear(data)
+
+		local frame = background
+
+		local dragToggle = nil
+		local dragSpeed = 0.25
+		local dragStart = nil
+		local startPos = nil
+
+		local function updateInput(input)
+			local delta = input.Position - dragStart
+			local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+				startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		end
+
+		frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+				dragToggle = true
+				dragStart = input.Position
+				startPos = frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+
+		UIS.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				if dragToggle then
+					updateInput(input)
+				end
+			end
+		end)
+	end,
+}
+
+return module

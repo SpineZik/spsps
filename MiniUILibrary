@@ -35,7 +35,7 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal)
 		UICorner_9.CornerRadius = UDim.new(0, 4)
 		UICorner_9.Parent = TextButton
 		
-		scroll.CanvasSize = children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
+		scroll.CanvasSize = #children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
 		
 		TextButton.MouseButton1Click:Connect(function()
 			task.spawn(function()

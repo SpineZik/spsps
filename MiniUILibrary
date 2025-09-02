@@ -243,7 +243,7 @@ local main_tab_module = {
 			end,
 		}
 	end,
-	CreateButton = function(properties)
+	CreateButton = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		
 		local Button = Instance.new("Frame")
@@ -306,7 +306,7 @@ local main_tab_module = {
 			end,
 		}
 	end,
-	CreateDropdown = function(properties)
+	CreateDropdown = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		
 		local DropdownFrame = Instance.new("Frame")

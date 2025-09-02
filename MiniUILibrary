@@ -5,8 +5,56 @@ local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['Local
 
 local main_tab: ScrollingFrame
 
+local function load_dropdown(scroll: ScrollingFrame, children, signal)
+	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
+		
+	for _, child: Model in children do 
+		local TextButton = Instance.new("TextButton")
+		local UICorner_9 = Instance.new("UICorner")
+		
+		TextButton.Parent = scroll
+		TextButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+		TextButton.BackgroundTransparency = 0.200
+		TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextButton.BorderSizePixel = 0
+		TextButton.Position = UDim2.new(0.0678851157, 0, 0, 0)
+		TextButton.Size = UDim2.new(0, 348, 0, 21)
+		TextButton.AutoButtonColor = false
+		TextButton.Font = Enum.Font.Jura
+		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextButton.TextScaled = true
+		TextButton.TextSize = 14.000
+		TextButton.TextWrapped = true
+		
+		if child:IsA("Model") or child:IsA("MeshPart") or child:IsA("UnionOperation") or child:IsA("Part") or child:IsA("BasePart") then
+			TextButton.Text = child.Name
+		elseif child:IsA("BoolValue") or child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
+			TextButton.Text = child.Value
+		end
+		
+		UICorner_9.CornerRadius = UDim.new(0, 4)
+		UICorner_9.Parent = TextButton
+		
+		scroll.CanvasSize = children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
+		
+		TextButton.MouseButton1Click:Connect(function()
+			task.spawn(function()
+				if not signal then warn("[SpineLibrary]: Signal was not connected (at dropdown!)") return end
+				signal(TextButton.Text)
+			end)
+			
+			for i, drop_variant: TextButton in scroll:GetChildren() do 
+				if drop_variant:IsA("TextButton") then
+					ts:Create(drop_variant, TweenInfo.new(0.7), {BackgroundColor3 = Color3.new(0.368627, 0.368627, 0.368627)}):Play()
+				end
+			end
+			ts:Create(TextButton, TweenInfo.new(0.75),{BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)}):Play()
+		end)
+	end
+end
+
 local main_tab_module = {
-	CreateButton = function(self, properties)
+	CreateToggle = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		--[[ Properties:
 			Name: имя
@@ -23,6 +71,7 @@ local main_tab_module = {
 		local Trigger = Instance.new("TextButton")
 		local UIPadding = Instance.new("UIPadding")
 		local ScrollingFrame: ScrollingFrame = main_tab
+		local status: boolean = false
 		
 		Button.Name = properties['Name']
 		Button.Parent = ScrollingFrame
@@ -87,12 +136,28 @@ local main_tab_module = {
 		UIPadding.PaddingRight = UDim.new(0, 1)
 		UIPadding.PaddingTop = UDim.new(0, 4)
 		
-		Trigger.MouseButton1Click:Connect(function()
+		local connect: RBXScriptConnection
+		
+		connect = Trigger.MouseButton1Click:Connect(function()
+			status = not status
+			if status then
+				ts:Create(Frame, properties, {Position = UDim2.new(0,26,-0.055,0)}):Play()
+			else
+				ts:Create(Frame, properties, {Position = UDim2.new(0,0,-0.055,0)}):Play()
+			end
+			
 			task.spawn(function()
 				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected!') return end
-				properties['Signal']()
+				properties['Signal'](status)
 			end)
 		end)
+		
+		return {
+			Delete = function(self)
+				connect:Disconnect()
+				Button:Destroy()
+			end,
+		}
 	end,
 	CreateTextBox = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
@@ -165,19 +230,178 @@ local main_tab_module = {
 			getgenv = function()
 				return _G
 			end
-		end
-
-		box.FocusLost:Connect(function()
+		end	
+		local connect: RBXScriptConnection
+		
+		connect = box.FocusLost:Connect(function()
 			getgenv()[properties['Variable']] = TextBox['Text']
 		end)
+		return {
+			Delete = function(self)
+				connect:Disconnect()
+				TextBoxMain:Destroy()
+			end,
+		}
+	end,
+	CreateButton = function(properties)
+		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
+		
+		local Button = Instance.new("Frame")
+		local UICorner_14 = Instance.new("UICorner")
+		local TextLabel_6 = Instance.new("TextLabel")
+		local button = Instance.new("TextButton")
+		
+		Button.Name = properties['Name']
+		Button.Parent = main_tab
+		Button.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		Button.BackgroundTransparency = 0.200
+		Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Button.BorderSizePixel = 0
+		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		Button.Size = UDim2.new(0, 383, 0, 38)
+
+		UICorner_14.CornerRadius = UDim.new(0, 4)
+		UICorner_14.Parent = Button
+
+		TextLabel_6.Parent = Button
+		TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_6.BackgroundTransparency = 1.000
+		TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_6.BorderSizePixel = 0
+		TextLabel_6.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_6.Size = UDim2.new(0, 181, 0, 33)
+		TextLabel_6.Font = Enum.Font.Unknown
+		TextLabel_6.Text = properties['Name']
+		TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_6.TextSize = 18.000
+		TextLabel_6.TextWrapped = true
+		TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
+
+		button.Name = "Trigger"
+		button.Parent = Button
+		button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		button.BackgroundTransparency = 1.000
+		button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		button.BorderSizePixel = 0
+		button.Position = UDim2.new(0.8328982, 0, 0.0263157897, 0)
+		button.Size = UDim2.new(0, 64, 0, 33)
+		button.Font = Enum.Font.SourceSans
+		button.TextColor3 = Color3.fromRGB(0, 0, 0)
+		button.TextSize = 14.000
+		button.TextTransparency = 1.000
+		
+		local connect: RBXScriptConnection
+		
+		connect = button.MouseButton1Click:Connect(function()
+			task.spawn(function()
+				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected! (Button '..properties['Name']..")") return end
+				properties['Signal']()
+			end)
+		end)
+		
+		return {
+			Delete = function(self)
+				connect:Disconnect()
+				button:Destroy()
+			end,
+		}
+	end,
+	CreateDropdown = function(properties)
+		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
+		
+		local DropdownFrame = Instance.new("Frame")
+		local UICorner_8 = Instance.new("UICorner")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local ControlSize_2 = Instance.new("ImageButton")
+		local Background = Instance.new("Frame")
+		local Variants = Instance.new("ScrollingFrame")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+		
+		DropdownFrame.Name = properties['Name']
+		DropdownFrame.Parent = main_tab
+		DropdownFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		DropdownFrame.BackgroundTransparency = 0.200
+		DropdownFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		DropdownFrame.BorderSizePixel = 0
+		DropdownFrame.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		DropdownFrame.Size = UDim2.new(0, 383, 0, 38)
+
+		UICorner_8.CornerRadius = UDim.new(0, 4)
+		UICorner_8.Parent = DropdownFrame
+
+		TextLabel_4.Parent = DropdownFrame
+		TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.BackgroundTransparency = 1.000
+		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_4.BorderSizePixel = 0
+		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_4.Size = UDim2.new(0, 181, 0, 33)
+		TextLabel_4.Font = Enum.Font.Unknown
+		TextLabel_4.Text = properties['Name']
+		TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.TextSize = 18.000
+		TextLabel_4.TextWrapped = true
+		TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+		ControlSize_2.Name = "ControlSize"
+		ControlSize_2.Parent = DropdownFrame
+		ControlSize_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ControlSize_2.BackgroundTransparency = 1.000
+		ControlSize_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		ControlSize_2.BorderSizePixel = 0
+		ControlSize_2.Position = UDim2.new(0.904017806, 0, 0.223758101, 0)
+		ControlSize_2.Size = UDim2.new(0, 35, 0, 21)
+		ControlSize_2.Image = "rbxassetid://81808702659668"
+
+		Background.Name = "Background"
+		Background.Parent = DropdownFrame
+		Background.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		Background.BackgroundTransparency = 0.200
+		Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Background.BorderSizePixel = 0
+		Background.LayoutOrder = 1
+		Background.Position = UDim2.new(0, 0, 0.947368801, 0)
+		Background.Size = UDim2.new(0, 383, 0, 0)
+		Background.Visible = false
+
+		Variants.Name = "Variants"
+		Variants.Parent = Background
+		Variants.Active = true
+		Variants.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Variants.BackgroundTransparency = 1.000
+		Variants.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Variants.BorderSizePixel = 0
+		Variants.Size = UDim2.new(1, 0, 1, 0)
+		Variants.Visible = false
+
+		UIListLayout_2.Parent = Variants
+		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		
+		load_dropdown(Variants, properties['Variants'], properties['Signal'])
+		
+		return {
+			ClearDropdown = function(self)
+				for i,v in pairs(Variants:GetChildren()) do
+					if v.Name ~= "Example" and v:IsA("TextButton") then
+						v:Destroy()
+					end
+				end
+			end,
+			UpdateDropdown = function(self, childs)
+				load_dropdown(Variants, childs, properties['Signal'])
+			end,
+		}
 	end,
 }
 setmetatable(main_tab_module, {
 	__index = function(table, index)
 		warn('[SpineLibrary]: ERROR! No Index named '..index.."!")
+		return {}
 	end,
 	__namecall = function(...)
 		warn('[SpineLibrary]: Missed the method! NO FUNCTION! Arguments: '..table.unpack({...}))
+		return {}
 	end,
 })
 
@@ -291,7 +515,7 @@ local module = {
 		local prevproport = {Size = background.Size, BackgroundTransparency = background.BackgroundTransparency}
 
 		pcall(function() -- так нада
-			for _, v in pairs(gui:GetDescendants()) do
+			for _, v in pairs(script.Parent:GetDescendants()) do
 				if v:IsA("ScrollingFrame") then
 					v.ScrollBarImageTransparency = 1 
 				elseif v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
@@ -335,7 +559,7 @@ local module = {
 			end)	
 		end)
 		
-		for _, desc in gui:GetDescendants() do
+		for _, desc in script.Parent:GetDescendants() do
 			if desc:IsA("Frame") or desc:IsA("ScrollingFrame") then
 				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency}})
 				desc.BackgroundTransparency = 1
@@ -404,3 +628,4 @@ local module = {
 }
 
 return module
+

@@ -445,10 +445,11 @@ local module = {
 			Top.Parent = Backround
 			Top.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 			Top.BackgroundTransparency = 0.350
+			Top.TextTransparency = 1
 			Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Top.BorderSizePixel = 0
 			Top.Size = UDim2.new(0, 392, 0, 34)
-
+		
 			UICorner_2.CornerRadius = UDim.new(0, 4)
 			UICorner_2.Parent = Top
 
@@ -457,7 +458,7 @@ local module = {
 			TextLabel.BackgroundTransparency = 1.000
 			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			TextLabel.BorderSizePixel = 0
-			TextLabel.Position = UDim2.new(0.0127551025, 25, 0.0266463328, 0)
+			TextLabel.Position = UDim2.new(0.04001025, 25, 0.0266463328, 0)
 			TextLabel.Size = UDim2.new(0, 136, 0, 33)
 			TextLabel.Font = Enum.Font.Unknown
 			TextLabel.Text = Name

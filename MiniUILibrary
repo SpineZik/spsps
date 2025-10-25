@@ -224,7 +224,7 @@ local main_tab_module = {
 		local textlabel: TextLabel = TextBoxMain:FindFirstChildOfClass("TextLabel")
 
 		local ts: TweenService = game:GetService("TweenService")
-		local properties: TweenInfo = TweenInfo.new(0.55)
+		local properties_: TweenInfo = TweenInfo.new(0.55)
 
 		if getgenv == nil then
 			getgenv = function()

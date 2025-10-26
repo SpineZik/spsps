@@ -234,7 +234,7 @@ local main_tab_module = {
 		local connect: RBXScriptConnection
 		
 		connect = box.FocusLost:Connect(function()
-			getgenv()[properties['Variable']] = TextBox['Text']
+			properties['Signal'](TextBox['Text'])
 		end)
 		return {
 			Delete = function(self)

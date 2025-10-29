@@ -7,11 +7,11 @@ local main_tab: ScrollingFrame
 
 local function load_dropdown(scroll: ScrollingFrame, children, signal)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
-		
+
 	for _, child: Model in children do 
 		local TextButton = Instance.new("TextButton")
 		local UICorner_9 = Instance.new("UICorner")
-		
+
 		TextButton.Parent = scroll
 		TextButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
 		TextButton.BackgroundTransparency = 0.200
@@ -25,24 +25,24 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal)
 		TextButton.TextScaled = true
 		TextButton.TextSize = 14.000
 		TextButton.TextWrapped = true
-		
+
 		if child:IsA("Model") or child:IsA("MeshPart") or child:IsA("UnionOperation") or child:IsA("Part") or child:IsA("BasePart") then
 			TextButton.Text = child.Name
 		elseif child:IsA("BoolValue") or child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
 			TextButton.Text = child.Value
 		end
-		
+
 		UICorner_9.CornerRadius = UDim.new(0, 4)
 		UICorner_9.Parent = TextButton
-		
+
 		scroll.CanvasSize = #children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
-		
+
 		TextButton.MouseButton1Click:Connect(function()
 			task.spawn(function()
 				if not signal then warn("[SpineLibrary]: Signal was not connected (at dropdown!)") return end
 				signal(TextButton.Text)
 			end)
-			
+
 			for i, drop_variant: TextButton in scroll:GetChildren() do 
 				if drop_variant:IsA("TextButton") then
 					ts:Create(drop_variant, TweenInfo.new(0.7), {BackgroundColor3 = Color3.new(0.368627, 0.368627, 0.368627)}):Play()
@@ -59,8 +59,9 @@ local main_tab_module = {
 		--[[ Properties:
 			Name: имя
 			Signal: function
+			FirstValue: boolean
 		]]
-		
+
 		local Button = Instance.new("Frame")
 		local UICorner_3 = Instance.new("UICorner")
 		local TextLabel_2 = Instance.new("TextLabel")
@@ -71,8 +72,8 @@ local main_tab_module = {
 		local Trigger = Instance.new("TextButton")
 		local UIPadding = Instance.new("UIPadding")
 		local ScrollingFrame: ScrollingFrame = main_tab
-		local status: boolean = false
-		
+		local status: boolean = properties['FirstValue'] ~= nil and properties['FirstValue'] or false
+
 		Button.Name = properties['Name']
 		Button.Parent = ScrollingFrame
 		Button.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -104,7 +105,7 @@ local main_tab_module = {
 		Turner.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 		Turner.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Turner.BorderSizePixel = 0
-		Turner.Position = UDim2.new(0.853785872, 0, 0.218210325, 0)
+		Turner.Position = not status and UDim2.new(0.853785872, 0, 0.218210325, 0) or UDim2.new(0.853785872, 26, 0.218210325, 0)
 		Turner.Size = UDim2.new(0, 47, 0, 21)
 
 		UICorner_4.Parent = Turner
@@ -135,9 +136,9 @@ local main_tab_module = {
 		UIPadding.Parent = ScrollingFrame
 		UIPadding.PaddingRight = UDim.new(0, 1)
 		UIPadding.PaddingTop = UDim.new(0, 4)
-		
+
 		local connect: RBXScriptConnection
-		
+
 		connect = Trigger.MouseButton1Click:Connect(function()
 			status = not status
 			if status then
@@ -145,13 +146,13 @@ local main_tab_module = {
 			else
 				ts:Create(Frame, TweenInfo.new(0.5), {Position = UDim2.new(0,0,-0.055,0)}):Play()
 			end
-			
+
 			task.spawn(function()
 				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected!') return end
 				properties['Signal'](status)
 			end)
 		end)
-		
+
 		return {
 			Delete = function(self)
 				connect:Disconnect()
@@ -161,14 +162,14 @@ local main_tab_module = {
 	end,
 	CreateTextBox = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-		
+
 		local TextBoxMain = Instance.new("Frame")
 		local UICorner_9 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
 		local Turner_3 = Instance.new("Frame")
 		local UICorner_10 = Instance.new("UICorner")
 		local TextBox = Instance.new("TextBox")
-		
+
 		TextBoxMain.Name = properties['Text']
 		TextBoxMain.Parent = main_tab
 		TextBoxMain.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -218,21 +219,15 @@ local main_tab_module = {
 		TextBox.TextScaled = true
 		TextBox.TextSize = 14.000
 		TextBox.TextWrapped = true
-		
+
 		local turner: Frame = Turner_3
 		local box: TextBox = turner:FindFirstChildOfClass("TextBox") or turner:FindFirstChild("TextBox")
 		local textlabel: TextLabel = TextBoxMain:FindFirstChildOfClass("TextLabel")
 
 		local ts: TweenService = game:GetService("TweenService")
 		local properties_: TweenInfo = TweenInfo.new(0.55)
-
-		if getgenv == nil then
-			getgenv = function()
-				return _G
-			end
-		end	
 		local connect: RBXScriptConnection
-		
+
 		connect = box.FocusLost:Connect(function()
 			properties['Signal'](TextBox['Text'])
 		end)
@@ -245,12 +240,12 @@ local main_tab_module = {
 	end,
 	CreateButton = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-		
+
 		local Button = Instance.new("Frame")
 		local UICorner_14 = Instance.new("UICorner")
 		local TextLabel_6 = Instance.new("TextLabel")
 		local tbutton = Instance.new("TextButton")
-		
+
 		Button.Name = properties['Name']
 		Button.Parent = main_tab
 		Button.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -289,16 +284,16 @@ local main_tab_module = {
 		tbutton.TextColor3 = Color3.fromRGB(0, 0, 0)
 		tbutton.TextSize = 14.000
 		tbutton.TextTransparency = 1.000
-		
+
 		local connect: RBXScriptConnection
-		
+
 		connect = tbutton.MouseButton1Click:Connect(function()
 			task.spawn(function()
 				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected! (Button '..properties['Name']..")") return end
 				properties['Signal']()
 			end)
 		end)
-		
+
 		return {
 			Delete = function(self)
 				connect:Disconnect()
@@ -308,7 +303,7 @@ local main_tab_module = {
 	end,
 	CreateDropdown = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-		
+
 		local DropdownFrame = Instance.new("Frame")
 		local UICorner_8 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
@@ -316,7 +311,7 @@ local main_tab_module = {
 		local Background = Instance.new("Frame")
 		local Variants = Instance.new("ScrollingFrame")
 		local UIListLayout_2 = Instance.new("UIListLayout")
-		
+
 		DropdownFrame.Name = properties['Name']
 		DropdownFrame.Parent = main_tab
 		DropdownFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -377,9 +372,9 @@ local main_tab_module = {
 		UIListLayout_2.Parent = Variants
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-		
+
 		load_dropdown(Variants, properties['Variants'], properties['Signal'])
-		
+
 		return {
 			ClearDropdown = function(self)
 				for i,v in pairs(Variants:GetChildren()) do
@@ -426,9 +421,9 @@ local module = {
 			local ControlSize = Instance.new("ImageButton")
 			local ScrollingFrame = Instance.new("ScrollingFrame")
 			local UIListLayout = Instance.new("UIListLayout")
-			
+
 			self['ControlSize'] = ControlSize
-				
+
 			Backround.Name = "Backround"
 			Backround.AnchorPoint = Vector2.new(0.5, 0.5)
 			Backround.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
@@ -449,7 +444,7 @@ local module = {
 			Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Top.BorderSizePixel = 0
 			Top.Size = UDim2.new(0, 392, 0, 34)
-		
+
 			UICorner_2.CornerRadius = UDim.new(0, 4)
 			UICorner_2.Parent = Top
 
@@ -495,12 +490,12 @@ local module = {
 			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
 			ScrollingFrame.ScrollingEnabled = false
 			main_tab = ScrollingFrame
-			
+
 			UIListLayout.Parent = ScrollingFrame
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.Padding = UDim.new(0, 3)
-			
+
 			return main_tab_module
 		else
 			warn('[SpineLibrary]: Hey! Gui won`t be loaded! The Parent is NIL, there is no CoreGui/PlayerGui!')
@@ -509,7 +504,7 @@ local module = {
 	Start = function(self)
 		local gui: StarterGui = self['Gui']
 		local turner: ImageButton = self['ControlSize']
-		
+
 		if not gui then warn('[SpineLibrary]: Hey! First make the init! "Start" starts animations and makes gui moveable.') return end
 		local background = gui:FindFirstChild("Backround") or gui:FindFirstChildOfClass("Frame")
 		local data = {} -- здесь будут храниться пропорции
@@ -527,11 +522,11 @@ local module = {
 				end
 			end
 		end)
-		
+
 		task.spawn(function()
 			local controlbutton: ImageButton = turner
 			local background: Frame = turner['Parent']['Parent']
-			
+
 			local buttons: ScrollingFrame = background:FindFirstChild("ScrollingFrame") or background:FindFirstChildOfClass("ScrollingFrame")
 			local status: boolean = true
 			local proccessing: boolean = false
@@ -559,7 +554,7 @@ local module = {
 				proccessing = false	
 			end)	
 		end)
-		
+
 		for _, desc in main_tab.Parent:GetDescendants() do
 			if desc:IsA("Frame") or desc:IsA("ScrollingFrame") then
 				table.insert(data,{desc, {BackgroundTransparency = desc.BackgroundTransparency}})
@@ -578,17 +573,17 @@ local module = {
 		background.Size = UDim2.new(0, 100, 0, 100) -- делаем квадрат, а после расширяем его
 		task.wait(1.5)
 		background.BackgroundTransparency = prevproport.BackgroundTransparency
-		
+
 		local maintween = ts:Create(background,TweenInfo.new(1),prevproport)
 		maintween:Play()
 		maintween.Completed:Wait()
-		
+
 		for _, data_object in data do -- а вот сейчас делаем их обратно в родные пропорции
 			task.spawn(function()
 				ts:Create(data_object[1], TweenInfo.new(1), data_object[2]):Play()
 			end)
 		end
-		
+
 		table.clear(data)
 
 		local frame = background
@@ -629,4 +624,3 @@ local module = {
 }
 
 return module
-

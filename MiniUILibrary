@@ -7,12 +7,9 @@ local main_tab: ScrollingFrame
 
 local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
-	print(children)
 	
 	for index, child in children do 
-		print(index, child)
 		local TextButton = Instance.new("TextButton")
-		local UICorner_9 = Instance.new("UICorner")
 
 		TextButton.Parent = scroll
 		TextButton.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
@@ -40,8 +37,6 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 		if TextButton['Text'] == first_val then
 			TextButton.BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)
 		end
-		UICorner_9.CornerRadius = UDim.new(0, 4)
-		UICorner_9.Parent = TextButton
 
 		scroll.CanvasSize = #children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
 

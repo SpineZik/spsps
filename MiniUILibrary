@@ -500,6 +500,7 @@ local module = {
 			ImageLabel.BorderSizePixel = 0
 			ImageLabel.Position = UDim2.new(0.0102040814, 0, 0.0294117648, 0)
 			ImageLabel.Size = UDim2.new(0, 34, 0, 32)
+			ImageLabel.ScaleType = Enum.ScaleType.Crop
 			if Icon ~= nil then
 				if Icon:match("https") then
 					local cont = game:HttpGet(Icon)

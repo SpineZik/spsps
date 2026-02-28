@@ -499,18 +499,16 @@ local module = {
 			ImageLabel.BorderSizePixel = 0
 			ImageLabel.Position = UDim2.new(0.0102040814, 0, 0.0294117648, 0)
 			ImageLabel.Size = UDim2.new(0, 34, 0, 32)
-
-			if Icon ~= nil then
-				if Icon:match("https") then
-					local cont = game:HttpGet(Icon)
-					pcall(function()
-						writefile("SpineIcon.png", cont)
-						ImageLabel.Image = getcustomasset("SpineIcon.png")
-					end)
-				else
-					ImageLabel.Image = (Icon ~= nil and "rbxassetid://103605169978265" or Icon)
-				end
+			if Icon:match("https") then
+				local cont = game:HttpGet(Icon)
+				pcall(function()
+					writefile("SpineIcon.png", cont)
+					ImageLabel.Image = getcustomasset("SpineIcon.png")
+				end)
+			else
+				ImageLabel.Image = (Icon ~= nil and "rbxassetid://103605169978265" or Icon)
 			end
+
 			ControlSize.Name = "ControlSize"
 			ControlSize.Parent = Top
 			ControlSize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -573,12 +571,12 @@ local module = {
 			local controlbutton: ImageButton = turner
 			local background: Frame = turner['Parent']['Parent']
 
-			local buttons: ScrollingFrame = background:FindFirstChild("ScrollingFrame") or background:FindFirstChildOfClass("ScrollingFrame")
+			local buttons_f: ScrollingFrame = background:FindFirstChild("ScrollingFrame") or background:FindFirstChildOfClass("ScrollingFrame")
 			local status: boolean = true
 			local proccessing: boolean = false
 			task.spawn(function()
 				while task.wait(1) do
-					buttons['CanvasSize'] = UDim2.new(0, 0, buttons*0.2, 0)
+					buttons_f['CanvasSize'] = UDim2.new(0, 0, buttons*0.2, 0)
 				end
 			end)
 			local closingtween = {Size = UDim2.new(0, 392, 0, 34)}
@@ -589,7 +587,7 @@ local module = {
 
 				status = not status
 				if not status then
-					buttons.Visible = false
+					buttons_f.Visible = false
 					local closing = ts:Create(background,TweenInfo.new(1),closingtween)
 					ts:Create(controlbutton,TweenInfo.new(1),{Rotation = 180}):Play()
 					closing:Play()
@@ -599,7 +597,7 @@ local module = {
 					ts:Create(controlbutton,TweenInfo.new(1),{Rotation = 0}):Play()
 					opening:Play()
 					opening.Completed:Wait()
-					buttons.Visible = true
+					buttons_f.Visible = true
 				end
 				proccessing = false	
 			end)	

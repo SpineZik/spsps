@@ -508,6 +508,8 @@ local module = {
 						writefile("SpineIcon.png", cont)
 						ImageLabel.Image = getcustomasset("SpineIcon.png")
 					end)
+				else
+					ImageLabel.Image = Icon
 				end
 			else
 				ImageLabel.Image = "rbxassetid://103605169978265"

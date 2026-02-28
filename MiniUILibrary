@@ -506,7 +506,7 @@ local module = {
 					ImageLabel.Image = getcustomasset("SpineIcon.png")
 				end)
 			else
-				ImageLabel.Image = Icon
+				ImageLabel.Image = (Icon ~= nil and "rbxassetid://103605169978265" or Icon)
 			end
 
 			ControlSize.Name = "ControlSize"

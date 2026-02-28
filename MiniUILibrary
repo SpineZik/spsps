@@ -5,10 +5,12 @@ local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['Local
 
 local main_tab: ScrollingFrame
 
-local function load_dropdown(scroll: ScrollingFrame, children, signal)
+local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
-
-	for _, child: Model in children do 
+	print(children)
+	
+	for index, child in children do 
+		print(index, child)
 		local TextButton = Instance.new("TextButton")
 		local UICorner_9 = Instance.new("UICorner")
 
@@ -25,13 +27,19 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal)
 		TextButton.TextScaled = true
 		TextButton.TextSize = 14.000
 		TextButton.TextWrapped = true
-
-		if child:IsA("Model") or child:IsA("MeshPart") or child:IsA("UnionOperation") or child:IsA("Part") or child:IsA("BasePart") then
-			TextButton.Text = child.Name
-		elseif child:IsA("BoolValue") or child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
-			TextButton.Text = child.Value
+		
+		if type(child) ~= "userdata" then
+			TextButton.Text = child
+		else
+			if child:IsA("Model") or child:IsA("MeshPart") or child:IsA("UnionOperation") or child:IsA("Part") or child:IsA("BasePart") then
+				TextButton.Text = child.Name
+			elseif child:IsA("BoolValue") or child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
+				TextButton.Text = child.Value
+			end
 		end
-
+		if TextButton['Text'] == first_val then
+			TextButton.BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)
+		end
 		UICorner_9.CornerRadius = UDim.new(0, 4)
 		UICorner_9.Parent = TextButton
 
@@ -311,7 +319,11 @@ local main_tab_module = {
 		local Background = Instance.new("Frame")
 		local Variants = Instance.new("ScrollingFrame")
 		local UIListLayout_2 = Instance.new("UIListLayout")
-
+		
+		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
+		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
+		local status: boolean = false
+		
 		DropdownFrame.Name = properties['Name']
 		DropdownFrame.Parent = main_tab
 		DropdownFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -372,9 +384,25 @@ local main_tab_module = {
 		UIListLayout_2.Parent = Variants
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		local choosen_value = properties['FirstValue'] and properties['FirstValue'] or "Nothing"
+		
+		load_dropdown(Variants, properties['Variants'], properties['Signal'], choosen_value)
+		ControlSize_2.MouseButton1Click:Connect(function()
+			status = not status
+			if status then
+				Background.Visible = status
+				Variants.Visible = status 
+				ts:Create(Background, TweenInfo.new(0.5), {Size = finish_size}):Play()
+				ts:Create(ControlSize_2,TweenInfo.new(1),{Rotation = 180}):Play()
+			else
+				ts:Create(Background, TweenInfo.new(0.5), {Size = start_size}):Play()
+				ts:Create(ControlSize_2,TweenInfo.new(1),{Rotation = 0}):Play()
 
-		load_dropdown(Variants, properties['Variants'], properties['Signal'])
-
+				task.wait(1)
+				Background.Visible = status
+				Variants.Visible = status 
+			end
+		end)
 		return {
 			ClearDropdown = function(self)
 				for i,v in pairs(Variants:GetChildren()) do
@@ -384,7 +412,7 @@ local main_tab_module = {
 				end
 			end,
 			UpdateDropdown = function(self, childs)
-				load_dropdown(Variants, childs, properties['Signal'])
+				load_dropdown(Variants, childs, properties['Signal'], "Nothing")
 			end,
 		}
 	end,
@@ -413,7 +441,7 @@ local module = {
 
 		if new_gui['Parent'] ~= nil then
 			local Backround: Frame = Instance.new("Frame", new_gui) -- init the gui
-			local Top: TextLabel = Instance.new("TextLabel")
+			local Top: Frame = Instance.new("Frame")
 			local UICorner: UICorner = Instance.new("UICorner")
 			local UICorner_2: UICorner = Instance.new("UICorner")
 			local TextLabel = Instance.new("TextLabel")
@@ -421,7 +449,8 @@ local module = {
 			local ControlSize = Instance.new("ImageButton")
 			local ScrollingFrame = Instance.new("ScrollingFrame")
 			local UIListLayout = Instance.new("UIListLayout")
-
+			local UIPadding = Instance.new("UIPadding")
+			
 			self['ControlSize'] = ControlSize
 
 			Backround.Name = "Backround"
@@ -440,7 +469,6 @@ local module = {
 			Top.Parent = Backround
 			Top.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 			Top.BackgroundTransparency = 0.350
-			Top.TextTransparency = 1
 			Top.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			Top.BorderSizePixel = 0
 			Top.Size = UDim2.new(0, 392, 0, 34)
@@ -453,13 +481,14 @@ local module = {
 			TextLabel.BackgroundTransparency = 1.000
 			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			TextLabel.BorderSizePixel = 0
-			TextLabel.Position = UDim2.new(0.04001025, 25, 0.0266463328, 0)
-			TextLabel.Size = UDim2.new(0, 146, 0, 33)
+			TextLabel.Position = UDim2.new(0.048, 25, 0.027, 0)
+			TextLabel.Size = UDim2.new(0, 316, 0, 33)
 			TextLabel.Font = Enum.Font.Unknown
 			TextLabel.Text = Name
 			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			TextLabel.TextSize = 24.000
-
+			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+			
 			ImageLabel.Parent = Top
 			ImageLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 			ImageLabel.BackgroundTransparency = 1.000
@@ -486,9 +515,14 @@ local module = {
 			ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ScrollingFrame.BorderSizePixel = 0
 			ScrollingFrame.Position = UDim2.new(0, 0, 0.148471609, 0)
-			ScrollingFrame.Size = UDim2.new(0, 392, 0, 195)
-			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-			ScrollingFrame.ScrollingEnabled = false
+			ScrollingFrame.Size = UDim2.new(0, 408, 0, 200)
+			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
+			ScrollingFrame.ScrollingEnabled = true
+			
+			UIPadding.Parent = ScrollingFrame
+			UIPadding.PaddingRight = UDim.new(0, 17)
+			UIPadding.PaddingTop = UDim.new(0, 4)
+			
 			main_tab = ScrollingFrame
 
 			UIListLayout.Parent = ScrollingFrame

@@ -25,7 +25,8 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 		TextButton.TextScaled = true
 		TextButton.TextSize = 14.000
 		TextButton.TextWrapped = true
-		
+		TextButton.Font = Enum.Font.Jura
+
 		if type(child) ~= "userdata" then
 			TextButton.Text = child
 		else
@@ -499,16 +500,17 @@ local module = {
 			ImageLabel.BorderSizePixel = 0
 			ImageLabel.Position = UDim2.new(0.0102040814, 0, 0.0294117648, 0)
 			ImageLabel.Size = UDim2.new(0, 34, 0, 32)
-			if Icon:match("https") then
-				local cont = game:HttpGet(Icon)
-				pcall(function()
-					writefile("SpineIcon.png", cont)
-					ImageLabel.Image = getcustomasset("SpineIcon.png")
-				end)
-			else
-				ImageLabel.Image = (Icon ~= nil and "rbxassetid://103605169978265" or Icon)
+			if Icon ~= nil then
+				if Icon:match("https") then
+					local cont = game:HttpGet(Icon)
+					pcall(function()
+						writefile("SpineIcon.png", cont)
+						ImageLabel.Image = getcustomasset("SpineIcon.png")
+					end)
+				else
+					ImageLabel.Image = (Icon ~= nil and "rbxassetid://103605169978265" or Icon)
+				end
 			end
-
 			ControlSize.Name = "ControlSize"
 			ControlSize.Parent = Top
 			ControlSize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -576,7 +578,7 @@ local module = {
 			local proccessing: boolean = false
 			task.spawn(function()
 				while task.wait(1) do
-					buttons_f['CanvasSize'] = UDim2.new(0, 0, buttons*0.2, 0)
+					buttons_f['CanvasSize'] = UDim2.new(0, 0, buttons*0.27, 0)
 				end
 			end)
 			local closingtween = {Size = UDim2.new(0, 392, 0, 34)}

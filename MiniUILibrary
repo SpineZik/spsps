@@ -4,6 +4,7 @@ local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['Local
 -- Gui without tabs!
 
 local main_tab: ScrollingFrame
+local buttons = 0; -- x0.2 = scale of scrolling frame.
 
 local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
@@ -58,6 +59,7 @@ end
 
 local main_tab_module = {
 	CreateToggle = function(self, properties)
+		buttons += 1
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		--[[ Properties:
 			Name: имя
@@ -160,12 +162,14 @@ local main_tab_module = {
 			Delete = function(self)
 				connect:Disconnect()
 				Button:Destroy()
+				buttons -= 1
 			end,
 		}
 	end,
 	CreateTextBox = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-
+		buttons += 1
+		
 		local TextBoxMain = Instance.new("Frame")
 		local UICorner_9 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
@@ -238,12 +242,14 @@ local main_tab_module = {
 			Delete = function(self)
 				connect:Disconnect()
 				TextBoxMain:Destroy()
+				buttons -=1
 			end,
 		}
 	end,
 	CreateButton = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-
+		buttons += 1
+		
 		local Button = Instance.new("Frame")
 		local UICorner_14 = Instance.new("UICorner")
 		local TextLabel_6 = Instance.new("TextLabel")
@@ -301,12 +307,14 @@ local main_tab_module = {
 			Delete = function(self)
 				connect:Disconnect()
 				Button:Destroy()
+				buttons -= 1
 			end,
 		}
 	end,
 	CreateDropdown = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
-
+		buttons += 1
+		
 		local DropdownFrame = Instance.new("Frame")
 		local UICorner_8 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
@@ -424,7 +432,7 @@ setmetatable(main_tab_module, {
 })
 
 local module = {
-	Init = function(self, gui_parent: Object, Name: string)
+	Init = function(self, gui_parent: Object, Name: string, Icon: string)
 		if not gui_parent then
 			gui_parent = core_gui
 		end
@@ -491,7 +499,15 @@ local module = {
 			ImageLabel.BorderSizePixel = 0
 			ImageLabel.Position = UDim2.new(0.0102040814, 0, 0.0294117648, 0)
 			ImageLabel.Size = UDim2.new(0, 34, 0, 32)
-			ImageLabel.Image = "rbxassetid://103605169978265"
+			if Icon:match("https") then
+				local cont = game:HttpGet(Icon)
+				pcall(function()
+					writefile("SpineIcon.png", cont)
+					ImageLabel.Image = getcustomasset("SpineIcon.png")
+				end)
+			else
+				ImageLabel.Image = Icon
+			end
 
 			ControlSize.Name = "ControlSize"
 			ControlSize.Parent = Top
@@ -551,7 +567,6 @@ local module = {
 				end
 			end
 		end)
-
 		task.spawn(function()
 			local controlbutton: ImageButton = turner
 			local background: Frame = turner['Parent']['Parent']
@@ -559,7 +574,11 @@ local module = {
 			local buttons: ScrollingFrame = background:FindFirstChild("ScrollingFrame") or background:FindFirstChildOfClass("ScrollingFrame")
 			local status: boolean = true
 			local proccessing: boolean = false
-
+			task.spawn(function()
+				while task.wait(1) do
+					buttons['CanvasSize'] = UDim2.new(0, 0, buttons*0.2, 0)
+				end
+			end)
 			local closingtween = {Size = UDim2.new(0, 392, 0, 34)}
 			local openingtween = {Size = background.Size}
 			controlbutton.MouseButton1Click:Connect(function()

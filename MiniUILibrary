@@ -1,14 +1,44 @@
 local ts: TweenService = game:GetService("TweenService")
 local UIS: UserInputService = game:GetService('UserInputService')
+local Mouse = game['Players']['LocalPlayer']:GetMouse()
 local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['LocalPlayer']['PlayerGui']
 -- Gui without tabs!
 
 local main_tab: ScrollingFrame
 local buttons = 0; -- x0.2 = scale of scrolling frame.
 
+local Objects = {}
+local ActualTypes = {RoundFrame = "ImageLabel", Shadow = "ImageLabel", Circle = "ImageLabel", CircleButton = "ImageButton", Frame = "Frame", Label = "TextLabel", Button = "TextButton", SmoothButton = "ImageButton", Box = "TextBox", ScrollingFrame = "ScrollingFrame", Menu = "ImageButton", NavBar = "ImageButton"}
+local Properties = {RoundFrame = {BackgroundTransparency = 1, Image = "http://www.roblox.com/asset/?id=5554237731", ScaleType = Enum.ScaleType.Slice, SliceCenter = Rect.new(3,3,297,297)}, SmoothButton = {AutoButtonColor = false, BackgroundTransparency = 1, Image = "http://www.roblox.com/asset/?id=5554237731", ScaleType = Enum.ScaleType.Slice, SliceCenter = Rect.new(3,3,297,297)}, Shadow = {Name = "Shadow", BackgroundTransparency = 1, Image = "http://www.roblox.com/asset/?id=5554236805", ScaleType = Enum.ScaleType.Slice, SliceCenter = Rect.new(23,23,277,277), Size = UDim2.fromScale(1,1) + UDim2.fromOffset(30,30), Position = UDim2.fromOffset(-15,-15)}, Circle = {BackgroundTransparency = 1, Image = "http://www.roblox.com/asset/?id=5554831670"}, CircleButton = {BackgroundTransparency = 1, AutoButtonColor = false, Image = "http://www.roblox.com/asset/?id=5554831670"}, Frame = {BackgroundTransparency = 1, BorderSizePixel = 0, Size = UDim2.fromScale(1,1)}, Label = {BackgroundTransparency = 1, Position = UDim2.fromOffset(5,0), Size = UDim2.fromScale(1,1) - UDim2.fromOffset(5,0), TextSize = 14, TextXAlignment = Enum.TextXAlignment.Left}, Button = {BackgroundTransparency = 1, Position = UDim2.fromOffset(5,0), Size = UDim2.fromScale(1,1) - UDim2.fromOffset(5,0), TextSize = 14, TextXAlignment = Enum.TextXAlignment.Left}, Box = {BackgroundTransparency = 1, Position = UDim2.fromOffset(5,0), Size = UDim2.fromScale(1,1) - UDim2.fromOffset(5,0), TextSize = 14, TextXAlignment = Enum.TextXAlignment.Left}, ScrollingFrame = {BackgroundTransparency = 1, ScrollBarThickness = 0, CanvasSize = UDim2.fromScale(0,0), Size = UDim2.fromScale(1,1)}, Menu = {Name = "More", AutoButtonColor = false, BackgroundTransparency = 1, Image = "http://www.roblox.com/asset/?id=5555108481", Size = UDim2.fromOffset(20,20), Position = UDim2.fromScale(1,0.5) - UDim2.fromOffset(25,10)}, NavBar = {Name = "SheetToggle", Image = "http://www.roblox.com/asset/?id=5576439039", BackgroundTransparency = 1, Size = UDim2.fromOffset(20,20), Position = UDim2.fromOffset(5,5), AutoButtonColor = false}}
+local Types = {"RoundFrame", "Shadow", "Circle", "CircleButton", "Frame", "Label", "Button", "SmoothButton", "Box", "ScrollingFrame", "Menu", "NavBar"}
+function FindType(String) for _, Type in next, Types do if Type:sub(1, #String):lower() == String:lower() then return Type end end return false end
+function Objects.new(Type) local TargetType = FindType(Type) if TargetType then local NewImage = Instance.new(ActualTypes[TargetType]) if Properties[TargetType] then for Property, Value in next, Properties[TargetType] do NewImage[Property] = Value end end return NewImage else return Instance.new(Type) end end
+
+local function GetXY(GuiObject)
+	local Max, May = GuiObject.AbsoluteSize.X, GuiObject.AbsoluteSize.Y
+	local Px, Py = math.clamp(Mouse.X - GuiObject.AbsolutePosition.X, 0, Max), math.clamp(Mouse.Y - GuiObject.AbsolutePosition.Y, 0, May)
+	return Px/Max, Py/May
+end
+
+local function CircleAnim(GuiObject, EndColour, StartColour)
+	local PX, PY = GetXY(GuiObject)
+	local Circle = Objects.new("Circle")
+	Circle.Size = UDim2.fromScale(0,0)
+	Circle.Position = UDim2.fromScale(PX,PY)
+	Circle.ImageColor3 = Color3.fromRGB(85,85,85) or GuiObject.ImageColor3
+	Circle.ZIndex = 200
+	Circle.Parent = GuiObject
+	local Size = GuiObject.AbsoluteSize.X
+	game:GetService("TweenService"):Create(Circle, TweenInfo.new(1), {Position = UDim2.fromScale(PX,PY) - UDim2.fromOffset(Size/2,Size/2), ImageTransparency = 1, ImageColor3 = Color3.fromRGB(255,255,255), Size = UDim2.fromOffset(Size,Size)}):Play()
+	spawn(function()
+		wait(2)
+		Circle:Destroy()
+	end)
+end
+
 local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
-	
+
 	for index, child in children do 
 		local TextButton = Instance.new("TextButton")
 
@@ -98,7 +128,7 @@ local main_tab_module = {
 		TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_2.BorderSizePixel = 0
 		TextLabel_2.Position = UDim2.new(0.039164491, 0, 0.049866125, 0)
-		TextLabel_2.Size = UDim2.new(0, 300, 0, 33)
+		TextLabel_2.Size = UDim2.new(0, 147, 0, 33)
 		TextLabel_2.Font = Enum.Font.Unknown
 		TextLabel_2.Text = properties['Name']
 		TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -170,7 +200,7 @@ local main_tab_module = {
 	CreateTextBox = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		buttons += 1
-		
+
 		local TextBoxMain = Instance.new("Frame")
 		local UICorner_9 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
@@ -250,7 +280,7 @@ local main_tab_module = {
 	CreateButton = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		buttons += 1
-		
+
 		local Button = Instance.new("Frame")
 		local UICorner_14 = Instance.new("UICorner")
 		local TextLabel_6 = Instance.new("TextLabel")
@@ -264,7 +294,8 @@ local main_tab_module = {
 		Button.BorderSizePixel = 0
 		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
 		Button.Size = UDim2.new(0, 383, 0, 38)
-
+		Button.ClipsDescendants = true
+		
 		UICorner_14.CornerRadius = UDim.new(0, 4)
 		UICorner_14.Parent = Button
 
@@ -301,6 +332,9 @@ local main_tab_module = {
 			task.spawn(function()
 				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected! (Button '..properties['Name']..")") return end
 				properties['Signal']()
+				print(pcall(function()
+					CircleAnim(Button)
+				end))
 			end)
 		end)
 
@@ -315,7 +349,7 @@ local main_tab_module = {
 	CreateDropdown = function(self, properties)
 		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
 		buttons += 1
-		
+
 		local DropdownFrame = Instance.new("Frame")
 		local UICorner_8 = Instance.new("UICorner")
 		local TextLabel_4 = Instance.new("TextLabel")
@@ -323,11 +357,11 @@ local main_tab_module = {
 		local Background = Instance.new("Frame")
 		local Variants = Instance.new("ScrollingFrame")
 		local UIListLayout_2 = Instance.new("UIListLayout")
-		
+
 		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
 		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
 		local status: boolean = false
-		
+
 		DropdownFrame.Name = properties['Name']
 		DropdownFrame.Parent = main_tab
 		DropdownFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -389,7 +423,7 @@ local main_tab_module = {
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 		local choosen_value = properties['FirstValue'] and properties['FirstValue'] or "Nothing"
-		
+
 		load_dropdown(Variants, properties['Variants'], properties['Signal'], choosen_value)
 		ControlSize_2.MouseButton1Click:Connect(function()
 			status = not status
@@ -454,7 +488,7 @@ local module = {
 			local ScrollingFrame = Instance.new("ScrollingFrame")
 			local UIListLayout = Instance.new("UIListLayout")
 			local UIPadding = Instance.new("UIPadding")
-			
+
 			self['ControlSize'] = ControlSize
 
 			Backround.Name = "Backround"
@@ -492,7 +526,7 @@ local module = {
 			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			TextLabel.TextSize = 24.000
 			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-			
+
 			ImageLabel.Parent = Top
 			ImageLabel.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 			ImageLabel.BackgroundTransparency = 1.000
@@ -534,11 +568,11 @@ local module = {
 			ScrollingFrame.Size = UDim2.new(0, 408, 0, 200)
 			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
 			ScrollingFrame.ScrollingEnabled = true
-			
+
 			UIPadding.Parent = ScrollingFrame
 			UIPadding.PaddingRight = UDim.new(0, 17)
 			UIPadding.PaddingTop = UDim.new(0, 4)
-			
+
 			main_tab = ScrollingFrame
 
 			UIListLayout.Parent = ScrollingFrame

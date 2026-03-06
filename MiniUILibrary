@@ -295,7 +295,7 @@ local main_tab_module = {
 		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
 		Button.Size = UDim2.new(0, 383, 0, 38)
 		Button.ClipsDescendants = true
-		
+
 		UICorner_14.CornerRadius = UDim.new(0, 4)
 		UICorner_14.Parent = Button
 
@@ -454,6 +454,111 @@ local main_tab_module = {
 			end,
 		}
 	end,
+	CreateSlider = function(self, properties)
+		local SliderMax = properties['SliderMax'] and properties['SliderMax'] or 200
+		local SliderMin = properties['SliderMin'] and properties['SliderMin'] or 0
+		local SliderDef = properties['SliderDef'] and properties['SliderDef'] or (SliderMax + SliderMin)/2
+		local Precision = properties['Precision'] and properties['Precision'] or 0
+		
+		local Slider = Instance.new("Frame")
+		local UICorner_10 = Instance.new("UICorner")
+		local SliderName = Instance.new("TextLabel")
+		local Slider_2 = Instance.new("Frame")
+		local Slider_3 = Instance.new("ImageButton")
+		local Line = Instance.new("Frame")
+		local Value = Instance.new("TextLabel")
+
+		Slider.Name = properties['Name']
+		Slider.Parent = main_tab
+		Slider.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		Slider.BackgroundTransparency = 0.200
+		Slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Slider.BorderSizePixel = 0
+		Slider.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		Slider.Size = UDim2.new(0, 383, 0, 38)
+
+		UICorner_10.CornerRadius = UDim.new(0, 4)
+		UICorner_10.Parent = Slider
+
+		SliderName.Name = "SliderName"
+		SliderName.Parent = Slider
+		SliderName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		SliderName.BackgroundTransparency = 1.000
+		SliderName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		SliderName.BorderSizePixel = 0
+		SliderName.Position = UDim2.new(0.039164491, 0, 0, 3)
+		SliderName.Size = UDim2.new(0, 317, 0, 17)
+		SliderName.Font = Enum.Font.Unknown
+		SliderName.Text = properties['Name']
+		SliderName.TextColor3 = Color3.fromRGB(255, 255, 255)
+		SliderName.TextSize = 16.000
+		SliderName.TextWrapped = true
+		SliderName.TextXAlignment = Enum.TextXAlignment.Left
+
+		Slider_2.Name = "Slider"
+		Slider_2.Parent = Slider
+		Slider_2.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+		Slider_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Slider_2.BorderSizePixel = 0
+		Slider_2.Position = UDim2.new(0.0400000177, 0, 0.604999721, 0)
+		Slider_2.Size = UDim2.new(0.986109376, -20, 0, 3)
+
+		Slider_3.Name = "Dot"
+		Slider_3.Parent = Slider_2
+		Slider_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Slider_3.BackgroundTransparency = 1.000
+		Slider_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Slider_3.BorderSizePixel = 0
+		Slider_3.Position = UDim2.new((SliderDef - SliderMin) / (SliderMax - SliderMin), -5, 0.5, -5)
+		Slider_3.Size = UDim2.new(0, 10, 0, 10)
+		Slider_3.Image = "rbxassetid://5554831670"
+
+		Line.Name = "Line"
+		Line.Parent = Slider_2
+		Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Line.BorderSizePixel = 0
+		Line.Size = UDim2.new((SliderDef - SliderMin) / (SliderMax - SliderMin), 0, 1, 0)
+		
+		Value.Name = "Value"
+		Value.Parent = Slider
+		Value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Value.BackgroundTransparency = 1.000
+		Value.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Value.BorderSizePixel = 0
+		Value.Position = UDim2.new(0.845952988, 0, 0, 3)
+		Value.Size = UDim2.new(0, 49, 0, 17)
+		Value.Font = Enum.Font.Jura
+		Value.Text = SliderDef
+		Value.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Value.TextScaled = true
+		Value.TextSize = 16.000
+		Value.TextWrapped = true
+		Value.TextXAlignment = Enum.TextXAlignment.Right
+		
+		local move, kill; -- хуйня ебливая суко
+		local mouse = game['Players']['LocalPlayer']:GetMouse()
+		local uis = game:GetService("UserInputService")
+		
+		Slider_3['MouseButton1Down']:Connect(function()
+			move = mouse['Move']:Connect(function()
+				local scale = GetXY(Slider_2)
+				local power = 10 ^ Precision
+				local value = math.floor((SliderMin + (SliderMax - SliderMin) * scale) * power) / power
+
+				Line['Size'] = UDim2.new(scale, 0, 1, 0)
+				Slider_3['Position'] = UDim2.new(scale, - Slider_3.AbsoluteSize.X/2, 0.5, - Slider_3.AbsoluteSize.Y/2)
+				Value['Text'] = value
+				properties['Signal'](value)
+			end)	
+			kill = uis.InputEnded:Connect(function(type)
+				if type['UserInputType'] == Enum['UserInputType']['MouseButton1'] then
+					move:Disconnect()
+					kill:Disconnect()
+				end
+			end)
+		end)
+	end,
 }
 setmetatable(main_tab_module, {
 	__index = function(table, index)
@@ -474,7 +579,11 @@ local module = {
 		if not Name then
 			Name = "SpineGui"
 		end
+		if gethui ~= nil then
+			gui_parent = gethui()
+		end
 		local new_gui: ScreenGui = Instance.new("ScreenGui", gui_parent)
+		new_gui['Name'] = Name
 		self['Gui'] = new_gui
 
 		if new_gui['Parent'] ~= nil then

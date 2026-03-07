@@ -20,9 +20,11 @@ local function GetXY(GuiObject)
 	return Px/Max, Py/May
 end
 
+local PreloadCircle = Objects.new("Circle")
+
 local function CircleAnim(GuiObject, EndColour, StartColour)
 	local PX, PY = GetXY(GuiObject)
-	local Circle = Objects.new("Circle")
+	local Circle = PreloadCircle:Clone()
 	Circle.Size = UDim2.fromScale(0,0)
 	Circle.Position = UDim2.fromScale(PX,PY)
 	Circle.ImageColor3 = Color3.fromRGB(85,85,85) or GuiObject.ImageColor3

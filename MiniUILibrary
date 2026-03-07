@@ -332,9 +332,9 @@ local main_tab_module = {
 			task.spawn(function()
 				if not properties['Signal'] then warn('[SpineLibrary]: Denied, signal was not connected! (Button '..properties['Name']..")") return end
 				properties['Signal']()
-				print(pcall(function()
+				pcall(function()
 					CircleAnim(Button)
-				end))
+				end)
 			end)
 		end)
 
@@ -455,6 +455,7 @@ local main_tab_module = {
 		}
 	end,
 	CreateSlider = function(self, properties)
+		buttons += 1
 		local SliderMax = properties['SliderMax'] and properties['SliderMax'] or 200
 		local SliderMin = properties['SliderMin'] and properties['SliderMin'] or 0
 		local SliderDef = properties['SliderDef'] and properties['SliderDef'] or (SliderMax + SliderMin)/2

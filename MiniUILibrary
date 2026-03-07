@@ -15,7 +15,7 @@ function FindType(String) for _, Type in next, Types do if Type:sub(1, #String):
 function Objects.new(Type) local TargetType = FindType(Type) if TargetType then local NewImage = Instance.new(ActualTypes[TargetType]) if Properties[TargetType] then for Property, Value in next, Properties[TargetType] do NewImage[Property] = Value end end return NewImage else return Instance.new(Type) end end
 
 local dropdowns = {}
-function DropDownPriority() for i = 1, #dropdowns do task.spawn(function() dropdowns[i]['ZIndex'] = #dropdowns - i + 1; dropdowns[i]:FindFirstChildOfClass("Frame"):WaitForChild("ScrollingFrame")['ZIndex'] = #dropdowns - i + 1 end) end end
+function DropDownPriority() for i = 1, #dropdowns do task.spawn(function() pcall(function() dropdowns[i]['ZIndex'] = #dropdowns - i + 1; dropdowns[i]:FindFirstChild("Variants", true)['ZIndex'] = #dropdowns - i + 1 end) end) end end
 function FindElement(table, element) for _, el in table do if el == element then return true end end return false end
 local function GetXY(GuiObject)
 	local Max, May = GuiObject.AbsoluteSize.X, GuiObject.AbsoluteSize.Y
@@ -45,7 +45,7 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
 	local chooser = is_chooser and true or false
 	local choosen = {}
-	print(chooser)
+
 	for index, child in children do 
 		local TextButton = Instance.new("TextButton")
 
@@ -99,13 +99,13 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 			end
 			task.spawn(function()
 				if not signal then warn("[SpineLibrary]: Signal was not connected (at dropdown!)") return end
-				local format_ = {}
+				local formattable = {}
 				if chooser then
-					for _, element in choosen do 
-						table.insert(format_, element['Text']:gsub("%<[^>]*>",""))
+					for aindex, element__ in choosen do 
+						table.insert(formattable, tostring(element__['Text']:gsub("%<[^>]*>", "")))
 					end
 				end
-				signal(not chooser and TextButton.Text:gsub("%<[^>]*>","") or format_)
+				signal(not chooser and TextButton.Text:gsub("%<[^>]*>","") or formattable)
 			end)
 			if not chooser then 
 				for i, drop_variant: TextButton in scroll:GetChildren() do 

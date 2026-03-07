@@ -14,6 +14,9 @@ local Types = {"RoundFrame", "Shadow", "Circle", "CircleButton", "Frame", "Label
 function FindType(String) for _, Type in next, Types do if Type:sub(1, #String):lower() == String:lower() then return Type end end return false end
 function Objects.new(Type) local TargetType = FindType(Type) if TargetType then local NewImage = Instance.new(ActualTypes[TargetType]) if Properties[TargetType] then for Property, Value in next, Properties[TargetType] do NewImage[Property] = Value end end return NewImage else return Instance.new(Type) end end
 
+local dropdowns = {}
+function DropDownPriority() for i = 1, #dropdowns do task.spawn(function() dropdowns[i]['ZIndex'] = #dropdowns - i + 1; dropdowns[i]:FindFirstChildOfClass("Frame"):WaitForChild("ScrollingFrame")['ZIndex'] = #dropdowns - i + 1 end) end end
+function FindElement(table, element) for _, el in table do if el == element then return true end end return false end
 local function GetXY(GuiObject)
 	local Max, May = GuiObject.AbsoluteSize.X, GuiObject.AbsoluteSize.Y
 	local Px, Py = math.clamp(Mouse.X - GuiObject.AbsolutePosition.X, 0, Max), math.clamp(Mouse.Y - GuiObject.AbsolutePosition.Y, 0, May)
@@ -38,9 +41,11 @@ local function CircleAnim(GuiObject, EndColour, StartColour)
 	end)
 end
 
-local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val)
+local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val, is_chooser)
 	if not children then warn('[SpineLibrary]: Hey! Children are nil! Dropdown can not be filled by nil.') return end
-
+	local chooser = is_chooser and true or false
+	local choosen = {}
+	print(chooser)
 	for index, child in children do 
 		local TextButton = Instance.new("TextButton")
 
@@ -64,28 +69,52 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 		else
 			if child:IsA("Model") or child:IsA("MeshPart") or child:IsA("UnionOperation") or child:IsA("Part") or child:IsA("BasePart") then
 				TextButton.Text = child.Name
-			elseif child:IsA("BoolValue") or child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
+			elseif child:IsA("StringValue") or child:IsA("IntValue") or child:IsA("ObjectValue") then
 				TextButton.Text = child.Value
+			else
+				pcall(function()
+					TextButton.Text = child.Name
+				end)
 			end
 		end
 		if TextButton['Text'] == first_val then
 			TextButton.BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)
 		end
-
-		scroll.CanvasSize = #children > 5 and scroll.CanvasSize + UDim2.new(0, 0, 0.4, 0) or UDim2.new(0, 0, 2, 0)
-
+		scroll.CanvasSize = scroll.CanvasSize + UDim2.new(0, 0, 0.2, 0) 
 		TextButton.MouseButton1Click:Connect(function()
-			task.spawn(function()
-				if not signal then warn("[SpineLibrary]: Signal was not connected (at dropdown!)") return end
-				signal(TextButton.Text)
-			end)
-
-			for i, drop_variant: TextButton in scroll:GetChildren() do 
-				if drop_variant:IsA("TextButton") then
-					ts:Create(drop_variant, TweenInfo.new(0.7), {BackgroundColor3 = Color3.new(0.368627, 0.368627, 0.368627)}):Play()
+			local was_found = false
+			if chooser then
+				if not FindElement(choosen, TextButton) then 
+					table.insert(choosen, TextButton)
+				else
+					was_found = true
+					local index = 0
+					for i, v in choosen do
+						if v == TextButton then
+							index = i
+						end
+					end
+					table.remove(choosen, index)
 				end
 			end
-			ts:Create(TextButton, TweenInfo.new(0.75),{BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)}):Play()
+			task.spawn(function()
+				if not signal then warn("[SpineLibrary]: Signal was not connected (at dropdown!)") return end
+				local format_ = {}
+				if chooser then
+					for _, element in choosen do 
+						table.insert(format_, element['Text']:gsub("%<[^>]*>",""))
+					end
+				end
+				signal(not chooser and TextButton.Text:gsub("%<[^>]*>","") or format_)
+			end)
+			if not chooser then 
+				for i, drop_variant: TextButton in scroll:GetChildren() do 
+					if drop_variant:IsA("TextButton") then
+						ts:Create(drop_variant, TweenInfo.new(0.7), {BackgroundColor3 = Color3.new(0.368627, 0.368627, 0.368627)}):Play()
+					end
+				end
+			end
+			ts:Create(TextButton, TweenInfo.new(0.75),{BackgroundColor3 = was_found and Color3.new(0.368627, 0.368627, 0.368627) or Color3.new(0.211765, 0.639216, 0.164706)}):Play()
 		end)
 	end
 end
@@ -359,7 +388,10 @@ local main_tab_module = {
 		local Background = Instance.new("Frame")
 		local Variants = Instance.new("ScrollingFrame")
 		local UIListLayout_2 = Instance.new("UIListLayout")
-
+	
+		table.insert(dropdowns, DropdownFrame)
+		DropDownPriority()
+		
 		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
 		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
 		local status: boolean = false
@@ -372,7 +404,8 @@ local main_tab_module = {
 		DropdownFrame.BorderSizePixel = 0
 		DropdownFrame.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
 		DropdownFrame.Size = UDim2.new(0, 383, 0, 38)
-
+		DropdownFrame.ZIndex = 2
+		
 		UICorner_8.CornerRadius = UDim.new(0, 4)
 		UICorner_8.Parent = DropdownFrame
 
@@ -429,6 +462,7 @@ local main_tab_module = {
 		load_dropdown(Variants, properties['Variants'], properties['Signal'], choosen_value)
 		ControlSize_2.MouseButton1Click:Connect(function()
 			status = not status
+			Variants['ScrollBarImageTransparency'] = not status and 1 or 0
 			if status then
 				Background.Visible = status
 				Variants.Visible = status 
@@ -562,6 +596,119 @@ local main_tab_module = {
 			end)
 		end)
 	end,
+	CreateChooser = function(self, properties)
+		if not main_tab then warn('[SpineLibrary]: Init me, please! (Library:Init())') return end
+		buttons += 1
+
+		local DropdownFrame = Instance.new("Frame")
+		local UICorner_8 = Instance.new("UICorner")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local ControlSize_2 = Instance.new("ImageButton")
+		local Background = Instance.new("Frame")
+		local Variants = Instance.new("ScrollingFrame")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+
+		table.insert(dropdowns, DropdownFrame)
+		DropDownPriority()
+
+		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
+		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
+		local status: boolean = false
+
+		DropdownFrame.Name = properties['Name']
+		DropdownFrame.Parent = main_tab
+		DropdownFrame.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		DropdownFrame.BackgroundTransparency = 0.200
+		DropdownFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		DropdownFrame.BorderSizePixel = 0
+		DropdownFrame.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
+		DropdownFrame.Size = UDim2.new(0, 383, 0, 38)
+		DropdownFrame.ZIndex = 2
+
+		UICorner_8.CornerRadius = UDim.new(0, 4)
+		UICorner_8.Parent = DropdownFrame
+
+		TextLabel_4.Parent = DropdownFrame
+		TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.BackgroundTransparency = 1.000
+		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		TextLabel_4.BorderSizePixel = 0
+		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_4.Size = UDim2.new(0, 300, 0, 33)
+		TextLabel_4.Font = Enum.Font.Unknown
+		TextLabel_4.Text = properties['Name']
+		TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel_4.TextSize = 18.000
+		TextLabel_4.TextWrapped = true
+		TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
+
+		ControlSize_2.Name = "ControlSize"
+		ControlSize_2.Parent = DropdownFrame
+		ControlSize_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		ControlSize_2.BackgroundTransparency = 1.000
+		ControlSize_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		ControlSize_2.BorderSizePixel = 0
+		ControlSize_2.Position = UDim2.new(0.904017806, 0, 0.223758101, 0)
+		ControlSize_2.Size = UDim2.new(0, 35, 0, 21)
+		ControlSize_2.Image = "rbxassetid://81808702659668"
+
+		Background.Name = "Background"
+		Background.Parent = DropdownFrame
+		Background.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+		Background.BackgroundTransparency = 0.200
+		Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Background.BorderSizePixel = 0
+		Background.LayoutOrder = 1
+		Background.Position = UDim2.new(0, 0, 0.947368801, 0)
+		Background.Size = UDim2.new(0, 383, 0, 0)
+		Background.Visible = false
+
+		Variants.Name = "Variants"
+		Variants.Parent = Background
+		Variants.Active = true
+		Variants.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Variants.BackgroundTransparency = 1.000
+		Variants.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		Variants.BorderSizePixel = 0
+		Variants.Size = UDim2.new(1, 0, 1, 0)
+		Variants.Visible = false
+
+		UIListLayout_2.Parent = Variants
+		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+		local choosen_value = properties['FirstValue'] and properties['FirstValue'] or "Nothing"
+
+		load_dropdown(Variants, properties['Variants'], properties['Signal'], choosen_value, "chooser")
+		ControlSize_2.MouseButton1Click:Connect(function()
+			status = not status
+			Variants['ScrollBarImageTransparency'] = not status and 1 or 0
+			if status then
+				Background.Visible = status
+				Variants.Visible = status 
+				ts:Create(Background, TweenInfo.new(0.5), {Size = finish_size}):Play()
+				ts:Create(ControlSize_2,TweenInfo.new(1),{Rotation = 180}):Play()
+			else
+				ts:Create(Background, TweenInfo.new(0.5), {Size = start_size}):Play()
+				ts:Create(ControlSize_2,TweenInfo.new(1),{Rotation = 0}):Play()
+
+				task.wait(1)
+				Background.Visible = status
+				Variants.Visible = status 
+			end
+		end)
+		return {
+			ClearDropdown = function(self)
+				for i,v in pairs(Variants:GetChildren()) do
+					if v.Name ~= "Example" and v:IsA("TextButton") then
+						v:Destroy()
+					end
+				end
+			end,
+			UpdateDropdown = function(self, childs)
+				load_dropdown(Variants, childs, properties['Signal'], "Nothing", "chooser")
+			end,
+		}
+	end,
 }
 setmetatable(main_tab_module, {
 	__index = function(table, index)
@@ -587,6 +734,8 @@ local module = {
 		end
 		local new_gui: ScreenGui = Instance.new("ScreenGui", gui_parent)
 		new_gui['Name'] = Name
+		new_gui['ZIndexBehavior'] = Enum['ZIndexBehavior']['Sibling']
+		
 		self['Gui'] = new_gui
 
 		if new_gui['Parent'] ~= nil then

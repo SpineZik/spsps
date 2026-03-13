@@ -1,0 +1,2504 @@
+gethui = function()
+	return game['CoreGui']
+end
+
+local toggles_list = {
+	ESP = Instance.new("BoolValue"),
+	ESPEnabled = {
+		Players = Instance.new("BoolValue"),
+		Mercenaries = Instance.new("BoolValue"),
+		Parasites = Instance.new("BoolValue")
+	},
+	WalkSpeed = Instance.new("IntValue"),
+	JumpPower = Instance.new("IntValue"),
+	SmartStorage = Instance.new("BoolValue"),
+	ItemSeen = Instance.new("BoolValue"),
+	InfStorage = Instance.new("BoolValue"),
+	Noclip = Instance.new("BoolValue"),
+	AntiSpotted = Instance.new("BoolValue"),
+	TrollPlayer = Instance.new("BoolValue"),
+	TrolledPlayer = Instance.new("ObjectValue"),
+	BuddiesTroll = false,
+	AutoAnswer = false,
+	AutoTPGiver = false,
+	ChoosedReward = "",
+	RewardCount = 1,
+	HighlightsEnabled = false,
+	HighPlayer = Instance.new("Color3Value"),
+	HighMerc = Instance.new("Color3Value"),
+	HighParasite = Instance.new("Color3Value")
+}
+
+local Functions = {
+	Mineshaft = function()
+		local success, err = pcall(function()
+			pcall(function ()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PylonScreenEarth.Button.WorldPivot
+				repeat task.wait() until workspace.Map.Main.PylonScreenEarth.Button:FindFirstChild("Main")
+			end)
+
+			local click = workspace.Map.Main.PylonScreenEarth.Button.Main.ClickDetector
+
+			repeat
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = click.Parent.CFrame + Vector3.new(0,2,0)
+				fireclickdetector(click)
+				task.wait(.03)
+			until click.Parent.Material ~= Enum.Material.Neon
+		end)
+	end,
+	Water = function()
+		local click = workspace.Map.Main.LeviathanFragments.State.Solved
+
+		for i = 1, 15 do
+			pcall(function()  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=workspace.Map.Main.PerspectiveTriggerModel.WorldPivot   end)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Map.Main.PerspectiveTriggerModel.PerspectiveTrigger.CFrame + Vector3.new(0,5,0)
+			click:FireServer()
+			task.wait(.01)
+		end
+	end,
+	ApeCity = function()
+		local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+
+		for _,v in workspace.Map.Main.TheGlassDoorPuzzle:GetChildren() do
+			if v:IsA("Model") and string.find(v.Name,"Plate") then
+				a,b = pcall(function()
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,1,0)
+					repeat task.wait() until v:FindFirstChild("Base") and v:FindFirstChild("Gem")
+					repeat
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,0)
+						task.wait()
+						firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Base,1)
+						task.wait()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot +Vector3.new(0,0,0)
+					until v:FindFirstChild("Gem").Material == Enum.Material.Neon
+				end)
+			end
+		end
+
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+	end,
+	Shields = function()
+		local success, err = pcall(function()
+			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			local list = {
+				{workspace.Map.Main.LeechContainer},
+				{workspace.Map.Main.HornetContainer},
+				{workspace.Map.Main.FrogContainer}
+			}
+			for _, container in list do
+				local plr = game.Players.LocalPlayer.Character
+				local breakf = false
+				local StarterGui = game:GetService("StarterGui") 
+				local bindable = Instance.new("BindableFunction")
+				function bindable.OnInvoke(response)
+					if response == "Break" then
+						breakf = true
+					end
+				end
+				StarterGui:SetCore("SendNotification", {
+					Title = "Break function // SpineWare",
+					Text = "Attention! Maybe this alien already not in container",
+					Duration = 20,
+					Callback = bindable,
+					Button1 = "Break",
+					Button2 = "Ignore"
+				})
+
+				repeat plr.HumanoidRootPart.CFrame = container[1].WorldPivot task.wait() until not game.Players.LocalPlayer.GameplayPaused and container[1]:FindFirstChild("Handle") or breakf or task.wait(10)
+				repeat
+					plr.HumanoidRootPart.CFrame = container[1]:FindFirstChild("Handle").CFrame
+					fireclickdetector(container[1]:FindFirstChild("Handle"):FindFirstChild("ClickDetector"))
+					task.wait() 
+				until container[1]:FindFirstChild("Handle"):FindFirstChild("Sabotaged").Value == true or breakf
+			end
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+		end)
+	end,
+	Levers = function()
+		local success, err = pcall(function()
+			local plr: Instance = game.Players.LocalPlayer.Character
+			for _, v in workspace.Map.Main:GetChildren() do
+				if v.Name == "ChainGate" then
+					pcall(function ()
+						plr.HumanoidRootPart.CFrame = v.WorldPivot
+						plr.HumanoidRootPart.CFrame = v.Lever.Handle.LeverMain.CFrame
+					end)
+					repeat
+						task.wait()
+					until v:FindFirstChild("Lever")
+					for i= 1, 10 do
+						local click = v.Lever.Handle:FindFirstChild("LeverMain"):FindFirstChildOfClass("ClickDetector")
+						fireclickdetector(click)
+						task.wait(.05)
+					end
+					task.wait(.1)
+				end
+			end
+		end)
+	end,
+}
+task.spawn(function()
+    pcall(function()
+		local conn = game['Players']['LocalPlayer']['Character']['@Alerts']['ChildAdded']:Connect(function()
+			conn:Disconnect()
+	        local value = Instance.new("Color3Value")
+	        value['Value'] = Color3.fromRGB(0, 255, 0)
+	        value['Name'] = "https://discord.gg/Pk7VQqZvZr"
+	        value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']   
+	        task.delay(2.5, function()
+	            value:Destroy()
+	            local value = Instance.new("Color3Value")
+	            value['Value'] = Color3.fromRGB(0, 255, 0)
+	            value['Name'] = "ORWALKEREDMZ COOKED"
+	            value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']  
+	            task.wait(2.5)
+	            value:Destroy()
+	        end)
+		end)
+    end)
+end)
+local Material = loadstring(game:HttpGet('https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/IsleLib'))()
+Start = Material['Start']
+
+local X = Material:Load({
+	Title = "SpineWare - Remastered",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 350,
+	Theme = "Dark",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(111,111,111)
+	}
+})
+
+local Features = X.New({
+	Title = "Features"
+})
+local Shields = Features.Button({
+	Text = "Disable shields 💀🌹",
+	Callback = function()
+		Functions['Shields']()
+	end
+})
+local ApeCity = Features.Button({
+	Text = "Activate Ape City",
+	Callback = function()
+		Functions['ApeCity']()
+	end
+})
+local Levers = Features.Button({
+	Text = "Activate all Levers",
+	Callback = function()
+		Functions['Levers']()
+	end
+})
+local Gate = Features.Button({
+	Text = "Open Gate",
+	Menu = {
+		Tip = function(self)
+			X:Banner({Text = "It`ll open the gate only if u was at docks."})
+		end
+	},
+	Callback = function()
+		local success = pcall(function()
+			fireclickdetector(workspace.Map.Main.Gate.Buttons.Open.ClickDetector)
+		end)
+		if not success then
+			X:Banner({Text = "The gate has not been loaded"})
+		end
+	end
+})
+local AutoHackEnabled = false
+local AutoHack = Features.Toggle({
+	Text = "Auto Hack",
+	Menu = {
+		Tip = function(self)
+			X:Banner({Text = "Now it supports all executors"})
+		end
+	}, 
+	Callback = function(status)
+		AutoHackEnabled = status
+	end
+})
+local Storage1 = Features.Toggle({
+	Text = "Smart Infinite Storage",
+	Menu = {
+		Exception = function(self)
+			X:Banner({Text = "It may be not working with your executor. Better than Basic Infinite Storage"})
+		end
+	},
+	Callback = function(status)
+		toggles_list['SmartStorage']['Value'] = status 
+	end
+})
+
+local Storage2 = Features.Toggle({
+	Text = "Infinite Storage",
+	Menu = {
+		Exception = function(self)
+			X:Banner({Text = "If your exector supports smart version, I recommend dont use it."})
+		end
+	},
+	Callback = function(new_status)
+		toggles_list['InfStorage']['Value'] = new_status
+	end
+})
+local ESP = X.New({
+	Title = "ESP"
+})
+
+local toggle_esp = ESP.Toggle({
+	Text = "Enable",
+	Callback = function(value)
+		toggles_list['ESP']['Value'] = value
+	end,
+	Enabled = false
+})
+
+local jsons = game:GetService("HttpService")
+local function refresh_hitbox_saving_file()
+	local success, error = pcall(function()
+		writefile('SpineWare/Isle/settings.json', jsons:JSONEncode({
+			PlayerHighlightColor = {toggles_list['HighPlayer']['Value']['R'], toggles_list['HighPlayer']['Value']['G'], toggles_list['HighPlayer']['Value']['B']},
+			MercenariesHiglightColor = {toggles_list['HighMerc']['Value']['R'], toggles_list['HighMerc']['Value']['G'], toggles_list['HighMerc']['Value']['B']},
+			ParasitesHiglightColor = {toggles_list['HighParasite']['Value']['R'], toggles_list['HighParasite']['Value']['G'], toggles_list['HighParasite']['Value']['B']},
+			ReadIt = "HI GUYS GUYZZ KSTOPICSTARTER COOKING TS SHIT"
+		}))
+	end)
+	if not success then print(error) end
+end
+
+local dropdown_esp = ESP.ChipSet({
+	Text = "Entities",
+	Options = {
+		Players = false,
+		Parasites = false,
+		Mercenaries = false
+	},
+	Callback = function(value)
+		toggles_list['ESPEnabled']['Players']['Value'] = value['Players']
+		toggles_list['ESPEnabled']['Parasites']['Value'] = value['Parasites']
+		toggles_list['ESPEnabled']['Mercenaries']['Value'] = value['Mercenaries']
+	end,
+})
+local toggle_higlight = ESP.Toggle({
+	Text = "Highlights Enabled",
+	Callback = function(boolean)
+		toggles_list['HighlightsEnabled'] = boolean
+	end,
+	Enabled = false
+})
+toggles_list['HighPlayer']['Value'] = Color3.fromRGB(49, 204, 80)
+toggles_list['HighMerc']['Value'] = Color3.fromRGB(204, 104, 38)
+toggles_list['HighParasite']['Value'] = Color3.fromRGB(204, 11, 53)
+
+-- file system (like saving the colors of highlights rn)
+local main_folder = isfolder('SpineWare')
+local d_folder = isfolder('SpineWare/Isle')
+local p_f = isfile('SpineWare/Isle/settings.json')
+if not main_folder then
+	makefolder('SpineWare')
+end
+if not d_folder then
+	makefolder('SpineWare/Isle')
+end
+if not p_f then
+	writefile('SpineWare/Isle/settings.json', jsons:JSONEncode({
+		PlayerHighlightColor = {49, 204, 80},
+		MercenariesHiglightColor = {204, 104, 38},
+		ParasitesHiglightColor = {204, 11, 53},
+		ReadIt = "HI GUYS GUYZZ KSTOPICSTARTER COOKING TS SHIT"
+	}))
+else
+	local s = jsons:JSONDecode(readfile('SpineWare/Isle/settings.json'))
+	local players_color = Color3.new(s['PlayerHighlightColor'][1], s['PlayerHighlightColor'][2], s['PlayerHighlightColor'][3])
+	local Mercenaries_color = Color3.new(s['MercenariesHiglightColor'][1], s['MercenariesHiglightColor'][2], s['MercenariesHiglightColor'][3])
+	local Parasites_color = Color3.new(s['ParasitesHiglightColor'][1], s['ParasitesHiglightColor'][2], s['ParasitesHiglightColor'][3])
+	toggles_list['HighPlayer']['Value'] = players_color
+	toggles_list['HighMerc']['Value'] = Mercenaries_color
+	toggles_list['HighParasite']['Value'] = Parasites_color
+end
+
+
+local color_picker_players = ESP.ColorPicker({
+	-- hi genius, if u are one of isle devs - u arent genius... u are dumbass (like a blioooz). btw urwalkerdmz - my username while i was writin that script 
+	Text = "Player Highlight Color",
+	Default = toggles_list['HighPlayer']['Value'],
+	Callback = function(new_color: Color3)
+		toggles_list['HighPlayer']['Value'] = new_color
+		refresh_hitbox_saving_file()
+	end,
+})
+local color_picker_merc = ESP.ColorPicker({
+	Text = "Mercenaries Highlight Color",
+	Default = toggles_list['HighMerc']['Value'],
+	Callback = function(new_color: Color3)
+		toggles_list['HighMerc']['Value'] = new_color
+		refresh_hitbox_saving_file()
+	end,
+})
+local color_picker_paras = ESP.ColorPicker({
+	Text = "Parasites Highlight Color",
+	Default = toggles_list['HighParasite']['Value'],
+	Callback = function(new_color: Color3)
+		toggles_list['HighParasite']['Value'] = new_color
+		refresh_hitbox_saving_file()
+	end,
+})
+local MapMethod = 1
+local SmartLoading = false
+
+local Map = X.New({
+	Title = "Map"
+})
+local MapLoad = Map.Button({
+	Text = "Load Map by choosen method",
+	Callback = function()
+		if MapMethod == 1 then
+			if SmartLoading then
+				for i,v in game:GetService("ReplicatedStorage").Markers:GetChildren() do
+					if v:FindFirstChild('TextLabel', true).Text ~= "Mirror World" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						task.wait(0.5)
+						repeat task.wait() until game.Players.LocalPlayer.GameplayPaused == false
+					end
+				end
+			else
+				for i,v in game:GetService("ReplicatedStorage").Markers:GetChildren() do
+					if v:FindFirstChild('TextLabel', true).Text ~= "Mirror World" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						task.wait(0.5)
+					end
+				end
+			end
+		else
+			if SmartLoading then
+				for i,v in game:GetService("ReplicatedStorage").Markers:GetChildren() do
+					if v:FindFirstChild('TextLabel', true).Text ~= "Mirror World" then
+						game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(0.5),{CFrame = v.CFrame}):Play()
+						task.wait(0.6)
+						repeat task.wait() until game.Players.LocalPlayer.GameplayPaused == false
+					end
+				end
+			else
+				for i,v in game:GetService("ReplicatedStorage").Markers:GetChildren() do
+					if v:FindFirstChild('TextLabel', true).Text ~= "Mirror World" then
+						game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(0.5),{CFrame = v.CFrame}):Play()
+						task.wait(0.6)  
+					end
+				end             
+			end
+		end
+	end
+})
+local SmartMethod = Map.Toggle({
+	Text = "Wait till location was loaded?",
+	Callback = function(status)
+		SmartLoading = status
+	end,
+	Enabled = false,
+	Menu = {
+		Why = function(self)
+			X:Banner({
+				Text = "Items may be not loaded if location wasnt loaded. So usually many items wont be loaded. But this method takes 2x time than basic method"
+			})
+		end
+	}
+})
+local Drop_Map = Map.Dropdown({
+	Text = "Loading method",
+	Options = {
+		"Tween [Greater]",
+		"Teleport"
+	},
+	Callback = function(option)
+		if option == "Teleport" then
+			MapMethod = 1
+		else
+			MapMethod = 2
+		end
+	end
+})
+local RemoveTrees = Map.Button({
+	Text = "Remove all Trees",
+	Callback = function()
+		local success, err = pcall(function()
+			for _, v in workspace.Map.Ignore:GetChildren() do
+				if string.find(v.Name,"Trees") then
+					v:Destroy()
+				end
+			end
+		end)
+	end
+})
+local RemoveGlass = Map.Button({
+	Text = "Remove Glass Containers",
+	Callback = function()
+		local success, err = pcall(function()
+			for _, v in workspace.Threats:GetChildren() do
+				if string.find(v.Name:lower(),"glass") then
+					v:Destroy()
+				end
+			end
+		end)
+	end
+})
+local RandomTP = Map.Button({
+	Text = "Random TP [Portals]",
+	Callback = function()
+		local success, err = pcall(function()
+			v = workspace.Map.Ignore.SpecialRegions:FindFirstChild("Anomaly")
+			if v:FindFirstChildOfClass("PointLight").Enabled == true then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+			else
+				for _, x in workspace.Map.Ignore.SpecialRegions:GetChildren() do
+					if x.Name == "Anomaly" and x:FindFirstChildOfClass("PointLight").Enabled == true then
+						v = x 
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						return
+					end
+				end
+			end
+		end)
+	end
+})
+local Giver = X.New({
+	Title = "Giver"
+})
+Giver.Label({
+	Text = "USE THE ORIGINAL TRANSLATION! SUPPORTED ONLY ENGLISH LANG"
+})
+Giver.Label({
+	Text = "Rn Auto Answer will be clicking on the right answers"
+})
+local AutoAnswer = Giver.Toggle({
+	Text = "Auto Teleport to Giver Zalupa",
+	Callback = function(bool)
+		toggles_list['AutoTPGiver'] = bool
+	end
+})
+local AutoAnswer = Giver.Toggle({
+	Text = "Auto Answer",
+	Callback = function(bool)
+		toggles_list['AutoAnswer'] = bool
+	end
+})
+local Reward = Giver.Dropdown({
+	Text = "Reward",
+	Options = {
+		"Note",
+		"Be stronger",
+		"BCorp shit"
+	},
+	Callback = function(reward)
+		if reward == "Note" then
+			toggles_list['ChoosedReward'] = "for access"
+		elseif reward == "BCorp shit" then
+			toggles_list['ChoosedReward'] = "to wipe out my"
+		elseif reward == "Be stronger" then
+			toggles_list['ChoosedReward'] = "to become stronger"
+		end
+	end
+})
+local RewardCount;
+RewardCount = Giver.TextField({
+	Text = "Rewards count: 1",
+	Callback = function(count)
+		if tonumber(count) ~= nil and tonumber(count) ~= 0 then
+			toggles_list['RewardCount'] = tonumber(count) 
+			RewardCount:SetText(string.format("Rewards count: %d", toggles_list['RewardCount']))
+		end
+	end,
+})
+local TalkToDragon = Giver.Button({
+	Text = "Start dialogue with dragon",
+	Callback = function()
+		local touching = workspace.Map.Ignore.SpecialRegions.DragonDialogue
+		local hrp = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']
+
+		task.spawn(function()
+			firetouchinterest(hrp, touching, 0)
+			task.wait()
+			firetouchinterest(hrp, touching, 1)
+		end)
+	end
+})
+local Pylons = X.New({
+	Title = "Pylons"
+})
+local GroundPylon = Pylons.Button({
+	Text = "Activate Ground Pylon", 
+	Callback = function()
+		Functions['Mineshaft']()
+	end
+})
+local WaterPylon = Pylons.Button({
+	Text = "Activate Aqua Pylon",
+	Callback = function()
+		Functions['Water']()
+	end
+})
+local Player_Tab = X.New({
+	Title = "Player"
+})
+local SpeedSlider = Player_Tab.Slider({
+	Text = "Walkspeed Boost",
+	Min = 0,
+	Max = 50,
+	Def = 0,
+	Callback = function(int_value)
+		toggles_list['WalkSpeed']['Value'] = int_value
+	end
+})
+local JumpSlider = Player_Tab.Slider({
+	Text = "JumpPower",
+	Min = 50,
+	Max = 750,
+	Def = 50,
+	Callback = function(int_value)
+		toggles_list['JumpPower']['Value'] = int_value
+	end
+})
+local Noclip_ever_activated = false
+
+local Noclip = Player_Tab.Toggle({
+	Text = "Noclip",
+	Callback = function(choice)
+		toggles_list['Noclip']['Value'] = choice
+		Noclip_ever_activated = true
+	end,
+	Enabled = false
+})
+local AntiFlag = Player_Tab.Button({
+	Text = "Anti Fly Flag",
+	Callback = function()
+		X:Banner({Text = "Fly must be off"})
+		local char = game['Players']['LocalPlayer']['Character']
+		local hrp = char['HumanoidRootPart']
+		if hrp then
+			local ray = Ray.new(hrp.Position, Vector3.new(0, -1000, 0))
+			local hit, pos = workspace:FindPartOnRay(ray, char)
+			local targetY = hit and pos.Y or false
+			local finishpos = Vector3.new(hrp.Position.X, targetY, hrp.Position.Z)
+			for i = 1, 5 do
+				game:GetService("TweenService"):Create(hrp, TweenInfo.new(.2), {CFrame = CFrame.new(finishpos)}):Play()
+				task.wait(.4)
+			end
+		end
+	end
+})
+local Troll = X.New({
+	Title = "Trolling"
+})
+local AntiStan = Troll.Toggle({
+	Text = "Dont look at stan",
+	Callback = function(t)
+		toggles_list['AntiSpotted']['Value'] = t
+	end,
+	Menu = {
+		Tip = function(self)
+			X:Banner({Text = "May be not working on your executor"})
+		end
+	}
+})
+local BuddyTroll = Troll.Toggle({
+	Text = "Aggressive Bee Buddies",
+	Menu = {
+		Tip = {
+			X:Banner({Text = "This function makes buddy aggressive to players, but buddy wont shot player"})
+		}
+	},
+	Callback = function(choice)
+		toggles_list['BuddiesTroll'] = choice
+	end
+})
+local GunTroll = Troll.Toggle({
+	Text = "Enemy Troll",
+	Callback = function(bool)
+		toggles_list['TrollPlayer']['Value'] = bool
+	end,
+	Menu = {
+		Tip = function()
+			X:Banner({Text = "Mercenaries will be tryin to shoot player. So he`ll get messages from sniper and others"})
+		end
+	}
+})
+local ChoosedPlayerDrop = Troll.Dropdown({
+	Text = "Player",
+	Options = {},
+	Callback = function(choosed_player)
+		if game['Players'][choosed_player] then
+			toggles_list['TrolledPlayer']['Value'] = game['Players'][choosed_player]
+		end
+	end
+})
+local Leviaphan = Troll.Button({
+	Text = "Die by leviathan near choosen player",
+	Menu = {
+		READ_IT = function()
+			X:Banner({Text = "This function will kill you! The leviathan will jump and eat you near that player! If script cant find locations, fly around the water where leviathan usually jumps (hangar recommended)"})
+		end
+	},
+	Callback = function()
+		local spawns = {{CFrame = CFrame.new(-3152.80005, -12.0000038, -2915, 1, 0, 0, 0, 1, 0, 0, 0, 1)}, {CFrame = CFrame.new(-3226.01953, -36.3047562, -2918.7959, -0.0586063899, -0.147178605, -0.98737216, 0, 0.989072204, -0.147432014, 0.998281181, -0.00864045788, -0.0579659529)}}
+		local hrp = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']
+
+		local player = toggles_list['TrolledPlayer']['Value']
+		if player ~= nil then
+			local jump_position;
+			if player == game['Players']['LocalPlayer'] then
+				jump_position = hrp['CFrame']
+			else
+				jump_position = "nonself"
+			end
+
+			for _, jump in spawns do
+				for attempt = 1, 2 do
+					game:GetService("TweenService"):Create(hrp, TweenInfo.new(0.05), {CFrame = jump['CFrame'] - Vector3.new(0, 2, 0)}):Play()
+					task.wait(0.4)
+					hrp['CFrame'] = jump_position == "nonself" and player['Character']['HumanoidRootPart']['CFrame'] or jump_position
+					task.wait(.1)
+					game:GetService("TweenService"):Create(hrp, TweenInfo.new(0.05), {CFrame = jump['CFrame'] - Vector3.new(15, 12, 15)}):Play()
+					task.wait(0.5)
+					hrp['CFrame'] = jump_position == "nonself" and player['Character']['HumanoidRootPart']['CFrame'] or jump_position
+				end
+				break
+			end
+		else
+			X:Banner({Text = "You havent choosed a player!"})
+		end
+	end
+})
+local Acid = Troll.Button({
+	Text = "Touch Acid",
+	Menu = {
+		Tip = function()
+			X:Banner({Text = "Use only with a shield pack or it`ll kill you"})
+		end
+	},
+	Callback = function()
+		local touching = workspace.Map.Ignore.Effects.AcidHitbox
+		local hrp = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']
+		task.spawn(function()
+			firetouchinterest(hrp, touching, 0)
+			task.wait()
+			firetouchinterest(hrp, touching, 1)
+		end)
+	end
+})
+local SpawnZombe = Troll.Button({
+	Text = "Trigger all zombeee",
+	Callback = function()
+		local hrp = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']
+		for _, zombe in workspace.Map.Ignore.SpecialRegions:GetChildren() do
+			if zombe['Name']:match('Spawn') then
+				task.spawn(function()
+					firetouchinterest(hrp, zombe, 0)
+					task.wait()
+					firetouchinterest(hrp, zombe, 1)
+				end)
+			end
+		end
+	end
+})
+local Laser = Troll.Button({
+	Text = "Trigger Facility Laser",
+	Callback = function()
+		local touching = workspace.Map.Main.Facility.LaserHallway.LaserTrigger
+		local hrp = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']
+		task.spawn(function()
+			firetouchinterest(hrp, touching, 0)
+			task.wait()
+			firetouchinterest(hrp, touching, 1)
+		end)
+	end
+})
+local Collect = X.New({
+	Title = "Collecting"
+})
+local Artifacts = Collect.Button({
+	Text = "Take Artefacts",
+	Callback = function()
+		local success, err = pcall(function()
+			local arts = {
+				CFrame.new(-1350.38, -458.775238, -1580.62024, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(1405.88269, -250.722977, -1855.16284, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(-752.184326, 126.690788, -3171.6106, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+				CFrame.new(-1761.74756, -194.51709, -1306.67212, -0.885949731, 0.00651492085, 0.463735491, -0.00259297574, 0.99981612, -0.0189999882, -0.463773996, -0.0180354901, -0.885769963)
+			}
+			local arts_n = {"A","B","C","D"}
+			local char : Character = game.Players.LocalPlayer.Character
+			local root = char:FindFirstChild("HumanoidRootPart")
+			local c = root.CFrame
+			local revolver_cf = CFrame.new(472.481567, 164.817795, -1216.77148, -0.101358771, 2.70025069e-09, -0.99484992, 5.56263746e-09, 1, 2.14748819e-09, 0.99484992, -5.31632294e-09, -0.101358771)
+
+			for position, artifact_c in pairs(arts) do
+				local artifact_name = string.format("Artifact %s",arts_n[position])
+				local tp_c = artifact_c
+				if position ~= 4 then
+					pcall(function()
+						local art; for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then art = v break end end
+						if art then
+							tp_c = art.WorldPivot
+						end
+					end)
+					for i = 1, 5 do root.CFrame = tp_c task.wait(0.01) end
+					local is_f = false; local artifact = nil
+					repeat wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then is_f = true; artifact = v break end end until is_f 
+					local args = {"#*@85799661851116949753", artifact.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(args)) wait(.5) end
+					repeat wait() until char:FindFirstChild(artifact_name) or game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+					local art = nil
+					if char:FindFirstChild(artifact_name) then
+						art = char:FindFirstChild(artifact_name)
+					else
+						art = game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+						char.Humanoid:EquipTool(art)
+						wait()
+					end
+					for i = 1, 5 do
+						art:Activate() task.wait(.05)
+					end
+					wait()
+				else 
+					local artifact_name = string.format("Artifact %s",arts_n[position])
+					for i =1, 5 do root.CFrame = revolver_cf task.wait(.03) end; local revo
+					pcall(function() _G.SetN("Artifact D // SpineWare","Take the revolver, usually it spawns near you",7.5) end)
+					repeat wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),"revolver") then pcall(function() if (v.Collision.Position - root.Position).Magnitude <= 12 then revo = v end  end) end end until revo
+					local argssse = {"#*@85799661851116949753", revo.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(argssse)) wait(.5) end
+					repeat wait() until char:FindFirstChild("Revolver") and char:FindFirstChild("Revolver"):FindFirstChildOfClass("RemoteEvent")
+					local rev = char:FindFirstChild("Revolver")
+					local kill_event = rev:FindFirstChild("@Kill")
+					for i = 1, 5 do root.CFrame = artifact_c wait(.03) end
+					repeat wait() until workspace.Threats:WaitForChild("Glass Container") and char:FindFirstChild("Revolver"):FindFirstChildOfClass("RemoteEvent")
+					local glass = workspace.Threats:WaitForChild("Glass Container"); local skip = false
+					if glass.Humanoid.Health >= 0 then skip = true end
+					if not skip then task.wait(.25)
+						pcall(function() _G.SetN("Artifact D // SpineWare","Take the revolver, usually it spawns near you",7.5) end)
+						task.wait(1.25)
+						kill_event:FireServer(glass) end
+					local is_f = false; local artifact = nil;
+					repeat task.wait() for i,v in workspace.Map.Ignore.Tools:GetChildren() do if string.find(v.Name:lower(),artifact_name:lower()) then is_f = true; artifact = v break end end until is_f 
+					for i = 1, 5 do root.CFrame = artifact.WorldPivot end
+					local argsss = {"#*@85799661851116949753", artifact.Name}
+					for i = 1,2 do workspace:WaitForChild("Services"):WaitForChild("PickupTool"):InvokeServer(unpack(argsss)) wait(.5) end
+					repeat wait() until char:FindFirstChild(artifact_name) or game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+					local art = nil
+					if char:FindFirstChild(artifact_name) then
+						art = char:FindFirstChild(artifact_name)
+					else
+						art = game.Players.LocalPlayer.Backpack:FindFirstChild(artifact_name)
+						char.Humanoid:EquipTool(art)
+						task.wait()
+					end
+					for i = 1, 5 do
+						art:Activate() task.wait(.05)
+					end
+					task.wait()
+				end
+			end
+		end)
+	end
+})
+local Collectibles = Collect.Button({
+	Text = "Collect Collectibles",
+	Callback = function()
+		lastc = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame']
+		for _, v : Model | UnionOperation in workspace.Map.Ignore.Collectibles:GetChildren() do
+			a,b = pcall(function()
+				local click;
+				for i,x in v:GetDescendants() do
+					if x:IsA("ClickDetector") then
+						click = x;
+					end
+				end
+				for i = 1,  5 do
+					fireclickdetector(click)
+					task.spawn(function()
+						parent = click['Parent']:IsA("Model") and click['Parent']['PrimaryPart'] or click['Parent']
+						firetouchinterest(game['Players']['LocalPlayer']['Character']['HumanoidRootPart'], parent, 0)
+						task.wait()
+						firetouchinterest(game['Players']['LocalPlayer']['Character']['HumanoidRootPart'], parent, 1)
+					end)
+					xpcall(function()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot
+					end,function()
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+					end)
+					task.wait(.025)
+				end
+				task.wait(0.05)
+			end)
+		end
+		game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame'] = lastc
+	end,
+	Menu = { 
+		Tip = function()
+			X:Banner({Text = "Use only with diving pack!!!"})
+		end
+	}
+})
+local Files = Collect.Button({
+	Text = "Collect Files",
+	Callback = function()
+		local success, err = pcall(function()
+			local plr : Instance = game.Players.LocalPlayer.Character
+			local last = plr.HumanoidRootPart.CFrame
+			for _, v in workspace.Map.Ignore.Files:GetChildren() do
+				local clicker;
+				for __, click in v:GetDescendants() do
+					if click:IsA("ClickDetector") then
+						clicker = click
+					end
+				end
+				for i = 1, 10 do
+					task.spawn(function()
+						parent = clicker['Parent']:IsA("Model") and clicker['Parent']['PrimaryPart'] or clicker['Parent']
+						game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame'] = parent['CFrame']
+					end)
+					fireclickdetector(clicker)
+					task.wait(.05)
+				end
+			end
+			plr.HumanoidRootPart.CFrame = last
+		end)
+	end
+})
+local Marble = Collect.Button({
+	Text = "Collect Marble Pieces",
+	Callback = function()
+		local success, err = pcall(function()
+			for _,v in workspace.Map.Main:GetChildren() do
+				if string.find(v.Name,"Marble Piece") then
+					local breakf = false					
+					pcall(function()
+						local StarterGui = game:GetService("StarterGui") 
+						local bindable = Instance.new("BindableFunction")	
+						function bindable.OnInvoke(response)
+							if response == "Break" then
+								breakf = true
+							else								
+							end
+						end
+						StarterGui:SetCore("SendNotification", {
+							Title = "Break function // SpineWare",
+							Text = "Attention! If ur inventory is full, then turn on 'Inf Storage' or break function",
+							Duration = 9e9,
+							Callback = bindable,
+							Button1 = "Break",
+							Button2 = "Ignore"
+						})
+						repeat game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.WorldPivot  task.wait() until breakf or game.Players.LocalPlayer.Backpack:FindFirstChild(v.Name) or game.Players.LocalPlayer.Character:FindFirstChild(v.Name)
+					end)
+				end
+			end
+		end)
+	end
+})
+local Fuse = Collect.Button({
+	Text = "Collect Fuse",
+	Callback = function()
+		local fuse = game.Workspace.Map.Main.Fuse
+		local last = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		pcall(function ()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = fuse.WorldPivot
+			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,0)
+			task.wait(0.1)
+			firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,fuse.Tube,1)
+			task.wait(0.3)
+		end)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = last
+	end
+})
+local EnterTeleport = Collect.Button({
+	Text = "Take Teleporter Enterance", 
+	Callback = function()
+		local success, err = pcall(function()
+			local teleport = workspace.Map.Ignore.Debris["Teleport Entrance"]
+			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			repeat
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleport.WorldPivot
+				for i = 1, 10 do
+					teleport:FindFirstChildOfClass("RemoteEvent"):FireServer()
+					task.wait(.05)
+				end
+				task.wait()
+			until game.Players.LocalPlayer.Backpack:FindFirstChild("Teleporter Entrance")
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+		end)
+		if not success then X:Banner({Text = "Not Success :("}) end
+	end
+})
+local LeaveTeleport = Collect.Button({
+	Text = "Take Teleporter Exit", 
+	Callback = function()
+		local success, err = pcall(function()
+			local teleport = workspace.Map.Ignore.Debris["Teleport Exit"]
+			local lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			repeat
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = teleport.WorldPivot
+				for i = 1, 10 do
+					teleport:FindFirstChildOfClass("RemoteEvent"):FireServer()
+					task.wait(.05)
+				end
+				task.wait()
+			until game.Players.LocalPlayer.Backpack:FindFirstChild("Teleporter Exit")
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
+		end)
+		if not success then X:Banner({Text = "Not Success :("}) end
+	end
+})
+local Guis = X.New({
+	Title = "Tools"
+})
+local ToolsUI = Guis.Button({
+	Text = "Items GUI",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/tpGui"))()
+	end
+})
+local KillUI = Guis.Button({
+	Text = "Kill GUI",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/killui"))()
+	end
+})
+local StoryUI = Guis.Button({
+	Text = "Story GUI",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/StoryGui"))()
+	end
+})
+local TpUI = Guis.Button({
+	Text = "Teleport GUI",
+	Callback = function()
+		local sucess, err = pcall(function()
+			local teleportsUI = Instance.new("ScreenGui")
+			local MainFrame = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local TextLabel = Instance.new("TextLabel")
+			local Option = Instance.new("Frame")
+			local UICorner_2 = Instance.new("UICorner")
+			local UIListLayout = Instance.new("UIListLayout")
+			local UIPadding = Instance.new("UIPadding")
+			local _Name = Instance.new("TextLabel")
+			local Teleport = Instance.new("TextButton")
+			local UICorner_3 = Instance.new("UICorner")
+			local Rename = Instance.new("TextButton")
+			local UICorner_4 = Instance.new("UICorner")
+			local Delete = Instance.new("TextButton")
+			local UICorner_5 = Instance.new("UICorner")
+			local NewPoint = Instance.new("TextButton")
+			local UICorner_6 = Instance.new("UICorner")
+			local Copy = Instance.new("TextButton")
+			local UICorner_7 = Instance.new("UICorner")
+			local Set = Instance.new("TextButton")
+			local UICorner_8 = Instance.new("UICorner")
+			local Frame = Instance.new("Frame")
+			local New = Instance.new("TextButton")
+			local UICorner_9 = Instance.new("UICorner")
+			local Bypass = Instance.new("TextButton")
+			local UICorner_10 = Instance.new("UICorner")
+			local Main = Instance.new("Frame")
+			local UICorner_11 = Instance.new("UICorner")
+			local Locations = Instance.new("ScrollingFrame")
+			local UIListLayout_2 = Instance.new("UIListLayout")
+			local UIPadding_2 = Instance.new("UIPadding")
+			local Example = Instance.new("TextButton")
+			local UICorner_12 = Instance.new("UICorner")
+			local TextBox = Instance.new("Frame")
+			local UICorner_13 = Instance.new("UICorner")
+			local UIListLayout_3 = Instance.new("UIListLayout")
+			local UIPadding_3 = Instance.new("UIPadding")
+			local TextBox_2 = Instance.new("TextBox")
+			
+			--Properties:
+			
+			teleportsUI.Name = "teleportsUI"
+			teleportsUI.Parent = game['CoreGui']
+			teleportsUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			
+			MainFrame.Name = "MainFrame"
+			MainFrame.Parent = teleportsUI
+			MainFrame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+			MainFrame.BackgroundTransparency = 0.250
+			MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			MainFrame.BorderSizePixel = 0
+			MainFrame.Position = UDim2.new(0.344146699, 0, 0.266457677, 0)
+			MainFrame.Size = UDim2.new(0, 340, 0, 329)
+			
+			UICorner.CornerRadius = UDim.new(0, 5)
+			UICorner.Parent = MainFrame
+			
+			TextLabel.Parent = MainFrame
+			TextLabel.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Position = UDim2.new(0, 0, 0.0243161097, 0)
+			TextLabel.Size = UDim2.new(0, 182, 0, 32)
+			TextLabel.Font = Enum.Font.Unknown
+			TextLabel.Text = "SPINEWARE"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextScaled = true
+			TextLabel.TextSize = 14.000
+			TextLabel.TextWrapped = true
+			
+			Option.Name = "Option"
+			Option.Parent = MainFrame
+			Option.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			Option.BackgroundTransparency = 0.250
+			Option.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Option.BorderSizePixel = 0
+			Option.Position = UDim2.new(0.573529422, 0, 0, 0)
+			Option.Size = UDim2.new(0, 145, 0, 329)
+			
+			UICorner_2.CornerRadius = UDim.new(0, 5)
+			UICorner_2.Parent = Option
+			
+			UIListLayout.Parent = Option
+			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0, 2)
+			
+			UIPadding.Parent = Option
+			UIPadding.PaddingTop = UDim.new(0, 2)
+			
+			_Name.Name = "_Name"
+			_Name.Parent = Option
+			_Name.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+			_Name.BackgroundTransparency = 1.000
+			_Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			_Name.BorderSizePixel = 0
+			_Name.Position = UDim2.new(0.0448275879, 0, -0.0249221176, 0)
+			_Name.Size = UDim2.new(0, 130, 0, 45)
+			_Name.Font = Enum.Font.Unknown
+			_Name.Text = "Click On Location"
+			_Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+			_Name.TextScaled = true
+			_Name.TextSize = 14.000
+			_Name.TextWrapped = true
+			
+			Teleport.Name = "Teleport"
+			Teleport.Parent = Option
+			Teleport.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Teleport.BorderSizePixel = 0
+			Teleport.Position = UDim2.new(0.0413793102, 0, 0.143730894, 0)
+			Teleport.Size = UDim2.new(0, 133, 0, 32)
+			Teleport.Font = Enum.Font.Unknown
+			Teleport.Text = "Teleport"
+			Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Teleport.TextScaled = true
+			Teleport.TextSize = 14.000
+			Teleport.TextWrapped = true
+			
+			UICorner_3.CornerRadius = UDim.new(0, 5)
+			UICorner_3.Parent = Teleport
+			
+			Rename.Name = "Rename"
+			Rename.Parent = Option
+			Rename.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Rename.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Rename.BorderSizePixel = 0
+			Rename.Position = UDim2.new(0.0413793102, 0, 0.250026405, 0)
+			Rename.Size = UDim2.new(0, 133, 0, 32)
+			Rename.Font = Enum.Font.Unknown
+			Rename.Text = "Rename"
+			Rename.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Rename.TextScaled = true
+			Rename.TextSize = 14.000
+			Rename.TextWrapped = true
+			
+			UICorner_4.CornerRadius = UDim.new(0, 5)
+			UICorner_4.Parent = Rename
+			
+			Delete.Name = "Delete"
+			Delete.Parent = Option
+			Delete.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Delete.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Delete.BorderSizePixel = 0
+			Delete.Position = UDim2.new(0.0413793102, 0, 0.356321841, 0)
+			Delete.Size = UDim2.new(0, 133, 0, 32)
+			Delete.Font = Enum.Font.Unknown
+			Delete.Text = "Delete"
+			Delete.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Delete.TextScaled = true
+			Delete.TextSize = 14.000
+			Delete.TextWrapped = true
+			
+			UICorner_5.CornerRadius = UDim.new(0, 5)
+			UICorner_5.Parent = Delete
+			
+			NewPoint.Name = "NewPoint"
+			NewPoint.Parent = Option
+			NewPoint.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			NewPoint.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			NewPoint.BorderSizePixel = 0
+			NewPoint.Position = UDim2.new(0.0413793102, 0, 0.462617278, 0)
+			NewPoint.Size = UDim2.new(0, 133, 0, 32)
+			NewPoint.Font = Enum.Font.Unknown
+			NewPoint.Text = "Set New Point"
+			NewPoint.TextColor3 = Color3.fromRGB(255, 255, 255)
+			NewPoint.TextScaled = true
+			NewPoint.TextSize = 14.000
+			NewPoint.TextWrapped = true
+			
+			UICorner_6.CornerRadius = UDim.new(0, 5)
+			UICorner_6.Parent = NewPoint
+			
+			Copy.Name = "Copy"
+			Copy.Parent = Option
+			Copy.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Copy.BorderSizePixel = 0
+			Copy.Position = UDim2.new(0.0413793102, 0, 0.568912804, 0)
+			Copy.Size = UDim2.new(0, 133, 0, 32)
+			Copy.Font = Enum.Font.Unknown
+			Copy.Text = "Copy CFrame"
+			Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Copy.TextScaled = true
+			Copy.TextSize = 14.000
+			Copy.TextWrapped = true
+			
+			UICorner_7.CornerRadius = UDim.new(0, 5)
+			UICorner_7.Parent = Copy
+			
+			Set.Name = "Set"
+			Set.Parent = Option
+			Set.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Set.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Set.BorderSizePixel = 0
+			Set.Position = UDim2.new(0.0413793102, 0, 0.67520833, 0)
+			Set.Size = UDim2.new(0, 133, 0, 32)
+			Set.Font = Enum.Font.Unknown
+			Set.Text = "Set CFrame"
+			Set.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Set.TextScaled = true
+			Set.TextSize = 14.000
+			Set.TextWrapped = true
+			
+			UICorner_8.CornerRadius = UDim.new(0, 5)
+			UICorner_8.Parent = Set
+			
+			Frame.Parent = Option
+			Frame.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
+			Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Frame.BorderSizePixel = 0
+			Frame.Position = UDim2.new(-0.0379310362, 0, 0.725856721, 0)
+			Frame.Size = UDim2.new(0, 132, 0, 2)
+			
+			New.Name = "New"
+			New.Parent = Option
+			New.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			New.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			New.BorderSizePixel = 0
+			New.Position = UDim2.new(0.0413793102, 0, 0.793314219, 0)
+			New.Size = UDim2.new(0, 133, 0, 32)
+			New.Font = Enum.Font.Unknown
+			New.Text = "New Location"
+			New.TextColor3 = Color3.fromRGB(255, 255, 255)
+			New.TextScaled = true
+			New.TextSize = 14.000
+			New.TextWrapped = true
+			
+			UICorner_9.CornerRadius = UDim.new(0, 5)
+			UICorner_9.Parent = New
+			
+			Bypass.Name = "Bypass"
+			Bypass.Parent = Option
+			Bypass.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Bypass.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Bypass.BorderSizePixel = 0
+			Bypass.Position = UDim2.new(0.0413793102, 0, 0.899609864, 0)
+			Bypass.Size = UDim2.new(0, 133, 0, 32)
+			Bypass.Font = Enum.Font.Unknown
+			Bypass.Text = "Bypass: Off"
+			Bypass.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Bypass.TextScaled = true
+			Bypass.TextSize = 14.000
+			Bypass.TextWrapped = true
+			
+			UICorner_10.CornerRadius = UDim.new(0, 5)
+			UICorner_10.Parent = Bypass
+			
+			Main.Name = "Main"
+			Main.Parent = MainFrame
+			Main.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			Main.BackgroundTransparency = 0.250
+			Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Main.BorderSizePixel = 0
+			Main.Position = UDim2.new(0.0382352956, 0, 0.139817625, 0)
+			Main.Size = UDim2.new(0, 161, 0, 266)
+			
+			UICorner_11.CornerRadius = UDim.new(0, 5)
+			UICorner_11.Parent = Main
+			
+			Locations.Name = "Locations"
+			Locations.Parent = Main
+			Locations.Active = true
+			Locations.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Locations.BackgroundTransparency = 1.000
+			Locations.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Locations.BorderSizePixel = 0
+			Locations.Size = UDim2.new(1.04968941, 0, 1, 0)
+			
+			UIListLayout_2.Parent = Locations
+			UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout_2.Padding = UDim.new(0, 3)
+			
+			UIPadding_2.Parent = Locations
+			UIPadding_2.PaddingRight = UDim.new(0, 7)
+			UIPadding_2.PaddingTop = UDim.new(0, 8)
+			
+			Example.Name = "Example"
+			Example.Parent = Locations
+			Example.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+			Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Example.BorderSizePixel = 0
+			Example.Position = UDim2.new(0.0401234552, 0, 0, 0)
+			Example.Size = UDim2.new(0, 154, 0, 34)
+			Example.Visible = false
+			Example.Font = Enum.Font.Jura
+			Example.Text = "1. Lair"
+			Example.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Example.TextScaled = true
+			Example.TextSize = 14.000
+			Example.TextWrapped = true
+			
+			UICorner_12.CornerRadius = UDim.new(0, 5)
+			UICorner_12.Parent = Example
+			
+			TextBox.Name = "TextBox"
+			TextBox.Parent = MainFrame
+			TextBox.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			TextBox.BackgroundTransparency = 0.250
+			TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextBox.BorderSizePixel = 0
+			TextBox.Position = UDim2.new(1.05882359, 0, 0.392097265, 0)
+			TextBox.Size = UDim2.new(0, 145, 0, 70)
+			TextBox.Visible = false
+			
+			UICorner_13.CornerRadius = UDim.new(0, 5)
+			UICorner_13.Parent = TextBox
+			
+			UIListLayout_3.Parent = TextBox
+			UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout_3.Padding = UDim.new(0, 10)
+			
+			UIPadding_3.Parent = TextBox
+			UIPadding_3.PaddingTop = UDim.new(0, 8)
+			
+			TextBox_2.Parent = TextBox
+			TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextBox_2.BackgroundTransparency = 1.000
+			TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextBox_2.BorderSizePixel = 0
+			TextBox_2.Size = UDim2.new(1, 0, 1, 0)
+			TextBox_2.Font = Enum.Font.Unknown
+			TextBox_2.Text = "Write here"
+			TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextBox_2.TextScaled = true
+			TextBox_2.TextSize = 14.000
+			TextBox_2.TextWrapped = true
+			
+			-- Scripts:
+			
+			local function ESYNN_fake_script() -- teleportsUI.Controller 
+				local script = Instance.new('LocalScript', teleportsUI)
+			
+				--[[Made by @kstopicstarter]]
+				local main_frame: Frame = script['Parent']['MainFrame']
+				local options: Frame = main_frame['Option']
+				local main: Frame = main_frame['Main']
+				local text_box: TextBox = main_frame['TextBox']:FindFirstChildOfClass("TextBox")
+				
+				local choosen_location = nil -- {Name: string, CFrame = CFrame}
+				local bypass_enabled = false -- bypass for isle 9 (ANTICHEAT OMG FUCKING ANTICHEAT!!!) but bliooooooozz isle DOG ZZZ wont add it i think
+				local connections = {} -- after changing location we will disconnect all of them
+				local logic_connections = {} -- buttons
+				
+				-- locations logic
+				local locations = {}
+				local jsons = game:GetService("HttpService")
+				local function cframeToTable(cf)
+					local x, y, z, r00, r01, r02, r10, r11, r12, r20, r21, r22 = cf:components()
+					return {x, y, z, r00, r01, r02, r10, r11, r12, r20, r21, r22}
+				end
+				local function tableToCFrame(t)
+			    if not t or type(t) ~= "table" or #t ~= 12 then
+			        warn("Invalid CFrame data:", t)
+			        return CFrame.new()
+			    end
+			    return CFrame.new(
+			        t[1], t[2], t[3],
+			        t[4], t[5], t[6],
+			        t[7], t[8], t[9],
+			        t[10], t[11], t[12]
+			    )
+			end
+				local main_folder = isfolder('SpineWare')
+				local d_folder = isfolder('SpineWare/Isle')
+				local p_f = isfile('SpineWare/Isle/locations.json')
+				if not main_folder then
+					makefolder('SpineWare')
+				end
+				if not d_folder then
+					makefolder('SpineWare/Isle')
+				end
+				if not p_f then
+					local redacting = {
+							{name = "Ship", cframe = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)},
+							{name = "Forest", cframe = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)},
+							{name = "Generators", cframe = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)},
+							{name = "Observatory", cframe = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)},
+							{name = "Tallest Point", cframe = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)},
+							{name = "Lighthouse", cframe = CFrame.new(-1554.31982, 239.972183, -194.894745, -0.0421087965, 6.00672152e-08, -0.999113023, 1.10267962e-07, 1, 5.54731656e-08, 0.999113023, -1.07834254e-07, -0.0421087965)},
+							{name = "Crash", cframe = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)},
+							{name = "Fireplace", cframe = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)},
+							{name = "Idk place", cframe = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)},
+							{name = "Labaratory", cframe = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)},
+							{name = "Glass Laboratory", cframe = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)},
+							{name = "Docks", cframe = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)},
+							{name = "Lair", cframe = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)},
+							{name = "Hangar", cframe = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)},
+							{name = "Ape City", cframe = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)},
+					}
+					local save_data = {}
+					for _, location in redacting do
+						table.insert(save_data, {name = location['name'], cframe = cframeToTable(location['cframe'])})
+					end
+					writefile('SpineWare/Isle/locations.json', jsons:JSONEncode({
+						['locations'] = save_data
+					}))
+				else
+					local s = jsons:JSONDecode(readfile('SpineWare/Isle/locations.json'))
+					locations = {}
+					for _, loc in s['locations'] do
+						table.insert(locations, {
+							name = loc.name,
+							cframe = tableToCFrame(loc.cframe)
+						})
+					end
+				end
+				-- getting the locations from saved file (it they`re exits)
+				peanut = nil;
+				xpcall(function()
+					peanut = {name="Peanut Box", cframe = workspace.Map.Main.PeanutBox.WorldPivot}
+				end, function()
+					peanut = {name = "NO PEANUT BOX", cframe = CFrame.new(0, 0, 0)}
+				end)
+				table.insert(locations, peanut)
+				if #locations < 2 then
+					locations = {
+						{name = "Ship", cframe = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)},
+						{name = "Forest", cframe = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)},
+						{name = "Generators", cframe = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)},
+						{name = "Observatory", cframe = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)},
+						{name = "Tallest Point", cframe = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)},
+						{name = "Lighthouse", cframe = CFrame.new(-1554.31982, 239.972183, -194.894745, -0.0421087965, 6.00672152e-08, -0.999113023, 1.10267962e-07, 1, 5.54731656e-08, 0.999113023, -1.07834254e-07, -0.0421087965)},
+						{name = "Crash", cframe = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)},
+						{name = "Fireplace", cframe = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)},
+						{name = "Idk place", cframe = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)},
+						{name = "Labaratory", cframe = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)},
+						{name = "Glass Laboratory", cframe = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)},
+						{name = "Docks", cframe = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)},
+						{name = "Lair", cframe = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)},
+						{name = "Hangar", cframe = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)},
+						{name = "Ape City", cframe = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)},
+						peanut
+					}
+				end
+				-- logic
+				local remove_connections = function()
+					for _, connection in connections do
+						pcall(function()
+							connection:Disconnect()
+						end)
+					end
+				end
+				local reload_list = function()
+					for _, exist: TextButton in main['Locations']:GetChildren() do
+						if exist:IsA("TextButton") and exist['Name'] ~= "Example" then
+							exist:Destroy()
+						end
+					end
+					for _, logic_con: RBXScriptConnection in logic_connections do
+						pcall(function() logic_con:Disconnect() end)
+					end
+					for _, location in locations do
+						local example_button: TextButton = main['Locations']['Example']
+						local new_button: TextButton = example_button:Clone()
+						new_button['Visible'] = true
+						new_button['Parent'] = example_button['Parent']
+						new_button['Text'] = location['name']
+						new_button['Name'] = location['name'] ~= "Example" and location['name'] or "xueta"
+						logic_connection = new_button['MouseButton1Click']:Connect(function()
+							choosen_location = location
+							options['_Name']['Text'] = choosen_location and choosen_location['name'] or "Click On Location"
+							text_box['Parent']['Visible'] = false
+							remove_connections()
+							
+							for _, locbut in example_button['Parent']:GetChildren() do
+								if locbut:IsA("TextButton") then 
+									if locbut ~= new_button then
+										if locbut['Name'] ~= "Example" then
+											locbut['TextColor3'] = Color3.new(1,1,1)
+										end
+									else
+										locbut['TextColor3'] = Color3.new(0.14902, 1, 0.203922)
+									end
+								end
+							end
+						end)
+						table.insert(logic_connections, logic_connection)
+					end
+					options['_Name']['Text'] = choosen_location and choosen_location['name'] or "Click On Location"
+					main['Locations']['CanvasSize'] = UDim2.new(0, 0, #locations*0.15, 0)
+				end
+				local save = function()
+					reload_list()
+					local serializable = {}
+					for _, loc in locations do
+						if loc['name'] ~= "Peanut Box" then
+							table.insert(serializable, {
+								name = loc['name'],
+								cframe = cframeToTable(loc['cframe'])
+							})
+						end
+					end
+					writefile('SpineWare/Isle/locations.json', jsons:JSONEncode({locations = serializable}))
+				end
+				reload_list()
+				-- after that we`re got all of these locations 
+				local function bypass_tp(cframe: CFrame)
+					local char: Model = game['Players']['LocalPlayer']['Character']
+					local root: BasePart = char['HumanoidRootPart'] or char:WaitForChild("HumanoidRootPart", 9e9)
+					local anomaly: BasePart = workspace['Map']['Ignore']['SpecialRegions']['Anomaly3']
+					repeat task.wait() until anomaly['PointLight']['Enabled']
+					repeat root['CFrame'] = anomaly['CFrame']; firetouchinterest(anomaly, root, 0); task.wait(.01); firetouchinterest(anomaly, root, 1) until not anomaly:FindFirstChildOfClass("PointLight")['Enabled']
+					root['CFrame'] = cframe
+				end
+				options['Teleport']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						pcall(function()
+							if bypass_enabled then
+								bypass_tp(choosen_location['cframe'])
+							else
+								game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame'] = choosen_location['cframe']
+							end
+						end)
+					end
+				end)
+				options['Bypass']['MouseButton1Click']:Connect(function()
+					bypass_enabled = not bypass_enabled
+					options['Bypass']['Text'] = string.format("Bypass: %s", bypass_enabled and "On" or "Off")
+				end)
+				options['Rename']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								text_box['Parent']['Visible'] = true
+								remove_connections()
+								connection = text_box['FocusLost']:Connect(function(enter)
+									if enter then
+										connection:Disconnect()
+										local text = text_box['Text']
+										text_box['Parent']['Visible'] = false
+										text_box['Text'] = "Write here"
+										
+										if text ~= "Write here" and text ~= "" then
+											location['name'] = text
+											save()
+										end
+									end
+								end)
+								table.insert(connections, connection)
+							end
+						end
+					end
+				end)
+				options['Delete']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								table.remove(locations, table.find(locations, location))
+							end
+						end
+						save()
+					end
+				end)
+				options['Copy']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						xpcall(function()
+							setclipboard(tostring(choosen_location['cframe']))
+						end, function()
+							warn("fail :(")
+						end)
+					end
+				end)
+				options['NewPoint']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								location['cframe'] = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame']
+								save()
+							end
+						end
+					end
+				end)
+				options['Set']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								text_box['Parent']['Visible'] = true
+								remove_connections()
+								connection = text_box['FocusLost']:Connect(function(enter)
+									if enter then
+										connection:Disconnect()
+										local text = text_box['Text']
+										text_box['Parent']['Visible'] = false
+										text_box['Text'] = "Write here"
+				
+										if text ~= "Write here" and text ~= "" then
+											pcall(function()
+												local v = text:split(",")
+												location['cframe'] = CFrame.new(v[1], v[2], v[3], v[4], v[5], v[6], v[7], v[8], v[9], v[10], v[11], v[12])
+												save()
+											end) 
+										end
+									end
+								end)
+								table.insert(connections, connection)
+							end
+						end
+					end
+				end)
+				options['New']['MouseButton1Click']:Connect(function()
+					text_box['Parent']['Visible'] = true
+					text_box['Text'] = "Write name of location here"
+					remove_connections()
+					connection = text_box['FocusLost']:Connect(function(enter)
+						if enter then
+							connection:Disconnect()
+							local text = text_box['Text']
+							text_box['Parent']['Visible'] = false
+							text_box['Text'] = "Write here"
+				
+							if text ~= "Write here" and text ~= "" then
+								table.insert(locations, {
+									name = text, cframe = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame']
+								})
+								save()
+							end
+						end
+					end)
+					table.insert(connections, connection)
+					
+				end)
+				-- ok i think that`s all, now we will do it moveable!!!
+				local UIS = game:GetService('UserInputService')
+				local frame = MainFrame
+				
+				local dragToggle = nil
+				local dragSpeed = 0.25
+				local dragStart = nil
+				local startPos = nil
+				
+				local function updateInput(input)
+					local delta = input.Position - dragStart
+					local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+					game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+				end
+				
+				frame.InputBegan:Connect(function(input)
+					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+						dragToggle = true
+						dragStart = input.Position
+						startPos = frame.Position
+						input.Changed:Connect(function()
+							if input.UserInputState == Enum.UserInputState.End then
+								dragToggle = false
+							end
+						end)
+					end
+				end)
+				
+				UIS.InputChanged:Connect(function(input)
+					if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+						if dragToggle then
+							updateInput(input)
+						end
+					end
+				end)
+			end
+			coroutine.wrap(ESYNN_fake_script)()
+			
+			for _, v in teleportsUI:GetDescendants() do
+				if v['ClassName']:match("Text") then
+					v['RichText'] = true
+					v['Font'] = Enum.Font.Jura
+					v['Text'] = string.format("<b>%s</b>", v['Text'])
+				end
+			end
+		end)
+	end
+})
+local UY = Guis.Button({
+	Text = "Infinite Yeild",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end,
+	Menu = {
+		Tip = function(self)
+			X:Banner({Text = "Don`t use it if your exploit isnt supporting anticheat bypass."})
+		end
+	},
+})
+local Credits = X.New({
+	Title = "Credits"
+})
+Credits.Label({Text = "Rescripted by @kstopicstarter"})
+Credits.Label({Text = "https://discord.gg/Pk7VQqZvZr"})
+Credits.Label({Text = "bliooz - island dog [*****]"})
+Credits.Button({
+	Text = "Copy SpineWare Discord", 
+	Callback = function()
+		pcall(function()
+			setclipboard("https://discord.gg/Pk7VQqZvZr")
+		end)
+	end
+})
+
+local Objects = {}
+local Trash = {Players = {}, Parasites = {}, Mercenaries = {}}
+
+local function drawObj(objectClass, objectProperties)
+	local obj = Drawing.new(objectClass)
+	table.insert(Objects, obj)
+
+	for i, v in pairs(objectProperties) do
+		obj[i] = v
+	end
+
+	objectProperties = nil
+	return obj
+end
+
+local function createMOBESP(player, enabled_value)
+	if not player.Head or not toggles_list['ESP']['Value'] then return end
+	local head = player:FindFirstChild("Head")
+	if player == game['Players']['LocalPlayer']['Character'] then return end
+	local t = {["Mercenaries"] = Color3.fromRGB(216, 155, 18), ["Parasites"] = Color3.fromRGB(201, 67, 64), ["Players"] = Color3.fromRGB(143, 152, 171)}
+	local playerNameText = drawObj("Text", {
+		Position = Vector2.new(0, 0),
+		Text = player.Name,
+		Size = 16,
+		Font = Drawing.Fonts.System,
+		Color = t[enabled_value] ~= nil and t[enabled_value] or Color3.fromRGB(255,255,255),
+		Transparency = 0,
+		Outline = true,
+		Visible = false,
+		OutlineColor = Color3.fromRGB(0, 0, 0),
+	})
+
+	local distanceText = drawObj("Text", {
+		Position = Vector2.new(0, 0),
+		Size = 14,
+		Font = Drawing.Fonts.System,
+		Color = Color3.fromRGB(255, 255, 255),
+		Transparency = 0,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0, 0, 0),
+	})
+	connection = game:GetService("RunService").RenderStepped:Connect(function()
+		pcall(function()
+			if player and head and head:IsDescendantOf(workspace) and player.Humanoid.Health ~= 0 and toggles_list['ESPEnabled'][enabled_value]['Value'] then
+				local headPosition = head.Position
+				local localHead = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Head")
+				if localHead then
+					local localHeadPosition = localHead.Position
+					local screenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(headPosition)
+
+					if onScreen then
+						local distance = (localHeadPosition - headPosition).Magnitude
+
+						local targetTransparency = distance > 1000 and 0 or 1
+						local currentTransparency = playerNameText.Transparency
+
+						if math.abs(currentTransparency - targetTransparency) > 0.05 then
+							playerNameText.Transparency = currentTransparency + (targetTransparency - currentTransparency) * 0.1
+							distanceText.Transparency = playerNameText.Transparency
+						else
+							playerNameText.Transparency = targetTransparency
+							distanceText.Transparency = targetTransparency
+						end
+
+						playerNameText.Position = Vector2.new(screenPosition.X, screenPosition.Y)
+						distanceText.Position = Vector2.new(screenPosition.X, screenPosition.Y + 15)
+						distanceText.Text = string.format("[%.1fm] [%d HP]", distance, player['Humanoid']['Health'])
+
+						playerNameText.Visible = true
+						distanceText.Visible = true
+					else
+						playerNameText.Visible = false
+						distanceText.Visible = false
+					end
+				else
+					playerNameText.Visible = false
+					distanceText.Visible = false
+				end
+			else
+				playerNameText.Visible = false
+				distanceText.Visible = false
+			end
+		end)
+	end)
+	table.insert(Trash[enabled_value], connection)
+end
+
+local function create_search(force, new_npc)
+	task.spawn(function()
+		if new_npc:IsA("Player") then
+			repeat task.wait() until new_npc['Character'] ~= nil or new_npc['CharacterAdded']:Wait()
+			new_npc = new_npc['Character']
+		end
+		repeat task.wait() until new_npc:FindFirstChild("Head")
+		if new_npc:IsA("Model") and new_npc:FindFirstChild("HumanoidRootPart") and new_npc:FindFirstChild("Head") then
+			if toggles_list['ESPEnabled'][force] then
+				createMOBESP(new_npc, force)
+			end
+		end
+	end)
+end
+local folder_search = function(folder, force)
+	for _, object in folder:GetChildren() do
+		create_search(force, object)
+	end
+	folder['ChildAdded']:Connect(function(new_npc)
+		create_search(force, new_npc)
+	end)
+end
+for index, value in toggles_list['ESPEnabled'] do
+	value['Changed']:Connect(function(new_force)
+		if value['Value'] then
+			if index == "Mercenaries" then
+				folder_search(game['Workspace']['AIHunter'], index)
+			end
+			if index == "Players" then
+				folder_search(game['Players'], index)
+			end
+			if index == "Parasites" then
+				folder_search(game.Workspace.Threats, index)
+			end
+		else
+			for i,v in Trash[index] do
+				v:Disconnect()
+			end 
+			table.clear(Trash[index])
+			for i,v in Objects do
+				pcall(function() v:Remove() end)
+			end
+		end
+	end)
+end
+toggles_list['ESP']['Changed']:Connect(function(status)
+	if not status then
+		for i, v in Objects do
+			pcall(function()
+				v:Remove()
+			end)
+		end
+		table.clear(Objects)
+		for i, r in Trash do
+			for _, v in r do 
+				v:Disconnect()
+			end
+			table.clear(Trash[i])
+		end
+	else
+		folder_search(game['Workspace']['AIHunter'], "Mercenaries")
+		folder_search(game['Players'], "Players")
+		folder_search(game.Workspace.Threats, "Parasites")
+	end
+end)
+
+local speed = 0
+local jump = 50
+
+toggles_list['WalkSpeed']['Changed']:Connect(function(value)
+	speed = value
+end)
+toggles_list['JumpPower']['Changed']:Connect(function(value)
+	jump = value
+end)
+
+task.spawn(function()
+	task.spawn(function()
+		while game['Players']['LocalPlayer']['Character']:FindFirstChildOfClass("Humanoid") do
+			humanoid = game['Players']['LocalPlayer']['Character']:FindFirstChildOfClass("Humanoid")
+			if humanoid['JumpPower'] ~= jump then
+				humanoid['JumpPower'] = jump
+			end
+			task.wait(0.1)
+		end
+	end)
+	getgenv().TpWalking = true
+
+	local player = game:GetService("Players").LocalPlayer
+	local chr = player.Character or player.CharacterAdded:Wait()
+	local hum = chr:FindFirstChildWhichIsA("Humanoid")
+	local root = chr:FindFirstChild("HumanoidRootPart")
+	local hb = game:GetService("RunService").Heartbeat
+
+	if not (hum and root) then return end
+	local minAllowedY = workspace.FallenPartsDestroyHeight + 10
+	while getgenv().TpWalking and chr and hum and hum.Parent and root and root.Parent do
+		local delta = hb:Wait()
+		if speed == 0 then continue end
+		if hum.MoveDirection.Magnitude > 0 then
+			local moveDir = hum.MoveDirection * tonumber(speed) * delta * 10
+			local oldY = root.Position.Y
+			chr:TranslateBy(moveDir)
+			if root.Position.Y < oldY - 5 then  
+				local safePos = Vector3.new(root.Position.X, oldY, root.Position.Z)
+				chr:SetPrimaryPartCFrame(CFrame.new(safePos, safePos + root.CFrame.LookVector))
+			end
+			if root.Position.Y < minAllowedY then
+				getgenv().TpWalking = false
+				break
+			end
+		end
+	end
+	if root and root.Position.Y < minAllowedY then
+		local spawn = player:FindFirstChild("SpawnLocation")
+		if spawn then
+			chr:SetPrimaryPartCFrame(spawn.CFrame)
+		else
+			chr:SetPrimaryPartCFrame(CFrame.new(0, 50, 0))
+		end
+	end
+end)
+local theId, ThePart
+
+local function del_kick()
+	local a, x =  pcall(function()
+		local oldNamecall = getrawmetatable(game).__namecall
+		setreadonly(getrawmetatable(game), false)
+		getrawmetatable(game).__namecall = newcclosure(function(self, ...)
+			local args = {...}
+			local method = getnamecallmethod()
+			if method == "InvokeServer" then
+				if self['Name'] == "BypassRequest" then
+					theId = args[1]
+					ThePart = args[2]
+				elseif self['Name'] == "PickupTool" then
+					toggles_list['ItemSeen']['Value'] = true
+					task.delay(0.1, function()
+						toggles_list['ItemSeen']['Value'] = false
+					end)
+				end
+			elseif method == "Invoke" and self == game.Players.LocalPlayer.Kick then
+				return
+			elseif method == "FireServer" and self['Name'] == "Spotted" then
+				if toggles_list['AntiSpotted']['Value'] then 
+					return
+				end
+			end
+			return oldNamecall(self, unpack(args))
+		end)
+		setreadonly(getrawmetatable(game), true)
+	end)
+	local StarterGui = game:GetService("StarterGui")
+	if not a then 
+		X:Banner({Text = "Anticheat was not bypassed :("})
+	else
+		X:Banner({Text = "Anticheat was bypassed! Now you can use IY without kick"})
+	end
+end
+del_kick()
+
+local last_arguments = {}
+local success, error = pcall(function()
+	local PlayersService = game:GetService("Players")
+	local LocalPlayer = PlayersService.LocalPlayer
+	local Services = workspace:WaitForChild("Services")
+	local ALLOW_FREEZE = true -- If true makes generating extremely fast but might freeze on hard ones
+	local CharacterPresent, GetNumber, ParseExpression; do -- src: https://gist.githubusercontent.com/Noble-Mushtak/a2eb302003891c85b562/raw/652cbe49d72211309d6c688ced4027959afeffc1/Calculator.lua
+		function CharacterPresent(str, character)
+			for i=1, #str do
+				if string.sub(str, i, i) == character then
+					return true
+				end
+			end
+			return false
+		end
+		function GetNumber(expression)
+			local validCharacters = "0123456789.-"
+			local foundDigit = false
+			local i = 1
+			local currentCharacter = string.sub(expression, i, i)
+			while CharacterPresent(validCharacters, currentCharacter) do
+				if i == 1 then
+					validCharacters = "0123456789."
+				end
+				if currentCharacter == "." then
+					validCharacters = "0123456789"
+				end
+				if CharacterPresent("0123456789", currentCharacter) then
+					foundDigit = true
+				end
+				i = i + 1
+				if i > #expression then
+					break
+				end
+				currentCharacter = string.sub(expression, i, i)
+			end
+			if not foundDigit then
+				i = 1
+			end
+			return tonumber(string.sub(expression, 1, i-1)), string.sub(expression, i, #expression)
+		end
+		function ParseExpression(expression, expectEndParentheses)
+			if type(expression) ~= "string" then
+				return nil, "Expected string as argument #1"
+			end
+			expression = string.gsub(expression, "%s+", "")
+			local expectingExpression = true
+			local lastExpressionWasParenthetical = false
+			local operators = "+-/*^%"
+			local parts = {}
+			local foundEndParentheses = false
+			expectEndParentheses = expectEndParentheses or false
+			while expression ~= "" do
+				local nextNumber, expressionAfterNumber = GetNumber(expression)
+				local nextCharacter = string.sub(expression, 1, 1)
+				local nextPiece = string.sub(expression, 1, 5)
+				if #expression <= 5 then
+					nextPiece = nextPiece .." [end]"
+				end
+				if expectingExpression then
+					if nextCharacter == "(" then
+						local nestedExpressionValue, expressionAfterParentheses = ParseExpression(string.sub(expression, 2, #expression), true)
+						if nestedExpressionValue == nil then
+							return nestedExpressionValue, expressionAfterParentheses
+						end
+						table.insert(parts, nestedExpressionValue)
+						expression = expressionAfterParentheses
+						lastExpressionWasParenthetical = true
+					else
+						if nextNumber == nil then
+							return nil, "Expected number or '(', but found '"..nextPiece.."'"
+						end
+						table.insert(parts, nextNumber)
+						expression = expressionAfterNumber
+						lastExpressionWasParenthetical = false
+					end
+				elseif CharacterPresent(operators, nextCharacter) then
+					table.insert(parts, nextCharacter)
+					expression = string.sub(expression, 2, #expression)
+				elseif nextCharacter == "(" or (lastExpressionWasParenthetical and nextNumber ~= nil) then
+					table.insert(parts, "*")
+				elseif nextCharacter == ")" then
+					if expectEndParentheses then
+						expression = string.sub(expression, 2, #expression)
+						foundEndParentheses = true
+						break
+					else
+						return nil, "')' present without matching '(' at '"..nextPiece.."'"
+					end
+				else
+					return nil, "Expected expression, but found '"..nextPiece.."'"
+				end
+				expectingExpression = not expectingExpression
+			end
+			if expectEndParentheses and not foundEndParentheses then
+				return nil, "Expression unexpectedly ended ('(' present without matching ')')"
+			end
+			if expectingExpression then
+				return nil, "Expression unexpectedly ended"
+			end
+			local i = #parts
+			while i >= 1 do
+				if parts[i] == "^" then
+					parts[i-1] = parts[i-1] ^ parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				end
+				i = i - 1
+			end
+			i = 1
+			while i <= #parts do
+				if parts[i] == "*" then
+					parts[i-1] = parts[i-1]*parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				elseif parts[i] == "/" then
+					parts[i-1] = parts[i-1]/parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				elseif parts[i] == "%" then
+					parts[i-1] = parts[i-1]%parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				else
+					i = i+ 1
+				end
+			end
+			i = 1
+			while i <= #parts do
+				if parts[i] == "+" then
+					parts[i-1] = parts[i-1]+parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				elseif parts[i] == "-" then
+					parts[i-1] =parts[i-1]- parts[i+1]
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				else
+					i = i + 1
+				end
+			end
+
+			return parts[1], expression
+		end
+	end
+
+	local GetDictionaryLength; do
+		function GetDictionaryLength(dictionary)
+			local length = 0
+			for key, value in pairs(dictionary) do
+				length =length + 1
+			end
+			return length
+		end
+	end
+
+	local OnHack; do
+		local SubmitSolution = Services:WaitForChild("SubmitSolution")
+		function OnHack(expressions, letters, answers, er,objectId,Place,sea)
+			if not AutoHackEnabled then return end
+			local results = {}
+			local generatedNumbers = {}
+			local lastGeneratedNumbers
+			local allowSubmit = true
+			for index, expression in ipairs(expressions) do
+				local correctAnswer = tonumber(answers[index])
+				local result, errorMessage
+				repeat
+					local expression = expression
+					if lastGeneratedNumbers then
+						generatedNumbers = lastGeneratedNumbers
+					elseif GetDictionaryLength(generatedNumbers) == 0 then
+						for index, letter in ipairs(letters) do
+							generatedNumbers[letter] = math.random(0, 9)
+						end
+					end
+					for letter, value in pairs(generatedNumbers) do
+						expression = string.gsub(expression, letter, value)
+					end
+					result, errorMessage = ParseExpression(expression)
+					if tonumber(result) ~= correctAnswer then
+						if lastGeneratedNumbers == generatedNumbers then
+							allowSubmit = false
+							task.wait(0.0001)
+							task.spawn(OnHack, expressions, letters, answers, objectId)
+							break
+						end
+						table.clear(generatedNumbers)
+					end
+					if not ALLOW_FREEZE then
+						task.wait()
+					end
+				until tonumber(result) == correctAnswer
+				lastGeneratedNumbers = generatedNumbers
+			end
+			if allowSubmit   then
+				for _, argument in last_args do
+					if tonumber(argument) ~= nil then
+						theId = argument
+					else
+						pcall(function()
+							if argument:IsA("Part") then
+								ThePart = argument
+							end
+						end)
+					end
+				end
+				SubmitSolution:FireServer(theId, generatedNumbers,ThePart)
+				table.clear(generatedNumbers)
+				if parts then
+					table.remove(parts, i+1)
+					table.remove(parts, i)
+				end
+			end
+		end
+	end
+	local HackReceiver = LocalPlayer.Character:FindFirstChild("@H")
+	HackReceiver.OnClientEvent:Connect(function(...)
+		last_args = {...}
+		OnHack(...)
+	end)
+end)
+
+local success, error = pcall(function()
+	toggles_list['ItemSeen']['Changed']:Connect(function(val)
+		if toggles_list['SmartStorage']['Value'] then
+			local player = game['Players']['LocalPlayer']
+			if val then
+				for _, item in player['Backpack']:GetChildren() do
+					item['Parent'] = player['Character']
+					task.delay(.2, function()
+						item['Parent'] = player['Backpack']
+					end)
+				end
+			end
+		end
+	end)
+end)
+
+local success, error = pcall(function()
+	task.spawn(function()
+		while 1 do 
+			if toggles_list['InfStorage']['Value'] then
+				local player = game['Players']['LocalPlayer']
+				if player['Character'] then
+					for _, item in player['Backpack']:GetChildren() do
+						item['Parent'] = player['Character']
+						task.delay(.2, function()
+							item['Parent'] = player['Backpack']
+						end)
+					end
+				end
+			end
+			task.wait(.25)
+		end
+	end)
+
+	local function noclip()
+		for _, part in game['Players']['LocalPlayer']['Character']:GetChildren() do
+			if part:IsA("MeshPart") or part:IsA("Part") then
+				part['CanCollide'] = not toggles_list['Noclip']['Value'] 
+			end
+		end
+	end
+	game:GetService("RunService")['Stepped']:Connect(function()
+		if Noclip_ever_activated and toggles_list['Noclip']['Value'] then
+			noclip()
+		end
+	end)
+end)
+task.spawn(function()
+	task.spawn(function()
+		local players = game:GetService("Players")
+		local function formatted_list()
+			local t = {}
+			for _, player in players:GetPlayers() do
+				table.insert(t, player['Name'])
+			end
+			return t
+		end
+		ChoosedPlayerDrop:SetOptions(formatted_list())
+
+		players.PlayerAdded:Connect(function(player)
+			ChoosedPlayerDrop:SetOptions(formatted_list())
+		end)
+		players.PlayerRemoving:Connect(function()
+			ChoosedPlayerDrop:SetOptions(formatted_list())
+		end)
+	end)
+	while 1 do
+		if toggles_list['TrollPlayer']['Value'] then
+			local hunters = workspace['AIHunter']
+			for _, child in hunters:GetChildren() do
+				if child:FindFirstChildOfClass("Humanoid") and child['Name']:match('Sniper') then
+					if toggles_list['TrolledPlayer']['Value'] ~= nil then
+						local kill_event = child:FindFirstChild("@Kill", true)
+						kill_event:FireServer(toggles_list['TrolledPlayer']['Value']['Character'])
+					end
+				end
+			end
+			task.wait(3.5)
+		end
+		if toggles_list['BuddiesTroll'] then
+			for _, buddy in workspace.Threats:GetChildren() do
+				if buddy['Name']:match('Buddy') then
+					if buddy:FindFirstChildOfClass("Tool") then
+						if toggles_list['TrolledPlayer']['Value'] ~= nil then
+							local gun = buddy:FindFirstChildOfClass("Tool")
+							local kill_event = gun:FindFirstChild("@Kill")
+							kill_event:FireServer(toggles_list['TrolledPlayer']['Value']['Character'])
+						end
+					end
+				end
+			end
+		end
+		task.wait(.1)
+	end
+end)
+local teleportedToGiverXuesos = false
+local MercenariesCountStatused = false
+
+task.spawn(function()
+	-- giver kolbasa talk
+	local plrgui = game:GetService("Players")['LocalPlayer']['PlayerGui']
+	local dialogues = plrgui['MainGui']['Dialogue']
+	local shablon = {
+		{"one of them bears hypnotising eyes", "gem"},
+		{"one of them grants an escape from this place", "feathered"},
+		{"one of them strikes from the hidden depths of the ocean", "scaled"},
+		{"you right now", "forest"},
+		{"time did my house appear here", "8:00"},
+		{"guaranteed to spawn in facility", "glowstick"},
+		{"Calamity, comity or curiosity?", "curiosity"},
+		{"the natural human", "who are you"},
+		{"i`m bored", "CLICKING"},
+		{"time you spend", "CLICKING"},
+		{"hearing more", "Yes"},
+		{"Tick tock", "CLICKING"},
+		{"something for you", "CLICKING"},
+		{"something I'd like to", "CLICKING"},
+		{"My move", "CLICKING"},
+		{"My turn", "CLICKING"},
+		{"very well", "CLICKING"},
+		{"we will", "CLICKING"},
+		{"you may", "CLICKING"},
+		{"consider", "CLICKING"},
+	}
+	while 1 do
+		if toggles_list['AutoAnswer'] then
+			local question = ""
+			local answers = {}
+			if dialogues and dialogues:FindFirstChild('DialogueFrame') then
+				local success, error = pcall(function()
+					question = dialogues['DialogueFrame']:FindFirstChildOfClass("TextLabel")['Text']
+					for _, option in dialogues['OptionFrame']:GetChildren() do
+						if option:IsA("TextButton") then
+							table.insert(answers, {option, option['Text']:lower()})
+						end
+					end  
+					if question:lower():match("powered") or question:lower():match("been used") then 
+						for _, value_power in workspace['Power']:GetChildren() do
+							if question:lower():match(value_power['Name']:lower()) then
+								for index, answer_var in answers do
+									if answer_var[2]:lower() == (value_power['Value'] and "Yes" or "No"):lower() then
+										answer_var[1]['TextColor3'] = Color3.new(0, 1, 0)
+										firesignal(answer_var[1]['MouseButton1Up'])
+										break
+									end
+								end
+							end
+						end
+					elseif question:lower():match("active") then
+						for _, value_power in workspace['Pylons']:GetChildren() do
+							if question:lower():match("mineshaft") then
+								question = "earth"
+							elseif question:lower():match("radio tower") then
+								question = "water"
+							else
+								question = "air"
+							end
+							if question:lower():match(value_power['Name']:lower()) then
+								for index, answer_var in answers do
+									if answer_var[2]:lower() == (value_power['Value'] and "Yes" or "No"):lower() then
+										answer_var[1]['TextColor3'] = Color3.new(0, 1, 0)
+										firesignal(answer_var[1]['MouseButton1Up'])
+										break
+									end
+								end
+							end
+						end
+					elseif question:lower():match("day") then
+						local day = workspace['Weather']['Day']['Value']
+						for index, answer_var in answers do
+							if answer_var[2]:match(string.format('day %d', day)) then
+								answer_var[1]['TextColor3'] = Color3.new(0, 1, 0)
+								firesignal(answer_var[1]['MouseButton1Up'])
+								break
+							end
+						end
+					elseif question:lower():match('how many merc') then
+						count = -1
+						for __, object in worspace['AIHunter']:GetChildren() do
+							if object:IsA("Model") then
+								count += 1
+							end
+						end
+						if not MercenariesCountStatused then
+							X:Banner({Text = string.format("BIG DADDY`S COUNT ON ISLAND: %d", count)})
+							MercenariesCountStatused = true
+							task.delay(1.5, function()
+								MercenariesCountStatused = false
+							end)
+						end
+					end
+					for i, shablon_variant in shablon do
+						if (question:lower()):match(shablon_variant[1]:lower()) then
+							for __, answer_variant in answers do
+								if answer_variant[2] == "clicking" then
+									firesignal(dialogues['DialogueFrame']['TextButton']['MouseButton1Up'])
+									task.wait()
+									break
+								end
+								if answer_variant[2]:lower():match(shablon_variant[2]:lower()) then
+									answer_variant[1]['TextColor3'] = Color3.new(0, 1, 0)
+									firesignal(answer_variant[1]['MouseButton1Up'])
+									task.wait()
+									break
+								end
+							end
+						end
+					end
+				end)
+			end
+			if not success then print(error) end
+		end
+		if toggles_list['AutoTPGiver'] then
+			if game:GetService("Lighting")['ClockTime'] >= 20 then
+				if not teleportedToGiverXuesos then 
+					teleportedToGiverXuesos = true
+					for i = 1, 3 do 
+						game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame'] = CFrame.new(-770.85437, 4.60989952, 413.090179, -0.649261534, 6.0111347e-08, 0.760565221, -2.61333e-09, 1, -8.12659877e-08, -0.760565221, -5.47504868e-08, -0.649261534) + Vector3.new(0, 1.5, 0)
+						task.wait(.1)
+					end
+				end
+			else
+				teleportedToGiverXuesos = false
+			end
+		end
+		task.wait(.1)
+	end
+end)
+
+--highlight system
+local main_size = Vector3.new(3, 6, 3) -- we will be economing this shit!!!!!!!!!!!!!!
+local exception = {}
+local higlights = {} -- nneded for storing highlight parents and deleting them
+local tables = {}
+
+tables['_find'] = function(table_, searching)
+	for _, v in table_ do
+		if v == searching then
+			return true
+		end
+	end	
+	return false
+end
+local remove_higlight = function(character: Model)
+	for _, desc: Part in higlights do
+		if desc == character then
+			pcall(function()
+				desc:Destroy()
+			end)
+			pcall(function()
+				table.remove(exception, character)
+			end)
+		end
+	end
+end
+local return_type = function(character: Model)
+	if game['Players']:GetPlayerFromCharacter(character) ~= nil then
+		return "HighPlayer"
+	elseif character:FindFirstAncestor("AIHunter") then
+		return "HighMerc"
+	end
+	return "HighParasite"
+end
+local add_highlight = function(character: Model)
+	local success, error = pcall(function()
+		local highlight_new: Highlight = Instance.new("Highlight", character)
+		highlight_new['FillTransparency'] = 0.7
+		highlight_new['OutlineTransparency'] = 1
+		highlight_new['FillColor'] = toggles_list[return_type(character)]['Value']
+		toggles_list[return_type(character)]['Changed']:Connect(function(new_color)
+			highlight_new['FillColor'] = toggles_list[return_type(character)]['Value']
+		end)
+		table.insert(higlights, highlight_new)
+		table.insert(exception, character)
+	end)
+	if not success then print(error) end
+end
+task.spawn(function()
+	while true do
+		if toggles_list['HighlightsEnabled'] and toggles_list['ESP']['Value'] then
+			for _, player: Player in game['Players']:GetPlayers() do
+				if player['Character'] and player ~= game['Players']['LocalPlayer'] then
+					if player['Character']:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player['Character'])
+					end
+					if not tables['_find'](exception, player['Character']) then
+						add_highlight(player['Character'])
+					end
+				end
+			end
+			game['Players']['PlayerAdded']:Connect(function(player)
+				if player['Character'] and player ~= game['Players']['LocalPlayer'] then
+					if player['Character']:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player['Character'])
+					end
+					if not tables['_find'](exception, player['Character']) then
+						add_highlight(player['Character'])
+					end
+				end
+			end)
+			for _, player in game['Workspace']['AIHunter']:GetChildren() do
+				if player ~= nil and player:FindFirstChild("HumanoidRootPart") then
+					if player:FindFirstChildOfClass("Humanoid") and player:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player)
+					end
+					if not tables['_find'](exception, player) then
+						add_highlight(player)
+					end
+				end
+			end
+			game['Workspace']['AIHunter']['ChildAdded']:Connect(function(player)
+				if player ~= nil and player:FindFirstChild("HumanoidRootPart") then
+					if player:FindFirstChildOfClass("Humanoid") and player:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player)
+					end
+					if not tables['_find'](exception, player) then
+						add_highlight(player)
+					end
+				end
+			end)
+			for _, player in game['Workspace']['Threats']:GetChildren() do
+				if player ~= nil and player:FindFirstChild("HumanoidRootPart") then
+					if player:FindFirstChildOfClass("Humanoid") and player:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player)
+					end
+					if not tables['_find'](exception, player) then 
+						add_highlight(player)
+					end
+				end
+			end
+			game['Workspace']['Threats']['ChildAdded']:Connect(function(player)
+				if player ~= nil and player:FindFirstChild("HumanoidRootPart") then
+					if player:FindFirstChildOfClass("Humanoid") and player:FindFirstChildOfClass("Humanoid")['Health'] <= 0 then 
+						remove_higlight(player)
+					end
+					if not tables['_find'](exception, player) then 
+						add_highlight(player)
+					end
+				end
+			end)
+		else
+			if #higlights > 0 then
+				for _, v in higlights do
+					pcall(function()
+						v:Destroy()
+					end)
+					pcall(function()
+						table.remove(exception, v['Parent'])
+					end)
+				end
+			end
+		end
+		-- all of variables named player, cuz i dont want to waste my time on it...
+		task.wait(.15)
+	end
+end)
+
+Start()

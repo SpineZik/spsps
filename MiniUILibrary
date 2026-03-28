@@ -6,6 +6,7 @@ local core_gui: CoreGui | StarterGui = game['CoreGui'] or game['Players']['Local
 
 local main_tab: ScrollingFrame
 local buttons = 0; -- x0.2 = scale of scrolling frame.
+local last_size: UDim2 = UDim2.new(0, 392, 0, 229);
 
 local Objects = {}
 local ActualTypes = {RoundFrame = "ImageLabel", Shadow = "ImageLabel", Circle = "ImageLabel", CircleButton = "ImageButton", Frame = "Frame", Label = "TextLabel", Button = "TextButton", SmoothButton = "ImageButton", Box = "TextBox", ScrollingFrame = "ScrollingFrame", Menu = "ImageButton", NavBar = "ImageButton"}
@@ -15,7 +16,7 @@ function FindType(String) for _, Type in next, Types do if Type:sub(1, #String):
 function Objects.new(Type) local TargetType = FindType(Type) if TargetType then local NewImage = Instance.new(ActualTypes[TargetType]) if Properties[TargetType] then for Property, Value in next, Properties[TargetType] do NewImage[Property] = Value end end return NewImage else return Instance.new(Type) end end
 
 local dropdowns = {}
-function DropDownPriority() for i = 1, #dropdowns do task.spawn(function() pcall(function() dropdowns[i]['ZIndex'] = #dropdowns - i + 1; dropdowns[i]:FindFirstChild("Variants", true)['ZIndex'] = #dropdowns - i + 1 end) end) end end
+function DropDownPriority() for i = 1, #dropdowns do task.spawn(function() pcall(function() dropdowns[i]['ZIndex'] = #dropdowns - i + 2; dropdowns[i]:FindFirstChild("Variants", true)['ZIndex'] = #dropdowns - i + 1 end) end) end end
 function FindElement(table, element) for _, el in table do if el == element then return true end end return false end
 local function GetXY(GuiObject)
 	local Max, May = GuiObject.AbsoluteSize.X, GuiObject.AbsoluteSize.Y
@@ -55,7 +56,7 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 		TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextButton.BorderSizePixel = 0
 		TextButton.Position = UDim2.new(0.0678851157, 0, 0, 0)
-		TextButton.Size = UDim2.new(0, 348, 0, 21)
+		TextButton.Size = UDim2.new(1, -25, 0, 21)
 		TextButton.AutoButtonColor = false
 		TextButton.Font = Enum.Font.Jura
 		TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -77,6 +78,7 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 				end)
 			end
 		end
+		if first_val == TextButton['Text'] then table.insert(choosen, TextButton) end
 		if TextButton['Text'] == first_val then
 			TextButton.BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)
 		end
@@ -148,7 +150,7 @@ local main_tab_module = {
 		Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Button.BorderSizePixel = 0
 		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		Button.Size = UDim2.new(0, 383, 0, 38)
+		Button.Size = UDim2.new(1, -4, 0, 38)
 
 		UICorner_3.CornerRadius = UDim.new(0, 4)
 		UICorner_3.Parent = Button
@@ -158,7 +160,7 @@ local main_tab_module = {
 		TextLabel_2.BackgroundTransparency = 1.000
 		TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_2.BorderSizePixel = 0
-		TextLabel_2.Position = UDim2.new(0.039164491, 0, 0.049866125, 0)
+		TextLabel_2.Position = UDim2.new(0, 13, 0.0500000007, 0)
 		TextLabel_2.Size = UDim2.new(0, 147, 0, 33)
 		TextLabel_2.Font = Enum.Font.Unknown
 		TextLabel_2.Text = properties['Name']
@@ -172,7 +174,7 @@ local main_tab_module = {
 		Turner.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 		Turner.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Turner.BorderSizePixel = 0
-		Turner.Position = not status and UDim2.new(0.853785872, 0, 0.218210325, 0) or UDim2.new(0.853785872, 26, 0.218210325, 0)
+		Turner.Position = UDim2.new(1, -55, 0.218210325, 0)
 		Turner.Size = UDim2.new(0, 47, 0, 21)
 
 		UICorner_4.Parent = Turner
@@ -181,20 +183,19 @@ local main_tab_module = {
 		Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Frame.BorderSizePixel = 0
-		Frame.Position = UDim2.new(0, 0, -0.0552382693, 0)
+		Frame.Position = not self['FirstValue'] and UDim2.new(0, 26, -0.055, 0) or UDim2.new(0, 0,-0.055, 0)
 		Frame.Size = UDim2.new(0, 23, 0, 22)
 
 		UICorner_5.CornerRadius = UDim.new(0, 6)
 		UICorner_5.Parent = Frame
 
 		Trigger.Name = "Trigger"
-		Trigger.Parent = Button
+		Trigger.Parent = Turner
 		Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		Trigger.BackgroundTransparency = 1.000
 		Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Trigger.BorderSizePixel = 0
-		Trigger.Position = UDim2.new(0.8328982, 0, 0.0263157897, 0)
-		Trigger.Size = UDim2.new(0, 64, 0, 33)
+		Trigger.Size = UDim2.new(1, 5, 1, 5)
 		Trigger.Font = Enum.Font.SourceSans
 		Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
 		Trigger.TextSize = 14.000
@@ -246,7 +247,7 @@ local main_tab_module = {
 		TextBoxMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextBoxMain.BorderSizePixel = 0
 		TextBoxMain.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		TextBoxMain.Size = UDim2.new(0, 383, 0, 38)
+		TextBoxMain.Size = UDim2.new(1, -4, 0, 38)
 
 		UICorner_9.CornerRadius = UDim.new(0, 4)
 		UICorner_9.Parent = TextBoxMain
@@ -256,8 +257,8 @@ local main_tab_module = {
 		TextLabel_4.BackgroundTransparency = 1.000
 		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_4.BorderSizePixel = 0
-		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
-		TextLabel_4.Size = UDim2.new(0, 300, 0, 33)
+		TextLabel_4.Position = UDim2.new(0, 13, 0.0500000007, 0)
+		TextLabel_4.Size = UDim2.new(0, 181, 0, 33)
 		TextLabel_4.Font = Enum.Font.Unknown
 		TextLabel_4.Text = properties['Text']
 		TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -270,7 +271,7 @@ local main_tab_module = {
 		Turner_3.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 		Turner_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Turner_3.BorderSizePixel = 0
-		Turner_3.Position = UDim2.new(0.819843352, 0, 0.128813088, 0)
+		Turner_3.Position = UDim2.new(1, -70, 0.128999993, 0)
 		Turner_3.Size = UDim2.new(0, 62, 0, 27)
 
 		UICorner_10.CornerRadius = UDim.new(0, 4)
@@ -324,7 +325,7 @@ local main_tab_module = {
 		Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Button.BorderSizePixel = 0
 		Button.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		Button.Size = UDim2.new(0, 383, 0, 38)
+		Button.Size = UDim2.new(1, -4, 0, 38)
 		Button.ClipsDescendants = true
 
 		UICorner_14.CornerRadius = UDim.new(0, 4)
@@ -335,7 +336,7 @@ local main_tab_module = {
 		TextLabel_6.BackgroundTransparency = 1.000
 		TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_6.BorderSizePixel = 0
-		TextLabel_6.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_6.Position =  UDim2.new(0, 13, 0.0500000007, 0)
 		TextLabel_6.Size = UDim2.new(0, 300, 0, 33)
 		TextLabel_6.Font = Enum.Font.Unknown
 		TextLabel_6.Text = properties['Name']
@@ -392,8 +393,8 @@ local main_tab_module = {
 		table.insert(dropdowns, DropdownFrame)
 		DropDownPriority()
 		
-		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
-		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
+		local start_size: UDim2 = UDim2.new(1, 0, 0, 0)
+		local finish_size: UDim2 = UDim2.new(1, 0, 0, 72)
 		local status: boolean = false
 
 		DropdownFrame.Name = properties['Name']
@@ -403,7 +404,7 @@ local main_tab_module = {
 		DropdownFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		DropdownFrame.BorderSizePixel = 0
 		DropdownFrame.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		DropdownFrame.Size = UDim2.new(0, 383, 0, 38)
+		DropdownFrame.Size = UDim2.new(1, -4, 0, 38)
 		DropdownFrame.ZIndex = 2
 		
 		UICorner_8.CornerRadius = UDim.new(0, 4)
@@ -414,7 +415,7 @@ local main_tab_module = {
 		TextLabel_4.BackgroundTransparency = 1.000
 		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_4.BorderSizePixel = 0
-		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_4.Position =  UDim2.new(0, 13, 0.0500000007, 0)
 		TextLabel_4.Size = UDim2.new(0, 300, 0, 33)
 		TextLabel_4.Font = Enum.Font.Unknown
 		TextLabel_4.Text = properties['Name']
@@ -429,7 +430,7 @@ local main_tab_module = {
 		ControlSize_2.BackgroundTransparency = 1.000
 		ControlSize_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		ControlSize_2.BorderSizePixel = 0
-		ControlSize_2.Position = UDim2.new(0.904017806, 0, 0.223758101, 0)
+		ControlSize_2.Position = UDim2.new(1, -42, 0.238000005, 0)
 		ControlSize_2.Size = UDim2.new(0, 35, 0, 21)
 		ControlSize_2.Image = "rbxassetid://81808702659668"
 
@@ -441,7 +442,7 @@ local main_tab_module = {
 		Background.BorderSizePixel = 0
 		Background.LayoutOrder = 1
 		Background.Position = UDim2.new(0, 0, 0.947368801, 0)
-		Background.Size = UDim2.new(0, 383, 0, 0)
+		Background.Size =  UDim2.new(1, 0, 0, 0)
 		Background.Visible = false
 
 		Variants.Name = "Variants"
@@ -512,7 +513,7 @@ local main_tab_module = {
 		Slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Slider.BorderSizePixel = 0
 		Slider.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		Slider.Size = UDim2.new(0, 383, 0, 38)
+		Slider.Size = UDim2.new(1, -4, 0, 38)
 
 		UICorner_10.CornerRadius = UDim.new(0, 4)
 		UICorner_10.Parent = Slider
@@ -523,7 +524,7 @@ local main_tab_module = {
 		SliderName.BackgroundTransparency = 1.000
 		SliderName.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		SliderName.BorderSizePixel = 0
-		SliderName.Position = UDim2.new(0.039164491, 0, 0, 3)
+		SliderName.Position = UDim2.new(0, 13, 0, 3)
 		SliderName.Size = UDim2.new(0, 317, 0, 17)
 		SliderName.Font = Enum.Font.Unknown
 		SliderName.Text = properties['Name']
@@ -537,7 +538,7 @@ local main_tab_module = {
 		Slider_2.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
 		Slider_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Slider_2.BorderSizePixel = 0
-		Slider_2.Position = UDim2.new(0.0400000177, 0, 0.604999721, 0)
+		Slider_2.Position = UDim2.new(0, 15, 0.605000019, 0)
 		Slider_2.Size = UDim2.new(0.986109376, -20, 0, 3)
 
 		Slider_3.Name = "Dot"
@@ -563,7 +564,7 @@ local main_tab_module = {
 		Value.BackgroundTransparency = 1.000
 		Value.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Value.BorderSizePixel = 0
-		Value.Position = UDim2.new(0.845952988, 0, 0, 3)
+		Value.Position = UDim2.new(1, -60, 0, 3)
 		Value.Size = UDim2.new(0, 49, 0, 17)
 		Value.Font = Enum.Font.Jura
 		Value.Text = SliderDef
@@ -611,8 +612,8 @@ local main_tab_module = {
 		table.insert(dropdowns, DropdownFrame)
 		DropDownPriority()
 
-		local start_size: UDim2 = UDim2.new(0, 383, 0, 0)
-		local finish_size: UDim2 = UDim2.new(0, 383, 0, 72)
+		local start_size: UDim2 = UDim2.new(1, 0, 0, 0)
+		local finish_size: UDim2 = UDim2.new(1, 0, 0, 72)
 		local status: boolean = false
 
 		DropdownFrame.Name = properties['Name']
@@ -622,7 +623,7 @@ local main_tab_module = {
 		DropdownFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		DropdownFrame.BorderSizePixel = 0
 		DropdownFrame.Position = UDim2.new(0.0216836743, 0, 0.0416666679, 0)
-		DropdownFrame.Size = UDim2.new(0, 383, 0, 38)
+		DropdownFrame.Size = UDim2.new(1, -4, 0, 38)
 		DropdownFrame.ZIndex = 2
 
 		UICorner_8.CornerRadius = UDim.new(0, 4)
@@ -633,7 +634,7 @@ local main_tab_module = {
 		TextLabel_4.BackgroundTransparency = 1.000
 		TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		TextLabel_4.BorderSizePixel = 0
-		TextLabel_4.Position = UDim2.new(0.039164491, 0, 0.0498657227, 0)
+		TextLabel_4.Position =  UDim2.new(0, 13, 0.0500000007, 0)
 		TextLabel_4.Size = UDim2.new(0, 300, 0, 33)
 		TextLabel_4.Font = Enum.Font.Unknown
 		TextLabel_4.Text = properties['Name']
@@ -648,7 +649,7 @@ local main_tab_module = {
 		ControlSize_2.BackgroundTransparency = 1.000
 		ControlSize_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		ControlSize_2.BorderSizePixel = 0
-		ControlSize_2.Position = UDim2.new(0.904017806, 0, 0.223758101, 0)
+		ControlSize_2.Position = UDim2.new(1, -42, 0.238000005, 0)
 		ControlSize_2.Size = UDim2.new(0, 35, 0, 21)
 		ControlSize_2.Image = "rbxassetid://81808702659668"
 
@@ -659,8 +660,8 @@ local main_tab_module = {
 		Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 		Background.BorderSizePixel = 0
 		Background.LayoutOrder = 1
-		Background.Position = UDim2.new(0, 0, 0.947368801, 0)
-		Background.Size = UDim2.new(0, 383, 0, 0)
+		Background.Position = UDim2.new(0, 0, 0.947, 0)
+		Background.Size = UDim2.new(1, 0, 0, 0)
 		Background.Visible = false
 
 		Variants.Name = "Variants"
@@ -749,9 +750,11 @@ local module = {
 			local ScrollingFrame = Instance.new("ScrollingFrame")
 			local UIListLayout = Instance.new("UIListLayout")
 			local UIPadding = Instance.new("UIPadding")
-
+			local Sizer = Instance.new("ImageButton")
+			
 			self['ControlSize'] = ControlSize
-
+			self['Sizer'] = Sizer
+			
 			Backround.Name = "Backround"
 			Backround.AnchorPoint = Vector2.new(0.5, 0.5)
 			Backround.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
@@ -763,7 +766,16 @@ local module = {
 
 			UICorner.CornerRadius = UDim.new(0, 4)
 			UICorner.Parent = Backround
-
+			
+			Sizer.Parent = Backround
+			Sizer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Sizer.BackgroundTransparency = 1.000
+			Sizer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Sizer.BorderSizePixel = 0
+			Sizer.Position = UDim2.new(1, -20, 1, -20)
+			Sizer.Size = UDim2.new(0, 27, 0, 23)
+			Sizer.Image = "rbxassetid://92310700572359"
+			
 			Top.Name = "Top"
 			Top.Parent = Backround
 			Top.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
@@ -780,7 +792,7 @@ local module = {
 			TextLabel.BackgroundTransparency = 1.000
 			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			TextLabel.BorderSizePixel = 0
-			TextLabel.Position = UDim2.new(0.048, 25, 0.027, 0)
+			TextLabel.Position = UDim2.new(0, 45, 0.0269999783, 0)
 			TextLabel.Size = UDim2.new(0, 316, 0, 33)
 			TextLabel.Font = Enum.Font.Unknown
 			TextLabel.Text = Name
@@ -815,7 +827,7 @@ local module = {
 			ControlSize.BackgroundTransparency = 1.000
 			ControlSize.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ControlSize.BorderSizePixel = 0
-			ControlSize.Position = UDim2.new(0.893573999, 0, 0.302705646, 0)
+			ControlSize.Position = UDim2.new(1, -42, 0.303000003, 0) 
 			ControlSize.Size = UDim2.new(0, 35, 0, 21)
 			ControlSize.Image = "rbxassetid://81808702659668"
 
@@ -825,21 +837,21 @@ local module = {
 			ScrollingFrame.BackgroundTransparency = 1.000
 			ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 			ScrollingFrame.BorderSizePixel = 0
-			ScrollingFrame.Position = UDim2.new(0, 0, 0.148471609, 0)
-			ScrollingFrame.Size = UDim2.new(0, 408, 0, 200)
+			ScrollingFrame.Position = UDim2.new(0, 0, 0, 35)
+			ScrollingFrame.Size = UDim2.new(1, 16, 0.970000029, -29)
 			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 2, 0)
 			ScrollingFrame.ScrollingEnabled = true
 
+			UIListLayout.Parent = ScrollingFrame
+			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout.Padding = UDim.new(0, 3)
+
 			UIPadding.Parent = ScrollingFrame
+			UIPadding.PaddingLeft = UDim.new(0, 4)
 			UIPadding.PaddingRight = UDim.new(0, 17)
 			UIPadding.PaddingTop = UDim.new(0, 4)
 
 			main_tab = ScrollingFrame
-
-			UIListLayout.Parent = ScrollingFrame
-			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-			UIListLayout.Padding = UDim.new(0, 3)
 
 			return main_tab_module
 		else
@@ -879,15 +891,16 @@ local module = {
 					buttons_f['CanvasSize'] = UDim2.new(0, 0, buttons*0.27, 0)
 				end
 			end)
-			local closingtween = {Size = UDim2.new(0, 392, 0, 34)}
-			local openingtween = {Size = background.Size}
 			controlbutton.MouseButton1Click:Connect(function()
+				local closingtween = {Size = UDim2.new(0, (last_size and last_size['X']['Offset'] or 392), 0, 34)}
+				local openingtween = {Size = last_size}
 				if proccessing then return end
 				proccessing = true
 
 				status = not status
 				if not status then
 					buttons_f.Visible = false
+					background:FindFirstChildOfClass("ImageButton")['Visible'] = false
 					local closing = ts:Create(background,TweenInfo.new(1),closingtween)
 					ts:Create(controlbutton,TweenInfo.new(1),{Rotation = 180}):Play()
 					closing:Play()
@@ -898,6 +911,7 @@ local module = {
 					opening:Play()
 					opening.Completed:Wait()
 					buttons_f.Visible = true
+					background:FindFirstChildOfClass("ImageButton")['Visible'] = true
 				end
 				proccessing = false	
 			end)	
@@ -934,38 +948,57 @@ local module = {
 
 		table.clear(data)
 
+		local UIS = game:GetService('UserInputService')
+		local TweenService = game:GetService('TweenService')
 		local frame = background
-
-		local dragToggle = nil
+		local resizeButton = frame.ImageButton
+		local minSize = {X = 392, Y = 229}
 		local dragSpeed = 0.25
-		local dragStart = nil
-		local startPos = nil
 
-		local function updateInput(input)
+		local dragToggle, dragStart, startPos
+		local resizeToggle, resizeStart
+
+		local function updateDrag(input)
 			local delta = input.Position - dragStart
-			local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-				startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-			game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+			local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			TweenService:Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		end
+
+		local function updateResize(input)
+			local delta = Vector2.new(input.Position.X, input.Position.Y) - (frame.AbsolutePosition + frame.AbsoluteSize)
+			last_size = UDim2.new(0, math.max(minSize.X, frame.Size.X.Offset + delta.X), 0, math.max(minSize.Y, frame.Size.Y.Offset + delta.Y))
+			TweenService:Create(frame, TweenInfo.new(0.05), {Size = last_size}):Play()
+			TweenService:Create(frame.Top, TweenInfo.new(0.05), {Size = UDim2.new(0, last_size.X.Offset, 0, 34)}):Play()
 		end
 
 		frame.InputBegan:Connect(function(input)
-			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-				dragToggle = true
-				dragStart = input.Position
-				startPos = frame.Position
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				local mousePos = input.Position
+				local btnPos, btnSize = resizeButton.AbsolutePosition, resizeButton.AbsoluteSize
+				local isOnButton = mousePos.X >= btnPos.X and mousePos.X <= btnPos.X + btnSize.X and mousePos.Y >= btnPos.Y and mousePos.Y <= btnPos.Y + btnSize.Y
+
+				if not isOnButton then
+					dragToggle, dragStart, startPos = true, input.Position, frame.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then dragToggle = false end
+					end)
+				end
+			end
+		end)
+
+		resizeButton.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				resizeToggle, resizeStart = true, input.Position
 				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragToggle = false
-					end
+					if input.UserInputState == Enum.UserInputState.End then resizeToggle = false end
 				end)
 			end
 		end)
 
 		UIS.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-				if dragToggle then
-					updateInput(input)
-				end
+				if dragToggle then updateDrag(input)
+				elseif resizeToggle then updateResize(input) end
 			end
 		end)
 	end,

@@ -897,7 +897,7 @@ local controller = {
 		local new_Tab = tab(Name_)
 		return new_Tab
 	end,
-    Banner = function(self, properties)
+    Banner = function(properties)
 		print(properties['Text'])
 	end,
 }
@@ -1218,6 +1218,8 @@ local module = {
 		end)
 	end,
 }
+
+controller['Start'] = module['Start']
 
 setmetatable(module, {
 	__namecall = function(self, ...)

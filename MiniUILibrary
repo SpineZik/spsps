@@ -82,7 +82,7 @@ local function load_dropdown(scroll: ScrollingFrame, children, signal, first_val
 		if TextButton['Text'] == first_val then
 			TextButton.BackgroundColor3 = Color3.new(0.211765, 0.639216, 0.164706)
 		end
-		scroll.CanvasSize = scroll.CanvasSize + UDim2.new(0, 0, 0.2, 0) 
+		scroll.CanvasSize = scroll.CanvasSize + UDim2.new(0, 0, 0.25, 0) 
 		TextButton.MouseButton1Click:Connect(function()
 			local was_found = false
 			if chooser then
